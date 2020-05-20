@@ -173,6 +173,38 @@
             this.btnLoadSavedCases = new System.Windows.Forms.Button();
             this.rTxtBxTCA = new System.Windows.Forms.RichTextBox();
             this.lblTCA = new System.Windows.Forms.Label();
+            this.cBxWinterOffensive = new System.Windows.Forms.CheckBox();
+            this.cBxSpectrum2 = new System.Windows.Forms.CheckBox();
+            this.cBxSpectrum = new System.Windows.Forms.CheckBox();
+            this.cBxShatteredWeb = new System.Windows.Forms.CheckBox();
+            this.cBxShadow = new System.Windows.Forms.CheckBox();
+            this.cBxRevolver = new System.Windows.Forms.CheckBox();
+            this.cBxPrisma2 = new System.Windows.Forms.CheckBox();
+            this.cBxPrisma = new System.Windows.Forms.CheckBox();
+            this.cBxWildfire = new System.Windows.Forms.CheckBox();
+            this.cBxVanguard = new System.Windows.Forms.CheckBox();
+            this.cBxPhoenix = new System.Windows.Forms.CheckBox();
+            this.cBxHydra = new System.Windows.Forms.CheckBox();
+            this.cBxBreakout = new System.Windows.Forms.CheckBox();
+            this.cBxBravo = new System.Windows.Forms.CheckBox();
+            this.cBxHuntsman = new System.Windows.Forms.CheckBox();
+            this.cBxHorizon = new System.Windows.Forms.CheckBox();
+            this.cBxGamma2 = new System.Windows.Forms.CheckBox();
+            this.cBxGlove = new System.Windows.Forms.CheckBox();
+            this.cBxGamma = new System.Windows.Forms.CheckBox();
+            this.cBxFalchion = new System.Windows.Forms.CheckBox();
+            this.cBxeSports2014S = new System.Windows.Forms.CheckBox();
+            this.cBxeSports2013W = new System.Windows.Forms.CheckBox();
+            this.cBxDangerZone = new System.Windows.Forms.CheckBox();
+            this.cBxeSports2013 = new System.Windows.Forms.CheckBox();
+            this.cBxCSGOWC3 = new System.Windows.Forms.CheckBox();
+            this.cBxCSGOWC2 = new System.Windows.Forms.CheckBox();
+            this.cBxCSGOWC = new System.Windows.Forms.CheckBox();
+            this.cBxClutch = new System.Windows.Forms.CheckBox();
+            this.cBxCS20 = new System.Windows.Forms.CheckBox();
+            this.cBxChroma3 = new System.Windows.Forms.CheckBox();
+            this.cBxChroma2 = new System.Windows.Forms.CheckBox();
+            this.cBxChroma = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnRefresh
@@ -180,7 +212,7 @@
             this.btnRefresh.BackColor = System.Drawing.Color.Gray;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRefresh.Font = new System.Drawing.Font("Noto Sans", 15F);
-            this.btnRefresh.Location = new System.Drawing.Point(1293, 57);
+            this.btnRefresh.Location = new System.Drawing.Point(1293, 81);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(126, 39);
             this.btnRefresh.TabIndex = 1;
@@ -196,9 +228,9 @@
             this.btnLoadAll.Font = new System.Drawing.Font("Noto Sans", 15F);
             this.btnLoadAll.Location = new System.Drawing.Point(1293, 12);
             this.btnLoadAll.Name = "btnLoadAll";
-            this.btnLoadAll.Size = new System.Drawing.Size(126, 39);
+            this.btnLoadAll.Size = new System.Drawing.Size(126, 63);
             this.btnLoadAll.TabIndex = 4;
-            this.btnLoadAll.Text = "Reload";
+            this.btnLoadAll.Text = "Reload Prices";
             this.btnLoadAll.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnLoadAll.UseVisualStyleBackColor = false;
             this.btnLoadAll.Click += new System.EventHandler(this.btnLoad_Click);
@@ -1953,7 +1985,7 @@
             this.lLblVanguard.AutoSize = true;
             this.lLblVanguard.Font = new System.Drawing.Font("Noto Sans", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblVanguard.LinkColor = System.Drawing.Color.White;
-            this.lLblVanguard.Location = new System.Drawing.Point(646, 281);
+            this.lLblVanguard.Location = new System.Drawing.Point(646, 283);
             this.lLblVanguard.Name = "lLblVanguard";
             this.lLblVanguard.Size = new System.Drawing.Size(207, 27);
             this.lLblVanguard.TabIndex = 131;
@@ -2140,7 +2172,7 @@
             this.btnSaveCases.BackColor = System.Drawing.Color.Gray;
             this.btnSaveCases.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSaveCases.Font = new System.Drawing.Font("Noto Sans", 15F);
-            this.btnSaveCases.Location = new System.Drawing.Point(1293, 102);
+            this.btnSaveCases.Location = new System.Drawing.Point(1293, 128);
             this.btnSaveCases.Name = "btnSaveCases";
             this.btnSaveCases.Size = new System.Drawing.Size(126, 39);
             this.btnSaveCases.TabIndex = 149;
@@ -2154,7 +2186,7 @@
             this.btnLoadSavedCases.BackColor = System.Drawing.Color.Gray;
             this.btnLoadSavedCases.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLoadSavedCases.Font = new System.Drawing.Font("Noto Sans", 15F);
-            this.btnLoadSavedCases.Location = new System.Drawing.Point(1293, 147);
+            this.btnLoadSavedCases.Location = new System.Drawing.Point(1293, 173);
             this.btnLoadSavedCases.Name = "btnLoadSavedCases";
             this.btnLoadSavedCases.Size = new System.Drawing.Size(126, 63);
             this.btnLoadSavedCases.TabIndex = 150;
@@ -2189,12 +2221,396 @@
             this.lblTCA.TabIndex = 154;
             this.lblTCA.Text = "Total Case Amount:";
             // 
+            // cBxWinterOffensive
+            // 
+            this.cBxWinterOffensive.AutoSize = true;
+            this.cBxWinterOffensive.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxWinterOffensive;
+            this.cBxWinterOffensive.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxWinterOffensive", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxWinterOffensive.Location = new System.Drawing.Point(853, 638);
+            this.cBxWinterOffensive.Name = "cBxWinterOffensive";
+            this.cBxWinterOffensive.Size = new System.Drawing.Size(15, 14);
+            this.cBxWinterOffensive.TabIndex = 186;
+            this.cBxWinterOffensive.UseVisualStyleBackColor = true;
+            // 
+            // cBxSpectrum2
+            // 
+            this.cBxSpectrum2.AutoSize = true;
+            this.cBxSpectrum2.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxSpectrum2;
+            this.cBxSpectrum2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxSpectrum2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxSpectrum2.Location = new System.Drawing.Point(853, 602);
+            this.cBxSpectrum2.Name = "cBxSpectrum2";
+            this.cBxSpectrum2.Size = new System.Drawing.Size(15, 14);
+            this.cBxSpectrum2.TabIndex = 185;
+            this.cBxSpectrum2.UseVisualStyleBackColor = true;
+            // 
+            // cBxSpectrum
+            // 
+            this.cBxSpectrum.AutoSize = true;
+            this.cBxSpectrum.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxSpectrum;
+            this.cBxSpectrum.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxSpectrum", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxSpectrum.Location = new System.Drawing.Point(853, 562);
+            this.cBxSpectrum.Name = "cBxSpectrum";
+            this.cBxSpectrum.Size = new System.Drawing.Size(15, 14);
+            this.cBxSpectrum.TabIndex = 184;
+            this.cBxSpectrum.UseVisualStyleBackColor = true;
+            // 
+            // cBxShatteredWeb
+            // 
+            this.cBxShatteredWeb.AutoSize = true;
+            this.cBxShatteredWeb.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxShatteredWeb;
+            this.cBxShatteredWeb.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxShatteredWeb", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxShatteredWeb.Location = new System.Drawing.Point(853, 524);
+            this.cBxShatteredWeb.Name = "cBxShatteredWeb";
+            this.cBxShatteredWeb.Size = new System.Drawing.Size(15, 14);
+            this.cBxShatteredWeb.TabIndex = 183;
+            this.cBxShatteredWeb.UseVisualStyleBackColor = true;
+            // 
+            // cBxShadow
+            // 
+            this.cBxShadow.AutoSize = true;
+            this.cBxShadow.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxShadow;
+            this.cBxShadow.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxShadow", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxShadow.Location = new System.Drawing.Point(853, 486);
+            this.cBxShadow.Name = "cBxShadow";
+            this.cBxShadow.Size = new System.Drawing.Size(15, 14);
+            this.cBxShadow.TabIndex = 182;
+            this.cBxShadow.UseVisualStyleBackColor = true;
+            // 
+            // cBxRevolver
+            // 
+            this.cBxRevolver.AutoSize = true;
+            this.cBxRevolver.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxRevolver;
+            this.cBxRevolver.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxRevolver", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxRevolver.Location = new System.Drawing.Point(853, 448);
+            this.cBxRevolver.Name = "cBxRevolver";
+            this.cBxRevolver.Size = new System.Drawing.Size(15, 14);
+            this.cBxRevolver.TabIndex = 181;
+            this.cBxRevolver.UseVisualStyleBackColor = true;
+            // 
+            // cBxPrisma2
+            // 
+            this.cBxPrisma2.AutoSize = true;
+            this.cBxPrisma2.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxPrisma2;
+            this.cBxPrisma2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxPrisma2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxPrisma2.Location = new System.Drawing.Point(853, 410);
+            this.cBxPrisma2.Name = "cBxPrisma2";
+            this.cBxPrisma2.Size = new System.Drawing.Size(15, 14);
+            this.cBxPrisma2.TabIndex = 180;
+            this.cBxPrisma2.UseVisualStyleBackColor = true;
+            // 
+            // cBxPrisma
+            // 
+            this.cBxPrisma.AutoSize = true;
+            this.cBxPrisma.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxPrisma;
+            this.cBxPrisma.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxPrisma", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxPrisma.Location = new System.Drawing.Point(853, 372);
+            this.cBxPrisma.Name = "cBxPrisma";
+            this.cBxPrisma.Size = new System.Drawing.Size(15, 14);
+            this.cBxPrisma.TabIndex = 179;
+            this.cBxPrisma.UseVisualStyleBackColor = true;
+            // 
+            // cBxWildfire
+            // 
+            this.cBxWildfire.AutoSize = true;
+            this.cBxWildfire.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxWildfire;
+            this.cBxWildfire.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxWildfire", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxWildfire.Location = new System.Drawing.Point(853, 334);
+            this.cBxWildfire.Name = "cBxWildfire";
+            this.cBxWildfire.Size = new System.Drawing.Size(15, 14);
+            this.cBxWildfire.TabIndex = 178;
+            this.cBxWildfire.UseVisualStyleBackColor = true;
+            // 
+            // cBxVanguard
+            // 
+            this.cBxVanguard.AutoSize = true;
+            this.cBxVanguard.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxVanguard;
+            this.cBxVanguard.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxVanguard", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxVanguard.Location = new System.Drawing.Point(853, 296);
+            this.cBxVanguard.Name = "cBxVanguard";
+            this.cBxVanguard.Size = new System.Drawing.Size(15, 14);
+            this.cBxVanguard.TabIndex = 177;
+            this.cBxVanguard.UseVisualStyleBackColor = true;
+            // 
+            // cBxPhoenix
+            // 
+            this.cBxPhoenix.AutoSize = true;
+            this.cBxPhoenix.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxPhoenix;
+            this.cBxPhoenix.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxPhoenix", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxPhoenix.Location = new System.Drawing.Point(853, 258);
+            this.cBxPhoenix.Name = "cBxPhoenix";
+            this.cBxPhoenix.Size = new System.Drawing.Size(15, 14);
+            this.cBxPhoenix.TabIndex = 176;
+            this.cBxPhoenix.UseVisualStyleBackColor = true;
+            // 
+            // cBxHydra
+            // 
+            this.cBxHydra.AutoSize = true;
+            this.cBxHydra.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxHydra;
+            this.cBxHydra.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxHydra", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxHydra.Location = new System.Drawing.Point(853, 220);
+            this.cBxHydra.Name = "cBxHydra";
+            this.cBxHydra.Size = new System.Drawing.Size(15, 14);
+            this.cBxHydra.TabIndex = 175;
+            this.cBxHydra.UseVisualStyleBackColor = true;
+            // 
+            // cBxBreakout
+            // 
+            this.cBxBreakout.AutoSize = true;
+            this.cBxBreakout.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxBreakout;
+            this.cBxBreakout.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxBreakout", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxBreakout.Location = new System.Drawing.Point(853, 182);
+            this.cBxBreakout.Name = "cBxBreakout";
+            this.cBxBreakout.Size = new System.Drawing.Size(15, 14);
+            this.cBxBreakout.TabIndex = 174;
+            this.cBxBreakout.UseVisualStyleBackColor = true;
+            // 
+            // cBxBravo
+            // 
+            this.cBxBravo.AutoSize = true;
+            this.cBxBravo.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxBravo;
+            this.cBxBravo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxBravo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxBravo.Location = new System.Drawing.Point(853, 147);
+            this.cBxBravo.Name = "cBxBravo";
+            this.cBxBravo.Size = new System.Drawing.Size(15, 14);
+            this.cBxBravo.TabIndex = 173;
+            this.cBxBravo.UseVisualStyleBackColor = true;
+            // 
+            // cBxHuntsman
+            // 
+            this.cBxHuntsman.AutoSize = true;
+            this.cBxHuntsman.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxHuntsman;
+            this.cBxHuntsman.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxHuntsman", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxHuntsman.Location = new System.Drawing.Point(853, 106);
+            this.cBxHuntsman.Name = "cBxHuntsman";
+            this.cBxHuntsman.Size = new System.Drawing.Size(15, 14);
+            this.cBxHuntsman.TabIndex = 172;
+            this.cBxHuntsman.UseVisualStyleBackColor = true;
+            // 
+            // cBxHorizon
+            // 
+            this.cBxHorizon.AutoSize = true;
+            this.cBxHorizon.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxHorizon;
+            this.cBxHorizon.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxHorizon", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxHorizon.Location = new System.Drawing.Point(853, 70);
+            this.cBxHorizon.Name = "cBxHorizon";
+            this.cBxHorizon.Size = new System.Drawing.Size(15, 14);
+            this.cBxHorizon.TabIndex = 171;
+            this.cBxHorizon.UseVisualStyleBackColor = true;
+            // 
+            // cBxGamma2
+            // 
+            this.cBxGamma2.AutoSize = true;
+            this.cBxGamma2.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxGamma2;
+            this.cBxGamma2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxGamma2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxGamma2.Location = new System.Drawing.Point(237, 602);
+            this.cBxGamma2.Name = "cBxGamma2";
+            this.cBxGamma2.Size = new System.Drawing.Size(15, 14);
+            this.cBxGamma2.TabIndex = 170;
+            this.cBxGamma2.UseVisualStyleBackColor = true;
+            // 
+            // cBxGlove
+            // 
+            this.cBxGlove.AutoSize = true;
+            this.cBxGlove.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxGlove;
+            this.cBxGlove.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxGlove", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxGlove.Location = new System.Drawing.Point(237, 638);
+            this.cBxGlove.Name = "cBxGlove";
+            this.cBxGlove.Size = new System.Drawing.Size(15, 14);
+            this.cBxGlove.TabIndex = 169;
+            this.cBxGlove.UseVisualStyleBackColor = true;
+            // 
+            // cBxGamma
+            // 
+            this.cBxGamma.AutoSize = true;
+            this.cBxGamma.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxGamma;
+            this.cBxGamma.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxGamma", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxGamma.Location = new System.Drawing.Point(237, 562);
+            this.cBxGamma.Name = "cBxGamma";
+            this.cBxGamma.Size = new System.Drawing.Size(15, 14);
+            this.cBxGamma.TabIndex = 168;
+            this.cBxGamma.UseVisualStyleBackColor = true;
+            // 
+            // cBxFalchion
+            // 
+            this.cBxFalchion.AutoSize = true;
+            this.cBxFalchion.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxFalchion;
+            this.cBxFalchion.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxFalchion", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxFalchion.Location = new System.Drawing.Point(237, 524);
+            this.cBxFalchion.Name = "cBxFalchion";
+            this.cBxFalchion.Size = new System.Drawing.Size(15, 14);
+            this.cBxFalchion.TabIndex = 167;
+            this.cBxFalchion.UseVisualStyleBackColor = true;
+            // 
+            // cBxeSports2014S
+            // 
+            this.cBxeSports2014S.AutoSize = true;
+            this.cBxeSports2014S.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxeSports2014S;
+            this.cBxeSports2014S.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxeSports2014S", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxeSports2014S.Location = new System.Drawing.Point(237, 486);
+            this.cBxeSports2014S.Name = "cBxeSports2014S";
+            this.cBxeSports2014S.Size = new System.Drawing.Size(15, 14);
+            this.cBxeSports2014S.TabIndex = 166;
+            this.cBxeSports2014S.UseVisualStyleBackColor = true;
+            // 
+            // cBxeSports2013W
+            // 
+            this.cBxeSports2013W.AutoSize = true;
+            this.cBxeSports2013W.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxeSports2013W;
+            this.cBxeSports2013W.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxeSports2013W", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxeSports2013W.Location = new System.Drawing.Point(237, 448);
+            this.cBxeSports2013W.Name = "cBxeSports2013W";
+            this.cBxeSports2013W.Size = new System.Drawing.Size(15, 14);
+            this.cBxeSports2013W.TabIndex = 165;
+            this.cBxeSports2013W.UseVisualStyleBackColor = true;
+            // 
+            // cBxDangerZone
+            // 
+            this.cBxDangerZone.AutoSize = true;
+            this.cBxDangerZone.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxDangerZone;
+            this.cBxDangerZone.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxDangerZone", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxDangerZone.Location = new System.Drawing.Point(237, 372);
+            this.cBxDangerZone.Name = "cBxDangerZone";
+            this.cBxDangerZone.Size = new System.Drawing.Size(15, 14);
+            this.cBxDangerZone.TabIndex = 164;
+            this.cBxDangerZone.UseVisualStyleBackColor = true;
+            // 
+            // cBxeSports2013
+            // 
+            this.cBxeSports2013.AutoSize = true;
+            this.cBxeSports2013.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxeSports2013;
+            this.cBxeSports2013.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxeSports2013", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxeSports2013.Location = new System.Drawing.Point(237, 410);
+            this.cBxeSports2013.Name = "cBxeSports2013";
+            this.cBxeSports2013.Size = new System.Drawing.Size(15, 14);
+            this.cBxeSports2013.TabIndex = 163;
+            this.cBxeSports2013.UseVisualStyleBackColor = true;
+            // 
+            // cBxCSGOWC3
+            // 
+            this.cBxCSGOWC3.AutoSize = true;
+            this.cBxCSGOWC3.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxCSGOWC3;
+            this.cBxCSGOWC3.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxCSGOWC3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxCSGOWC3.Location = new System.Drawing.Point(237, 334);
+            this.cBxCSGOWC3.Name = "cBxCSGOWC3";
+            this.cBxCSGOWC3.Size = new System.Drawing.Size(15, 14);
+            this.cBxCSGOWC3.TabIndex = 162;
+            this.cBxCSGOWC3.UseVisualStyleBackColor = true;
+            // 
+            // cBxCSGOWC2
+            // 
+            this.cBxCSGOWC2.AutoSize = true;
+            this.cBxCSGOWC2.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxCSGOWC2;
+            this.cBxCSGOWC2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxCSGOWC2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxCSGOWC2.Location = new System.Drawing.Point(237, 296);
+            this.cBxCSGOWC2.Name = "cBxCSGOWC2";
+            this.cBxCSGOWC2.Size = new System.Drawing.Size(15, 14);
+            this.cBxCSGOWC2.TabIndex = 161;
+            this.cBxCSGOWC2.UseVisualStyleBackColor = true;
+            // 
+            // cBxCSGOWC
+            // 
+            this.cBxCSGOWC.AutoSize = true;
+            this.cBxCSGOWC.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxCSGOWC;
+            this.cBxCSGOWC.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxCSGOWC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxCSGOWC.Location = new System.Drawing.Point(237, 258);
+            this.cBxCSGOWC.Name = "cBxCSGOWC";
+            this.cBxCSGOWC.Size = new System.Drawing.Size(15, 14);
+            this.cBxCSGOWC.TabIndex = 160;
+            this.cBxCSGOWC.UseVisualStyleBackColor = true;
+            // 
+            // cBxClutch
+            // 
+            this.cBxClutch.AutoSize = true;
+            this.cBxClutch.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxClutch;
+            this.cBxClutch.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxClutch", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxClutch.Location = new System.Drawing.Point(237, 182);
+            this.cBxClutch.Name = "cBxClutch";
+            this.cBxClutch.Size = new System.Drawing.Size(15, 14);
+            this.cBxClutch.TabIndex = 159;
+            this.cBxClutch.UseVisualStyleBackColor = true;
+            // 
+            // cBxCS20
+            // 
+            this.cBxCS20.AutoSize = true;
+            this.cBxCS20.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxCS20;
+            this.cBxCS20.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxCS20", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxCS20.Location = new System.Drawing.Point(237, 220);
+            this.cBxCS20.Name = "cBxCS20";
+            this.cBxCS20.Size = new System.Drawing.Size(15, 14);
+            this.cBxCS20.TabIndex = 158;
+            this.cBxCS20.UseVisualStyleBackColor = true;
+            // 
+            // cBxChroma3
+            // 
+            this.cBxChroma3.AutoSize = true;
+            this.cBxChroma3.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxChroma3;
+            this.cBxChroma3.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxChroma3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxChroma3.Location = new System.Drawing.Point(237, 144);
+            this.cBxChroma3.Name = "cBxChroma3";
+            this.cBxChroma3.Size = new System.Drawing.Size(15, 14);
+            this.cBxChroma3.TabIndex = 157;
+            this.cBxChroma3.UseVisualStyleBackColor = true;
+            // 
+            // cBxChroma2
+            // 
+            this.cBxChroma2.AutoSize = true;
+            this.cBxChroma2.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxChroma2;
+            this.cBxChroma2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxChroma2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxChroma2.Location = new System.Drawing.Point(237, 106);
+            this.cBxChroma2.Name = "cBxChroma2";
+            this.cBxChroma2.Size = new System.Drawing.Size(15, 14);
+            this.cBxChroma2.TabIndex = 156;
+            this.cBxChroma2.UseVisualStyleBackColor = true;
+            // 
+            // cBxChroma
+            // 
+            this.cBxChroma.AutoSize = true;
+            this.cBxChroma.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxChroma;
+            this.cBxChroma.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxChroma", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxChroma.Location = new System.Drawing.Point(237, 68);
+            this.cBxChroma.Name = "cBxChroma";
+            this.cBxChroma.Size = new System.Drawing.Size(15, 14);
+            this.cBxChroma.TabIndex = 155;
+            this.cBxChroma.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1431, 689);
+            this.Controls.Add(this.cBxWinterOffensive);
+            this.Controls.Add(this.cBxSpectrum2);
+            this.Controls.Add(this.cBxSpectrum);
+            this.Controls.Add(this.cBxShatteredWeb);
+            this.Controls.Add(this.cBxShadow);
+            this.Controls.Add(this.cBxRevolver);
+            this.Controls.Add(this.cBxPrisma2);
+            this.Controls.Add(this.cBxPrisma);
+            this.Controls.Add(this.cBxWildfire);
+            this.Controls.Add(this.cBxVanguard);
+            this.Controls.Add(this.cBxPhoenix);
+            this.Controls.Add(this.cBxHydra);
+            this.Controls.Add(this.cBxBreakout);
+            this.Controls.Add(this.cBxBravo);
+            this.Controls.Add(this.cBxHuntsman);
+            this.Controls.Add(this.cBxHorizon);
+            this.Controls.Add(this.cBxGamma2);
+            this.Controls.Add(this.cBxGlove);
+            this.Controls.Add(this.cBxGamma);
+            this.Controls.Add(this.cBxFalchion);
+            this.Controls.Add(this.cBxeSports2014S);
+            this.Controls.Add(this.cBxeSports2013W);
+            this.Controls.Add(this.cBxDangerZone);
+            this.Controls.Add(this.cBxeSports2013);
+            this.Controls.Add(this.cBxCSGOWC3);
+            this.Controls.Add(this.cBxCSGOWC2);
+            this.Controls.Add(this.cBxCSGOWC);
+            this.Controls.Add(this.cBxClutch);
+            this.Controls.Add(this.cBxCS20);
+            this.Controls.Add(this.cBxChroma3);
+            this.Controls.Add(this.cBxChroma2);
+            this.Controls.Add(this.cBxChroma);
             this.Controls.Add(this.lblTCA);
             this.Controls.Add(this.rTxtBxTCA);
             this.Controls.Add(this.btnLoadSavedCases);
@@ -2494,6 +2910,38 @@
         private System.Windows.Forms.RichTextBox rTxtBxTCA;
         private System.Windows.Forms.Label lblTCA;
         private System.Windows.Forms.RichTextBox rTxtBxChromaTV;
+        private System.Windows.Forms.CheckBox cBxChroma;
+        private System.Windows.Forms.CheckBox cBxChroma2;
+        private System.Windows.Forms.CheckBox cBxChroma3;
+        private System.Windows.Forms.CheckBox cBxCS20;
+        private System.Windows.Forms.CheckBox cBxClutch;
+        private System.Windows.Forms.CheckBox cBxCSGOWC;
+        private System.Windows.Forms.CheckBox cBxCSGOWC2;
+        private System.Windows.Forms.CheckBox cBxCSGOWC3;
+        private System.Windows.Forms.CheckBox cBxeSports2013;
+        private System.Windows.Forms.CheckBox cBxDangerZone;
+        private System.Windows.Forms.CheckBox cBxeSports2013W;
+        private System.Windows.Forms.CheckBox cBxeSports2014S;
+        private System.Windows.Forms.CheckBox cBxFalchion;
+        private System.Windows.Forms.CheckBox cBxGamma;
+        private System.Windows.Forms.CheckBox cBxGlove;
+        private System.Windows.Forms.CheckBox cBxGamma2;
+        private System.Windows.Forms.CheckBox cBxHorizon;
+        private System.Windows.Forms.CheckBox cBxHuntsman;
+        private System.Windows.Forms.CheckBox cBxBravo;
+        private System.Windows.Forms.CheckBox cBxBreakout;
+        private System.Windows.Forms.CheckBox cBxHydra;
+        private System.Windows.Forms.CheckBox cBxPhoenix;
+        private System.Windows.Forms.CheckBox cBxVanguard;
+        private System.Windows.Forms.CheckBox cBxWildfire;
+        private System.Windows.Forms.CheckBox cBxPrisma;
+        private System.Windows.Forms.CheckBox cBxPrisma2;
+        private System.Windows.Forms.CheckBox cBxRevolver;
+        private System.Windows.Forms.CheckBox cBxShadow;
+        private System.Windows.Forms.CheckBox cBxShatteredWeb;
+        private System.Windows.Forms.CheckBox cBxSpectrum;
+        private System.Windows.Forms.CheckBox cBxSpectrum2;
+        private System.Windows.Forms.CheckBox cBxWinterOffensive;
     }
 }
 

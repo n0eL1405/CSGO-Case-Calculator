@@ -56,547 +56,773 @@ namespace CSGO_Case_Calculator
         public async Task Main()
         {
             string urlsteammarkt = "https://steamcommunity.com/market/priceoverview/?appid=730&currency=3&market_hash_name=";
-            try
+
+            if (cBxChroma.Checked)
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Chroma%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Chroma%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
 
-                this.rTxtBxChroma.Text = Convert.ToString(price) + "€";
-            }
-            catch { }
+                    this.rTxtBxChroma.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
 
-            await Task.Delay(wait);
-
-            try
+            } else
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Chroma%202%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
 
-                this.rTxtBxChroma2.Text = Convert.ToString(price) + "€";
+                this.rTxtBxChroma.Text = "0";
+
             }
-            catch { }
 
-            await Task.Delay(wait);
-
-            try
+            if (cBxChroma2.Checked)
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Chroma%203%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
+                await Task.Delay(wait);
 
-                this.rTxtBxChroma3.Text = Convert.ToString(price) + "€";
-            }
-            catch { }
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Chroma%202%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
 
-            await Task.Delay(wait);
+                    this.rTxtBxChroma2.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
 
-            try
+            } else
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Clutch%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
-
-                this.rTxtBxClutch.Text = Convert.ToString(price) + "€";
+                this.rTxtBxChroma2.Text = "0";
             }
-            catch { }
 
-            await Task.Delay(wait);
-
-            try
+            if (cBxChroma3.Checked)
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "CS20%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
+                await Task.Delay(wait);
 
-                this.rTxtBxCS20.Text = Convert.ToString(price) + "€";
-            }
-            catch { }
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Chroma%203%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
 
-            await Task.Delay(wait);
+                    this.rTxtBxChroma3.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
 
-            try
+            } else
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "CS%3AGO%20Weapon%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
-
-                this.rTxtBxCSGOWC.Text = Convert.ToString(price) + "€";
+                this.rTxtBxChroma3.Text = "0";
             }
-            catch { }
 
-            await Task.Delay(wait);
-
-            try
+            if (cBxClutch.Checked)
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "CS%3AGO%20Weapon%20Case%202");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
+                await Task.Delay(wait);
 
-                this.rTxtBxCSGOWC2.Text = Convert.ToString(price) + "€";
-            }
-            catch { }
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Clutch%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
 
-            await Task.Delay(wait);
+                    this.rTxtBxClutch.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
 
-            try
+            } else
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "CS%3AGO%20Weapon%20Case%203");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
-
-                this.rTxtBxCSGOWC3.Text = Convert.ToString(price) + "€";
+                this.rTxtBxClutch.Text = "0";
             }
-            catch { }
 
-            await Task.Delay(wait);
-
-            try
+            if (cBxCS20.Checked)
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Danger%20Zone%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
+                await Task.Delay(wait);
 
-                this.rTxtBxDangerZone.Text = Convert.ToString(price) + "€";
-            }
-            catch { }
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "CS20%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
 
-            await Task.Delay(wait);
+                    this.rTxtBxCS20.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
 
-            try
+            } else
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "eSports%202013%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
-
-                this.rTxtBxeSports2013.Text = Convert.ToString(price) + "€";
+                this.rTxtBxCS20.Text = "0";
             }
-            catch { }
 
-            await Task.Delay(wait);
-
-            try
+            if (cBxCSGOWC.Checked)
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "eSports%202013%20Winter%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
+                await Task.Delay(wait);
 
-                this.rTxtBxeSports2013W.Text = Convert.ToString(price) + "€";
-            }
-            catch { }
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "CS%3AGO%20Weapon%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
 
-            await Task.Delay(wait);
+                    this.rTxtBxCSGOWC.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
 
-            try
+            } else
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "eSports%202014%20Summer%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
-
-                this.rTxtBxeSports2014S.Text = Convert.ToString(price) + "€";
+                this.rTxtBxCSGOWC.Text = "0";
             }
-            catch { }
 
-            await Task.Delay(wait);
-
-            try
+            if (cBxCSGOWC2.Checked)
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Falchion%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
+                await Task.Delay(wait);
 
-                this.rTxtBxFalchion.Text = Convert.ToString(price) + "€";
-            }
-            catch { }
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "CS%3AGO%20Weapon%20Case%202");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
 
-            await Task.Delay(wait);
+                    this.rTxtBxCSGOWC2.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
 
-            try
+            } else
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Gamma%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
-
-                this.rTxtBxGamma.Text = Convert.ToString(price) + "€";
+                this.rTxtBxCSGOWC2.Text = "0";
             }
-            catch { }
 
-            await Task.Delay(wait);
-
-            try
+            if (cBxCSGOWC3.Checked)
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Gamma%202%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
+                await Task.Delay(wait);
 
-                this.rTxtBxGamma2.Text = Convert.ToString(price) + "€";
-            }
-            catch { }
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "CS%3AGO%20Weapon%20Case%203");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
 
-            await Task.Delay(wait);
+                    this.rTxtBxCSGOWC3.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
 
-            try
+            } else
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Glove%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
-
-                this.rTxtBxGlove.Text = Convert.ToString(price) + "€";
+                this.rTxtBxCSGOWC3.Text = "0";
             }
-            catch { }
 
-            await Task.Delay(wait);
-
-            try
+            if (cBxDangerZone.Checked)
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Horizon%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
+                await Task.Delay(wait);
 
-                this.rTxtBxHorizon.Text = Convert.ToString(price) + "€";
-            }
-            catch { }
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Danger%20Zone%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
 
-            await Task.Delay(wait);
+                    this.rTxtBxDangerZone.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
 
-            try
+            } else
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Huntsman%20Weapon%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
-
-                this.rTxtBxHuntsman.Text = Convert.ToString(price) + "€";
+                this.rTxtBxDangerZone.Text = "0";
             }
-            catch { }
 
-            await Task.Delay(wait);
-
-            try
+            if (cBxeSports2013.Checked)
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Operation%20Bravo%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
+                await Task.Delay(wait);
 
-                this.rTxtBxBravo.Text = Convert.ToString(price) + "€";
-            }
-            catch { }
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "eSports%202013%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
 
-            await Task.Delay(wait);
+                    this.rTxtBxeSports2013.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
 
-            try
+            } else
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Operation%20Breakout%20Weapon%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
-
-                this.rTxtBxBreakout.Text = Convert.ToString(price) + "€";
+                this.rTxtBxeSports2013.Text = "0";
             }
-            catch { }
 
-            await Task.Delay(wait);
-
-            try
+            if (cBxeSports2013W.Checked)
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Operation%20Hydra%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
+                await Task.Delay(wait);
 
-                this.rTxtBxHydra.Text = Convert.ToString(price) + "€";
-            }
-            catch { }
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "eSports%202013%20Winter%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
 
-            await Task.Delay(wait);
+                    this.rTxtBxeSports2013W.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
 
-            try
+            } else
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Operation%20Phoenix%20Weapon%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
-
-                this.rTxtBxPhoenix.Text = Convert.ToString(price) + "€";
+                this.rTxtBxeSports2013W.Text = "0";
             }
-            catch { }
 
-            await Task.Delay(wait);
-
-            try
+            if (cBxeSports2014S.Checked)
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Operation%20Vanguard%20Weapon%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
+                await Task.Delay(wait);
 
-                this.rTxtBxVanguard.Text = Convert.ToString(price) + "€";
-            }
-            catch { }
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "eSports%202014%20Summer%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
 
-            await Task.Delay(wait);
+                    this.rTxtBxeSports2014S.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
 
-            try
+            } else
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Operation%20Wildfire%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
-
-                this.rTxtBxWildfire.Text = Convert.ToString(price) + "€";
+                this.rTxtBxeSports2014S.Text = "0";
             }
-            catch { }
 
-            await Task.Delay(wait);
-
-            try
+            if (cBxFalchion.Checked)
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Prisma%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
+                await Task.Delay(wait);
 
-                this.rTxtBxPrisma.Text = Convert.ToString(price) + "€";
-            }
-            catch { }
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Falchion%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
 
-            await Task.Delay(wait);
+                    this.rTxtBxFalchion.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
 
-            try
+            } else
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Prisma%202%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
-
-                this.rTxtBxPrisma2.Text = Convert.ToString(price) + "€";
+                this.rTxtBxFalchion.Text = "0";
             }
-            catch { }
 
-            await Task.Delay(wait);
-
-            try
+            if (cBxGamma.Checked)
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Revolver%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
+                await Task.Delay(wait);
 
-                this.rTxtBxRevolver.Text = Convert.ToString(price) + "€";
-            }
-            catch { }
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Gamma%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
 
-            await Task.Delay(wait);
+                    this.rTxtBxGamma.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
 
-            try
+            } else
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Shadow%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
-
-                this.rTxtBxShadow.Text = Convert.ToString(price) + "€";
+                this.rTxtBxGamma.Text = "0";
             }
-            catch { }
 
-            await Task.Delay(wait);
-
-            try
+            if (cBxGamma2.Checked)
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Shattered%20Web%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
+                await Task.Delay(wait);
 
-                this.rTxtBxShatteredWeb.Text = Convert.ToString(price) + "€";
-            }
-            catch { }
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Gamma%202%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
 
-            await Task.Delay(wait);
+                    this.rTxtBxGamma2.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
 
-            try
+            } else
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Spectrum%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
-
-                this.rTxtBxSpectrum.Text = Convert.ToString(price) + "€";
+                this.rTxtBxGamma2.Text = "0";
             }
-            catch { }
 
-            await Task.Delay(wait);
-
-            try
+            if (cBxGlove.Checked)
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Spectrum%202%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
+                await Task.Delay(wait);
 
-                this.rTxtBxSpectrum2.Text = Convert.ToString(price) + "€";
-            }
-            catch { }
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Glove%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
 
-            await Task.Delay(wait);
+                    this.rTxtBxGlove.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
 
-            try
+            } else
             {
-                HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Winter%20Offensive%20Weapon%20Case");
-                response.EnsureSuccessStatusCode();
-                string price = await response.Content.ReadAsStringAsync();
-                //cute out the min price
-                price = price.Remove(0, 32);
-                price = price.Remove(price.IndexOf('\\'));
-                //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-                price = price.Replace("--", "00");
-
-                this.rTxtBxWinterOffensive.Text = Convert.ToString(price) + "€";
+                this.rTxtBxGlove.Text = "0";
             }
-            catch { }
+
+            if (cBxHorizon.Checked)
+            {
+                await Task.Delay(wait);
+
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Horizon%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
+
+                    this.rTxtBxHorizon.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
+
+            } else
+            {
+                this.rTxtBxHorizon.Text = "0";
+            }
+
+            if (cBxHuntsman.Checked)
+            {
+                await Task.Delay(wait);
+
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Huntsman%20Weapon%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
+
+                    this.rTxtBxHuntsman.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
+
+            } else
+            {
+                this.rTxtBxHuntsman.Text = "0";
+            }
+
+            if (cBxBravo.Checked)
+            {
+                await Task.Delay(wait);
+
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Operation%20Bravo%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
+
+                    this.rTxtBxBravo.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
+
+            } else
+            {
+                this.rTxtBxBravo.Text = "0";
+            }
+
+            if (cBxBreakout.Checked)
+            {
+                await Task.Delay(wait);
+
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Operation%20Breakout%20Weapon%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
+
+                    this.rTxtBxBreakout.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
+
+            } else
+            {
+                this.rTxtBxBreakout.Text = "0";
+            }
+
+            if (cBxHydra.Checked)
+            {
+                await Task.Delay(wait);
+
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Operation%20Hydra%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
+
+                    this.rTxtBxHydra.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
+
+            } else
+            {
+                this.rTxtBxHydra.Text = "0";
+            }
+
+            if (cBxPhoenix.Checked)
+            {
+                await Task.Delay(wait);
+
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Operation%20Phoenix%20Weapon%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
+
+                    this.rTxtBxPhoenix.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
+
+            } else
+            {
+                this.rTxtBxPhoenix.Text = "0";
+            }
+
+            if (cBxVanguard.Checked)
+            {
+                await Task.Delay(wait);
+
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Operation%20Vanguard%20Weapon%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
+
+                    this.rTxtBxVanguard.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
+
+            } else
+            {
+                this.rTxtBxVanguard.Text = "0";
+            }
+
+            if (cBxWildfire.Checked)
+            {
+                await Task.Delay(wait);
+
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Operation%20Wildfire%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
+
+                    this.rTxtBxWildfire.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
+
+            } else
+            {
+                this.rTxtBxWildfire.Text = "0";
+            }
+
+            if (cBxPrisma.Checked)
+            {
+                await Task.Delay(wait);
+
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Prisma%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
+
+                    this.rTxtBxPrisma.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
+
+            } else
+            {
+                this.rTxtBxPrisma.Text = "0";
+            }
+
+            if (cBxPrisma2.Checked)
+            {
+                await Task.Delay(wait);
+
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Prisma%202%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
+
+                    this.rTxtBxPrisma2.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
+
+            } else
+            {
+                this.rTxtBxPrisma2.Text = "0";
+            }
+
+            if (cBxRevolver.Checked)
+            {
+                await Task.Delay(wait);
+
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Revolver%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
+
+                    this.rTxtBxRevolver.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
+
+            } else
+            {
+                this.rTxtBxRevolver.Text = "0";
+            }
+
+            if (cBxShadow.Checked)
+            {
+                await Task.Delay(wait);
+
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Shadow%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
+
+                    this.rTxtBxShadow.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
+
+            } else
+            {
+                this.rTxtBxShadow.Text = "0";
+            }
+
+            if (cBxShatteredWeb.Checked)
+            {
+                await Task.Delay(wait);
+
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Shattered%20Web%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
+
+                    this.rTxtBxShatteredWeb.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
+
+            } else
+            {
+                this.rTxtBxShatteredWeb.Text = "0";
+            }
+
+            if (cBxSpectrum.Checked)
+            {
+                await Task.Delay(wait);
+
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Spectrum%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
+
+                    this.rTxtBxSpectrum.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
+
+            } else
+            {
+                this.rTxtBxSpectrum.Text = "0";
+            }
+
+            if (cBxSpectrum2.Checked)
+            {
+                await Task.Delay(wait);
+
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Spectrum%202%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
+
+                    this.rTxtBxSpectrum2.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
+
+            } else
+            {
+                this.rTxtBxSpectrum2.Text = "0";
+            }
+
+            if (cBxWinterOffensive.Checked)
+            {
+                await Task.Delay(wait);
+
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Winter%20Offensive%20Weapon%20Case");
+                    response.EnsureSuccessStatusCode();
+                    string price = await response.Content.ReadAsStringAsync();
+                    //cute out the min price
+                    price = price.Remove(0, 32);
+                    price = price.Remove(price.IndexOf('\\'));
+                    //replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+                    price = price.Replace("--", "00");
+
+                    this.rTxtBxWinterOffensive.Text = Convert.ToString(price) + "€";
+                }
+                catch { }
+            } else
+            {
+                this.rTxtBxWinterOffensive.Text = "0";
+            }
         }
 
         //Load all Amounts from the XML-File

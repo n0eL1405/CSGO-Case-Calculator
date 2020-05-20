@@ -22,5 +22,401 @@ namespace CSGO_Case_Calculator.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxChroma {
+            get {
+                return ((bool)(this["cBxChroma"]));
+            }
+            set {
+                this["cBxChroma"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool SaveStatusOnCloseup {
+            get {
+                return ((bool)(this["SaveStatusOnCloseup"]));
+            }
+            set {
+                this["SaveStatusOnCloseup"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxChroma2 {
+            get {
+                return ((bool)(this["cBxChroma2"]));
+            }
+            set {
+                this["cBxChroma2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxChroma3 {
+            get {
+                return ((bool)(this["cBxChroma3"]));
+            }
+            set {
+                this["cBxChroma3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxClutch {
+            get {
+                return ((bool)(this["cBxClutch"]));
+            }
+            set {
+                this["cBxClutch"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxCS20 {
+            get {
+                return ((bool)(this["cBxCS20"]));
+            }
+            set {
+                this["cBxCS20"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxCSGOWC {
+            get {
+                return ((bool)(this["cBxCSGOWC"]));
+            }
+            set {
+                this["cBxCSGOWC"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxCSGOWC2 {
+            get {
+                return ((bool)(this["cBxCSGOWC2"]));
+            }
+            set {
+                this["cBxCSGOWC2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxCSGOWC3 {
+            get {
+                return ((bool)(this["cBxCSGOWC3"]));
+            }
+            set {
+                this["cBxCSGOWC3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxDangerZone {
+            get {
+                return ((bool)(this["cBxDangerZone"]));
+            }
+            set {
+                this["cBxDangerZone"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxeSports2013 {
+            get {
+                return ((bool)(this["cBxeSports2013"]));
+            }
+            set {
+                this["cBxeSports2013"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxeSports2013W {
+            get {
+                return ((bool)(this["cBxeSports2013W"]));
+            }
+            set {
+                this["cBxeSports2013W"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxeSports2014S {
+            get {
+                return ((bool)(this["cBxeSports2014S"]));
+            }
+            set {
+                this["cBxeSports2014S"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxFalchion {
+            get {
+                return ((bool)(this["cBxFalchion"]));
+            }
+            set {
+                this["cBxFalchion"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxGamma {
+            get {
+                return ((bool)(this["cBxGamma"]));
+            }
+            set {
+                this["cBxGamma"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxGamma2 {
+            get {
+                return ((bool)(this["cBxGamma2"]));
+            }
+            set {
+                this["cBxGamma2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxGlove {
+            get {
+                return ((bool)(this["cBxGlove"]));
+            }
+            set {
+                this["cBxGlove"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxHorizon {
+            get {
+                return ((bool)(this["cBxHorizon"]));
+            }
+            set {
+                this["cBxHorizon"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxHuntsman {
+            get {
+                return ((bool)(this["cBxHuntsman"]));
+            }
+            set {
+                this["cBxHuntsman"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxBravo {
+            get {
+                return ((bool)(this["cBxBravo"]));
+            }
+            set {
+                this["cBxBravo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxBreakout {
+            get {
+                return ((bool)(this["cBxBreakout"]));
+            }
+            set {
+                this["cBxBreakout"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxHydra {
+            get {
+                return ((bool)(this["cBxHydra"]));
+            }
+            set {
+                this["cBxHydra"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxPhoenix {
+            get {
+                return ((bool)(this["cBxPhoenix"]));
+            }
+            set {
+                this["cBxPhoenix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxVanguard {
+            get {
+                return ((bool)(this["cBxVanguard"]));
+            }
+            set {
+                this["cBxVanguard"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxWildfire {
+            get {
+                return ((bool)(this["cBxWildfire"]));
+            }
+            set {
+                this["cBxWildfire"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxPrisma {
+            get {
+                return ((bool)(this["cBxPrisma"]));
+            }
+            set {
+                this["cBxPrisma"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxPrisma2 {
+            get {
+                return ((bool)(this["cBxPrisma2"]));
+            }
+            set {
+                this["cBxPrisma2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxRevolver {
+            get {
+                return ((bool)(this["cBxRevolver"]));
+            }
+            set {
+                this["cBxRevolver"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxShadow {
+            get {
+                return ((bool)(this["cBxShadow"]));
+            }
+            set {
+                this["cBxShadow"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxShatteredWeb {
+            get {
+                return ((bool)(this["cBxShatteredWeb"]));
+            }
+            set {
+                this["cBxShatteredWeb"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxSpectrum {
+            get {
+                return ((bool)(this["cBxSpectrum"]));
+            }
+            set {
+                this["cBxSpectrum"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxSpectrum2 {
+            get {
+                return ((bool)(this["cBxSpectrum2"]));
+            }
+            set {
+                this["cBxSpectrum2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxWinterOffensive {
+            get {
+                return ((bool)(this["cBxWinterOffensive"]));
+            }
+            set {
+                this["cBxWinterOffensive"] = value;
+            }
+        }
     }
 }

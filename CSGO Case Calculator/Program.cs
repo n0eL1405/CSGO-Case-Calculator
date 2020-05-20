@@ -22,7 +22,10 @@ namespace CSGO_Case_Calculator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            Properties.Settings.Default.Reload();
             Application.Run(new Form1());
+            Properties.Settings.Default.Save();
         }
     }
 }
