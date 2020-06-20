@@ -2771,6 +2771,7 @@
             this.Controls.Add(this.btnLoadAll);
             this.Controls.Add(this.btnRefresh);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "CS:GO Case Calculator";
