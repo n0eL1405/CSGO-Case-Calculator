@@ -61,6 +61,7 @@ namespace CSGO_Case_Calculator
             {
                 try
                 {
+
                     HttpResponseMessage response = await client.GetAsync(urlsteammarkt + "Chroma%20Case");
                     response.EnsureSuccessStatusCode();
                     string price = await response.Content.ReadAsStringAsync();
@@ -827,7 +828,7 @@ namespace CSGO_Case_Calculator
             //auto calculate
             if (cBxAC.Checked)
             {
-                SaveAllCases();
+                Calculate();
             }
         }
 
@@ -937,51 +938,8 @@ namespace CSGO_Case_Calculator
             SaveCases.SaveDaten(cases, CaseXML);
         }
 
-        public Form1() => InitializeComponent();
-
-        //Button to reload all prices
-        private async void btnLoad_Click(object sender, EventArgs e)
+        public void Calculate()
         {
-            this.rTxtBxChroma2.Text = "";
-            this.rTxtBxChroma2.Text = "";
-            this.rTxtBxChroma3.Text = "";
-            this.rTxtBxClutch.Text = "";
-            this.rTxtBxCS20.Text = "";
-            this.rTxtBxCSGOWC.Text = "";
-            this.rTxtBxCSGOWC2.Text = "";
-            this.rTxtBxCSGOWC3.Text = "";
-            this.rTxtBxDangerZone.Text = "";
-            this.rTxtBxeSports2013.Text = "";
-            this.rTxtBxeSports2013W.Text = "";
-            this.rTxtBxeSports2014S.Text = "";
-            this.rTxtBxFalchion.Text = "";
-            this.rTxtBxGamma.Text = "";
-            this.rTxtBxGamma2.Text = "";
-            this.rTxtBxGlove.Text = "";
-            this.rTxtBxHorizon.Text = "";
-            this.rTxtBxHuntsman.Text = "";
-            this.rTxtBxBravo.Text = "";
-            this.rTxtBxBreakout.Text = "";
-            this.rTxtBxHydra.Text = "";
-            this.rTxtBxPhoenix.Text = "";
-            this.rTxtBxVanguard.Text = "";
-            this.rTxtBxWildfire.Text = "";
-            this.rTxtBxPrisma.Text = "";
-            this.rTxtBxPrisma2.Text = "";
-            this.rTxtBxRevolver.Text = "";
-            this.rTxtBxShadow.Text = "";
-            this.rTxtBxShatteredWeb.Text = "";
-            this.rTxtBxSpectrum.Text = "";
-            this.rTxtBxSpectrum2.Text = "";
-            this.rTxtBxWinterOffensive.Text = "";
-
-            await Main();
-        }
-
-        //calculate the values
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-
             if (Int32.TryParse(this.rTxtBxChromaA.Text, out aChroma))
             {                                                       
                 this.rTxtBxChromaTV.Text = Convert.ToString(Convert.ToDecimal(this.rTxtBxChroma.Text.Replace("€", "")) * Convert.ToDecimal(aChroma)) + "€";
@@ -1305,6 +1263,53 @@ namespace CSGO_Case_Calculator
             } else { }
         }
 
+        public Form1() => InitializeComponent();
+
+        //Button to reload all prices
+        private async void btnLoad_Click(object sender, EventArgs e)
+        {
+            this.rTxtBxChroma2.Text = "";
+            this.rTxtBxChroma2.Text = "";
+            this.rTxtBxChroma3.Text = "";
+            this.rTxtBxClutch.Text = "";
+            this.rTxtBxCS20.Text = "";
+            this.rTxtBxCSGOWC.Text = "";
+            this.rTxtBxCSGOWC2.Text = "";
+            this.rTxtBxCSGOWC3.Text = "";
+            this.rTxtBxDangerZone.Text = "";
+            this.rTxtBxeSports2013.Text = "";
+            this.rTxtBxeSports2013W.Text = "";
+            this.rTxtBxeSports2014S.Text = "";
+            this.rTxtBxFalchion.Text = "";
+            this.rTxtBxGamma.Text = "";
+            this.rTxtBxGamma2.Text = "";
+            this.rTxtBxGlove.Text = "";
+            this.rTxtBxHorizon.Text = "";
+            this.rTxtBxHuntsman.Text = "";
+            this.rTxtBxBravo.Text = "";
+            this.rTxtBxBreakout.Text = "";
+            this.rTxtBxHydra.Text = "";
+            this.rTxtBxPhoenix.Text = "";
+            this.rTxtBxVanguard.Text = "";
+            this.rTxtBxWildfire.Text = "";
+            this.rTxtBxPrisma.Text = "";
+            this.rTxtBxPrisma2.Text = "";
+            this.rTxtBxRevolver.Text = "";
+            this.rTxtBxShadow.Text = "";
+            this.rTxtBxShatteredWeb.Text = "";
+            this.rTxtBxSpectrum.Text = "";
+            this.rTxtBxSpectrum2.Text = "";
+            this.rTxtBxWinterOffensive.Text = "";
+
+            await Main();
+        }
+
+        //calculate the values
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            Calculate();
+        }
+
         //class to save the amount
         public class SaveCases
         {
@@ -1391,11 +1396,10 @@ namespace CSGO_Case_Calculator
             try
             {
                 SaveAllCases();
-            }
-            catch
-            {
                 MessageBox.Show("Cases saved", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            catch
+            { }
         }
 
         //button to load all saved amounts if something went wrong on startup
