@@ -173,6 +173,7 @@
             this.btnLoadSavedCases = new System.Windows.Forms.Button();
             this.rTxtBxTCA = new System.Windows.Forms.RichTextBox();
             this.lblTCA = new System.Windows.Forms.Label();
+            this.cBxAC = new System.Windows.Forms.CheckBox();
             this.cBxWinterOffensive = new System.Windows.Forms.CheckBox();
             this.cBxSpectrum2 = new System.Windows.Forms.CheckBox();
             this.cBxSpectrum = new System.Windows.Forms.CheckBox();
@@ -2172,7 +2173,7 @@
             this.btnSaveCases.BackColor = System.Drawing.Color.Gray;
             this.btnSaveCases.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSaveCases.Font = new System.Drawing.Font("Noto Sans", 15F);
-            this.btnSaveCases.Location = new System.Drawing.Point(1293, 128);
+            this.btnSaveCases.Location = new System.Drawing.Point(1293, 149);
             this.btnSaveCases.Name = "btnSaveCases";
             this.btnSaveCases.Size = new System.Drawing.Size(126, 39);
             this.btnSaveCases.TabIndex = 149;
@@ -2186,7 +2187,7 @@
             this.btnLoadSavedCases.BackColor = System.Drawing.Color.Gray;
             this.btnLoadSavedCases.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLoadSavedCases.Font = new System.Drawing.Font("Noto Sans", 15F);
-            this.btnLoadSavedCases.Location = new System.Drawing.Point(1293, 173);
+            this.btnLoadSavedCases.Location = new System.Drawing.Point(1293, 194);
             this.btnLoadSavedCases.Name = "btnLoadSavedCases";
             this.btnLoadSavedCases.Size = new System.Drawing.Size(126, 63);
             this.btnLoadSavedCases.TabIndex = 150;
@@ -2220,6 +2221,19 @@
             this.lblTCA.Size = new System.Drawing.Size(107, 54);
             this.lblTCA.TabIndex = 154;
             this.lblTCA.Text = "Total Case Amount:";
+            // 
+            // cBxAC
+            // 
+            this.cBxAC.AutoSize = true;
+            this.cBxAC.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxAC;
+            this.cBxAC.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cBxAC.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxAC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxAC.Location = new System.Drawing.Point(1293, 126);
+            this.cBxAC.Name = "cBxAC";
+            this.cBxAC.Size = new System.Drawing.Size(119, 17);
+            this.cBxAC.TabIndex = 187;
+            this.cBxAC.Text = "Calculate automatic";
+            this.cBxAC.UseVisualStyleBackColor = true;
             // 
             // cBxWinterOffensive
             // 
@@ -2579,6 +2593,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1431, 689);
+            this.Controls.Add(this.cBxAC);
             this.Controls.Add(this.cBxWinterOffensive);
             this.Controls.Add(this.cBxSpectrum2);
             this.Controls.Add(this.cBxSpectrum);
@@ -2942,6 +2957,7 @@
         private System.Windows.Forms.CheckBox cBxSpectrum;
         private System.Windows.Forms.CheckBox cBxSpectrum2;
         private System.Windows.Forms.CheckBox cBxWinterOffensive;
+        private System.Windows.Forms.CheckBox cBxAC;
     }
 }
 

@@ -418,5 +418,17 @@ namespace CSGO_Case_Calculator.Properties {
                 this["cBxWinterOffensive"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxAC {
+            get {
+                return ((bool)(this["cBxAC"]));
+            }
+            set {
+                this["cBxAC"] = value;
+            }
+        }
     }
 }
