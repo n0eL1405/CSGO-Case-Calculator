@@ -5,6 +5,7 @@ TBP = To be published
 
 
 V 1.1 (TBP)
++ Added exit button to prevent closing without saving the cases
 * Changed the location for the XML-file where the amounts are saved
 
 V 1.0
