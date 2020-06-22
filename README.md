@@ -9,4 +9,4 @@ Little program to calculate the value off your CS:GO weapon cases you have.
 
 Amounts and checked boxes will be load on startup
 
-If you want to calculate the prices automatically when loading them, check the "auto calculate" check box
+If you want to calculate the prices automatically when loading them, check the "Calculate automatic" check box

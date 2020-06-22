@@ -1,0 +1,14 @@
+TBP = To be published
+* = change
++ = add
+- = remove
+
+
+V 1.1 (TBP)
++ Added exit button
++ Added dialog to prevent closing without saving
+- Removed ability to maximize the window
+* Changed the location for the XML-file where the amounts are saved
+
+V 1.0
+Release
