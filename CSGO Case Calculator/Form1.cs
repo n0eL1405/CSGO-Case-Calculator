@@ -846,7 +846,7 @@ namespace CSGO_Case_Calculator
             string OLD2CaseXML = OLD2propertyFolder + "\\" + "cases.xml";
 
             string NEWpropertyFolder = Application.StartupPath;
-            string NEWCaseXML = NEWpropertyFolder + "\\" + "cases.xml";
+            string NEWCaseXML = NEWpropertyFolder + "\\files\\cases.xml";
 
             if (File.Exists(NEWCaseXML))
             {
@@ -855,7 +855,7 @@ namespace CSGO_Case_Calculator
                     //amounts a set in the boxes
                     string propertyFolder = Application.StartupPath;
                     //string propertyFolder = Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents") + "\\CSGOCC";
-                    string CaseXML = propertyFolder + "\\" + "cases.xml";
+                    string CaseXML = propertyFolder + "\\files\\cases.xml";
 
                     XmlSerializer xs = new XmlSerializer(typeof(Cases));
                     FileStream read = new FileStream(CaseXML, FileMode.Open, FileAccess.Read, FileShare.Read);
@@ -1065,7 +1065,7 @@ namespace CSGO_Case_Calculator
 
             //set path for xml-file
             string propertyFolder = Application.StartupPath;
-            string CaseXML = propertyFolder + "\\" + "cases.xml";
+            string CaseXML = propertyFolder + "\\files\\cases.xml";
 
             //create fill
             SaveCases.SaveDaten(cases, CaseXML);
@@ -1550,7 +1550,7 @@ namespace CSGO_Case_Calculator
         {
             string propertyFolder = Application.StartupPath;
             //string propertyFolder = Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents") + "\\CSGOCC";
-            string CaseXML = propertyFolder + "\\" + "cases.xml";
+            string CaseXML = propertyFolder + "\\files\\cases.xml";
 
             MessageBox.Show(CaseXML, "test");
 
