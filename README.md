@@ -11,8 +11,10 @@ Amounts and checked boxes will be load on startup
 
 **If you want to calculate the prices automatically when loading them, check the "Calculate automatic" check box**
 
+### [Here you can find the changelogs](Changelogs.txt)  
+
+### FAQ
+
 Q: Why is there a pause between when loading the price of every case?  
 A: When you request the prices too often Steam thinks you try to DDoS the API (witch I'm using to get the prices) and your pc is banned for about an hour from using accesing the API. Don't panic, the ban would NOT effect your account from using Steam normally.
 (If someone knows a good alternative to reduce/ remove the wait time, please be so kind give me the tip)
-
-[Here you can find the changelogs](Changelogs.txt)
