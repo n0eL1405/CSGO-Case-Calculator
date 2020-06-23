@@ -1,4 +1,6 @@
-﻿namespace CSGO_Case_Calculator
+﻿using System.Windows.Forms;
+
+namespace CSGO_Case_Calculator
 {
     partial class Form1
     {
@@ -206,6 +208,7 @@
             this.cBxChroma3 = new System.Windows.Forms.CheckBox();
             this.cBxChroma2 = new System.Windows.Forms.CheckBox();
             this.cBxChroma = new System.Windows.Forms.CheckBox();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnRefresh
@@ -2144,7 +2147,7 @@
             // lblTotalCase
             // 
             this.lblTotalCase.Font = new System.Drawing.Font("Noto Sans", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalCase.Location = new System.Drawing.Point(1288, 562);
+            this.lblTotalCase.Location = new System.Drawing.Point(1288, 505);
             this.lblTotalCase.Name = "lblTotalCase";
             this.lblTotalCase.Size = new System.Drawing.Size(107, 54);
             this.lblTotalCase.TabIndex = 143;
@@ -2158,7 +2161,7 @@
             this.rTxtBxTCV.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.rTxtBxTCV.Font = new System.Drawing.Font("Noto Sans", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxTCV.ForeColor = System.Drawing.Color.White;
-            this.rTxtBxTCV.Location = new System.Drawing.Point(1293, 619);
+            this.rTxtBxTCV.Location = new System.Drawing.Point(1293, 562);
             this.rTxtBxTCV.Multiline = false;
             this.rTxtBxTCV.Name = "rTxtBxTCV";
             this.rTxtBxTCV.ReadOnly = true;
@@ -2203,7 +2206,7 @@
             this.rTxtBxTCA.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.rTxtBxTCA.Font = new System.Drawing.Font("Noto Sans", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxTCA.ForeColor = System.Drawing.Color.White;
-            this.rTxtBxTCA.Location = new System.Drawing.Point(1293, 506);
+            this.rTxtBxTCA.Location = new System.Drawing.Point(1293, 468);
             this.rTxtBxTCA.Multiline = false;
             this.rTxtBxTCA.Name = "rTxtBxTCA";
             this.rTxtBxTCA.ReadOnly = true;
@@ -2216,7 +2219,7 @@
             // lblTCA
             // 
             this.lblTCA.Font = new System.Drawing.Font("Noto Sans", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTCA.Location = new System.Drawing.Point(1288, 446);
+            this.lblTCA.Location = new System.Drawing.Point(1288, 411);
             this.lblTCA.Name = "lblTCA";
             this.lblTCA.Size = new System.Drawing.Size(107, 54);
             this.lblTCA.TabIndex = 154;
@@ -2230,9 +2233,9 @@
             this.cBxAC.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxAC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxAC.Location = new System.Drawing.Point(1293, 126);
             this.cBxAC.Name = "cBxAC";
-            this.cBxAC.Size = new System.Drawing.Size(119, 17);
+            this.cBxAC.Size = new System.Drawing.Size(134, 17);
             this.cBxAC.TabIndex = 187;
-            this.cBxAC.Text = "Calculate automatic";
+            this.cBxAC.Text = "Calculate automatically";
             this.cBxAC.UseVisualStyleBackColor = true;
             // 
             // cBxWinterOffensive
@@ -2587,12 +2590,27 @@
             this.cBxChroma.TabIndex = 155;
             this.cBxChroma.UseVisualStyleBackColor = true;
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Gray;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.Font = new System.Drawing.Font("Noto Sans", 15F);
+            this.btnExit.Location = new System.Drawing.Point(1293, 638);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(126, 39);
+            this.btnExit.TabIndex = 188;
+            this.btnExit.Text = "Exit";
+            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1431, 689);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.cBxAC);
             this.Controls.Add(this.cBxWinterOffensive);
             this.Controls.Add(this.cBxSpectrum2);
@@ -2771,10 +2789,12 @@
             this.Controls.Add(this.btnLoadAll);
             this.Controls.Add(this.btnRefresh);
             this.ForeColor = System.Drawing.Color.White;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "CS:GO Case Calculator";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_Exit);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2959,6 +2979,7 @@
         private System.Windows.Forms.CheckBox cBxSpectrum2;
         private System.Windows.Forms.CheckBox cBxWinterOffensive;
         private System.Windows.Forms.CheckBox cBxAC;
+        private Button btnExit;
     }
 }
 
