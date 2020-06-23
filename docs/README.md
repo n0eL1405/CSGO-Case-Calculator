@@ -9,7 +9,7 @@
 
 Amounts and checked boxes will be load on startup
 
-**If you want to calculate the prices automatically when loading them, check the "Calculate automatic" check box**
+**If you want to calculate the prices automatically when loading them, check the "Calculate automatically" check box**
 
 ### [Here you can find the changelogs](Changelogs.md)  
 
