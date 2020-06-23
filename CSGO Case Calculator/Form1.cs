@@ -1065,7 +1065,6 @@ namespace CSGO_Case_Calculator
 
             //set path for xml-file
             string propertyFolder = Application.StartupPath;
-            //string propertyFolder = Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents") + "\\CSGOCC";
             string CaseXML = propertyFolder + "\\" + "cases.xml";
 
             //create fill
@@ -1542,16 +1541,18 @@ namespace CSGO_Case_Calculator
         }
 
         //open options window
-        //private void btnOptns_Click(object sender, EventArgs e)
-        //{
-            //new Form_Options().Show();
-        //}
+        private void btnOptns_Click_1(object sender, EventArgs e)
+        {
+            new Form_Options().Show();
+        }
 
         private async void Form1_Load(object sender, EventArgs e)
         {
             string propertyFolder = Application.StartupPath;
             //string propertyFolder = Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents") + "\\CSGOCC";
             string CaseXML = propertyFolder + "\\" + "cases.xml";
+
+            MessageBox.Show(CaseXML, "test");
 
             if (File.Exists(CaseXML))
             {

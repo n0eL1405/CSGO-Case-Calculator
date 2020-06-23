@@ -209,6 +209,7 @@ namespace CSGO_Case_Calculator
             this.cBxChroma2 = new System.Windows.Forms.CheckBox();
             this.cBxChroma = new System.Windows.Forms.CheckBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnOptns = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnRefresh
@@ -217,7 +218,7 @@ namespace CSGO_Case_Calculator
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btnRefresh.Location = new System.Drawing.Point(1724, 100);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(168, 48);
             this.btnRefresh.TabIndex = 1;
@@ -232,7 +233,7 @@ namespace CSGO_Case_Calculator
             this.btnLoadAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLoadAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btnLoadAll.Location = new System.Drawing.Point(1724, 15);
-            this.btnLoadAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLoadAll.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoadAll.Name = "btnLoadAll";
             this.btnLoadAll.Size = new System.Drawing.Size(168, 78);
             this.btnLoadAll.TabIndex = 4;
@@ -249,7 +250,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxChroma.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxChroma.ForeColor = System.Drawing.Color.White;
             this.rTxtBxChroma.Location = new System.Drawing.Point(344, 62);
-            this.rTxtBxChroma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxChroma.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxChroma.Multiline = false;
             this.rTxtBxChroma.Name = "rTxtBxChroma";
             this.rTxtBxChroma.ReadOnly = true;
@@ -299,7 +300,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxChroma2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxChroma2.ForeColor = System.Drawing.Color.White;
             this.rTxtBxChroma2.Location = new System.Drawing.Point(344, 108);
-            this.rTxtBxChroma2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxChroma2.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxChroma2.Multiline = false;
             this.rTxtBxChroma2.Name = "rTxtBxChroma2";
             this.rTxtBxChroma2.ReadOnly = true;
@@ -316,7 +317,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxChroma3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxChroma3.ForeColor = System.Drawing.Color.White;
             this.rTxtBxChroma3.Location = new System.Drawing.Point(344, 155);
-            this.rTxtBxChroma3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxChroma3.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxChroma3.Multiline = false;
             this.rTxtBxChroma3.Name = "rTxtBxChroma3";
             this.rTxtBxChroma3.ReadOnly = true;
@@ -333,7 +334,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxClutch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxClutch.ForeColor = System.Drawing.Color.White;
             this.rTxtBxClutch.Location = new System.Drawing.Point(344, 202);
-            this.rTxtBxClutch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxClutch.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxClutch.Multiline = false;
             this.rTxtBxClutch.Name = "rTxtBxClutch";
             this.rTxtBxClutch.ReadOnly = true;
@@ -350,7 +351,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxCS20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxCS20.ForeColor = System.Drawing.Color.White;
             this.rTxtBxCS20.Location = new System.Drawing.Point(344, 249);
-            this.rTxtBxCS20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxCS20.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxCS20.Multiline = false;
             this.rTxtBxCS20.Name = "rTxtBxCS20";
             this.rTxtBxCS20.ReadOnly = true;
@@ -367,7 +368,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxCSGOWC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxCSGOWC.ForeColor = System.Drawing.Color.White;
             this.rTxtBxCSGOWC.Location = new System.Drawing.Point(344, 295);
-            this.rTxtBxCSGOWC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxCSGOWC.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxCSGOWC.Multiline = false;
             this.rTxtBxCSGOWC.Name = "rTxtBxCSGOWC";
             this.rTxtBxCSGOWC.ReadOnly = true;
@@ -384,7 +385,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxCSGOWC2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxCSGOWC2.ForeColor = System.Drawing.Color.White;
             this.rTxtBxCSGOWC2.Location = new System.Drawing.Point(344, 342);
-            this.rTxtBxCSGOWC2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxCSGOWC2.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxCSGOWC2.Multiline = false;
             this.rTxtBxCSGOWC2.Name = "rTxtBxCSGOWC2";
             this.rTxtBxCSGOWC2.ReadOnly = true;
@@ -401,7 +402,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxCSGOWC3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxCSGOWC3.ForeColor = System.Drawing.Color.White;
             this.rTxtBxCSGOWC3.Location = new System.Drawing.Point(344, 389);
-            this.rTxtBxCSGOWC3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxCSGOWC3.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxCSGOWC3.Multiline = false;
             this.rTxtBxCSGOWC3.Name = "rTxtBxCSGOWC3";
             this.rTxtBxCSGOWC3.ReadOnly = true;
@@ -418,7 +419,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxDangerZone.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxDangerZone.ForeColor = System.Drawing.Color.White;
             this.rTxtBxDangerZone.Location = new System.Drawing.Point(344, 436);
-            this.rTxtBxDangerZone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxDangerZone.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxDangerZone.Multiline = false;
             this.rTxtBxDangerZone.Name = "rTxtBxDangerZone";
             this.rTxtBxDangerZone.ReadOnly = true;
@@ -435,7 +436,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxeSports2013.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxeSports2013.ForeColor = System.Drawing.Color.White;
             this.rTxtBxeSports2013.Location = new System.Drawing.Point(344, 482);
-            this.rTxtBxeSports2013.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxeSports2013.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxeSports2013.Multiline = false;
             this.rTxtBxeSports2013.Name = "rTxtBxeSports2013";
             this.rTxtBxeSports2013.ReadOnly = true;
@@ -452,7 +453,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxeSports2013W.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxeSports2013W.ForeColor = System.Drawing.Color.White;
             this.rTxtBxeSports2013W.Location = new System.Drawing.Point(344, 529);
-            this.rTxtBxeSports2013W.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxeSports2013W.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxeSports2013W.Multiline = false;
             this.rTxtBxeSports2013W.Name = "rTxtBxeSports2013W";
             this.rTxtBxeSports2013W.ReadOnly = true;
@@ -469,7 +470,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxeSports2014S.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxeSports2014S.ForeColor = System.Drawing.Color.White;
             this.rTxtBxeSports2014S.Location = new System.Drawing.Point(344, 576);
-            this.rTxtBxeSports2014S.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxeSports2014S.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxeSports2014S.Multiline = false;
             this.rTxtBxeSports2014S.Name = "rTxtBxeSports2014S";
             this.rTxtBxeSports2014S.ReadOnly = true;
@@ -486,7 +487,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxFalchion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxFalchion.ForeColor = System.Drawing.Color.White;
             this.rTxtBxFalchion.Location = new System.Drawing.Point(344, 623);
-            this.rTxtBxFalchion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxFalchion.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxFalchion.Multiline = false;
             this.rTxtBxFalchion.Name = "rTxtBxFalchion";
             this.rTxtBxFalchion.ReadOnly = true;
@@ -503,7 +504,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxGamma.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxGamma.ForeColor = System.Drawing.Color.White;
             this.rTxtBxGamma.Location = new System.Drawing.Point(344, 670);
-            this.rTxtBxGamma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxGamma.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxGamma.Multiline = false;
             this.rTxtBxGamma.Name = "rTxtBxGamma";
             this.rTxtBxGamma.ReadOnly = true;
@@ -520,7 +521,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxGamma2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxGamma2.ForeColor = System.Drawing.Color.White;
             this.rTxtBxGamma2.Location = new System.Drawing.Point(344, 716);
-            this.rTxtBxGamma2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxGamma2.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxGamma2.Multiline = false;
             this.rTxtBxGamma2.Name = "rTxtBxGamma2";
             this.rTxtBxGamma2.ReadOnly = true;
@@ -537,7 +538,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxGlove.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxGlove.ForeColor = System.Drawing.Color.White;
             this.rTxtBxGlove.Location = new System.Drawing.Point(344, 763);
-            this.rTxtBxGlove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxGlove.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxGlove.Multiline = false;
             this.rTxtBxGlove.Name = "rTxtBxGlove";
             this.rTxtBxGlove.ReadOnly = true;
@@ -554,7 +555,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxHorizon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxHorizon.ForeColor = System.Drawing.Color.White;
             this.rTxtBxHorizon.Location = new System.Drawing.Point(1165, 62);
-            this.rTxtBxHorizon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxHorizon.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxHorizon.Multiline = false;
             this.rTxtBxHorizon.Name = "rTxtBxHorizon";
             this.rTxtBxHorizon.ReadOnly = true;
@@ -571,7 +572,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxHuntsman.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxHuntsman.ForeColor = System.Drawing.Color.White;
             this.rTxtBxHuntsman.Location = new System.Drawing.Point(1165, 108);
-            this.rTxtBxHuntsman.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxHuntsman.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxHuntsman.Multiline = false;
             this.rTxtBxHuntsman.Name = "rTxtBxHuntsman";
             this.rTxtBxHuntsman.ReadOnly = true;
@@ -588,7 +589,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxBravo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxBravo.ForeColor = System.Drawing.Color.White;
             this.rTxtBxBravo.Location = new System.Drawing.Point(1165, 155);
-            this.rTxtBxBravo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxBravo.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxBravo.Multiline = false;
             this.rTxtBxBravo.Name = "rTxtBxBravo";
             this.rTxtBxBravo.ReadOnly = true;
@@ -605,7 +606,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxBreakout.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxBreakout.ForeColor = System.Drawing.Color.White;
             this.rTxtBxBreakout.Location = new System.Drawing.Point(1165, 202);
-            this.rTxtBxBreakout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxBreakout.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxBreakout.Multiline = false;
             this.rTxtBxBreakout.Name = "rTxtBxBreakout";
             this.rTxtBxBreakout.ReadOnly = true;
@@ -622,7 +623,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxHydra.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxHydra.ForeColor = System.Drawing.Color.White;
             this.rTxtBxHydra.Location = new System.Drawing.Point(1165, 249);
-            this.rTxtBxHydra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxHydra.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxHydra.Multiline = false;
             this.rTxtBxHydra.Name = "rTxtBxHydra";
             this.rTxtBxHydra.ReadOnly = true;
@@ -639,7 +640,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxPhoenix.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxPhoenix.ForeColor = System.Drawing.Color.White;
             this.rTxtBxPhoenix.Location = new System.Drawing.Point(1165, 295);
-            this.rTxtBxPhoenix.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxPhoenix.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxPhoenix.Multiline = false;
             this.rTxtBxPhoenix.Name = "rTxtBxPhoenix";
             this.rTxtBxPhoenix.ReadOnly = true;
@@ -656,7 +657,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxVanguard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxVanguard.ForeColor = System.Drawing.Color.White;
             this.rTxtBxVanguard.Location = new System.Drawing.Point(1165, 342);
-            this.rTxtBxVanguard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxVanguard.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxVanguard.Multiline = false;
             this.rTxtBxVanguard.Name = "rTxtBxVanguard";
             this.rTxtBxVanguard.ReadOnly = true;
@@ -673,7 +674,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxWildfire.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxWildfire.ForeColor = System.Drawing.Color.White;
             this.rTxtBxWildfire.Location = new System.Drawing.Point(1165, 389);
-            this.rTxtBxWildfire.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxWildfire.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxWildfire.Multiline = false;
             this.rTxtBxWildfire.Name = "rTxtBxWildfire";
             this.rTxtBxWildfire.ReadOnly = true;
@@ -690,7 +691,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxPrisma.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxPrisma.ForeColor = System.Drawing.Color.White;
             this.rTxtBxPrisma.Location = new System.Drawing.Point(1165, 436);
-            this.rTxtBxPrisma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxPrisma.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxPrisma.Multiline = false;
             this.rTxtBxPrisma.Name = "rTxtBxPrisma";
             this.rTxtBxPrisma.ReadOnly = true;
@@ -707,7 +708,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxPrisma2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxPrisma2.ForeColor = System.Drawing.Color.White;
             this.rTxtBxPrisma2.Location = new System.Drawing.Point(1165, 482);
-            this.rTxtBxPrisma2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxPrisma2.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxPrisma2.Multiline = false;
             this.rTxtBxPrisma2.Name = "rTxtBxPrisma2";
             this.rTxtBxPrisma2.ReadOnly = true;
@@ -724,7 +725,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxRevolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxRevolver.ForeColor = System.Drawing.Color.White;
             this.rTxtBxRevolver.Location = new System.Drawing.Point(1165, 529);
-            this.rTxtBxRevolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxRevolver.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxRevolver.Multiline = false;
             this.rTxtBxRevolver.Name = "rTxtBxRevolver";
             this.rTxtBxRevolver.ReadOnly = true;
@@ -741,7 +742,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxShadow.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxShadow.ForeColor = System.Drawing.Color.White;
             this.rTxtBxShadow.Location = new System.Drawing.Point(1165, 576);
-            this.rTxtBxShadow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxShadow.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxShadow.Multiline = false;
             this.rTxtBxShadow.Name = "rTxtBxShadow";
             this.rTxtBxShadow.ReadOnly = true;
@@ -758,7 +759,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxShatteredWeb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxShatteredWeb.ForeColor = System.Drawing.Color.White;
             this.rTxtBxShatteredWeb.Location = new System.Drawing.Point(1165, 623);
-            this.rTxtBxShatteredWeb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxShatteredWeb.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxShatteredWeb.Multiline = false;
             this.rTxtBxShatteredWeb.Name = "rTxtBxShatteredWeb";
             this.rTxtBxShatteredWeb.ReadOnly = true;
@@ -775,7 +776,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxSpectrum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxSpectrum.ForeColor = System.Drawing.Color.White;
             this.rTxtBxSpectrum.Location = new System.Drawing.Point(1165, 670);
-            this.rTxtBxSpectrum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxSpectrum.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxSpectrum.Multiline = false;
             this.rTxtBxSpectrum.Name = "rTxtBxSpectrum";
             this.rTxtBxSpectrum.ReadOnly = true;
@@ -792,7 +793,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxSpectrum2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxSpectrum2.ForeColor = System.Drawing.Color.White;
             this.rTxtBxSpectrum2.Location = new System.Drawing.Point(1165, 716);
-            this.rTxtBxSpectrum2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxSpectrum2.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxSpectrum2.Multiline = false;
             this.rTxtBxSpectrum2.Name = "rTxtBxSpectrum2";
             this.rTxtBxSpectrum2.ReadOnly = true;
@@ -809,7 +810,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxWinterOffensive.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxWinterOffensive.ForeColor = System.Drawing.Color.White;
             this.rTxtBxWinterOffensive.Location = new System.Drawing.Point(1165, 762);
-            this.rTxtBxWinterOffensive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxWinterOffensive.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxWinterOffensive.Multiline = false;
             this.rTxtBxWinterOffensive.Name = "rTxtBxWinterOffensive";
             this.rTxtBxWinterOffensive.ReadOnly = true;
@@ -823,7 +824,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxChromaA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxChromaA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxChromaA.Location = new System.Drawing.Point(525, 62);
-            this.rTxtBxChromaA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxChromaA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxChromaA.Name = "rTxtBxChromaA";
             this.rTxtBxChromaA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxChromaA.Size = new System.Drawing.Size(129, 38);
@@ -838,7 +839,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxChromaTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxChromaTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxChromaTV.Location = new System.Drawing.Point(664, 62);
-            this.rTxtBxChromaTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxChromaTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxChromaTV.Multiline = false;
             this.rTxtBxChromaTV.Name = "rTxtBxChromaTV";
             this.rTxtBxChromaTV.ReadOnly = true;
@@ -853,7 +854,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxChroma2A.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxChroma2A.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxChroma2A.Location = new System.Drawing.Point(525, 108);
-            this.rTxtBxChroma2A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxChroma2A.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxChroma2A.Name = "rTxtBxChroma2A";
             this.rTxtBxChroma2A.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxChroma2A.Size = new System.Drawing.Size(129, 38);
@@ -865,7 +866,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxChroma3A.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxChroma3A.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxChroma3A.Location = new System.Drawing.Point(525, 155);
-            this.rTxtBxChroma3A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxChroma3A.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxChroma3A.Name = "rTxtBxChroma3A";
             this.rTxtBxChroma3A.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxChroma3A.Size = new System.Drawing.Size(129, 38);
@@ -877,7 +878,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxClutchA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxClutchA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxClutchA.Location = new System.Drawing.Point(525, 202);
-            this.rTxtBxClutchA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxClutchA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxClutchA.Name = "rTxtBxClutchA";
             this.rTxtBxClutchA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxClutchA.Size = new System.Drawing.Size(129, 38);
@@ -889,7 +890,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxCS20A.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxCS20A.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxCS20A.Location = new System.Drawing.Point(525, 249);
-            this.rTxtBxCS20A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxCS20A.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxCS20A.Name = "rTxtBxCS20A";
             this.rTxtBxCS20A.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxCS20A.Size = new System.Drawing.Size(129, 38);
@@ -901,7 +902,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxCSGOWCA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxCSGOWCA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxCSGOWCA.Location = new System.Drawing.Point(525, 295);
-            this.rTxtBxCSGOWCA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxCSGOWCA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxCSGOWCA.Name = "rTxtBxCSGOWCA";
             this.rTxtBxCSGOWCA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxCSGOWCA.Size = new System.Drawing.Size(129, 38);
@@ -913,7 +914,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxCSGOWC2A.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxCSGOWC2A.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxCSGOWC2A.Location = new System.Drawing.Point(525, 342);
-            this.rTxtBxCSGOWC2A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxCSGOWC2A.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxCSGOWC2A.Name = "rTxtBxCSGOWC2A";
             this.rTxtBxCSGOWC2A.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxCSGOWC2A.Size = new System.Drawing.Size(129, 38);
@@ -925,7 +926,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxCSGOWC3A.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxCSGOWC3A.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxCSGOWC3A.Location = new System.Drawing.Point(525, 389);
-            this.rTxtBxCSGOWC3A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxCSGOWC3A.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxCSGOWC3A.Name = "rTxtBxCSGOWC3A";
             this.rTxtBxCSGOWC3A.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxCSGOWC3A.Size = new System.Drawing.Size(129, 38);
@@ -937,7 +938,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxDangerZoneA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxDangerZoneA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxDangerZoneA.Location = new System.Drawing.Point(525, 436);
-            this.rTxtBxDangerZoneA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxDangerZoneA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxDangerZoneA.Name = "rTxtBxDangerZoneA";
             this.rTxtBxDangerZoneA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxDangerZoneA.Size = new System.Drawing.Size(129, 38);
@@ -949,7 +950,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxeSports2013A.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxeSports2013A.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxeSports2013A.Location = new System.Drawing.Point(525, 482);
-            this.rTxtBxeSports2013A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxeSports2013A.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxeSports2013A.Name = "rTxtBxeSports2013A";
             this.rTxtBxeSports2013A.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxeSports2013A.Size = new System.Drawing.Size(129, 38);
@@ -961,7 +962,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxeSports2013WA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxeSports2013WA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxeSports2013WA.Location = new System.Drawing.Point(525, 529);
-            this.rTxtBxeSports2013WA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxeSports2013WA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxeSports2013WA.Name = "rTxtBxeSports2013WA";
             this.rTxtBxeSports2013WA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxeSports2013WA.Size = new System.Drawing.Size(129, 38);
@@ -973,7 +974,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxeSports2014SA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxeSports2014SA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxeSports2014SA.Location = new System.Drawing.Point(525, 576);
-            this.rTxtBxeSports2014SA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxeSports2014SA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxeSports2014SA.Name = "rTxtBxeSports2014SA";
             this.rTxtBxeSports2014SA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxeSports2014SA.Size = new System.Drawing.Size(129, 38);
@@ -985,7 +986,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxFalchionA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxFalchionA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxFalchionA.Location = new System.Drawing.Point(525, 623);
-            this.rTxtBxFalchionA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxFalchionA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxFalchionA.Name = "rTxtBxFalchionA";
             this.rTxtBxFalchionA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxFalchionA.Size = new System.Drawing.Size(129, 38);
@@ -997,7 +998,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxGammaA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxGammaA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxGammaA.Location = new System.Drawing.Point(525, 670);
-            this.rTxtBxGammaA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxGammaA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxGammaA.Name = "rTxtBxGammaA";
             this.rTxtBxGammaA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxGammaA.Size = new System.Drawing.Size(129, 38);
@@ -1009,7 +1010,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxGamma2A.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxGamma2A.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxGamma2A.Location = new System.Drawing.Point(525, 716);
-            this.rTxtBxGamma2A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxGamma2A.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxGamma2A.Name = "rTxtBxGamma2A";
             this.rTxtBxGamma2A.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxGamma2A.Size = new System.Drawing.Size(129, 38);
@@ -1021,7 +1022,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxGloveA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxGloveA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxGloveA.Location = new System.Drawing.Point(525, 763);
-            this.rTxtBxGloveA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxGloveA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxGloveA.Name = "rTxtBxGloveA";
             this.rTxtBxGloveA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxGloveA.Size = new System.Drawing.Size(129, 38);
@@ -1036,7 +1037,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxChroma2TV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxChroma2TV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxChroma2TV.Location = new System.Drawing.Point(664, 108);
-            this.rTxtBxChroma2TV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxChroma2TV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxChroma2TV.Multiline = false;
             this.rTxtBxChroma2TV.Name = "rTxtBxChroma2TV";
             this.rTxtBxChroma2TV.ReadOnly = true;
@@ -1053,7 +1054,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxChroma3TV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxChroma3TV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxChroma3TV.Location = new System.Drawing.Point(664, 155);
-            this.rTxtBxChroma3TV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxChroma3TV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxChroma3TV.Multiline = false;
             this.rTxtBxChroma3TV.Name = "rTxtBxChroma3TV";
             this.rTxtBxChroma3TV.ReadOnly = true;
@@ -1070,7 +1071,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxClutchTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxClutchTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxClutchTV.Location = new System.Drawing.Point(664, 202);
-            this.rTxtBxClutchTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxClutchTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxClutchTV.Multiline = false;
             this.rTxtBxClutchTV.Name = "rTxtBxClutchTV";
             this.rTxtBxClutchTV.ReadOnly = true;
@@ -1087,7 +1088,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxCS20TV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxCS20TV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxCS20TV.Location = new System.Drawing.Point(664, 249);
-            this.rTxtBxCS20TV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxCS20TV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxCS20TV.Multiline = false;
             this.rTxtBxCS20TV.Name = "rTxtBxCS20TV";
             this.rTxtBxCS20TV.ReadOnly = true;
@@ -1104,7 +1105,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxCSGOWCTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxCSGOWCTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxCSGOWCTV.Location = new System.Drawing.Point(664, 295);
-            this.rTxtBxCSGOWCTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxCSGOWCTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxCSGOWCTV.Multiline = false;
             this.rTxtBxCSGOWCTV.Name = "rTxtBxCSGOWCTV";
             this.rTxtBxCSGOWCTV.ReadOnly = true;
@@ -1121,7 +1122,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxCSGOWC2TV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxCSGOWC2TV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxCSGOWC2TV.Location = new System.Drawing.Point(664, 342);
-            this.rTxtBxCSGOWC2TV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxCSGOWC2TV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxCSGOWC2TV.Multiline = false;
             this.rTxtBxCSGOWC2TV.Name = "rTxtBxCSGOWC2TV";
             this.rTxtBxCSGOWC2TV.ReadOnly = true;
@@ -1138,7 +1139,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxCSGOWC3TV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxCSGOWC3TV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxCSGOWC3TV.Location = new System.Drawing.Point(664, 389);
-            this.rTxtBxCSGOWC3TV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxCSGOWC3TV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxCSGOWC3TV.Multiline = false;
             this.rTxtBxCSGOWC3TV.Name = "rTxtBxCSGOWC3TV";
             this.rTxtBxCSGOWC3TV.ReadOnly = true;
@@ -1155,7 +1156,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxDangerZoneTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxDangerZoneTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxDangerZoneTV.Location = new System.Drawing.Point(664, 436);
-            this.rTxtBxDangerZoneTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxDangerZoneTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxDangerZoneTV.Multiline = false;
             this.rTxtBxDangerZoneTV.Name = "rTxtBxDangerZoneTV";
             this.rTxtBxDangerZoneTV.ReadOnly = true;
@@ -1172,7 +1173,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxeSports2013TV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxeSports2013TV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxeSports2013TV.Location = new System.Drawing.Point(664, 482);
-            this.rTxtBxeSports2013TV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxeSports2013TV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxeSports2013TV.Multiline = false;
             this.rTxtBxeSports2013TV.Name = "rTxtBxeSports2013TV";
             this.rTxtBxeSports2013TV.ReadOnly = true;
@@ -1189,7 +1190,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxeSports2013WTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxeSports2013WTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxeSports2013WTV.Location = new System.Drawing.Point(664, 529);
-            this.rTxtBxeSports2013WTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxeSports2013WTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxeSports2013WTV.Multiline = false;
             this.rTxtBxeSports2013WTV.Name = "rTxtBxeSports2013WTV";
             this.rTxtBxeSports2013WTV.ReadOnly = true;
@@ -1206,7 +1207,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxeSports2014STV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxeSports2014STV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxeSports2014STV.Location = new System.Drawing.Point(664, 576);
-            this.rTxtBxeSports2014STV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxeSports2014STV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxeSports2014STV.Multiline = false;
             this.rTxtBxeSports2014STV.Name = "rTxtBxeSports2014STV";
             this.rTxtBxeSports2014STV.ReadOnly = true;
@@ -1223,7 +1224,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxFalchionTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxFalchionTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxFalchionTV.Location = new System.Drawing.Point(664, 623);
-            this.rTxtBxFalchionTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxFalchionTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxFalchionTV.Multiline = false;
             this.rTxtBxFalchionTV.Name = "rTxtBxFalchionTV";
             this.rTxtBxFalchionTV.ReadOnly = true;
@@ -1240,7 +1241,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxGammaTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxGammaTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxGammaTV.Location = new System.Drawing.Point(664, 670);
-            this.rTxtBxGammaTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxGammaTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxGammaTV.Multiline = false;
             this.rTxtBxGammaTV.Name = "rTxtBxGammaTV";
             this.rTxtBxGammaTV.ReadOnly = true;
@@ -1257,7 +1258,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxGamma2TV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxGamma2TV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxGamma2TV.Location = new System.Drawing.Point(664, 716);
-            this.rTxtBxGamma2TV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxGamma2TV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxGamma2TV.Multiline = false;
             this.rTxtBxGamma2TV.Name = "rTxtBxGamma2TV";
             this.rTxtBxGamma2TV.ReadOnly = true;
@@ -1274,7 +1275,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxGloveTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxGloveTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxGloveTV.Location = new System.Drawing.Point(664, 763);
-            this.rTxtBxGloveTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxGloveTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxGloveTV.Multiline = false;
             this.rTxtBxGloveTV.Name = "rTxtBxGloveTV";
             this.rTxtBxGloveTV.ReadOnly = true;
@@ -1299,7 +1300,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxHorizonA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxHorizonA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxHorizonA.Location = new System.Drawing.Point(1347, 62);
-            this.rTxtBxHorizonA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxHorizonA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxHorizonA.Name = "rTxtBxHorizonA";
             this.rTxtBxHorizonA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxHorizonA.Size = new System.Drawing.Size(129, 38);
@@ -1311,7 +1312,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxHuntsmanA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxHuntsmanA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxHuntsmanA.Location = new System.Drawing.Point(1347, 108);
-            this.rTxtBxHuntsmanA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxHuntsmanA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxHuntsmanA.Name = "rTxtBxHuntsmanA";
             this.rTxtBxHuntsmanA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxHuntsmanA.Size = new System.Drawing.Size(129, 38);
@@ -1323,7 +1324,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxBravoA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxBravoA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxBravoA.Location = new System.Drawing.Point(1347, 155);
-            this.rTxtBxBravoA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxBravoA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxBravoA.Name = "rTxtBxBravoA";
             this.rTxtBxBravoA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxBravoA.Size = new System.Drawing.Size(129, 38);
@@ -1335,7 +1336,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxBreakoutA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxBreakoutA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxBreakoutA.Location = new System.Drawing.Point(1347, 202);
-            this.rTxtBxBreakoutA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxBreakoutA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxBreakoutA.Name = "rTxtBxBreakoutA";
             this.rTxtBxBreakoutA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxBreakoutA.Size = new System.Drawing.Size(129, 38);
@@ -1347,7 +1348,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxHydraA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxHydraA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxHydraA.Location = new System.Drawing.Point(1347, 249);
-            this.rTxtBxHydraA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxHydraA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxHydraA.Name = "rTxtBxHydraA";
             this.rTxtBxHydraA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxHydraA.Size = new System.Drawing.Size(129, 38);
@@ -1359,7 +1360,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxPhoenixA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxPhoenixA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxPhoenixA.Location = new System.Drawing.Point(1347, 295);
-            this.rTxtBxPhoenixA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxPhoenixA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxPhoenixA.Name = "rTxtBxPhoenixA";
             this.rTxtBxPhoenixA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxPhoenixA.Size = new System.Drawing.Size(129, 38);
@@ -1371,7 +1372,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxVanguardA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxVanguardA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxVanguardA.Location = new System.Drawing.Point(1347, 342);
-            this.rTxtBxVanguardA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxVanguardA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxVanguardA.Name = "rTxtBxVanguardA";
             this.rTxtBxVanguardA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxVanguardA.Size = new System.Drawing.Size(129, 38);
@@ -1383,7 +1384,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxWildfireA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxWildfireA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxWildfireA.Location = new System.Drawing.Point(1347, 389);
-            this.rTxtBxWildfireA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxWildfireA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxWildfireA.Name = "rTxtBxWildfireA";
             this.rTxtBxWildfireA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxWildfireA.Size = new System.Drawing.Size(129, 38);
@@ -1395,7 +1396,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxPrismaA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxPrismaA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxPrismaA.Location = new System.Drawing.Point(1347, 436);
-            this.rTxtBxPrismaA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxPrismaA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxPrismaA.Name = "rTxtBxPrismaA";
             this.rTxtBxPrismaA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxPrismaA.Size = new System.Drawing.Size(129, 38);
@@ -1407,7 +1408,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxPrisma2A.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxPrisma2A.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxPrisma2A.Location = new System.Drawing.Point(1347, 482);
-            this.rTxtBxPrisma2A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxPrisma2A.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxPrisma2A.Name = "rTxtBxPrisma2A";
             this.rTxtBxPrisma2A.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxPrisma2A.Size = new System.Drawing.Size(129, 38);
@@ -1419,7 +1420,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxRevolverA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxRevolverA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxRevolverA.Location = new System.Drawing.Point(1347, 529);
-            this.rTxtBxRevolverA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxRevolverA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxRevolverA.Name = "rTxtBxRevolverA";
             this.rTxtBxRevolverA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxRevolverA.Size = new System.Drawing.Size(129, 38);
@@ -1431,7 +1432,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxShadowA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxShadowA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxShadowA.Location = new System.Drawing.Point(1347, 576);
-            this.rTxtBxShadowA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxShadowA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxShadowA.Name = "rTxtBxShadowA";
             this.rTxtBxShadowA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxShadowA.Size = new System.Drawing.Size(129, 38);
@@ -1443,7 +1444,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxShatteredWebA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxShatteredWebA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxShatteredWebA.Location = new System.Drawing.Point(1347, 623);
-            this.rTxtBxShatteredWebA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxShatteredWebA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxShatteredWebA.Name = "rTxtBxShatteredWebA";
             this.rTxtBxShatteredWebA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxShatteredWebA.Size = new System.Drawing.Size(129, 38);
@@ -1455,7 +1456,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxSpectrumA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxSpectrumA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxSpectrumA.Location = new System.Drawing.Point(1347, 670);
-            this.rTxtBxSpectrumA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxSpectrumA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxSpectrumA.Name = "rTxtBxSpectrumA";
             this.rTxtBxSpectrumA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxSpectrumA.Size = new System.Drawing.Size(129, 38);
@@ -1467,7 +1468,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxSpectrum2A.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxSpectrum2A.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxSpectrum2A.Location = new System.Drawing.Point(1347, 715);
-            this.rTxtBxSpectrum2A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxSpectrum2A.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxSpectrum2A.Name = "rTxtBxSpectrum2A";
             this.rTxtBxSpectrum2A.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxSpectrum2A.Size = new System.Drawing.Size(129, 38);
@@ -1479,7 +1480,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxWinterOffensiveA.BackColor = System.Drawing.Color.Silver;
             this.rTxtBxWinterOffensiveA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rTxtBxWinterOffensiveA.Location = new System.Drawing.Point(1347, 762);
-            this.rTxtBxWinterOffensiveA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxWinterOffensiveA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxWinterOffensiveA.Name = "rTxtBxWinterOffensiveA";
             this.rTxtBxWinterOffensiveA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rTxtBxWinterOffensiveA.Size = new System.Drawing.Size(129, 38);
@@ -1505,7 +1506,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxHorizonTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxHorizonTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxHorizonTV.Location = new System.Drawing.Point(1485, 62);
-            this.rTxtBxHorizonTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxHorizonTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxHorizonTV.Multiline = false;
             this.rTxtBxHorizonTV.Name = "rTxtBxHorizonTV";
             this.rTxtBxHorizonTV.ReadOnly = true;
@@ -1522,7 +1523,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxHuntsmanTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxHuntsmanTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxHuntsmanTV.Location = new System.Drawing.Point(1485, 108);
-            this.rTxtBxHuntsmanTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxHuntsmanTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxHuntsmanTV.Multiline = false;
             this.rTxtBxHuntsmanTV.Name = "rTxtBxHuntsmanTV";
             this.rTxtBxHuntsmanTV.ReadOnly = true;
@@ -1539,7 +1540,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxBravoTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxBravoTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxBravoTV.Location = new System.Drawing.Point(1485, 155);
-            this.rTxtBxBravoTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxBravoTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxBravoTV.Multiline = false;
             this.rTxtBxBravoTV.Name = "rTxtBxBravoTV";
             this.rTxtBxBravoTV.ReadOnly = true;
@@ -1556,7 +1557,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxBreakoutTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxBreakoutTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxBreakoutTV.Location = new System.Drawing.Point(1485, 202);
-            this.rTxtBxBreakoutTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxBreakoutTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxBreakoutTV.Multiline = false;
             this.rTxtBxBreakoutTV.Name = "rTxtBxBreakoutTV";
             this.rTxtBxBreakoutTV.ReadOnly = true;
@@ -1573,7 +1574,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxHydraTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxHydraTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxHydraTV.Location = new System.Drawing.Point(1485, 249);
-            this.rTxtBxHydraTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxHydraTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxHydraTV.Multiline = false;
             this.rTxtBxHydraTV.Name = "rTxtBxHydraTV";
             this.rTxtBxHydraTV.ReadOnly = true;
@@ -1590,7 +1591,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxPhoenixTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxPhoenixTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxPhoenixTV.Location = new System.Drawing.Point(1485, 295);
-            this.rTxtBxPhoenixTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxPhoenixTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxPhoenixTV.Multiline = false;
             this.rTxtBxPhoenixTV.Name = "rTxtBxPhoenixTV";
             this.rTxtBxPhoenixTV.ReadOnly = true;
@@ -1607,7 +1608,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxVanguardTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxVanguardTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxVanguardTV.Location = new System.Drawing.Point(1485, 342);
-            this.rTxtBxVanguardTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxVanguardTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxVanguardTV.Multiline = false;
             this.rTxtBxVanguardTV.Name = "rTxtBxVanguardTV";
             this.rTxtBxVanguardTV.ReadOnly = true;
@@ -1624,7 +1625,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxWildfireTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxWildfireTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxWildfireTV.Location = new System.Drawing.Point(1485, 389);
-            this.rTxtBxWildfireTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxWildfireTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxWildfireTV.Multiline = false;
             this.rTxtBxWildfireTV.Name = "rTxtBxWildfireTV";
             this.rTxtBxWildfireTV.ReadOnly = true;
@@ -1641,7 +1642,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxPrismaTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxPrismaTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxPrismaTV.Location = new System.Drawing.Point(1485, 436);
-            this.rTxtBxPrismaTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxPrismaTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxPrismaTV.Multiline = false;
             this.rTxtBxPrismaTV.Name = "rTxtBxPrismaTV";
             this.rTxtBxPrismaTV.ReadOnly = true;
@@ -1658,7 +1659,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxPrisma2TV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxPrisma2TV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxPrisma2TV.Location = new System.Drawing.Point(1485, 482);
-            this.rTxtBxPrisma2TV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxPrisma2TV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxPrisma2TV.Multiline = false;
             this.rTxtBxPrisma2TV.Name = "rTxtBxPrisma2TV";
             this.rTxtBxPrisma2TV.ReadOnly = true;
@@ -1675,7 +1676,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxRevolverTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxRevolverTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxRevolverTV.Location = new System.Drawing.Point(1485, 529);
-            this.rTxtBxRevolverTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxRevolverTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxRevolverTV.Multiline = false;
             this.rTxtBxRevolverTV.Name = "rTxtBxRevolverTV";
             this.rTxtBxRevolverTV.ReadOnly = true;
@@ -1692,7 +1693,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxShadowTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxShadowTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxShadowTV.Location = new System.Drawing.Point(1485, 576);
-            this.rTxtBxShadowTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxShadowTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxShadowTV.Multiline = false;
             this.rTxtBxShadowTV.Name = "rTxtBxShadowTV";
             this.rTxtBxShadowTV.ReadOnly = true;
@@ -1709,7 +1710,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxShatteredWebTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxShatteredWebTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxShatteredWebTV.Location = new System.Drawing.Point(1485, 623);
-            this.rTxtBxShatteredWebTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxShatteredWebTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxShatteredWebTV.Multiline = false;
             this.rTxtBxShatteredWebTV.Name = "rTxtBxShatteredWebTV";
             this.rTxtBxShatteredWebTV.ReadOnly = true;
@@ -1726,7 +1727,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxSpectrumTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxSpectrumTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxSpectrumTV.Location = new System.Drawing.Point(1485, 670);
-            this.rTxtBxSpectrumTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxSpectrumTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxSpectrumTV.Multiline = false;
             this.rTxtBxSpectrumTV.Name = "rTxtBxSpectrumTV";
             this.rTxtBxSpectrumTV.ReadOnly = true;
@@ -1743,7 +1744,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxSpectrum2TV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxSpectrum2TV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxSpectrum2TV.Location = new System.Drawing.Point(1485, 716);
-            this.rTxtBxSpectrum2TV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxSpectrum2TV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxSpectrum2TV.Multiline = false;
             this.rTxtBxSpectrum2TV.Name = "rTxtBxSpectrum2TV";
             this.rTxtBxSpectrum2TV.ReadOnly = true;
@@ -1760,7 +1761,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxWinterOffensiveTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxWinterOffensiveTV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxWinterOffensiveTV.Location = new System.Drawing.Point(1485, 762);
-            this.rTxtBxWinterOffensiveTV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxWinterOffensiveTV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxWinterOffensiveTV.Multiline = false;
             this.rTxtBxWinterOffensiveTV.Name = "rTxtBxWinterOffensiveTV";
             this.rTxtBxWinterOffensiveTV.ReadOnly = true;
@@ -2301,7 +2302,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxTCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxTCV.ForeColor = System.Drawing.Color.White;
             this.rTxtBxTCV.Location = new System.Drawing.Point(1724, 656);
-            this.rTxtBxTCV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxTCV.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxTCV.Multiline = false;
             this.rTxtBxTCV.Name = "rTxtBxTCV";
             this.rTxtBxTCV.ReadOnly = true;
@@ -2317,7 +2318,7 @@ namespace CSGO_Case_Calculator
             this.btnSaveCases.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSaveCases.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btnSaveCases.Location = new System.Drawing.Point(1724, 183);
-            this.btnSaveCases.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSaveCases.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveCases.Name = "btnSaveCases";
             this.btnSaveCases.Size = new System.Drawing.Size(168, 48);
             this.btnSaveCases.TabIndex = 149;
@@ -2332,7 +2333,7 @@ namespace CSGO_Case_Calculator
             this.btnLoadSavedCases.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLoadSavedCases.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btnLoadSavedCases.Location = new System.Drawing.Point(1724, 239);
-            this.btnLoadSavedCases.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLoadSavedCases.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoadSavedCases.Name = "btnLoadSavedCases";
             this.btnLoadSavedCases.Size = new System.Drawing.Size(168, 78);
             this.btnLoadSavedCases.TabIndex = 150;
@@ -2349,7 +2350,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxTCA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtBxTCA.ForeColor = System.Drawing.Color.White;
             this.rTxtBxTCA.Location = new System.Drawing.Point(1724, 525);
-            this.rTxtBxTCA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rTxtBxTCA.Margin = new System.Windows.Forms.Padding(4);
             this.rTxtBxTCA.Multiline = false;
             this.rTxtBxTCA.Name = "rTxtBxTCA";
             this.rTxtBxTCA.ReadOnly = true;
@@ -2376,7 +2377,7 @@ namespace CSGO_Case_Calculator
             this.cBxAC.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cBxAC.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxAC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxAC.Location = new System.Drawing.Point(1724, 155);
-            this.cBxAC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxAC.Margin = new System.Windows.Forms.Padding(4);
             this.cBxAC.Name = "cBxAC";
             this.cBxAC.Size = new System.Drawing.Size(174, 21);
             this.cBxAC.TabIndex = 187;
@@ -2389,7 +2390,7 @@ namespace CSGO_Case_Calculator
             this.cBxWinterOffensive.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxWinterOffensive;
             this.cBxWinterOffensive.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxWinterOffensive", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxWinterOffensive.Location = new System.Drawing.Point(1137, 785);
-            this.cBxWinterOffensive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxWinterOffensive.Margin = new System.Windows.Forms.Padding(4);
             this.cBxWinterOffensive.Name = "cBxWinterOffensive";
             this.cBxWinterOffensive.Size = new System.Drawing.Size(18, 17);
             this.cBxWinterOffensive.TabIndex = 186;
@@ -2401,7 +2402,7 @@ namespace CSGO_Case_Calculator
             this.cBxSpectrum2.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxSpectrum2;
             this.cBxSpectrum2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxSpectrum2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxSpectrum2.Location = new System.Drawing.Point(1137, 741);
-            this.cBxSpectrum2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxSpectrum2.Margin = new System.Windows.Forms.Padding(4);
             this.cBxSpectrum2.Name = "cBxSpectrum2";
             this.cBxSpectrum2.Size = new System.Drawing.Size(18, 17);
             this.cBxSpectrum2.TabIndex = 185;
@@ -2413,7 +2414,7 @@ namespace CSGO_Case_Calculator
             this.cBxSpectrum.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxSpectrum;
             this.cBxSpectrum.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxSpectrum", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxSpectrum.Location = new System.Drawing.Point(1137, 692);
-            this.cBxSpectrum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxSpectrum.Margin = new System.Windows.Forms.Padding(4);
             this.cBxSpectrum.Name = "cBxSpectrum";
             this.cBxSpectrum.Size = new System.Drawing.Size(18, 17);
             this.cBxSpectrum.TabIndex = 184;
@@ -2425,7 +2426,7 @@ namespace CSGO_Case_Calculator
             this.cBxShatteredWeb.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxShatteredWeb;
             this.cBxShatteredWeb.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxShatteredWeb", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxShatteredWeb.Location = new System.Drawing.Point(1137, 645);
-            this.cBxShatteredWeb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxShatteredWeb.Margin = new System.Windows.Forms.Padding(4);
             this.cBxShatteredWeb.Name = "cBxShatteredWeb";
             this.cBxShatteredWeb.Size = new System.Drawing.Size(18, 17);
             this.cBxShatteredWeb.TabIndex = 183;
@@ -2437,7 +2438,7 @@ namespace CSGO_Case_Calculator
             this.cBxShadow.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxShadow;
             this.cBxShadow.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxShadow", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxShadow.Location = new System.Drawing.Point(1137, 598);
-            this.cBxShadow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxShadow.Margin = new System.Windows.Forms.Padding(4);
             this.cBxShadow.Name = "cBxShadow";
             this.cBxShadow.Size = new System.Drawing.Size(18, 17);
             this.cBxShadow.TabIndex = 182;
@@ -2449,7 +2450,7 @@ namespace CSGO_Case_Calculator
             this.cBxRevolver.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxRevolver;
             this.cBxRevolver.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxRevolver", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxRevolver.Location = new System.Drawing.Point(1137, 551);
-            this.cBxRevolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxRevolver.Margin = new System.Windows.Forms.Padding(4);
             this.cBxRevolver.Name = "cBxRevolver";
             this.cBxRevolver.Size = new System.Drawing.Size(18, 17);
             this.cBxRevolver.TabIndex = 181;
@@ -2461,7 +2462,7 @@ namespace CSGO_Case_Calculator
             this.cBxPrisma2.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxPrisma2;
             this.cBxPrisma2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxPrisma2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxPrisma2.Location = new System.Drawing.Point(1137, 505);
-            this.cBxPrisma2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxPrisma2.Margin = new System.Windows.Forms.Padding(4);
             this.cBxPrisma2.Name = "cBxPrisma2";
             this.cBxPrisma2.Size = new System.Drawing.Size(18, 17);
             this.cBxPrisma2.TabIndex = 180;
@@ -2473,7 +2474,7 @@ namespace CSGO_Case_Calculator
             this.cBxPrisma.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxPrisma;
             this.cBxPrisma.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxPrisma", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxPrisma.Location = new System.Drawing.Point(1137, 458);
-            this.cBxPrisma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxPrisma.Margin = new System.Windows.Forms.Padding(4);
             this.cBxPrisma.Name = "cBxPrisma";
             this.cBxPrisma.Size = new System.Drawing.Size(18, 17);
             this.cBxPrisma.TabIndex = 179;
@@ -2485,7 +2486,7 @@ namespace CSGO_Case_Calculator
             this.cBxWildfire.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxWildfire;
             this.cBxWildfire.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxWildfire", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxWildfire.Location = new System.Drawing.Point(1137, 411);
-            this.cBxWildfire.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxWildfire.Margin = new System.Windows.Forms.Padding(4);
             this.cBxWildfire.Name = "cBxWildfire";
             this.cBxWildfire.Size = new System.Drawing.Size(18, 17);
             this.cBxWildfire.TabIndex = 178;
@@ -2497,7 +2498,7 @@ namespace CSGO_Case_Calculator
             this.cBxVanguard.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxVanguard;
             this.cBxVanguard.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxVanguard", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxVanguard.Location = new System.Drawing.Point(1137, 364);
-            this.cBxVanguard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxVanguard.Margin = new System.Windows.Forms.Padding(4);
             this.cBxVanguard.Name = "cBxVanguard";
             this.cBxVanguard.Size = new System.Drawing.Size(18, 17);
             this.cBxVanguard.TabIndex = 177;
@@ -2509,7 +2510,7 @@ namespace CSGO_Case_Calculator
             this.cBxPhoenix.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxPhoenix;
             this.cBxPhoenix.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxPhoenix", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxPhoenix.Location = new System.Drawing.Point(1137, 318);
-            this.cBxPhoenix.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxPhoenix.Margin = new System.Windows.Forms.Padding(4);
             this.cBxPhoenix.Name = "cBxPhoenix";
             this.cBxPhoenix.Size = new System.Drawing.Size(18, 17);
             this.cBxPhoenix.TabIndex = 176;
@@ -2521,7 +2522,7 @@ namespace CSGO_Case_Calculator
             this.cBxHydra.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxHydra;
             this.cBxHydra.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxHydra", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxHydra.Location = new System.Drawing.Point(1137, 271);
-            this.cBxHydra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxHydra.Margin = new System.Windows.Forms.Padding(4);
             this.cBxHydra.Name = "cBxHydra";
             this.cBxHydra.Size = new System.Drawing.Size(18, 17);
             this.cBxHydra.TabIndex = 175;
@@ -2533,7 +2534,7 @@ namespace CSGO_Case_Calculator
             this.cBxBreakout.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxBreakout;
             this.cBxBreakout.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxBreakout", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxBreakout.Location = new System.Drawing.Point(1137, 224);
-            this.cBxBreakout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxBreakout.Margin = new System.Windows.Forms.Padding(4);
             this.cBxBreakout.Name = "cBxBreakout";
             this.cBxBreakout.Size = new System.Drawing.Size(18, 17);
             this.cBxBreakout.TabIndex = 174;
@@ -2545,7 +2546,7 @@ namespace CSGO_Case_Calculator
             this.cBxBravo.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxBravo;
             this.cBxBravo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxBravo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxBravo.Location = new System.Drawing.Point(1137, 181);
-            this.cBxBravo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxBravo.Margin = new System.Windows.Forms.Padding(4);
             this.cBxBravo.Name = "cBxBravo";
             this.cBxBravo.Size = new System.Drawing.Size(18, 17);
             this.cBxBravo.TabIndex = 173;
@@ -2557,7 +2558,7 @@ namespace CSGO_Case_Calculator
             this.cBxHuntsman.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxHuntsman;
             this.cBxHuntsman.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxHuntsman", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxHuntsman.Location = new System.Drawing.Point(1137, 130);
-            this.cBxHuntsman.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxHuntsman.Margin = new System.Windows.Forms.Padding(4);
             this.cBxHuntsman.Name = "cBxHuntsman";
             this.cBxHuntsman.Size = new System.Drawing.Size(18, 17);
             this.cBxHuntsman.TabIndex = 172;
@@ -2569,7 +2570,7 @@ namespace CSGO_Case_Calculator
             this.cBxHorizon.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxHorizon;
             this.cBxHorizon.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxHorizon", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxHorizon.Location = new System.Drawing.Point(1137, 86);
-            this.cBxHorizon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxHorizon.Margin = new System.Windows.Forms.Padding(4);
             this.cBxHorizon.Name = "cBxHorizon";
             this.cBxHorizon.Size = new System.Drawing.Size(18, 17);
             this.cBxHorizon.TabIndex = 171;
@@ -2581,7 +2582,7 @@ namespace CSGO_Case_Calculator
             this.cBxGamma2.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxGamma2;
             this.cBxGamma2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxGamma2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxGamma2.Location = new System.Drawing.Point(316, 741);
-            this.cBxGamma2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxGamma2.Margin = new System.Windows.Forms.Padding(4);
             this.cBxGamma2.Name = "cBxGamma2";
             this.cBxGamma2.Size = new System.Drawing.Size(18, 17);
             this.cBxGamma2.TabIndex = 170;
@@ -2593,7 +2594,7 @@ namespace CSGO_Case_Calculator
             this.cBxGlove.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxGlove;
             this.cBxGlove.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxGlove", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxGlove.Location = new System.Drawing.Point(316, 785);
-            this.cBxGlove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxGlove.Margin = new System.Windows.Forms.Padding(4);
             this.cBxGlove.Name = "cBxGlove";
             this.cBxGlove.Size = new System.Drawing.Size(18, 17);
             this.cBxGlove.TabIndex = 169;
@@ -2605,7 +2606,7 @@ namespace CSGO_Case_Calculator
             this.cBxGamma.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxGamma;
             this.cBxGamma.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxGamma", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxGamma.Location = new System.Drawing.Point(316, 692);
-            this.cBxGamma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxGamma.Margin = new System.Windows.Forms.Padding(4);
             this.cBxGamma.Name = "cBxGamma";
             this.cBxGamma.Size = new System.Drawing.Size(18, 17);
             this.cBxGamma.TabIndex = 168;
@@ -2617,7 +2618,7 @@ namespace CSGO_Case_Calculator
             this.cBxFalchion.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxFalchion;
             this.cBxFalchion.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxFalchion", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxFalchion.Location = new System.Drawing.Point(316, 645);
-            this.cBxFalchion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxFalchion.Margin = new System.Windows.Forms.Padding(4);
             this.cBxFalchion.Name = "cBxFalchion";
             this.cBxFalchion.Size = new System.Drawing.Size(18, 17);
             this.cBxFalchion.TabIndex = 167;
@@ -2629,7 +2630,7 @@ namespace CSGO_Case_Calculator
             this.cBxeSports2014S.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxeSports2014S;
             this.cBxeSports2014S.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxeSports2014S", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxeSports2014S.Location = new System.Drawing.Point(316, 598);
-            this.cBxeSports2014S.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxeSports2014S.Margin = new System.Windows.Forms.Padding(4);
             this.cBxeSports2014S.Name = "cBxeSports2014S";
             this.cBxeSports2014S.Size = new System.Drawing.Size(18, 17);
             this.cBxeSports2014S.TabIndex = 166;
@@ -2641,7 +2642,7 @@ namespace CSGO_Case_Calculator
             this.cBxeSports2013W.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxeSports2013W;
             this.cBxeSports2013W.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxeSports2013W", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxeSports2013W.Location = new System.Drawing.Point(316, 551);
-            this.cBxeSports2013W.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxeSports2013W.Margin = new System.Windows.Forms.Padding(4);
             this.cBxeSports2013W.Name = "cBxeSports2013W";
             this.cBxeSports2013W.Size = new System.Drawing.Size(18, 17);
             this.cBxeSports2013W.TabIndex = 165;
@@ -2653,7 +2654,7 @@ namespace CSGO_Case_Calculator
             this.cBxDangerZone.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxDangerZone;
             this.cBxDangerZone.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxDangerZone", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxDangerZone.Location = new System.Drawing.Point(316, 458);
-            this.cBxDangerZone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxDangerZone.Margin = new System.Windows.Forms.Padding(4);
             this.cBxDangerZone.Name = "cBxDangerZone";
             this.cBxDangerZone.Size = new System.Drawing.Size(18, 17);
             this.cBxDangerZone.TabIndex = 164;
@@ -2665,7 +2666,7 @@ namespace CSGO_Case_Calculator
             this.cBxeSports2013.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxeSports2013;
             this.cBxeSports2013.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxeSports2013", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxeSports2013.Location = new System.Drawing.Point(316, 505);
-            this.cBxeSports2013.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxeSports2013.Margin = new System.Windows.Forms.Padding(4);
             this.cBxeSports2013.Name = "cBxeSports2013";
             this.cBxeSports2013.Size = new System.Drawing.Size(18, 17);
             this.cBxeSports2013.TabIndex = 163;
@@ -2677,7 +2678,7 @@ namespace CSGO_Case_Calculator
             this.cBxCSGOWC3.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxCSGOWC3;
             this.cBxCSGOWC3.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxCSGOWC3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxCSGOWC3.Location = new System.Drawing.Point(316, 411);
-            this.cBxCSGOWC3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxCSGOWC3.Margin = new System.Windows.Forms.Padding(4);
             this.cBxCSGOWC3.Name = "cBxCSGOWC3";
             this.cBxCSGOWC3.Size = new System.Drawing.Size(18, 17);
             this.cBxCSGOWC3.TabIndex = 162;
@@ -2689,7 +2690,7 @@ namespace CSGO_Case_Calculator
             this.cBxCSGOWC2.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxCSGOWC2;
             this.cBxCSGOWC2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxCSGOWC2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxCSGOWC2.Location = new System.Drawing.Point(316, 364);
-            this.cBxCSGOWC2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxCSGOWC2.Margin = new System.Windows.Forms.Padding(4);
             this.cBxCSGOWC2.Name = "cBxCSGOWC2";
             this.cBxCSGOWC2.Size = new System.Drawing.Size(18, 17);
             this.cBxCSGOWC2.TabIndex = 161;
@@ -2701,7 +2702,7 @@ namespace CSGO_Case_Calculator
             this.cBxCSGOWC.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxCSGOWC;
             this.cBxCSGOWC.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxCSGOWC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxCSGOWC.Location = new System.Drawing.Point(316, 318);
-            this.cBxCSGOWC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxCSGOWC.Margin = new System.Windows.Forms.Padding(4);
             this.cBxCSGOWC.Name = "cBxCSGOWC";
             this.cBxCSGOWC.Size = new System.Drawing.Size(18, 17);
             this.cBxCSGOWC.TabIndex = 160;
@@ -2713,7 +2714,7 @@ namespace CSGO_Case_Calculator
             this.cBxClutch.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxClutch;
             this.cBxClutch.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxClutch", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxClutch.Location = new System.Drawing.Point(316, 224);
-            this.cBxClutch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxClutch.Margin = new System.Windows.Forms.Padding(4);
             this.cBxClutch.Name = "cBxClutch";
             this.cBxClutch.Size = new System.Drawing.Size(18, 17);
             this.cBxClutch.TabIndex = 159;
@@ -2725,7 +2726,7 @@ namespace CSGO_Case_Calculator
             this.cBxCS20.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxCS20;
             this.cBxCS20.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxCS20", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxCS20.Location = new System.Drawing.Point(316, 271);
-            this.cBxCS20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxCS20.Margin = new System.Windows.Forms.Padding(4);
             this.cBxCS20.Name = "cBxCS20";
             this.cBxCS20.Size = new System.Drawing.Size(18, 17);
             this.cBxCS20.TabIndex = 158;
@@ -2737,7 +2738,7 @@ namespace CSGO_Case_Calculator
             this.cBxChroma3.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxChroma3;
             this.cBxChroma3.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxChroma3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxChroma3.Location = new System.Drawing.Point(316, 177);
-            this.cBxChroma3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxChroma3.Margin = new System.Windows.Forms.Padding(4);
             this.cBxChroma3.Name = "cBxChroma3";
             this.cBxChroma3.Size = new System.Drawing.Size(18, 17);
             this.cBxChroma3.TabIndex = 157;
@@ -2749,7 +2750,7 @@ namespace CSGO_Case_Calculator
             this.cBxChroma2.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxChroma2;
             this.cBxChroma2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxChroma2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxChroma2.Location = new System.Drawing.Point(316, 130);
-            this.cBxChroma2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxChroma2.Margin = new System.Windows.Forms.Padding(4);
             this.cBxChroma2.Name = "cBxChroma2";
             this.cBxChroma2.Size = new System.Drawing.Size(18, 17);
             this.cBxChroma2.TabIndex = 156;
@@ -2761,7 +2762,7 @@ namespace CSGO_Case_Calculator
             this.cBxChroma.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxChroma;
             this.cBxChroma.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxChroma", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxChroma.Location = new System.Drawing.Point(316, 84);
-            this.cBxChroma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBxChroma.Margin = new System.Windows.Forms.Padding(4);
             this.cBxChroma.Name = "cBxChroma";
             this.cBxChroma.Size = new System.Drawing.Size(18, 17);
             this.cBxChroma.TabIndex = 155;
@@ -2773,7 +2774,7 @@ namespace CSGO_Case_Calculator
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btnExit.Location = new System.Drawing.Point(1724, 785);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(168, 48);
             this.btnExit.TabIndex = 188;
@@ -2782,12 +2783,28 @@ namespace CSGO_Case_Calculator
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnOptns
+            // 
+            this.btnOptns.BackColor = System.Drawing.Color.Gray;
+            this.btnOptns.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOptns.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnOptns.Location = new System.Drawing.Point(1724, 729);
+            this.btnOptns.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOptns.Name = "btnOptns";
+            this.btnOptns.Size = new System.Drawing.Size(168, 48);
+            this.btnOptns.TabIndex = 189;
+            this.btnOptns.Text = "Options";
+            this.btnOptns.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnOptns.UseVisualStyleBackColor = false;
+            this.btnOptns.Click += new System.EventHandler(this.btnOptns_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1908, 848);
+            this.Controls.Add(this.btnOptns);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.cBxAC);
             this.Controls.Add(this.cBxWinterOffensive);
@@ -2967,10 +2984,10 @@ namespace CSGO_Case_Calculator
             this.Controls.Add(this.btnLoadAll);
             this.Controls.Add(this.btnRefresh);
             this.ForeColor = System.Drawing.Color.White;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1926, 895);
             this.Name = "Form1";
             this.Text = "CS:GO Case Calculator";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_Exit);
@@ -3159,6 +3176,7 @@ namespace CSGO_Case_Calculator
         private System.Windows.Forms.CheckBox cBxWinterOffensive;
         private System.Windows.Forms.CheckBox cBxAC;
         private Button btnExit;
+        private Button btnOptns;
     }
 }
 
