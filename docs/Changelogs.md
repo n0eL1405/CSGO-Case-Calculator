@@ -8,6 +8,16 @@ TBP = To be published
   
   
 ## Versions
+#### V 1.2 (TBP)
+> \+ Added options window
+> \+ Added reloade automatically funktion
+
+
+#### V 1.1.1
+> \* Moved location of XML-file back to root folder
+> \* Window is sizeable again
+
+
 #### [V 1.1](https://github.com/NoelTheN00B/CSGO-Case-Calculator/releases/tag/v1.1)
 > \+ Added exit button  
 > \+ Added dialog to prevent closing without saving  
