@@ -11,9 +11,10 @@ TBP = To be published
 #### V 1.2 (TBP)
 > \+ Added options window   
 > \+ Added reloade automatically funktion   
+> \* Moved location of XML-file (again) to "\*ROOTFOLDER*\\files"
 
 
-#### V 1.1.1
+#### [V 1.1.1](https://github.com/NoelTheN00B/CSGO-Case-Calculator/releases/tag/v1.1.1)
 > \* Moved location of XML-file back to root folder   
 > \* Window is sizeable again   
 
@@ -22,7 +23,7 @@ TBP = To be published
 > \+ Added exit button  
 > \+ Added dialog to prevent closing without saving  
 > \- Removed ability to maximize the window  
-> \* Changed the location for the XML-file where the amounts are saved to "C:\Users\*USERNAME*\Documents\CSGOCC"  
+> \* Changed the location for the XML-file where the amounts are saved to "C:\Users\\\*USERNAME*\Documents\CSGOCC"  
 
 
 #### [V 1.0](https://github.com/NoelTheN00B/CSGO-Case-Calculator/releases/tag/v1.0)
