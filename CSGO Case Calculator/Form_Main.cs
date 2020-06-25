@@ -4,11 +4,10 @@ using System.Xml.Serialization;
 using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.Reflection;
 
 namespace CSGO_Case_Calculator
 {
-    public partial class Form1 : Form
+    public partial class Form_Main : Form
     {
         int wait = 3000;
 
@@ -75,7 +74,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
 
                 this.rTxtBxChroma.Text = "0";
@@ -101,7 +101,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxChroma2.Text = "0";
             }
@@ -125,7 +126,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxChroma3.Text = "0";
             }
@@ -149,7 +151,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxClutch.Text = "0";
             }
@@ -173,7 +176,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxCS20.Text = "0";
             }
@@ -197,7 +201,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxCSGOWC.Text = "0";
             }
@@ -221,7 +226,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxCSGOWC2.Text = "0";
             }
@@ -245,7 +251,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxCSGOWC3.Text = "0";
             }
@@ -269,7 +276,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxDangerZone.Text = "0";
             }
@@ -293,7 +301,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxeSports2013.Text = "0";
             }
@@ -317,7 +326,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxeSports2013W.Text = "0";
             }
@@ -341,7 +351,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxeSports2014S.Text = "0";
             }
@@ -365,7 +376,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxFalchion.Text = "0";
             }
@@ -389,7 +401,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxGamma.Text = "0";
             }
@@ -413,7 +426,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxGamma2.Text = "0";
             }
@@ -437,7 +451,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxGlove.Text = "0";
             }
@@ -461,7 +476,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxHorizon.Text = "0";
             }
@@ -485,7 +501,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxHuntsman.Text = "0";
             }
@@ -509,7 +526,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxBravo.Text = "0";
             }
@@ -533,7 +551,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxBreakout.Text = "0";
             }
@@ -557,7 +576,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxHydra.Text = "0";
             }
@@ -581,7 +601,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxPhoenix.Text = "0";
             }
@@ -605,7 +626,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxVanguard.Text = "0";
             }
@@ -629,7 +651,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxWildfire.Text = "0";
             }
@@ -653,7 +676,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxPrisma.Text = "0";
             }
@@ -677,7 +701,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxPrisma2.Text = "0";
             }
@@ -701,7 +726,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxRevolver.Text = "0";
             }
@@ -725,7 +751,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxShadow.Text = "0";
             }
@@ -749,7 +776,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxShatteredWeb.Text = "0";
             }
@@ -773,7 +801,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxSpectrum.Text = "0";
             }
@@ -797,7 +826,8 @@ namespace CSGO_Case_Calculator
                 }
                 catch { }
 
-            } else
+            }
+            else
             {
                 this.rTxtBxSpectrum2.Text = "0";
             }
@@ -820,7 +850,8 @@ namespace CSGO_Case_Calculator
                     this.rTxtBxWinterOffensive.Text = Convert.ToString(price) + "€";
                 }
                 catch { }
-            } else
+            }
+            else
             {
                 this.rTxtBxWinterOffensive.Text = "0";
             }
@@ -835,194 +866,59 @@ namespace CSGO_Case_Calculator
         //Load all Amounts from the XML-File
         public void LoadCases()
         {
-
-            //path for old xml file
-            string OLDExePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"CSGO Case Calculator.exe");
-            string OLDpropertyFile = @OLDExePath;
-            string OLDpropertyFolder = OLDpropertyFile.Substring(0, OLDpropertyFile.LastIndexOf("\\") + 1);
-            string OLDCaseXML = OLDpropertyFolder + "\\" + "cases.xml";
-
-            string OLD2propertyFolder = Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents") + "\\CSGOCC";
-            string OLD2CaseXML = OLD2propertyFolder + "\\" + "cases.xml";
-
-            string NEWpropertyFolder = Application.StartupPath;
-            string NEWCaseXML = NEWpropertyFolder + "\\files\\cases.xml";
-
-            if (File.Exists(NEWCaseXML))
+            try
             {
-                try
-                {
-                    //amounts a set in the boxes
-                    string propertyFolder = Application.StartupPath;
-                    //string propertyFolder = Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents") + "\\CSGOCC";
-                    string CaseXML = propertyFolder + "\\files\\cases.xml";
+                //amounts a set in the boxes
+                string propertyFolder = Application.StartupPath;
+                //string propertyFolder = Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents") + "\\CSGOCC";
+                string CaseXML = propertyFolder + "\\files\\cases.xml";
 
-                    XmlSerializer xs = new XmlSerializer(typeof(Cases));
-                    FileStream read = new FileStream(CaseXML, FileMode.Open, FileAccess.Read, FileShare.Read);
-                    Cases cases = (Cases)xs.Deserialize(read);
+                XmlSerializer xs = new XmlSerializer(typeof(Cases));
+                FileStream read = new FileStream(CaseXML, FileMode.Open, FileAccess.Read, FileShare.Read);
+                Cases cases = (Cases)xs.Deserialize(read);
 
-                    rTxtBxChromaA.Text = cases.CHROMA_AMOUNT;
-                    rTxtBxChroma2A.Text = cases.CHROMA2_AMOUNT;
-                    rTxtBxChroma3A.Text = cases.CHROMA3_AMOUNT;
-                    rTxtBxClutchA.Text = cases.CLUTCH_AMOUNT;
-                    rTxtBxCS20A.Text = cases.CS20_AMOUNT;
-                    rTxtBxCSGOWCA.Text = cases.CSGOWC_AMOUNT;
-                    rTxtBxCSGOWC2A.Text = cases.CSGOWC2_AMOUNT;
-                    rTxtBxCSGOWC3A.Text = cases.CSGOWC3_AMOUNT;
-                    rTxtBxDangerZoneA.Text = cases.DANGERZONE_AMOUNT;
-                    rTxtBxeSports2013A.Text = cases.ESPORTS2013_AMOUNT;
-                    rTxtBxeSports2013WA.Text = cases.ESPORTS2013WINTER_AMOUNT;
-                    rTxtBxeSports2014SA.Text = cases.ESPORTS2014SUMMER_AMOUNT;
-                    rTxtBxFalchionA.Text = cases.FALCHION_AMOUNT;
-                    rTxtBxGammaA.Text = cases.GAMMA_AMOUNT;
-                    rTxtBxGamma2A.Text = cases.GAMMA2_AMOUNT;
-                    rTxtBxGloveA.Text = cases.GLOVE_AMOUNT;
-                    rTxtBxHorizonA.Text = cases.HORIZON_AMOUNT;
-                    rTxtBxHuntsmanA.Text = cases.HUNTSMAN_AMOUNT;
-                    rTxtBxBravoA.Text = cases.BRAVO_AMOUNT;
-                    rTxtBxBreakoutA.Text = cases.BREAKOUT_AMOUNT;
-                    rTxtBxHydraA.Text = cases.HYDRA_AMOUNT;
-                    rTxtBxPhoenixA.Text = cases.PHOENIX_AMOUNT;
-                    rTxtBxVanguardA.Text = cases.VANGUARD_AMOUNT;
-                    rTxtBxWildfireA.Text = cases.WILDFIRE_AMOUNT;
-                    rTxtBxPrismaA.Text = cases.PRISMA_AMOUNT;
-                    rTxtBxPrisma2A.Text = cases.PRISMA2_AMOUNT;
-                    rTxtBxRevolverA.Text = cases.REVOLVER_AMOUNT;
-                    rTxtBxShadowA.Text = cases.SHADOW_AMOUNT;
-                    rTxtBxShatteredWebA.Text = cases.SHATTEREDWEB_AMOUNT;
-                    rTxtBxSpectrumA.Text = cases.SPECTRUM_AMOUNT;
-                    rTxtBxSpectrum2A.Text = cases.SPECTRUM2_AMOUNT;
-                    rTxtBxWinterOffensiveA.Text = cases.WINTEROFFENSIVE_AMOUNT;
+                rTxtBxChromaA.Text = cases.CHROMA_AMOUNT;
+                rTxtBxChroma2A.Text = cases.CHROMA2_AMOUNT;
+                rTxtBxChroma3A.Text = cases.CHROMA3_AMOUNT;
+                rTxtBxClutchA.Text = cases.CLUTCH_AMOUNT;
+                rTxtBxCS20A.Text = cases.CS20_AMOUNT;
+                rTxtBxCSGOWCA.Text = cases.CSGOWC_AMOUNT;
+                rTxtBxCSGOWC2A.Text = cases.CSGOWC2_AMOUNT;
+                rTxtBxCSGOWC3A.Text = cases.CSGOWC3_AMOUNT;
+                rTxtBxDangerZoneA.Text = cases.DANGERZONE_AMOUNT;
+                rTxtBxeSports2013A.Text = cases.ESPORTS2013_AMOUNT;
+                rTxtBxeSports2013WA.Text = cases.ESPORTS2013WINTER_AMOUNT;
+                rTxtBxeSports2014SA.Text = cases.ESPORTS2014SUMMER_AMOUNT;
+                rTxtBxFalchionA.Text = cases.FALCHION_AMOUNT;
+                rTxtBxGammaA.Text = cases.GAMMA_AMOUNT;
+                rTxtBxGamma2A.Text = cases.GAMMA2_AMOUNT;
+                rTxtBxGloveA.Text = cases.GLOVE_AMOUNT;
+                rTxtBxHorizonA.Text = cases.HORIZON_AMOUNT;
+                rTxtBxHuntsmanA.Text = cases.HUNTSMAN_AMOUNT;
+                rTxtBxBravoA.Text = cases.BRAVO_AMOUNT;
+                rTxtBxBreakoutA.Text = cases.BREAKOUT_AMOUNT;
+                rTxtBxHydraA.Text = cases.HYDRA_AMOUNT;
+                rTxtBxPhoenixA.Text = cases.PHOENIX_AMOUNT;
+                rTxtBxVanguardA.Text = cases.VANGUARD_AMOUNT;
+                rTxtBxWildfireA.Text = cases.WILDFIRE_AMOUNT;
+                rTxtBxPrismaA.Text = cases.PRISMA_AMOUNT;
+                rTxtBxPrisma2A.Text = cases.PRISMA2_AMOUNT;
+                rTxtBxRevolverA.Text = cases.REVOLVER_AMOUNT;
+                rTxtBxShadowA.Text = cases.SHADOW_AMOUNT;
+                rTxtBxShatteredWebA.Text = cases.SHATTEREDWEB_AMOUNT;
+                rTxtBxSpectrumA.Text = cases.SPECTRUM_AMOUNT;
+                rTxtBxSpectrum2A.Text = cases.SPECTRUM2_AMOUNT;
+                rTxtBxWinterOffensiveA.Text = cases.WINTEROFFENSIVE_AMOUNT;
 
-                    //calculate Total Case Amount
-                    this.rTxtBxTCA.Text = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 + aCSGOWC3 + aDangerZone + aeSports2013 + aeSports2013Winter + aeSports2014Summer + aFalchion + aGamma +
-                        aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aBreakout + aHydra + aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 + aRevolver + aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive);
-                }
-                catch
-                {
+                //calculate Total Case Amount
+                this.rTxtBxTCA.Text = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 + aCSGOWC3 + aDangerZone + aeSports2013 + aeSports2013Winter + aeSports2014Summer + aFalchion + aGamma +
+                    aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aBreakout + aHydra + aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 + aRevolver + aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive);
+            }
+            catch
+            {
 
-                }
             }
 
-            //check for old xml files
-            else if (File.Exists(OLD2CaseXML))
-            {
-                try
-                {
-                    //amounts a set in the boxes
-                    string propertyFolder = Application.StartupPath;
-                    //string propertyFolder = Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents") + "\\CSGOCC";
-                    string CaseXML = propertyFolder + "\\" + "cases.xml";
-
-                    XmlSerializer xs = new XmlSerializer(typeof(Cases));
-                    FileStream read = new FileStream(CaseXML, FileMode.Open, FileAccess.Read, FileShare.Read);
-                    Cases cases = (Cases)xs.Deserialize(read);
-
-                    rTxtBxChromaA.Text = cases.CHROMA_AMOUNT;
-                    rTxtBxChroma2A.Text = cases.CHROMA2_AMOUNT;
-                    rTxtBxChroma3A.Text = cases.CHROMA3_AMOUNT;
-                    rTxtBxClutchA.Text = cases.CLUTCH_AMOUNT;
-                    rTxtBxCS20A.Text = cases.CS20_AMOUNT;
-                    rTxtBxCSGOWCA.Text = cases.CSGOWC_AMOUNT;
-                    rTxtBxCSGOWC2A.Text = cases.CSGOWC2_AMOUNT;
-                    rTxtBxCSGOWC3A.Text = cases.CSGOWC3_AMOUNT;
-                    rTxtBxDangerZoneA.Text = cases.DANGERZONE_AMOUNT;
-                    rTxtBxeSports2013A.Text = cases.ESPORTS2013_AMOUNT;
-                    rTxtBxeSports2013WA.Text = cases.ESPORTS2013WINTER_AMOUNT;
-                    rTxtBxeSports2014SA.Text = cases.ESPORTS2014SUMMER_AMOUNT;
-                    rTxtBxFalchionA.Text = cases.FALCHION_AMOUNT;
-                    rTxtBxGammaA.Text = cases.GAMMA_AMOUNT;
-                    rTxtBxGamma2A.Text = cases.GAMMA2_AMOUNT;
-                    rTxtBxGloveA.Text = cases.GLOVE_AMOUNT;
-                    rTxtBxHorizonA.Text = cases.HORIZON_AMOUNT;
-                    rTxtBxHuntsmanA.Text = cases.HUNTSMAN_AMOUNT;
-                    rTxtBxBravoA.Text = cases.BRAVO_AMOUNT;
-                    rTxtBxBreakoutA.Text = cases.BREAKOUT_AMOUNT;
-                    rTxtBxHydraA.Text = cases.HYDRA_AMOUNT;
-                    rTxtBxPhoenixA.Text = cases.PHOENIX_AMOUNT;
-                    rTxtBxVanguardA.Text = cases.VANGUARD_AMOUNT;
-                    rTxtBxWildfireA.Text = cases.WILDFIRE_AMOUNT;
-                    rTxtBxPrismaA.Text = cases.PRISMA_AMOUNT;
-                    rTxtBxPrisma2A.Text = cases.PRISMA2_AMOUNT;
-                    rTxtBxRevolverA.Text = cases.REVOLVER_AMOUNT;
-                    rTxtBxShadowA.Text = cases.SHADOW_AMOUNT;
-                    rTxtBxShatteredWebA.Text = cases.SHATTEREDWEB_AMOUNT;
-                    rTxtBxSpectrumA.Text = cases.SPECTRUM_AMOUNT;
-                    rTxtBxSpectrum2A.Text = cases.SPECTRUM2_AMOUNT;
-                    rTxtBxWinterOffensiveA.Text = cases.WINTEROFFENSIVE_AMOUNT;
-
-                    //calculate Total Case Amount
-                    this.rTxtBxTCA.Text = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 + aCSGOWC3 + aDangerZone + aeSports2013 + aeSports2013Winter + aeSports2014Summer + aFalchion + aGamma +
-                        aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aBreakout + aHydra + aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 + aRevolver + aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive);
-                    SaveAllCases();
-
-                }
-                catch
-                {
-
-                }
-            }
-
-            else if (File.Exists(OLDCaseXML))
-            {
-                try
-                {
-                    //amounts a set in the boxes
-                    string ExePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"CSGO Case Calculator.exe");
-                    string propertyFile = @ExePath;
-                    string propertyFolder = propertyFile.Substring(0, propertyFile.LastIndexOf("\\") + 1);
-                    string CaseXML = propertyFolder + "\\" + "cases.xml";
-
-                    XmlSerializer xs = new XmlSerializer(typeof(Cases));
-                    FileStream read = new FileStream(CaseXML, FileMode.Open, FileAccess.Read, FileShare.Read);
-                    Cases cases = (Cases)xs.Deserialize(read);
-
-                    rTxtBxChromaA.Text = cases.CHROMA_AMOUNT;
-                    rTxtBxChroma2A.Text = cases.CHROMA2_AMOUNT;
-                    rTxtBxChroma3A.Text = cases.CHROMA3_AMOUNT;
-                    rTxtBxClutchA.Text = cases.CLUTCH_AMOUNT;
-                    rTxtBxCS20A.Text = cases.CS20_AMOUNT;
-                    rTxtBxCSGOWCA.Text = cases.CSGOWC_AMOUNT;
-                    rTxtBxCSGOWC2A.Text = cases.CSGOWC2_AMOUNT;
-                    rTxtBxCSGOWC3A.Text = cases.CSGOWC3_AMOUNT;
-                    rTxtBxDangerZoneA.Text = cases.DANGERZONE_AMOUNT;
-                    rTxtBxeSports2013A.Text = cases.ESPORTS2013_AMOUNT;
-                    rTxtBxeSports2013WA.Text = cases.ESPORTS2013WINTER_AMOUNT;
-                    rTxtBxeSports2014SA.Text = cases.ESPORTS2014SUMMER_AMOUNT;
-                    rTxtBxFalchionA.Text = cases.FALCHION_AMOUNT;
-                    rTxtBxGammaA.Text = cases.GAMMA_AMOUNT;
-                    rTxtBxGamma2A.Text = cases.GAMMA2_AMOUNT;
-                    rTxtBxGloveA.Text = cases.GLOVE_AMOUNT;
-                    rTxtBxHorizonA.Text = cases.HORIZON_AMOUNT;
-                    rTxtBxHuntsmanA.Text = cases.HUNTSMAN_AMOUNT;
-                    rTxtBxBravoA.Text = cases.BRAVO_AMOUNT;
-                    rTxtBxBreakoutA.Text = cases.BREAKOUT_AMOUNT;
-                    rTxtBxHydraA.Text = cases.HYDRA_AMOUNT;
-                    rTxtBxPhoenixA.Text = cases.PHOENIX_AMOUNT;
-                    rTxtBxVanguardA.Text = cases.VANGUARD_AMOUNT;
-                    rTxtBxWildfireA.Text = cases.WILDFIRE_AMOUNT;
-                    rTxtBxPrismaA.Text = cases.PRISMA_AMOUNT;
-                    rTxtBxPrisma2A.Text = cases.PRISMA2_AMOUNT;
-                    rTxtBxRevolverA.Text = cases.REVOLVER_AMOUNT;
-                    rTxtBxShadowA.Text = cases.SHADOW_AMOUNT;
-                    rTxtBxShatteredWebA.Text = cases.SHATTEREDWEB_AMOUNT;
-                    rTxtBxSpectrumA.Text = cases.SPECTRUM_AMOUNT;
-                    rTxtBxSpectrum2A.Text = cases.SPECTRUM2_AMOUNT;
-                    rTxtBxWinterOffensiveA.Text = cases.WINTEROFFENSIVE_AMOUNT;
-
-                    //calculate Total Case Amount
-                    this.rTxtBxTCA.Text = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 + aCSGOWC3 + aDangerZone + aeSports2013 + aeSports2013Winter + aeSports2014Summer + aFalchion + aGamma +
-                        aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aBreakout + aHydra + aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 + aRevolver + aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive);
-
-                    //save in new xml file location
-                    SaveAllCases();
-
-                }
-                catch
-                {
-
-                }
-            }
         }
 
         public void SaveAllCases()
@@ -1074,7 +970,7 @@ namespace CSGO_Case_Calculator
         public void Calculate()
         {
             if (Int32.TryParse(this.rTxtBxChromaA.Text, out aChroma))
-            {                                                       
+            {
                 this.rTxtBxChromaTV.Text = Convert.ToString(Convert.ToDecimal(this.rTxtBxChroma.Text.Replace("€", "")) * Convert.ToDecimal(aChroma)) + "€";
             }
             else
@@ -1391,10 +1287,11 @@ namespace CSGO_Case_Calculator
                 //calculate Total Case Amount
                 this.rTxtBxTCA.Text = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 + aCSGOWC3 + aDangerZone + aeSports2013 + aeSports2013Winter + aeSports2014Summer + aFalchion + aGamma +
                     aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aBreakout + aHydra + aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 + aRevolver + aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive);
-            } else { }
+            }
+            else { }
         }
 
-        public Form1() => InitializeComponent();
+        public Form_Main() => InitializeComponent();
 
         //Button to reload all prices
         private async void btnLoad_Click(object sender, EventArgs e)
@@ -1546,20 +1443,69 @@ namespace CSGO_Case_Calculator
             new Form_Options().Show();
         }
 
-        private async void Form1_Load(object sender, EventArgs e)
+        private async void Form_Main_Load(object sender, EventArgs e)
         {
             string propertyFolder = Application.StartupPath;
             //string propertyFolder = Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents") + "\\CSGOCC";
             string CaseXML = propertyFolder + "\\files\\cases.xml";
 
-            MessageBox.Show(CaseXML, "test");
-
-            if (File.Exists(CaseXML))
+            if (Directory.Exists(propertyFolder + "\\files"))
             {
-                //Load all Amounts
-                LoadCases();
-            
-            } else {
+
+                if (File.Exists(CaseXML))
+                {
+                    //Load all Amounts
+                    LoadCases();
+
+                }
+                else
+                {
+
+                    //on first startup a file will be create where every amount is set to 0 (to avoid bugs when calculating)
+                    Cases casesempty = new Cases
+                    {
+                        CHROMA_AMOUNT = "0",
+                        CHROMA2_AMOUNT = "0",
+                        CHROMA3_AMOUNT = "0",
+                        CLUTCH_AMOUNT = "0",
+                        CS20_AMOUNT = "0",
+                        CSGOWC_AMOUNT = "0",
+                        CSGOWC2_AMOUNT = "0",
+                        CSGOWC3_AMOUNT = "0",
+                        DANGERZONE_AMOUNT = "0",
+                        ESPORTS2013_AMOUNT = "0",
+                        ESPORTS2013WINTER_AMOUNT = "0",
+                        ESPORTS2014SUMMER_AMOUNT = "0",
+                        FALCHION_AMOUNT = "0",
+                        GAMMA_AMOUNT = "0",
+                        GAMMA2_AMOUNT = "0",
+                        GLOVE_AMOUNT = "0",
+                        HORIZON_AMOUNT = "0",
+                        HUNTSMAN_AMOUNT = "0",
+                        BRAVO_AMOUNT = "0",
+                        BREAKOUT_AMOUNT = "0",
+                        HYDRA_AMOUNT = "0",
+                        PHOENIX_AMOUNT = "0",
+                        VANGUARD_AMOUNT = "0",
+                        WILDFIRE_AMOUNT = "0",
+                        PRISMA_AMOUNT = "0",
+                        PRISMA2_AMOUNT = "0",
+                        REVOLVER_AMOUNT = "0",
+                        SHADOW_AMOUNT = "0",
+                        SHATTEREDWEB_AMOUNT = "0",
+                        SPECTRUM_AMOUNT = "0",
+                        SPECTRUM2_AMOUNT = "0",
+                        WINTEROFFENSIVE_AMOUNT = "0",
+                    };
+
+                    //create file
+                    SaveCases.SaveDaten(casesempty, CaseXML);
+
+                }
+            }
+            else
+            {
+                DirectoryInfo di = Directory.CreateDirectory(propertyFolder + "\\files");
 
                 //on first startup a file will be create where every amount is set to 0 (to avoid bugs when calculating)
                 Cases casesempty = new Cases
@@ -1600,7 +1546,6 @@ namespace CSGO_Case_Calculator
 
                 //create file
                 SaveCases.SaveDaten(casesempty, CaseXML);
-
             }
 
             //load all amounts on startup
@@ -1631,7 +1576,7 @@ namespace CSGO_Case_Calculator
             { }
         }
 
-        private void Form1_Exit(object sender, FormClosingEventArgs e)
+        private void Form_Main_Exit(object sender, FormClosingEventArgs e)
         {
             //block closing by the user using the "X"
             e.Cancel = (e.CloseReason == CloseReason.UserClosing);
@@ -1818,5 +1763,10 @@ namespace CSGO_Case_Calculator
 
         private void rTxtBxChromaTV_TextChanged(object sender, EventArgs e)
         { }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            new Form_Main().Show();
+        }
     }
 }

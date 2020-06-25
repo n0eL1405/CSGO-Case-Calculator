@@ -24,7 +24,7 @@ namespace CSGO_Case_Calculator
             Application.SetCompatibleTextRenderingDefault(false);
 
             Properties.Settings.Default.Reload();
-            Application.Run(new Form1());
+            Application.Run(new Form_Main());
             Properties.Settings.Default.Save();
         }
     }
