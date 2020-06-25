@@ -11,6 +11,8 @@ TBP = To be published
 #### V 1.2 (TBP)
 > \+ Added options window   
 > \+ Added reloade automatically funktion   
+> \+ Added scrollbars when window is getting smaller   
+> \- Removed searching for old XML-files when launching
 > \* Moved location of XML-file (again) to "\*ROOTFOLDER*\\files"
 
 
