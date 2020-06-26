@@ -10,6 +10,8 @@ namespace CSGO_Case_Calculator
 {
     public partial class Form_Options : Form
     {
+        int TimerTime;
+
         public Form_Options()
         {
             InitializeComponent();
@@ -76,7 +78,36 @@ namespace CSGO_Case_Calculator
 
         private void btnHelpTimer_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Enter full number between 5 and 60. This will be the interval between the price reloads and calculations.\n\nPress 'Start' to start the Calculation Timer and 'Stop' to stop the Calculation Timer.", "Calculation Timer Help", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            MessageBox.Show("Enter an integer between 5 and 60. This will be the interval between the price reloads and calculations.\n\nPress 'Start' to start the Calculation Timer and 'Stop' to stop the Calculation Timer.", "Calculation Timer Help", MessageBoxButtons.OK, MessageBoxIcon.Question);
+        }
+
+        private void rTxtBxTimerTime_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            //check if input is an integer
+            if (Int32.TryParse(rTxtBxTimerTime.Text, out TimerTime))
+            {
+                //check if number is between 5 and 60
+                if (TimerTime >= 5 && TimerTime <= 60)
+                {
+                    //code to set the timer
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Error: \"" + rTxtBxTimerTime.Text + "\" is not between 5 and 60!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Error: \"" + rTxtBxTimerTime.Text + "\" is not an integer!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

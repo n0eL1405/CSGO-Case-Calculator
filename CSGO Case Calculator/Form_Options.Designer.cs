@@ -35,7 +35,7 @@
             this.btnStop = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.lblLimitation = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rTxtBxTimerTime = new System.Windows.Forms.RichTextBox();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblMadeBy = new System.Windows.Forms.Label();
             this.btnImportOldXML = new System.Windows.Forms.Button();
@@ -63,7 +63,7 @@
             this.grpBxCalcTimer.Controls.Add(this.btnStop);
             this.grpBxCalcTimer.Controls.Add(this.btnStart);
             this.grpBxCalcTimer.Controls.Add(this.lblLimitation);
-            this.grpBxCalcTimer.Controls.Add(this.richTextBox1);
+            this.grpBxCalcTimer.Controls.Add(this.rTxtBxTimerTime);
             this.grpBxCalcTimer.Controls.Add(this.lblTime);
             this.grpBxCalcTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBxCalcTimer.ForeColor = System.Drawing.Color.White;
@@ -114,6 +114,7 @@
             this.btnStart.Text = "Start";
             this.btnStart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // lblLimitation
             // 
@@ -121,18 +122,21 @@
             this.lblLimitation.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLimitation.Location = new System.Drawing.Point(15, 72);
             this.lblLimitation.Name = "lblLimitation";
-            this.lblLimitation.Size = new System.Drawing.Size(146, 12);
+            this.lblLimitation.Size = new System.Drawing.Size(188, 12);
             this.lblLimitation.TabIndex = 2;
-            this.lblLimitation.Text = "Choose between 5 and 60 minutes";
+            this.lblLimitation.Text = "Choose an integer between 5 and 60 minutes";
             // 
-            // richTextBox1
+            // rTxtBxTimerTime
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.Silver;
-            this.richTextBox1.Location = new System.Drawing.Point(17, 48);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(116, 21);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.rTxtBxTimerTime.BackColor = System.Drawing.Color.Silver;
+            this.rTxtBxTimerTime.Location = new System.Drawing.Point(17, 48);
+            this.rTxtBxTimerTime.Multiline = false;
+            this.rTxtBxTimerTime.Name = "rTxtBxTimerTime";
+            this.rTxtBxTimerTime.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rTxtBxTimerTime.Size = new System.Drawing.Size(116, 21);
+            this.rTxtBxTimerTime.TabIndex = 1;
+            this.rTxtBxTimerTime.Text = "";
+            this.rTxtBxTimerTime.TextChanged += new System.EventHandler(this.rTxtBxTimerTime_TextChanged);
             // 
             // lblTime
             // 
@@ -199,6 +203,6 @@
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblLimitation;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rTxtBxTimerTime;
     }
 }
