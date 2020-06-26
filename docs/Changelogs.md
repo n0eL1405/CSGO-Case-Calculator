@@ -14,7 +14,7 @@ TBP = To be published
 > \+ Added scrollbars when window is getting smaller   
 > \+ Added import function of old XML-files (in new options window)   
 > \+ Letter and empty cases in xml-file will be replaced with "0" when loading cases   
-> \- Removed searching for old XML-files when launching
+> \- Removed searching for old XML-files when launching   
 > \* Moved location of XML-file (again) to "\*ROOTFOLDER*\\files"
 
 
