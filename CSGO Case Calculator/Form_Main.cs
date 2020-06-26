@@ -4,6 +4,7 @@ using System.Xml.Serialization;
 using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
 
 namespace CSGO_Case_Calculator
 {
@@ -866,58 +867,211 @@ namespace CSGO_Case_Calculator
         //Load all Amounts from the XML-File
         public void LoadCases()
         {
-            try
+            //amounts a set in the boxes
+            string propertyFolder = Application.StartupPath;
+            string CaseXML = propertyFolder + "\\files\\cases.xml";
+
+            XmlSerializer xs = new XmlSerializer(typeof(Cases));
+            FileStream read = new FileStream(CaseXML, FileMode.Open, FileAccess.Read, FileShare.Read);
+            Cases cases = (Cases)xs.Deserialize(read);
+
+            //if amount is empty, fill with 0
+            if (cases.CHROMA_AMOUNT == "" || !int.TryParse(cases.CHROMA_AMOUNT, out aChroma))
             {
-                //amounts a set in the boxes
-                string propertyFolder = Application.StartupPath;
-                //string propertyFolder = Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents") + "\\CSGOCC";
-                string CaseXML = propertyFolder + "\\files\\cases.xml";
-
-                XmlSerializer xs = new XmlSerializer(typeof(Cases));
-                FileStream read = new FileStream(CaseXML, FileMode.Open, FileAccess.Read, FileShare.Read);
-                Cases cases = (Cases)xs.Deserialize(read);
-
-                rTxtBxChromaA.Text = cases.CHROMA_AMOUNT;
-                rTxtBxChroma2A.Text = cases.CHROMA2_AMOUNT;
-                rTxtBxChroma3A.Text = cases.CHROMA3_AMOUNT;
-                rTxtBxClutchA.Text = cases.CLUTCH_AMOUNT;
-                rTxtBxCS20A.Text = cases.CS20_AMOUNT;
-                rTxtBxCSGOWCA.Text = cases.CSGOWC_AMOUNT;
-                rTxtBxCSGOWC2A.Text = cases.CSGOWC2_AMOUNT;
-                rTxtBxCSGOWC3A.Text = cases.CSGOWC3_AMOUNT;
-                rTxtBxDangerZoneA.Text = cases.DANGERZONE_AMOUNT;
-                rTxtBxeSports2013A.Text = cases.ESPORTS2013_AMOUNT;
-                rTxtBxeSports2013WA.Text = cases.ESPORTS2013WINTER_AMOUNT;
-                rTxtBxeSports2014SA.Text = cases.ESPORTS2014SUMMER_AMOUNT;
-                rTxtBxFalchionA.Text = cases.FALCHION_AMOUNT;
-                rTxtBxGammaA.Text = cases.GAMMA_AMOUNT;
-                rTxtBxGamma2A.Text = cases.GAMMA2_AMOUNT;
-                rTxtBxGloveA.Text = cases.GLOVE_AMOUNT;
-                rTxtBxHorizonA.Text = cases.HORIZON_AMOUNT;
-                rTxtBxHuntsmanA.Text = cases.HUNTSMAN_AMOUNT;
-                rTxtBxBravoA.Text = cases.BRAVO_AMOUNT;
-                rTxtBxBreakoutA.Text = cases.BREAKOUT_AMOUNT;
-                rTxtBxHydraA.Text = cases.HYDRA_AMOUNT;
-                rTxtBxPhoenixA.Text = cases.PHOENIX_AMOUNT;
-                rTxtBxVanguardA.Text = cases.VANGUARD_AMOUNT;
-                rTxtBxWildfireA.Text = cases.WILDFIRE_AMOUNT;
-                rTxtBxPrismaA.Text = cases.PRISMA_AMOUNT;
-                rTxtBxPrisma2A.Text = cases.PRISMA2_AMOUNT;
-                rTxtBxRevolverA.Text = cases.REVOLVER_AMOUNT;
-                rTxtBxShadowA.Text = cases.SHADOW_AMOUNT;
-                rTxtBxShatteredWebA.Text = cases.SHATTEREDWEB_AMOUNT;
-                rTxtBxSpectrumA.Text = cases.SPECTRUM_AMOUNT;
-                rTxtBxSpectrum2A.Text = cases.SPECTRUM2_AMOUNT;
-                rTxtBxWinterOffensiveA.Text = cases.WINTEROFFENSIVE_AMOUNT;
-
-                //calculate Total Case Amount
-                this.rTxtBxTCA.Text = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 + aCSGOWC3 + aDangerZone + aeSports2013 + aeSports2013Winter + aeSports2014Summer + aFalchion + aGamma +
-                    aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aBreakout + aHydra + aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 + aRevolver + aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive);
+                cases.CHROMA_AMOUNT = "0";
             }
-            catch
+
+            if (cases.CHROMA2_AMOUNT == "" || !int.TryParse(cases.CHROMA2_AMOUNT, out aChroma2))
             {
-
+                cases.CHROMA2_AMOUNT = "0";
             }
+
+            if (cases.CHROMA3_AMOUNT == "" || !int.TryParse(cases.CHROMA3_AMOUNT, out aChroma3))
+            {
+                cases.CHROMA3_AMOUNT = "0";
+            }
+
+            if (cases.CLUTCH_AMOUNT == "" || !int.TryParse(cases.CLUTCH_AMOUNT, out aClutch))
+            {
+                cases.CLUTCH_AMOUNT = "0";
+            }
+
+            if (cases.CS20_AMOUNT == "" || !int.TryParse(cases.CS20_AMOUNT, out aCS20))
+            {
+                cases.CS20_AMOUNT = "0";
+            }
+
+            if (cases.CSGOWC_AMOUNT == "" || !int.TryParse(cases.CSGOWC_AMOUNT, out aCSGOWC))
+            {
+                cases.CSGOWC_AMOUNT = "0";
+            }
+
+            if (cases.CSGOWC2_AMOUNT == "" || !int.TryParse(cases.CSGOWC2_AMOUNT, out aCSGOWC2))
+            {
+                cases.CSGOWC2_AMOUNT = "0";
+            }
+
+            if (cases.CSGOWC3_AMOUNT == "" || !int.TryParse(cases.CSGOWC3_AMOUNT, out aCSGOWC3))
+            {
+                cases.CSGOWC3_AMOUNT = "0";
+            }
+
+            if (cases.DANGERZONE_AMOUNT == "" || !int.TryParse(cases.DANGERZONE_AMOUNT, out aDangerZone))
+            {
+                cases.DANGERZONE_AMOUNT = "0";
+            }
+
+            if (cases.ESPORTS2013_AMOUNT == "" || !int.TryParse(cases.ESPORTS2013_AMOUNT, out aeSports2013))
+            {
+                cases.ESPORTS2013_AMOUNT = "0";
+            }
+
+            if (cases.ESPORTS2013WINTER_AMOUNT == "" || !int.TryParse(cases.ESPORTS2013WINTER_AMOUNT, out aeSports2013Winter))
+            {
+                cases.ESPORTS2013WINTER_AMOUNT = "0";
+            }
+
+            if (cases.ESPORTS2014SUMMER_AMOUNT == "" || !int.TryParse(cases.ESPORTS2014SUMMER_AMOUNT, out aeSports2013))
+            {
+                cases.ESPORTS2014SUMMER_AMOUNT = "0";
+            }
+
+            if (cases.FALCHION_AMOUNT == "" || !int.TryParse(cases.FALCHION_AMOUNT, out aFalchion))
+            {
+                cases.FALCHION_AMOUNT = "0";
+            }
+
+            if (cases.GAMMA_AMOUNT == "" || !int.TryParse(cases.GAMMA_AMOUNT, out aGamma))
+            {
+                cases.GAMMA_AMOUNT = "0";
+            }
+
+            if (cases.GAMMA2_AMOUNT == "" || !int.TryParse(cases.GAMMA2_AMOUNT, out aGamma2))
+            {
+                cases.GAMMA2_AMOUNT = "0";
+            }
+
+            if (cases.GLOVE_AMOUNT == "" || !int.TryParse(cases.GLOVE_AMOUNT, out aGlove))
+            {
+                cases.GLOVE_AMOUNT = "0";
+            }
+
+            if (cases.HORIZON_AMOUNT == "" || !int.TryParse(cases.HORIZON_AMOUNT, out aHorizon))
+            {
+                cases.HORIZON_AMOUNT = "0";
+            }
+
+            if (cases.HUNTSMAN_AMOUNT == "" || !int.TryParse(cases.HUNTSMAN_AMOUNT, out aHuntsman))
+            {
+                cases.HUNTSMAN_AMOUNT = "0";
+            }
+
+            if (cases.BRAVO_AMOUNT == "" || !int.TryParse(cases.BRAVO_AMOUNT, out aBravo))
+            {
+                cases.BRAVO_AMOUNT = "0";
+            }
+
+            if (cases.BREAKOUT_AMOUNT == "" || !int.TryParse(cases.BREAKOUT_AMOUNT, out aBreakout))
+            {
+                cases.BREAKOUT_AMOUNT = "0";
+            }
+
+            if (cases.HYDRA_AMOUNT == "" || !int.TryParse(cases.HYDRA_AMOUNT, out aHydra))
+            {
+                cases.HYDRA_AMOUNT = "0";
+            }
+
+            if (cases.PHOENIX_AMOUNT == "" || !int.TryParse(cases.PHOENIX_AMOUNT, out aPhoenix))
+            {
+                cases.PHOENIX_AMOUNT = "0";
+            }
+
+            if (cases.VANGUARD_AMOUNT == "" || !int.TryParse(cases.VANGUARD_AMOUNT, out aVanguard))
+            {
+                cases.VANGUARD_AMOUNT = "0";
+            }
+
+            if (cases.WILDFIRE_AMOUNT == "" || !int.TryParse(cases.WILDFIRE_AMOUNT, out aWildfire))
+            {
+                cases.WILDFIRE_AMOUNT = "0";
+            }
+
+            if (cases.PRISMA_AMOUNT == "" || !int.TryParse(cases.PRISMA_AMOUNT, out aPrisma))
+            {
+                cases.PRISMA_AMOUNT = "0";
+            }
+
+            if (cases.PRISMA2_AMOUNT == "" || !int.TryParse(cases.PRISMA2_AMOUNT, out aPrisma2))
+            {
+                cases.PRISMA2_AMOUNT = "0";
+            }
+
+            if (cases.REVOLVER_AMOUNT == "" || !int.TryParse(cases.REVOLVER_AMOUNT, out aRevolver))
+            {
+                cases.REVOLVER_AMOUNT = "0";
+            }
+
+            if (cases.SHADOW_AMOUNT == "" || !int.TryParse(cases.SHADOW_AMOUNT, out aShadow))
+            {
+                cases.SHADOW_AMOUNT = "0";
+            }
+
+            if (cases.SHATTEREDWEB_AMOUNT == "" || !int.TryParse(cases.SHATTEREDWEB_AMOUNT, out aShatteredWeb))
+            {
+                cases.SHATTEREDWEB_AMOUNT = "0";
+            }
+
+            if (cases.SPECTRUM_AMOUNT == "" || !int.TryParse(cases.SPECTRUM_AMOUNT, out aSpectrum))
+            {
+                cases.SPECTRUM_AMOUNT = "0";
+            }
+
+            if (cases.SPECTRUM2_AMOUNT == "" || !int.TryParse(cases.SPECTRUM2_AMOUNT, out aSpectrum2))
+            {
+                cases.SPECTRUM2_AMOUNT = "0";
+            }
+
+            if (cases.WINTEROFFENSIVE_AMOUNT == "" || !int.TryParse(cases.WINTEROFFENSIVE_AMOUNT, out aWinterOffensive))
+            {
+                cases.WINTEROFFENSIVE_AMOUNT = "0";
+            }
+
+            rTxtBxChromaA.Text = cases.CHROMA_AMOUNT;
+            rTxtBxChroma2A.Text = cases.CHROMA2_AMOUNT;
+            rTxtBxChroma3A.Text = cases.CHROMA3_AMOUNT;
+            rTxtBxClutchA.Text = cases.CLUTCH_AMOUNT;
+            rTxtBxCS20A.Text = cases.CS20_AMOUNT;
+            rTxtBxCSGOWCA.Text = cases.CSGOWC_AMOUNT;
+            rTxtBxCSGOWC2A.Text = cases.CSGOWC2_AMOUNT;
+            rTxtBxCSGOWC3A.Text = cases.CSGOWC3_AMOUNT;
+            rTxtBxDangerZoneA.Text = cases.DANGERZONE_AMOUNT;
+            rTxtBxeSports2013A.Text = cases.ESPORTS2013_AMOUNT;
+            rTxtBxeSports2013WA.Text = cases.ESPORTS2013WINTER_AMOUNT;
+            rTxtBxeSports2014SA.Text = cases.ESPORTS2014SUMMER_AMOUNT;
+            rTxtBxFalchionA.Text = cases.FALCHION_AMOUNT;
+            rTxtBxGammaA.Text = cases.GAMMA_AMOUNT;
+            rTxtBxGamma2A.Text = cases.GAMMA2_AMOUNT;
+            rTxtBxGloveA.Text = cases.GLOVE_AMOUNT;
+            rTxtBxHorizonA.Text = cases.HORIZON_AMOUNT;
+            rTxtBxHuntsmanA.Text = cases.HUNTSMAN_AMOUNT;
+            rTxtBxBravoA.Text = cases.BRAVO_AMOUNT;
+            rTxtBxBreakoutA.Text = cases.BREAKOUT_AMOUNT;
+            rTxtBxHydraA.Text = cases.HYDRA_AMOUNT;
+            rTxtBxPhoenixA.Text = cases.PHOENIX_AMOUNT;
+            rTxtBxVanguardA.Text = cases.VANGUARD_AMOUNT;
+            rTxtBxWildfireA.Text = cases.WILDFIRE_AMOUNT;
+            rTxtBxPrismaA.Text = cases.PRISMA_AMOUNT;
+            rTxtBxPrisma2A.Text = cases.PRISMA2_AMOUNT;
+            rTxtBxRevolverA.Text = cases.REVOLVER_AMOUNT;
+            rTxtBxShadowA.Text = cases.SHADOW_AMOUNT;
+            rTxtBxShatteredWebA.Text = cases.SHATTEREDWEB_AMOUNT;
+            rTxtBxSpectrumA.Text = cases.SPECTRUM_AMOUNT;
+            rTxtBxSpectrum2A.Text = cases.SPECTRUM2_AMOUNT;
+            rTxtBxWinterOffensiveA.Text = cases.WINTEROFFENSIVE_AMOUNT;
+
+            //calculate Total Case Amount
+            this.rTxtBxTCA.Text = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 + aCSGOWC3 + aDangerZone + aeSports2013 + aeSports2013Winter + aeSports2014Summer + aFalchion + aGamma +
+                aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aBreakout + aHydra + aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 + aRevolver + aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive);
 
         }
 
@@ -1431,7 +1585,7 @@ namespace CSGO_Case_Calculator
         }
 
         //button to load all saved amounts if something went wrong on startup
-        private void btnLoadSavedCases_Click(object sender, EventArgs e)
+        public void btnLoadSavedCases_Click(object sender, EventArgs e)
         {
             //Load all Amounts
             LoadCases();
@@ -1763,10 +1917,5 @@ namespace CSGO_Case_Calculator
 
         private void rTxtBxChromaTV_TextChanged(object sender, EventArgs e)
         { }
-
-        private void btnTest_Click(object sender, EventArgs e)
-        {
-            new Form_Main().Show();
-        }
     }
 }

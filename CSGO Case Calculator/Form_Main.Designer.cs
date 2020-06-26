@@ -1684,7 +1684,7 @@ namespace CSGO_Case_Calculator
             this.lLblChroma.AutoSize = true;
             this.lLblChroma.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblChroma.LinkColor = System.Drawing.Color.White;
-            this.lLblChroma.Location = new System.Drawing.Point(7, 48);
+            this.lLblChroma.Location = new System.Drawing.Point(7, 50);
             this.lLblChroma.Name = "lLblChroma";
             this.lLblChroma.Size = new System.Drawing.Size(88, 25);
             this.lLblChroma.TabIndex = 109;
@@ -2234,7 +2234,7 @@ namespace CSGO_Case_Calculator
             this.cBxAC.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxAC;
             this.cBxAC.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cBxAC.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxAC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxAC.Location = new System.Drawing.Point(1293, 126);
+            this.cBxAC.Location = new System.Drawing.Point(1294, 119);
             this.cBxAC.Name = "cBxAC";
             this.cBxAC.Size = new System.Drawing.Size(134, 17);
             this.cBxAC.TabIndex = 187;
@@ -2246,7 +2246,7 @@ namespace CSGO_Case_Calculator
             this.cBxWinterOffensive.AutoSize = true;
             this.cBxWinterOffensive.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxWinterOffensive;
             this.cBxWinterOffensive.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxWinterOffensive", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxWinterOffensive.Location = new System.Drawing.Point(848, 631);
+            this.cBxWinterOffensive.Location = new System.Drawing.Point(848, 622);
             this.cBxWinterOffensive.Name = "cBxWinterOffensive";
             this.cBxWinterOffensive.Size = new System.Drawing.Size(15, 14);
             this.cBxWinterOffensive.TabIndex = 186;
@@ -2257,7 +2257,7 @@ namespace CSGO_Case_Calculator
             this.cBxSpectrum2.AutoSize = true;
             this.cBxSpectrum2.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxSpectrum2;
             this.cBxSpectrum2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxSpectrum2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxSpectrum2.Location = new System.Drawing.Point(848, 595);
+            this.cBxSpectrum2.Location = new System.Drawing.Point(848, 584);
             this.cBxSpectrum2.Name = "cBxSpectrum2";
             this.cBxSpectrum2.Size = new System.Drawing.Size(15, 14);
             this.cBxSpectrum2.TabIndex = 185;
@@ -2268,7 +2268,7 @@ namespace CSGO_Case_Calculator
             this.cBxSpectrum.AutoSize = true;
             this.cBxSpectrum.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxSpectrum;
             this.cBxSpectrum.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxSpectrum", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxSpectrum.Location = new System.Drawing.Point(848, 555);
+            this.cBxSpectrum.Location = new System.Drawing.Point(848, 546);
             this.cBxSpectrum.Name = "cBxSpectrum";
             this.cBxSpectrum.Size = new System.Drawing.Size(15, 14);
             this.cBxSpectrum.TabIndex = 184;
@@ -2279,7 +2279,7 @@ namespace CSGO_Case_Calculator
             this.cBxShatteredWeb.AutoSize = true;
             this.cBxShatteredWeb.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxShatteredWeb;
             this.cBxShatteredWeb.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxShatteredWeb", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxShatteredWeb.Location = new System.Drawing.Point(848, 517);
+            this.cBxShatteredWeb.Location = new System.Drawing.Point(848, 508);
             this.cBxShatteredWeb.Name = "cBxShatteredWeb";
             this.cBxShatteredWeb.Size = new System.Drawing.Size(15, 14);
             this.cBxShatteredWeb.TabIndex = 183;
@@ -2290,7 +2290,7 @@ namespace CSGO_Case_Calculator
             this.cBxShadow.AutoSize = true;
             this.cBxShadow.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxShadow;
             this.cBxShadow.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxShadow", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxShadow.Location = new System.Drawing.Point(848, 479);
+            this.cBxShadow.Location = new System.Drawing.Point(848, 470);
             this.cBxShadow.Name = "cBxShadow";
             this.cBxShadow.Size = new System.Drawing.Size(15, 14);
             this.cBxShadow.TabIndex = 182;
@@ -2301,7 +2301,7 @@ namespace CSGO_Case_Calculator
             this.cBxRevolver.AutoSize = true;
             this.cBxRevolver.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxRevolver;
             this.cBxRevolver.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxRevolver", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxRevolver.Location = new System.Drawing.Point(848, 441);
+            this.cBxRevolver.Location = new System.Drawing.Point(848, 432);
             this.cBxRevolver.Name = "cBxRevolver";
             this.cBxRevolver.Size = new System.Drawing.Size(15, 14);
             this.cBxRevolver.TabIndex = 181;
@@ -2312,7 +2312,7 @@ namespace CSGO_Case_Calculator
             this.cBxPrisma2.AutoSize = true;
             this.cBxPrisma2.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxPrisma2;
             this.cBxPrisma2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxPrisma2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxPrisma2.Location = new System.Drawing.Point(848, 403);
+            this.cBxPrisma2.Location = new System.Drawing.Point(848, 394);
             this.cBxPrisma2.Name = "cBxPrisma2";
             this.cBxPrisma2.Size = new System.Drawing.Size(15, 14);
             this.cBxPrisma2.TabIndex = 180;
@@ -2323,7 +2323,7 @@ namespace CSGO_Case_Calculator
             this.cBxPrisma.AutoSize = true;
             this.cBxPrisma.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxPrisma;
             this.cBxPrisma.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxPrisma", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxPrisma.Location = new System.Drawing.Point(848, 365);
+            this.cBxPrisma.Location = new System.Drawing.Point(848, 356);
             this.cBxPrisma.Name = "cBxPrisma";
             this.cBxPrisma.Size = new System.Drawing.Size(15, 14);
             this.cBxPrisma.TabIndex = 179;
@@ -2334,7 +2334,7 @@ namespace CSGO_Case_Calculator
             this.cBxWildfire.AutoSize = true;
             this.cBxWildfire.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxWildfire;
             this.cBxWildfire.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxWildfire", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxWildfire.Location = new System.Drawing.Point(848, 327);
+            this.cBxWildfire.Location = new System.Drawing.Point(848, 318);
             this.cBxWildfire.Name = "cBxWildfire";
             this.cBxWildfire.Size = new System.Drawing.Size(15, 14);
             this.cBxWildfire.TabIndex = 178;
@@ -2345,7 +2345,7 @@ namespace CSGO_Case_Calculator
             this.cBxVanguard.AutoSize = true;
             this.cBxVanguard.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxVanguard;
             this.cBxVanguard.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxVanguard", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxVanguard.Location = new System.Drawing.Point(848, 289);
+            this.cBxVanguard.Location = new System.Drawing.Point(848, 280);
             this.cBxVanguard.Name = "cBxVanguard";
             this.cBxVanguard.Size = new System.Drawing.Size(15, 14);
             this.cBxVanguard.TabIndex = 177;
@@ -2356,7 +2356,7 @@ namespace CSGO_Case_Calculator
             this.cBxPhoenix.AutoSize = true;
             this.cBxPhoenix.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxPhoenix;
             this.cBxPhoenix.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxPhoenix", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxPhoenix.Location = new System.Drawing.Point(848, 251);
+            this.cBxPhoenix.Location = new System.Drawing.Point(848, 242);
             this.cBxPhoenix.Name = "cBxPhoenix";
             this.cBxPhoenix.Size = new System.Drawing.Size(15, 14);
             this.cBxPhoenix.TabIndex = 176;
@@ -2367,7 +2367,7 @@ namespace CSGO_Case_Calculator
             this.cBxHydra.AutoSize = true;
             this.cBxHydra.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxHydra;
             this.cBxHydra.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxHydra", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxHydra.Location = new System.Drawing.Point(848, 213);
+            this.cBxHydra.Location = new System.Drawing.Point(848, 204);
             this.cBxHydra.Name = "cBxHydra";
             this.cBxHydra.Size = new System.Drawing.Size(15, 14);
             this.cBxHydra.TabIndex = 175;
@@ -2378,7 +2378,7 @@ namespace CSGO_Case_Calculator
             this.cBxBreakout.AutoSize = true;
             this.cBxBreakout.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxBreakout;
             this.cBxBreakout.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxBreakout", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxBreakout.Location = new System.Drawing.Point(848, 175);
+            this.cBxBreakout.Location = new System.Drawing.Point(848, 166);
             this.cBxBreakout.Name = "cBxBreakout";
             this.cBxBreakout.Size = new System.Drawing.Size(15, 14);
             this.cBxBreakout.TabIndex = 174;
@@ -2389,7 +2389,7 @@ namespace CSGO_Case_Calculator
             this.cBxBravo.AutoSize = true;
             this.cBxBravo.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxBravo;
             this.cBxBravo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxBravo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxBravo.Location = new System.Drawing.Point(848, 140);
+            this.cBxBravo.Location = new System.Drawing.Point(848, 128);
             this.cBxBravo.Name = "cBxBravo";
             this.cBxBravo.Size = new System.Drawing.Size(15, 14);
             this.cBxBravo.TabIndex = 173;
@@ -2400,7 +2400,7 @@ namespace CSGO_Case_Calculator
             this.cBxHuntsman.AutoSize = true;
             this.cBxHuntsman.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxHuntsman;
             this.cBxHuntsman.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxHuntsman", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxHuntsman.Location = new System.Drawing.Point(848, 99);
+            this.cBxHuntsman.Location = new System.Drawing.Point(848, 90);
             this.cBxHuntsman.Name = "cBxHuntsman";
             this.cBxHuntsman.Size = new System.Drawing.Size(15, 14);
             this.cBxHuntsman.TabIndex = 172;
@@ -2411,7 +2411,7 @@ namespace CSGO_Case_Calculator
             this.cBxHorizon.AutoSize = true;
             this.cBxHorizon.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxHorizon;
             this.cBxHorizon.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxHorizon", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxHorizon.Location = new System.Drawing.Point(848, 63);
+            this.cBxHorizon.Location = new System.Drawing.Point(848, 52);
             this.cBxHorizon.Name = "cBxHorizon";
             this.cBxHorizon.Size = new System.Drawing.Size(15, 14);
             this.cBxHorizon.TabIndex = 171;
@@ -2422,7 +2422,7 @@ namespace CSGO_Case_Calculator
             this.cBxGamma2.AutoSize = true;
             this.cBxGamma2.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxGamma2;
             this.cBxGamma2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxGamma2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxGamma2.Location = new System.Drawing.Point(232, 595);
+            this.cBxGamma2.Location = new System.Drawing.Point(232, 584);
             this.cBxGamma2.Name = "cBxGamma2";
             this.cBxGamma2.Size = new System.Drawing.Size(15, 14);
             this.cBxGamma2.TabIndex = 170;
@@ -2433,7 +2433,7 @@ namespace CSGO_Case_Calculator
             this.cBxGlove.AutoSize = true;
             this.cBxGlove.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxGlove;
             this.cBxGlove.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxGlove", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxGlove.Location = new System.Drawing.Point(232, 631);
+            this.cBxGlove.Location = new System.Drawing.Point(232, 622);
             this.cBxGlove.Name = "cBxGlove";
             this.cBxGlove.Size = new System.Drawing.Size(15, 14);
             this.cBxGlove.TabIndex = 169;
@@ -2444,7 +2444,7 @@ namespace CSGO_Case_Calculator
             this.cBxGamma.AutoSize = true;
             this.cBxGamma.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxGamma;
             this.cBxGamma.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxGamma", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxGamma.Location = new System.Drawing.Point(232, 555);
+            this.cBxGamma.Location = new System.Drawing.Point(232, 546);
             this.cBxGamma.Name = "cBxGamma";
             this.cBxGamma.Size = new System.Drawing.Size(15, 14);
             this.cBxGamma.TabIndex = 168;
@@ -2455,7 +2455,7 @@ namespace CSGO_Case_Calculator
             this.cBxFalchion.AutoSize = true;
             this.cBxFalchion.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxFalchion;
             this.cBxFalchion.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxFalchion", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxFalchion.Location = new System.Drawing.Point(232, 517);
+            this.cBxFalchion.Location = new System.Drawing.Point(232, 508);
             this.cBxFalchion.Name = "cBxFalchion";
             this.cBxFalchion.Size = new System.Drawing.Size(15, 14);
             this.cBxFalchion.TabIndex = 167;
@@ -2466,7 +2466,7 @@ namespace CSGO_Case_Calculator
             this.cBxeSports2014S.AutoSize = true;
             this.cBxeSports2014S.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxeSports2014S;
             this.cBxeSports2014S.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxeSports2014S", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxeSports2014S.Location = new System.Drawing.Point(232, 479);
+            this.cBxeSports2014S.Location = new System.Drawing.Point(232, 470);
             this.cBxeSports2014S.Name = "cBxeSports2014S";
             this.cBxeSports2014S.Size = new System.Drawing.Size(15, 14);
             this.cBxeSports2014S.TabIndex = 166;
@@ -2477,7 +2477,7 @@ namespace CSGO_Case_Calculator
             this.cBxeSports2013W.AutoSize = true;
             this.cBxeSports2013W.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxeSports2013W;
             this.cBxeSports2013W.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxeSports2013W", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxeSports2013W.Location = new System.Drawing.Point(232, 441);
+            this.cBxeSports2013W.Location = new System.Drawing.Point(232, 432);
             this.cBxeSports2013W.Name = "cBxeSports2013W";
             this.cBxeSports2013W.Size = new System.Drawing.Size(15, 14);
             this.cBxeSports2013W.TabIndex = 165;
@@ -2488,7 +2488,7 @@ namespace CSGO_Case_Calculator
             this.cBxDangerZone.AutoSize = true;
             this.cBxDangerZone.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxDangerZone;
             this.cBxDangerZone.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxDangerZone", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxDangerZone.Location = new System.Drawing.Point(232, 365);
+            this.cBxDangerZone.Location = new System.Drawing.Point(232, 356);
             this.cBxDangerZone.Name = "cBxDangerZone";
             this.cBxDangerZone.Size = new System.Drawing.Size(15, 14);
             this.cBxDangerZone.TabIndex = 164;
@@ -2499,7 +2499,7 @@ namespace CSGO_Case_Calculator
             this.cBxeSports2013.AutoSize = true;
             this.cBxeSports2013.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxeSports2013;
             this.cBxeSports2013.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxeSports2013", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxeSports2013.Location = new System.Drawing.Point(232, 403);
+            this.cBxeSports2013.Location = new System.Drawing.Point(232, 394);
             this.cBxeSports2013.Name = "cBxeSports2013";
             this.cBxeSports2013.Size = new System.Drawing.Size(15, 14);
             this.cBxeSports2013.TabIndex = 163;
@@ -2510,7 +2510,7 @@ namespace CSGO_Case_Calculator
             this.cBxCSGOWC3.AutoSize = true;
             this.cBxCSGOWC3.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxCSGOWC3;
             this.cBxCSGOWC3.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxCSGOWC3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxCSGOWC3.Location = new System.Drawing.Point(232, 327);
+            this.cBxCSGOWC3.Location = new System.Drawing.Point(232, 318);
             this.cBxCSGOWC3.Name = "cBxCSGOWC3";
             this.cBxCSGOWC3.Size = new System.Drawing.Size(15, 14);
             this.cBxCSGOWC3.TabIndex = 162;
@@ -2521,7 +2521,7 @@ namespace CSGO_Case_Calculator
             this.cBxCSGOWC2.AutoSize = true;
             this.cBxCSGOWC2.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxCSGOWC2;
             this.cBxCSGOWC2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxCSGOWC2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxCSGOWC2.Location = new System.Drawing.Point(232, 289);
+            this.cBxCSGOWC2.Location = new System.Drawing.Point(232, 280);
             this.cBxCSGOWC2.Name = "cBxCSGOWC2";
             this.cBxCSGOWC2.Size = new System.Drawing.Size(15, 14);
             this.cBxCSGOWC2.TabIndex = 161;
@@ -2532,7 +2532,7 @@ namespace CSGO_Case_Calculator
             this.cBxCSGOWC.AutoSize = true;
             this.cBxCSGOWC.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxCSGOWC;
             this.cBxCSGOWC.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxCSGOWC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxCSGOWC.Location = new System.Drawing.Point(232, 251);
+            this.cBxCSGOWC.Location = new System.Drawing.Point(232, 242);
             this.cBxCSGOWC.Name = "cBxCSGOWC";
             this.cBxCSGOWC.Size = new System.Drawing.Size(15, 14);
             this.cBxCSGOWC.TabIndex = 160;
@@ -2543,7 +2543,7 @@ namespace CSGO_Case_Calculator
             this.cBxClutch.AutoSize = true;
             this.cBxClutch.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxClutch;
             this.cBxClutch.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxClutch", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxClutch.Location = new System.Drawing.Point(232, 175);
+            this.cBxClutch.Location = new System.Drawing.Point(232, 166);
             this.cBxClutch.Name = "cBxClutch";
             this.cBxClutch.Size = new System.Drawing.Size(15, 14);
             this.cBxClutch.TabIndex = 159;
@@ -2554,7 +2554,7 @@ namespace CSGO_Case_Calculator
             this.cBxCS20.AutoSize = true;
             this.cBxCS20.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxCS20;
             this.cBxCS20.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxCS20", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxCS20.Location = new System.Drawing.Point(232, 213);
+            this.cBxCS20.Location = new System.Drawing.Point(232, 204);
             this.cBxCS20.Name = "cBxCS20";
             this.cBxCS20.Size = new System.Drawing.Size(15, 14);
             this.cBxCS20.TabIndex = 158;
@@ -2565,7 +2565,7 @@ namespace CSGO_Case_Calculator
             this.cBxChroma3.AutoSize = true;
             this.cBxChroma3.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxChroma3;
             this.cBxChroma3.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxChroma3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxChroma3.Location = new System.Drawing.Point(232, 137);
+            this.cBxChroma3.Location = new System.Drawing.Point(232, 128);
             this.cBxChroma3.Name = "cBxChroma3";
             this.cBxChroma3.Size = new System.Drawing.Size(15, 14);
             this.cBxChroma3.TabIndex = 157;
@@ -2576,7 +2576,7 @@ namespace CSGO_Case_Calculator
             this.cBxChroma2.AutoSize = true;
             this.cBxChroma2.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxChroma2;
             this.cBxChroma2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxChroma2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxChroma2.Location = new System.Drawing.Point(232, 99);
+            this.cBxChroma2.Location = new System.Drawing.Point(232, 90);
             this.cBxChroma2.Name = "cBxChroma2";
             this.cBxChroma2.Size = new System.Drawing.Size(15, 14);
             this.cBxChroma2.TabIndex = 156;
@@ -2587,7 +2587,7 @@ namespace CSGO_Case_Calculator
             this.cBxChroma.AutoSize = true;
             this.cBxChroma.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxChroma;
             this.cBxChroma.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxChroma", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxChroma.Location = new System.Drawing.Point(232, 61);
+            this.cBxChroma.Location = new System.Drawing.Point(232, 52);
             this.cBxChroma.Name = "cBxChroma";
             this.cBxChroma.Size = new System.Drawing.Size(15, 14);
             this.cBxChroma.TabIndex = 155;
@@ -2626,6 +2626,7 @@ namespace CSGO_Case_Calculator
             this.pnl1.AutoScroll = true;
             this.pnl1.AutoSize = true;
             this.pnl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnl1.Controls.Add(this.cBxAC);
             this.pnl1.Controls.Add(this.btnOptns);
             this.pnl1.Controls.Add(this.btnExit);
             this.pnl1.Controls.Add(this.cBxWinterOffensive);
@@ -2817,7 +2818,6 @@ namespace CSGO_Case_Calculator
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1431, 689);
             this.Controls.Add(this.pnl1);
-            this.Controls.Add(this.cBxAC);
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -2871,22 +2871,6 @@ namespace CSGO_Case_Calculator
         private System.Windows.Forms.RichTextBox rTxtBxSpectrum;
         private System.Windows.Forms.RichTextBox rTxtBxSpectrum2;
         private System.Windows.Forms.RichTextBox rTxtBxWinterOffensive;
-        private System.Windows.Forms.RichTextBox rTxtBxChromaA;
-        private System.Windows.Forms.RichTextBox rTxtBxChroma2A;
-        private System.Windows.Forms.RichTextBox rTxtBxChroma3A;
-        private System.Windows.Forms.RichTextBox rTxtBxClutchA;
-        private System.Windows.Forms.RichTextBox rTxtBxCS20A;
-        private System.Windows.Forms.RichTextBox rTxtBxCSGOWCA;
-        private System.Windows.Forms.RichTextBox rTxtBxCSGOWC2A;
-        private System.Windows.Forms.RichTextBox rTxtBxCSGOWC3A;
-        private System.Windows.Forms.RichTextBox rTxtBxDangerZoneA;
-        private System.Windows.Forms.RichTextBox rTxtBxeSports2013A;
-        private System.Windows.Forms.RichTextBox rTxtBxeSports2013WA;
-        private System.Windows.Forms.RichTextBox rTxtBxeSports2014SA;
-        private System.Windows.Forms.RichTextBox rTxtBxFalchionA;
-        private System.Windows.Forms.RichTextBox rTxtBxGammaA;
-        private System.Windows.Forms.RichTextBox rTxtBxGamma2A;
-        private System.Windows.Forms.RichTextBox rTxtBxGloveA;
         private System.Windows.Forms.RichTextBox rTxtBxChroma2TV;
         private System.Windows.Forms.RichTextBox rTxtBxChroma3TV;
         private System.Windows.Forms.RichTextBox rTxtBxClutchTV;
@@ -2903,22 +2887,6 @@ namespace CSGO_Case_Calculator
         private System.Windows.Forms.RichTextBox rTxtBxGamma2TV;
         private System.Windows.Forms.RichTextBox rTxtBxGloveTV;
         private System.Windows.Forms.Label lblPrice2;
-        private System.Windows.Forms.RichTextBox rTxtBxHorizonA;
-        private System.Windows.Forms.RichTextBox rTxtBxHuntsmanA;
-        private System.Windows.Forms.RichTextBox rTxtBxBravoA;
-        private System.Windows.Forms.RichTextBox rTxtBxBreakoutA;
-        private System.Windows.Forms.RichTextBox rTxtBxHydraA;
-        private System.Windows.Forms.RichTextBox rTxtBxPhoenixA;
-        private System.Windows.Forms.RichTextBox rTxtBxVanguardA;
-        private System.Windows.Forms.RichTextBox rTxtBxWildfireA;
-        private System.Windows.Forms.RichTextBox rTxtBxPrismaA;
-        private System.Windows.Forms.RichTextBox rTxtBxPrisma2A;
-        private System.Windows.Forms.RichTextBox rTxtBxRevolverA;
-        private System.Windows.Forms.RichTextBox rTxtBxShadowA;
-        private System.Windows.Forms.RichTextBox rTxtBxShatteredWebA;
-        private System.Windows.Forms.RichTextBox rTxtBxSpectrumA;
-        private System.Windows.Forms.RichTextBox rTxtBxSpectrum2A;
-        private System.Windows.Forms.RichTextBox rTxtBxWinterOffensiveA;
         private System.Windows.Forms.Label lblAmount2;
         private System.Windows.Forms.RichTextBox rTxtBxHorizonTV;
         private System.Windows.Forms.RichTextBox rTxtBxHuntsmanTV;
@@ -3014,6 +2982,38 @@ namespace CSGO_Case_Calculator
         private Button btnExit;
         private Button btnOptns;
         private Panel pnl1;
+        internal RichTextBox rTxtBxChroma2A;
+        internal RichTextBox rTxtBxChroma3A;
+        internal RichTextBox rTxtBxClutchA;
+        internal RichTextBox rTxtBxCS20A;
+        internal RichTextBox rTxtBxCSGOWCA;
+        internal RichTextBox rTxtBxCSGOWC2A;
+        internal RichTextBox rTxtBxCSGOWC3A;
+        internal RichTextBox rTxtBxDangerZoneA;
+        internal RichTextBox rTxtBxeSports2013A;
+        internal RichTextBox rTxtBxeSports2013WA;
+        internal RichTextBox rTxtBxeSports2014SA;
+        internal RichTextBox rTxtBxFalchionA;
+        internal RichTextBox rTxtBxGammaA;
+        internal RichTextBox rTxtBxGamma2A;
+        internal RichTextBox rTxtBxGloveA;
+        internal RichTextBox rTxtBxChromaA;
+        internal RichTextBox rTxtBxHorizonA;
+        internal RichTextBox rTxtBxHuntsmanA;
+        internal RichTextBox rTxtBxBravoA;
+        internal RichTextBox rTxtBxBreakoutA;
+        internal RichTextBox rTxtBxHydraA;
+        internal RichTextBox rTxtBxPhoenixA;
+        internal RichTextBox rTxtBxVanguardA;
+        internal RichTextBox rTxtBxWildfireA;
+        internal RichTextBox rTxtBxPrismaA;
+        internal RichTextBox rTxtBxPrisma2A;
+        internal RichTextBox rTxtBxRevolverA;
+        internal RichTextBox rTxtBxShadowA;
+        internal RichTextBox rTxtBxShatteredWebA;
+        internal RichTextBox rTxtBxSpectrumA;
+        internal RichTextBox rTxtBxSpectrum2A;
+        internal RichTextBox rTxtBxWinterOffensiveA;
     }
 }
 
