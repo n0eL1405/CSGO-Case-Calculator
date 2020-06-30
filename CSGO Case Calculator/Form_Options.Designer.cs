@@ -39,6 +39,8 @@
             this.lblTime = new System.Windows.Forms.Label();
             this.lblMadeBy = new System.Windows.Forms.Label();
             this.btnImportOldXML = new System.Windows.Forms.Button();
+            this.lLblTwitter = new System.Windows.Forms.LinkLabel();
+            this.lblVersion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.grpBxCalcTimer.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +50,8 @@
             this.panel1.AutoScroll = true;
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Controls.Add(this.lblVersion);
+            this.panel1.Controls.Add(this.lLblTwitter);
             this.panel1.Controls.Add(this.grpBxCalcTimer);
             this.panel1.Controls.Add(this.lblMadeBy);
             this.panel1.Controls.Add(this.btnImportOldXML);
@@ -150,7 +154,7 @@
             // lblMadeBy
             // 
             this.lblMadeBy.AutoSize = true;
-            this.lblMadeBy.Location = new System.Drawing.Point(562, 402);
+            this.lblMadeBy.Location = new System.Drawing.Point(3, 402);
             this.lblMadeBy.Name = "lblMadeBy";
             this.lblMadeBy.Size = new System.Drawing.Size(175, 13);
             this.lblMadeBy.TabIndex = 152;
@@ -169,6 +173,29 @@
             this.btnImportOldXML.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnImportOldXML.UseVisualStyleBackColor = false;
             this.btnImportOldXML.Click += new System.EventHandler(this.btnImportOldXML_Click);
+            // 
+            // lLblTwitter
+            // 
+            this.lLblTwitter.ActiveLinkColor = System.Drawing.Color.White;
+            this.lLblTwitter.AutoSize = true;
+            this.lLblTwitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lLblTwitter.LinkColor = System.Drawing.Color.Cyan;
+            this.lLblTwitter.Location = new System.Drawing.Point(184, 402);
+            this.lLblTwitter.Name = "lLblTwitter";
+            this.lLblTwitter.Size = new System.Drawing.Size(39, 13);
+            this.lLblTwitter.TabIndex = 154;
+            this.lLblTwitter.TabStop = true;
+            this.lLblTwitter.Text = "Twitter";
+            this.lLblTwitter.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.Location = new System.Drawing.Point(677, 402);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(60, 13);
+            this.lblVersion.TabIndex = 191;
+            this.lblVersion.Text = "Version 1.2";
             // 
             // Form_Options
             // 
@@ -204,5 +231,7 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblLimitation;
         private System.Windows.Forms.RichTextBox rTxtBxTimerTime;
+        private System.Windows.Forms.LinkLabel lLblTwitter;
+        private System.Windows.Forms.Label lblVersion;
     }
 }
