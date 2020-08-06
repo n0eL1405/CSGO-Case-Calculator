@@ -16,6 +16,7 @@ TBP = To be published
 > \+ Letter and empty cases in xml-file will be replaced with "0" when loading cases   
 > \- Removed searching for old XML-files when launching   
 > \* Moved location of XML-file (again) to "\*ROOTFOLDER*\\files"
+> \* Fixed bug that Breakoutcase gets add doubeld when calculation the full amount
 
 
 #### [V 1.1.1](https://github.com/NoelTheN00B/CSGO-Case-Calculator/releases/tag/v1.1.1)
