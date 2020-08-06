@@ -16,5 +16,5 @@ Amounts and checked boxes will be load on startup
 ### FAQ
 
 Q: Why is there a pause between when loading the price of every case?  
-A: When you request the prices too often Steam thinks you try to DDoS the API (witch I'm using to get the prices) and your pc is banned for about an hour from using accesing the API. Don't panic, the ban would NOT effect your account from using Steam normally.
+A: When you request the prices too often Steam thinks you try to DDoS the API (wich I'm using to get the prices) and your pc is banned for about an hour from using the API. Don't panic, the ban would NOT effect your account from using Steam normally.
 (If someone knows a good alternative to reduce/ remove the wait time, please be so kind give me the tip)
