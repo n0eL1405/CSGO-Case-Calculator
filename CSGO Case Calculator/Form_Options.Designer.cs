@@ -53,8 +53,9 @@
             this.panel1.Controls.Add(this.btnImportOldXML);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(740, 424);
+            this.panel1.Size = new System.Drawing.Size(987, 522);
             this.panel1.TabIndex = 0;
             // 
             // grpBxCalcTimer
@@ -67,9 +68,11 @@
             this.grpBxCalcTimer.Controls.Add(this.lblTime);
             this.grpBxCalcTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBxCalcTimer.ForeColor = System.Drawing.Color.White;
-            this.grpBxCalcTimer.Location = new System.Drawing.Point(12, 12);
+            this.grpBxCalcTimer.Location = new System.Drawing.Point(16, 15);
+            this.grpBxCalcTimer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpBxCalcTimer.Name = "grpBxCalcTimer";
-            this.grpBxCalcTimer.Size = new System.Drawing.Size(235, 149);
+            this.grpBxCalcTimer.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpBxCalcTimer.Size = new System.Drawing.Size(313, 183);
             this.grpBxCalcTimer.TabIndex = 153;
             this.grpBxCalcTimer.TabStop = false;
             this.grpBxCalcTimer.Text = "Calculation Timer";
@@ -80,9 +83,10 @@
             this.btnHelpTimer.Cursor = System.Windows.Forms.Cursors.Help;
             this.btnHelpTimer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHelpTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnHelpTimer.Location = new System.Drawing.Point(205, 11);
+            this.btnHelpTimer.Location = new System.Drawing.Point(273, 14);
+            this.btnHelpTimer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHelpTimer.Name = "btnHelpTimer";
-            this.btnHelpTimer.Size = new System.Drawing.Size(24, 25);
+            this.btnHelpTimer.Size = new System.Drawing.Size(32, 31);
             this.btnHelpTimer.TabIndex = 156;
             this.btnHelpTimer.Text = "?";
             this.btnHelpTimer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -94,9 +98,10 @@
             this.btnStop.BackColor = System.Drawing.Color.Gray;
             this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.btnStop.Location = new System.Drawing.Point(121, 99);
+            this.btnStop.Location = new System.Drawing.Point(161, 122);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(98, 40);
+            this.btnStop.Size = new System.Drawing.Size(131, 49);
             this.btnStop.TabIndex = 155;
             this.btnStop.Text = "Stop";
             this.btnStop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -107,9 +112,10 @@
             this.btnStart.BackColor = System.Drawing.Color.Gray;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.btnStart.Location = new System.Drawing.Point(17, 99);
+            this.btnStart.Location = new System.Drawing.Point(23, 122);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(98, 40);
+            this.btnStart.Size = new System.Drawing.Size(131, 49);
             this.btnStart.TabIndex = 154;
             this.btnStart.Text = "Start";
             this.btnStart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -120,20 +126,22 @@
             // 
             this.lblLimitation.AutoSize = true;
             this.lblLimitation.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLimitation.Location = new System.Drawing.Point(15, 72);
+            this.lblLimitation.Location = new System.Drawing.Point(20, 89);
+            this.lblLimitation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLimitation.Name = "lblLimitation";
-            this.lblLimitation.Size = new System.Drawing.Size(188, 12);
+            this.lblLimitation.Size = new System.Drawing.Size(255, 15);
             this.lblLimitation.TabIndex = 2;
             this.lblLimitation.Text = "Choose an integer between 5 and 60 minutes";
             // 
             // rTxtBxTimerTime
             // 
             this.rTxtBxTimerTime.BackColor = System.Drawing.Color.Silver;
-            this.rTxtBxTimerTime.Location = new System.Drawing.Point(17, 48);
+            this.rTxtBxTimerTime.Location = new System.Drawing.Point(23, 59);
+            this.rTxtBxTimerTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rTxtBxTimerTime.Multiline = false;
             this.rTxtBxTimerTime.Name = "rTxtBxTimerTime";
             this.rTxtBxTimerTime.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rTxtBxTimerTime.Size = new System.Drawing.Size(116, 21);
+            this.rTxtBxTimerTime.Size = new System.Drawing.Size(153, 25);
             this.rTxtBxTimerTime.TabIndex = 1;
             this.rTxtBxTimerTime.Text = "";
             this.rTxtBxTimerTime.TextChanged += new System.EventHandler(this.rTxtBxTimerTime_TextChanged);
@@ -141,18 +149,20 @@
             // lblTime
             // 
             this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(14, 30);
+            this.lblTime.Location = new System.Drawing.Point(19, 37);
+            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(172, 15);
+            this.lblTime.Size = new System.Drawing.Size(205, 18);
             this.lblTime.TabIndex = 0;
             this.lblTime.Text = "Minutes between calculations:";
             // 
             // lblMadeBy
             // 
             this.lblMadeBy.AutoSize = true;
-            this.lblMadeBy.Location = new System.Drawing.Point(562, 402);
+            this.lblMadeBy.Location = new System.Drawing.Point(749, 495);
+            this.lblMadeBy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMadeBy.Name = "lblMadeBy";
-            this.lblMadeBy.Size = new System.Drawing.Size(175, 13);
+            this.lblMadeBy.Size = new System.Drawing.Size(229, 17);
             this.lblMadeBy.TabIndex = 152;
             this.lblMadeBy.Text = "Made by Leon aka Noel_the_N00B";
             // 
@@ -161,9 +171,10 @@
             this.btnImportOldXML.BackColor = System.Drawing.Color.Gray;
             this.btnImportOldXML.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImportOldXML.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.btnImportOldXML.Location = new System.Drawing.Point(12, 184);
+            this.btnImportOldXML.Location = new System.Drawing.Point(16, 226);
+            this.btnImportOldXML.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnImportOldXML.Name = "btnImportOldXML";
-            this.btnImportOldXML.Size = new System.Drawing.Size(126, 63);
+            this.btnImportOldXML.Size = new System.Drawing.Size(168, 78);
             this.btnImportOldXML.TabIndex = 151;
             this.btnImportOldXML.Text = "Import old XML-file";
             this.btnImportOldXML.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -172,17 +183,18 @@
             // 
             // Form_Options
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(740, 424);
+            this.ClientSize = new System.Drawing.Size(987, 522);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "Form_Options";
             this.Text = "CS:GO Case Calculator - Options";
+            this.Load += new System.EventHandler(this.Form_Options_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.grpBxCalcTimer.ResumeLayout(false);
