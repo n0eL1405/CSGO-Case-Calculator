@@ -1071,7 +1071,7 @@ namespace CSGO_Case_Calculator
 
             //calculate Total Case Amount
             this.rTxtBxTCA.Text = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 + aCSGOWC3 + aDangerZone + aeSports2013 + aeSports2013Winter + aeSports2014Summer + aFalchion + aGamma +
-                aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aBreakout + aHydra + aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 + aRevolver + aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive);
+                aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aHydra + aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 + aRevolver + aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive);
 
         }
 
@@ -1440,7 +1440,7 @@ namespace CSGO_Case_Calculator
 
                 //calculate Total Case Amount
                 this.rTxtBxTCA.Text = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 + aCSGOWC3 + aDangerZone + aeSports2013 + aeSports2013Winter + aeSports2014Summer + aFalchion + aGamma +
-                    aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aBreakout + aHydra + aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 + aRevolver + aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive);
+                    aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aHydra + aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 + aRevolver + aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive);
             }
             else { }
         }
