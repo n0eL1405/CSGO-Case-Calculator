@@ -4,7 +4,6 @@ using System.Xml.Serialization;
 using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.Runtime.CompilerServices;
 
 namespace CSGO_Case_Calculator
 {
@@ -603,8 +602,8 @@ namespace CSGO_Case_Calculator
                 catch { }
 
             }
-            else
-            {
+            else {
+
                 this.rTxtBxPhoenix.Text = "0";
             }
 
@@ -1819,103 +1818,101 @@ namespace CSGO_Case_Calculator
             System.Diagnostics.Process.Start(steammarktcsgo + "Gamma%202%20Case");
         }
 
-        private void lLblGlove_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void lLblGlove_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+
             System.Diagnostics.Process.Start(steammarktcsgo + "Glove%20Case");
         }
 
-        private void lLblHorizon_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void lLblHorizon_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+
             System.Diagnostics.Process.Start(steammarktcsgo + "Horizon%20Case");
         }
 
-        private void lLblHuntsman_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void lLblHuntsman_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+
             System.Diagnostics.Process.Start(steammarktcsgo + "Huntsman%20Weapon%20Case");
         }
 
-        private void lLblBravo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void lLblBravo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+
             System.Diagnostics.Process.Start(steammarktcsgo + "Operation%20Bravo%20Case");
         }
 
-        private void lLblBreakout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void lLblBreakout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+
             System.Diagnostics.Process.Start(steammarktcsgo + "Operation%20Breakout%20Weapon%20Case");
         }
 
-        private void lLblHydra_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void lLblHydra_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+
             System.Diagnostics.Process.Start(steammarktcsgo + "Operation%20Hydra%20Case");
         }
 
-        private void lLblPhoenix_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void lLblPhoenix_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+
             System.Diagnostics.Process.Start(steammarktcsgo + "Operation%20Phoenix%20Weapon%20Case");
         }
 
-        private void lLblVanguard_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void lLblVanguard_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+
             System.Diagnostics.Process.Start(steammarktcsgo + "Operation%20Vanguard%20Weapon%20Case");
         }
 
-        private void lLblWildfire_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void lLblWildfire_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+
             System.Diagnostics.Process.Start(steammarktcsgo + "Operation%20Wildfire%20Case");
         }
 
-        private void lLblPrisma_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void lLblPrisma_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+
             System.Diagnostics.Process.Start(steammarktcsgo + "Prisma%20Case");
         }
 
-        private void lLblPrisma2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void lLblPrisma2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+
             System.Diagnostics.Process.Start(steammarktcsgo + "Prisma%202%20Case");
         }
 
-        private void lLblRevolver_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void lLblRevolver_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+
             System.Diagnostics.Process.Start(steammarktcsgo + "Revolver%20Case");
         }
 
-        private void lLblShadow_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void lLblShadow_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+
             System.Diagnostics.Process.Start(steammarktcsgo + "Shadow%20Case");
         }
 
-        private void lLblShatteredWeb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void lLblShatteredWeb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+
             System.Diagnostics.Process.Start(steammarktcsgo + "Shattered%20Web%20Case");
         }
 
-        private void lLblSpectrum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void lLblSpectrum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+
             System.Diagnostics.Process.Start(steammarktcsgo + "Spectrum%20Case");
         }
 
-        private void lLblSpectrum2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void lLblSpectrum2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+
             System.Diagnostics.Process.Start(steammarktcsgo + "Spectrum%202%20Case");
         }
 
-        private void lLblWinterOffensive_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void lLblWinterOffensive_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+
             System.Diagnostics.Process.Start(steammarktcsgo + "Winter%20Offensive%20Weapon%20Case");
         }
 
 
         //stuff that i don't need and created accidentally
-        private void rTxtBxTCA_TextChanged(object sender, EventArgs e)
-        { }
+        private void rTxtBxTCA_TextChanged(object sender, EventArgs e) { }
 
-        private void lblTotalCaseValue_Click(object sender, EventArgs e)
-        { }
+        private void lblTotalCaseValue_Click(object sender, EventArgs e) { }
 
-        private void rTxtBxTCV_TextChanged(object sender, EventArgs e)
-        { }
+        private void rTxtBxTCV_TextChanged(object sender, EventArgs e) { }
 
-        private void rTxtBxChromaTV_TextChanged(object sender, EventArgs e)
-        { }
+        private void rTxtBxChromaTV_TextChanged(object sender, EventArgs e) { }
+
+        private void pnl1_Paint(object sender, PaintEventArgs e) { }
     }
 }
