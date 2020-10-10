@@ -1785,6 +1785,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblChroma
             // 
+            this.lLblChroma.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblChroma.AutoSize = true;
             this.lLblChroma.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblChroma.LinkColor = System.Drawing.Color.White;
@@ -1800,6 +1801,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblChroma2
             // 
+            this.lLblChroma2.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblChroma2.AutoSize = true;
             this.lLblChroma2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblChroma2.LinkColor = System.Drawing.Color.White;
@@ -1815,6 +1817,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblChroma3
             // 
+            this.lLblChroma3.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblChroma3.AutoSize = true;
             this.lLblChroma3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblChroma3.LinkColor = System.Drawing.Color.White;
@@ -1830,6 +1833,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblClutch
             // 
+            this.lLblClutch.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblClutch.AutoSize = true;
             this.lLblClutch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblClutch.LinkColor = System.Drawing.Color.White;
@@ -1845,6 +1849,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblCS20
             // 
+            this.lLblCS20.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblCS20.AutoSize = true;
             this.lLblCS20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblCS20.LinkColor = System.Drawing.Color.White;
@@ -1860,6 +1865,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblCSGOWC
             // 
+            this.lLblCSGOWC.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblCSGOWC.AutoSize = true;
             this.lLblCSGOWC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblCSGOWC.LinkColor = System.Drawing.Color.White;
@@ -1875,6 +1881,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblCSGOWC2
             // 
+            this.lLblCSGOWC2.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblCSGOWC2.AutoSize = true;
             this.lLblCSGOWC2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblCSGOWC2.LinkColor = System.Drawing.Color.White;
@@ -1890,6 +1897,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblCSGOWC3
             // 
+            this.lLblCSGOWC3.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblCSGOWC3.AutoSize = true;
             this.lLblCSGOWC3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblCSGOWC3.LinkColor = System.Drawing.Color.White;
@@ -1905,6 +1913,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblDangerZone
             // 
+            this.lLblDangerZone.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblDangerZone.AutoSize = true;
             this.lLblDangerZone.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblDangerZone.LinkColor = System.Drawing.Color.White;
@@ -1920,6 +1929,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLbleSports2013
             // 
+            this.lLbleSports2013.ActiveLinkColor = System.Drawing.Color.White;
             this.lLbleSports2013.AutoSize = true;
             this.lLbleSports2013.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLbleSports2013.LinkColor = System.Drawing.Color.White;
@@ -1935,6 +1945,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLbleSports2013W
             // 
+            this.lLbleSports2013W.ActiveLinkColor = System.Drawing.Color.White;
             this.lLbleSports2013W.AutoSize = true;
             this.lLbleSports2013W.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLbleSports2013W.LinkColor = System.Drawing.Color.White;
@@ -1950,6 +1961,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLbleSports2014S
             // 
+            this.lLbleSports2014S.ActiveLinkColor = System.Drawing.Color.White;
             this.lLbleSports2014S.AutoSize = true;
             this.lLbleSports2014S.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLbleSports2014S.LinkColor = System.Drawing.Color.White;
@@ -1965,6 +1977,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblFalchion
             // 
+            this.lLblFalchion.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblFalchion.AutoSize = true;
             this.lLblFalchion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblFalchion.LinkColor = System.Drawing.Color.White;
@@ -1980,6 +1993,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblGamma
             // 
+            this.lLblGamma.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblGamma.AutoSize = true;
             this.lLblGamma.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblGamma.LinkColor = System.Drawing.Color.White;
@@ -1995,6 +2009,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblGamma2
             // 
+            this.lLblGamma2.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblGamma2.AutoSize = true;
             this.lLblGamma2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblGamma2.LinkColor = System.Drawing.Color.White;
@@ -2010,6 +2025,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblGlove
             // 
+            this.lLblGlove.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblGlove.AutoSize = true;
             this.lLblGlove.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblGlove.LinkColor = System.Drawing.Color.White;
@@ -2025,6 +2041,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblHuntsman
             // 
+            this.lLblHuntsman.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblHuntsman.AutoSize = true;
             this.lLblHuntsman.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblHuntsman.LinkColor = System.Drawing.Color.White;
@@ -2040,6 +2057,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblHorizon
             // 
+            this.lLblHorizon.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblHorizon.AutoSize = true;
             this.lLblHorizon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblHorizon.LinkColor = System.Drawing.Color.White;
@@ -2055,6 +2073,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblBravo
             // 
+            this.lLblBravo.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblBravo.AutoSize = true;
             this.lLblBravo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblBravo.LinkColor = System.Drawing.Color.White;
@@ -2070,6 +2089,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblBreakout
             // 
+            this.lLblBreakout.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblBreakout.AutoSize = true;
             this.lLblBreakout.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblBreakout.LinkColor = System.Drawing.Color.White;
@@ -2085,6 +2105,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblHydra
             // 
+            this.lLblHydra.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblHydra.AutoSize = true;
             this.lLblHydra.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblHydra.LinkColor = System.Drawing.Color.White;
@@ -2100,6 +2121,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblPhoenix
             // 
+            this.lLblPhoenix.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblPhoenix.AutoSize = true;
             this.lLblPhoenix.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblPhoenix.LinkColor = System.Drawing.Color.White;
@@ -2115,6 +2137,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblVanguard
             // 
+            this.lLblVanguard.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblVanguard.AutoSize = true;
             this.lLblVanguard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblVanguard.LinkColor = System.Drawing.Color.White;
@@ -2130,6 +2153,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblWildfire
             // 
+            this.lLblWildfire.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblWildfire.AutoSize = true;
             this.lLblWildfire.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblWildfire.LinkColor = System.Drawing.Color.White;
@@ -2145,6 +2169,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblPrisma
             // 
+            this.lLblPrisma.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblPrisma.AutoSize = true;
             this.lLblPrisma.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblPrisma.LinkColor = System.Drawing.Color.White;
@@ -2160,6 +2185,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblPrisma2
             // 
+            this.lLblPrisma2.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblPrisma2.AutoSize = true;
             this.lLblPrisma2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblPrisma2.LinkColor = System.Drawing.Color.White;
@@ -2175,6 +2201,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblRevolver
             // 
+            this.lLblRevolver.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblRevolver.AutoSize = true;
             this.lLblRevolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblRevolver.LinkColor = System.Drawing.Color.White;
@@ -2190,6 +2217,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblShadow
             // 
+            this.lLblShadow.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblShadow.AutoSize = true;
             this.lLblShadow.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblShadow.LinkColor = System.Drawing.Color.White;
@@ -2205,6 +2233,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblShatteredWeb
             // 
+            this.lLblShatteredWeb.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblShatteredWeb.AutoSize = true;
             this.lLblShatteredWeb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblShatteredWeb.LinkColor = System.Drawing.Color.White;
@@ -2220,6 +2249,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblSpectrum
             // 
+            this.lLblSpectrum.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblSpectrum.AutoSize = true;
             this.lLblSpectrum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblSpectrum.LinkColor = System.Drawing.Color.White;
@@ -2235,6 +2265,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblSpectrum2
             // 
+            this.lLblSpectrum2.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblSpectrum2.AutoSize = true;
             this.lLblSpectrum2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblSpectrum2.LinkColor = System.Drawing.Color.White;
@@ -2250,6 +2281,7 @@ namespace CSGO_Case_Calculator
             // 
             // lLblWinterOffensive
             // 
+            this.lLblWinterOffensive.ActiveLinkColor = System.Drawing.Color.White;
             this.lLblWinterOffensive.AutoSize = true;
             this.lLblWinterOffensive.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lLblWinterOffensive.LinkColor = System.Drawing.Color.White;

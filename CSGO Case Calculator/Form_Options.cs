@@ -1,19 +1,25 @@
 ﻿using System;
+using System.IO;
 using System.Xml;
 using System.Windows.Forms;
+using System.Drawing.Text;
+using System.Xml.Serialization;
+using System.Threading.Tasks;
 
-namespace CSGO_Case_Calculator {
-
-    public partial class Form_Options : Form {
-
+namespace CSGO_Case_Calculator
+{
+    public partial class Form_Options : Form
+    {
         int TimerTime;
 
-        public Form_Options() {
+        public Form_Options()
+        {
             InitializeComponent();
         }
 
         //button to import old xml-file
-        public void btnImportOldXML_Click(object sender, EventArgs e) {
+        public void btnImportOldXML_Click(object sender, EventArgs e)
+        {
 
             var Form_Main = new Form_Main();
 
@@ -24,13 +30,16 @@ namespace CSGO_Case_Calculator {
             openOldXMLfile.Filter = "Cases XML-file|*.xml";
             
 
-            if (openOldXMLfile.ShowDialog() == DialogResult.OK) {
+            if (openOldXMLfile.ShowDialog() == DialogResult.OK)
+            {
 
                 var MsgBxWrng = MessageBox.Show("WARNING!\nIf you already have an XML file, it will be replaced.\nThis cannot be undone.", "WARNING!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
 
-                if (MsgBxWrng == DialogResult.OK) {
+                if (MsgBxWrng == DialogResult.OK)
+                {
 
-                    try {
+                    try
+                    {
 
                         string OLDcasesXML = openOldXMLfile.FileName;
                         string NEWcasesXML = Application.StartupPath + "\\files\\cases.xml";
@@ -52,53 +61,58 @@ namespace CSGO_Case_Calculator {
                         MessageBox.Show("Success!\nPlease click on 'Load Saved Cases' to load the new XML-file.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
-                    catch {
+                    catch
+                    {
 
                         MessageBox.Show("Oops. Something went wrong.\nPlease try again.", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                 }
-                else {
+                else
+                {
                     
                 }
             }
 
         }
 
-        private void btnHelpTimer_Click(object sender, EventArgs e) {
+        private void btnHelpTimer_Click(object sender, EventArgs e)
+        {
             MessageBox.Show("Enter an integer between 5 and 60. This will be the interval between the price reloads and calculations.\n\nPress 'Start' to start the Calculation Timer and 'Stop' to stop the Calculation Timer.", "Calculation Timer Help", MessageBoxButtons.OK, MessageBoxIcon.Question);
         }
 
-        private void rTxtBxTimerTime_TextChanged(object sender, EventArgs e) {
+        private void rTxtBxTimerTime_TextChanged(object sender, EventArgs e)
+        {
             
         }
 
-        private void btnStart_Click(object sender, EventArgs e) {
+        private void btnStart_Click(object sender, EventArgs e)
+        {
             //check if input is an integer
-            if (Int32.TryParse(rTxtBxTimerTime.Text, out TimerTime)
-                ) {
+            if (Int32.TryParse(rTxtBxTimerTime.Text, out TimerTime))
+            {
                 //check if number is between 5 and 60
-                if (TimerTime >= 5 && TimerTime <= 60) {
-
+                if (TimerTime >= 5 && TimerTime <= 60)
+                {
                     //code to set the timer
 
 
                 }
-                else {
-
+                else
+                {
                     MessageBox.Show("Error: \"" + rTxtBxTimerTime.Text + "\" is not between 5 and 60!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
-            else {
-
+            else
+            {
                 MessageBox.Show("Error: \"" + rTxtBxTimerTime.Text + "\" is not an integer!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void Form_Options_Load(object sender, EventArgs e) {
-
-
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://twitter.com/noel_the_N00B");
         }
     }
 }
