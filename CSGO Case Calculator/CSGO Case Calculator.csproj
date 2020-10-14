@@ -83,6 +83,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Timer.cs" />
     <Compile Include="Form_Main.cs">
       <SubType>Form</SubType>
     </Compile>

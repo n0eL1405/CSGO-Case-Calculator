@@ -50,9 +50,22 @@ namespace CSGO_Case_Calculator {
 		private int aVanguard;
 		private int aWildfire;
 		private int aWinterOffensive;
+		private int aFracture;
 
 		public Form_Main() {
 			InitializeComponent();
+		}
+
+		public String cut(String price) {
+
+			//cute out the min price
+			price = price.Remove(0, 32);
+			price = price.Remove(price.IndexOf('€'));
+
+			//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
+			price = price.Replace("--", "00");
+
+			return price;
 		}
 
 		//save website in string and extract the price
@@ -67,12 +80,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxChroma.Text = Convert.ToString(price) + "€";
 				}
@@ -89,12 +97,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxChroma2.Text = Convert.ToString(price) + "€";
 				}
@@ -111,12 +114,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxChroma3.Text = Convert.ToString(price) + "€";
 				}
@@ -133,12 +131,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxClutch.Text = Convert.ToString(price) + "€";
 				}
@@ -155,12 +148,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxCS20.Text = Convert.ToString(price) + "€";
 				}
@@ -177,12 +165,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxCSGOWC.Text = Convert.ToString(price) + "€";
 				}
@@ -199,12 +182,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxCSGOWC2.Text = Convert.ToString(price) + "€";
 				}
@@ -221,12 +199,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxCSGOWC3.Text = Convert.ToString(price) + "€";
 				}
@@ -243,12 +216,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxDangerZone.Text = Convert.ToString(price) + "€";
 				}
@@ -265,12 +233,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxeSports2013.Text = Convert.ToString(price) + "€";
 				}
@@ -287,12 +250,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxeSports2013W.Text = Convert.ToString(price) + "€";
 				}
@@ -309,12 +267,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxeSports2014S.Text = Convert.ToString(price) + "€";
 				}
@@ -331,12 +284,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxFalchion.Text = Convert.ToString(price) + "€";
 				}
@@ -353,12 +301,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxGamma.Text = Convert.ToString(price) + "€";
 				}
@@ -375,12 +318,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxGamma2.Text = Convert.ToString(price) + "€";
 				}
@@ -397,12 +335,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxGlove.Text = Convert.ToString(price) + "€";
 				}
@@ -419,12 +352,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxHorizon.Text = Convert.ToString(price) + "€";
 				}
@@ -441,12 +369,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxHuntsman.Text = Convert.ToString(price) + "€";
 				}
@@ -463,12 +386,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxBravo.Text = Convert.ToString(price) + "€";
 				}
@@ -485,12 +403,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxBreakout.Text = Convert.ToString(price) + "€";
 				}
@@ -507,12 +420,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxHydra.Text = Convert.ToString(price) + "€";
 				}
@@ -529,12 +437,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxPhoenix.Text = Convert.ToString(price) + "€";
 				}
@@ -551,12 +454,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxVanguard.Text = Convert.ToString(price) + "€";
 				}
@@ -573,12 +471,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxWildfire.Text = Convert.ToString(price) + "€";
 				}
@@ -595,12 +488,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxPrisma.Text = Convert.ToString(price) + "€";
 				}
@@ -617,12 +505,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxPrisma2.Text = Convert.ToString(price) + "€";
 				}
@@ -639,12 +522,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxRevolver.Text = Convert.ToString(price) + "€";
 				}
@@ -661,12 +539,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxShadow.Text = Convert.ToString(price) + "€";
 				}
@@ -683,12 +556,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxShatteredWeb.Text = Convert.ToString(price) + "€";
 				}
@@ -705,12 +573,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxSpectrum.Text = Convert.ToString(price) + "€";
 				}
@@ -727,12 +590,7 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxSpectrum2.Text = Convert.ToString(price) + "€";
 				}
@@ -749,18 +607,30 @@ namespace CSGO_Case_Calculator {
 					response.EnsureSuccessStatusCode();
 					var price = await response.Content.ReadAsStringAsync();
 
-					//cute out the min price
-					price = price.Remove(0, 32);
-					price = price.Remove(price.IndexOf('\\'));
-
-					//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
-					price = price.Replace("--", "00");
+					price = cut(price);
 
 					rTxtBxWinterOffensive.Text = Convert.ToString(price) + "€";
 				}
 				catch { }
 			} else {
 				rTxtBxWinterOffensive.Text = "0";
+			}
+
+			if (cBxFracture.Checked) {
+				await Task.Delay(wait);
+
+				try {
+					var response = await client.GetAsync(urlsteammarkt + "Fracture%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					rTxtBxFracture.Text = Convert.ToString(price) + "€";
+				}
+				catch { }
+			} else {
+				rTxtBxFracture.Text = "0";
 			}
 
 			//auto calculate
@@ -911,6 +781,12 @@ namespace CSGO_Case_Calculator {
 				cases.WINTEROFFENSIVE_AMOUNT = "0";
 			}
 
+			if (cases.FRACTURE_AMOUNT == "" ||
+			    !int.TryParse(cases.FRACTURE_AMOUNT, out aFracture))
+			{
+				cases.FRACTURE_AMOUNT = "0";
+			}
+
 			rTxtBxChromaA.Text = cases.CHROMA_AMOUNT;
 			rTxtBxChroma2A.Text = cases.CHROMA2_AMOUNT;
 			rTxtBxChroma3A.Text = cases.CHROMA3_AMOUNT;
@@ -943,6 +819,7 @@ namespace CSGO_Case_Calculator {
 			rTxtBxSpectrumA.Text = cases.SPECTRUM_AMOUNT;
 			rTxtBxSpectrum2A.Text = cases.SPECTRUM2_AMOUNT;
 			rTxtBxWinterOffensiveA.Text = cases.WINTEROFFENSIVE_AMOUNT;
+			rTxtBxFractureA.Text = cases.FRACTURE_AMOUNT;
 
 			//calculate Total Case Amount
 			rTxtBxTCA.Text = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 +
@@ -950,7 +827,7 @@ namespace CSGO_Case_Calculator {
 			                                  aeSports2014Summer + aFalchion + aGamma +
 			                                  aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aHydra +
 			                                  aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 + aRevolver +
-			                                  aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive);
+			                                  aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive + aFracture);
 		}
 
 		public void SaveAllCases() {
@@ -986,7 +863,8 @@ namespace CSGO_Case_Calculator {
 				SHATTEREDWEB_AMOUNT = rTxtBxShatteredWebA.Text,
 				SPECTRUM_AMOUNT = rTxtBxSpectrumA.Text,
 				SPECTRUM2_AMOUNT = rTxtBxSpectrum2A.Text,
-				WINTEROFFENSIVE_AMOUNT = rTxtBxWinterOffensiveA.Text
+				WINTEROFFENSIVE_AMOUNT = rTxtBxWinterOffensiveA.Text,
+				FRACTURE_AMOUNT = rTxtBxFractureA.Text
 			};
 
 			//set path for xml-file
@@ -1290,6 +1168,19 @@ namespace CSGO_Case_Calculator {
 					"ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
 			}
 
+			if (int.TryParse(rTxtBxFractureA.Text, out aFracture))
+			{
+				rTxtBxFractureTV.Text =
+					Convert.ToString(Convert.ToDecimal(rTxtBxFracture.Text.Replace("€", "")) *
+					                 Convert.ToDecimal(aFracture)) + "€";
+			}
+			else
+			{
+				MessageBox.Show(
+					"Error: \"" + rTxtBxFractureA.Text + "\" is not a number! \nPlease enter a valid number",
+					"ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+			}
+
 			//check if all amounts are numbers
 			var allsave = int.TryParse(rTxtBxChromaA.Text, out aChroma) &&
 			              int.TryParse(rTxtBxChroma2A.Text, out aChroma2) &&
@@ -1321,10 +1212,12 @@ namespace CSGO_Case_Calculator {
 			              int.TryParse(rTxtBxShatteredWebA.Text, out aShatteredWeb) &&
 			              int.TryParse(rTxtBxSpectrumA.Text, out aSpectrum) &&
 			              int.TryParse(rTxtBxSpectrum2A.Text, out aSpectrum2) &&
-			              int.TryParse(rTxtBxWinterOffensiveA.Text, out aWinterOffensive);
+			              int.TryParse(rTxtBxWinterOffensiveA.Text, out aWinterOffensive) &&
+			              int.TryParse(rTxtBxFractureA.Text, out aFracture);
 
 			if (allsave) {
 				//calculate Total Case Value
+				rTxtBxTCV.Text = "";
 				rTxtBxTCV.Text = Convert.ToString(Convert.ToDecimal(rTxtBxChromaTV.Text.Replace("€", "")) +
 				                                  Convert.ToDecimal(rTxtBxChroma2TV.Text.Replace("€", "")) +
 				                                  Convert.ToDecimal(rTxtBxChroma3TV.Text.Replace("€", "")) +
@@ -1355,9 +1248,10 @@ namespace CSGO_Case_Calculator {
 				                                  Convert.ToDecimal(rTxtBxShadowTV.Text.Replace("€", "")) +
 				                                  Convert.ToDecimal(rTxtBxShatteredWebTV.Text.Replace("€", "")) +
 				                                  Convert.ToDecimal(rTxtBxSpectrumTV.Text.Replace("€", "")) +
-				                                  Convert.ToDecimal(rTxtBxSpectrum2TV.Text.Replace("€", "")) +
-				                                  Convert.ToDecimal(rTxtBxWinterOffensiveTV.Text.Replace("€", ""))) +
-				                 "€";
+				                                  Convert.ToDecimal(rTxtBxSpectrum2TV.Text.Replace("€", "")) + 
+				                                  Convert.ToDecimal(rTxtBxWinterOffensiveTV.Text.Replace("€", "")) +
+				                                  Convert.ToDecimal(rTxtBxFractureTV.Text.Replace("€", ""))
+				                                  ) +  "€";
 
 				//calculate Total Case Amount
 				rTxtBxTCA.Text = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 +
@@ -1366,13 +1260,13 @@ namespace CSGO_Case_Calculator {
 				                                  aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout +
 				                                  aHydra + aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 +
 				                                  aRevolver + aShadow + aShatteredWeb + aSpectrum + aSpectrum2 +
-				                                  aWinterOffensive);
+				                                  aWinterOffensive + aFracture);
 			}
 		}
 
 		//Button to reload all prices
 		private async void btnLoad_Click(object sender, EventArgs e) {
-			rTxtBxChroma2.Text = "";
+			rTxtBxChroma.Text = "";
 			rTxtBxChroma2.Text = "";
 			rTxtBxChroma3.Text = "";
 			rTxtBxClutch.Text = "";
@@ -1404,6 +1298,7 @@ namespace CSGO_Case_Calculator {
 			rTxtBxSpectrum.Text = "";
 			rTxtBxSpectrum2.Text = "";
 			rTxtBxWinterOffensive.Text = "";
+			rTxtBxFracture.Text = "";
 
 			await Main();
 		}
@@ -1477,7 +1372,8 @@ namespace CSGO_Case_Calculator {
 						SHATTEREDWEB_AMOUNT = "0",
 						SPECTRUM_AMOUNT = "0",
 						SPECTRUM2_AMOUNT = "0",
-						WINTEROFFENSIVE_AMOUNT = "0"
+						WINTEROFFENSIVE_AMOUNT = "0",
+						FRACTURE_AMOUNT = "0"
 					};
 
 					//create file
@@ -1520,7 +1416,8 @@ namespace CSGO_Case_Calculator {
 					SHATTEREDWEB_AMOUNT = "0",
 					SPECTRUM_AMOUNT = "0",
 					SPECTRUM2_AMOUNT = "0",
-					WINTEROFFENSIVE_AMOUNT = "0"
+					WINTEROFFENSIVE_AMOUNT = "0",
+					FRACTURE_AMOUNT = "0"
 				};
 
 				//create file
@@ -1542,8 +1439,10 @@ namespace CSGO_Case_Calculator {
 				}
 				catch { }
 
+				Properties.Settings.Default.Save();
 				Environment.Exit(0);
 			} else if (ExitMsgBx == DialogResult.No) {
+				Properties.Settings.Default.Save();
 				Environment.Exit(0);
 			} else if (ExitMsgBx == DialogResult.Cancel) { }
 		}
@@ -1688,6 +1587,10 @@ namespace CSGO_Case_Calculator {
 			Process.Start(steammarktcsgo + "Winter%20Offensive%20Weapon%20Case");
 		}
 
+		private void lLblFracture_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+			Process.Start(steammarktcsgo + "Fracture%20Case");
+		}
+
 		//stuff that i don't need and created accidentally
 		private void rTxtBxTCA_TextChanged(object sender, EventArgs e) { }
 
@@ -1778,8 +1681,8 @@ namespace CSGO_Case_Calculator {
 
 			public string WINTEROFFENSIVE_AMOUNT { get; set; }
 
+			public string FRACTURE_AMOUNT { get; set; }
+
 		}
-
-	}
-
+    }
 }

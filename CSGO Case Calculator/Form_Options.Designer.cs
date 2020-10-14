@@ -1,4 +1,6 @@
-﻿namespace CSGO_Case_Calculator
+﻿using System;
+
+namespace CSGO_Case_Calculator
 {
     partial class Form_Options
     {
@@ -28,8 +30,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Options));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblVersion = new System.Windows.Forms.Label();
+            this.lLblTwitter = new System.Windows.Forms.LinkLabel();
             this.grpBxCalcTimer = new System.Windows.Forms.GroupBox();
             this.btnHelpTimer = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
@@ -39,8 +44,7 @@
             this.lblTime = new System.Windows.Forms.Label();
             this.lblMadeBy = new System.Windows.Forms.Label();
             this.btnImportOldXML = new System.Windows.Forms.Button();
-            this.lLblTwitter = new System.Windows.Forms.LinkLabel();
-            this.lblVersion = new System.Windows.Forms.Label();
+            this.calcTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.grpBxCalcTimer.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +64,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(740, 424);
             this.panel1.TabIndex = 0;
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.Location = new System.Drawing.Point(677, 402);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(60, 13);
+            this.lblVersion.TabIndex = 191;
+            this.lblVersion.Text = "Version 1.2";
+            // 
+            // lLblTwitter
+            // 
+            this.lLblTwitter.ActiveLinkColor = System.Drawing.Color.White;
+            this.lLblTwitter.AutoSize = true;
+            this.lLblTwitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lLblTwitter.LinkColor = System.Drawing.Color.Cyan;
+            this.lLblTwitter.Location = new System.Drawing.Point(184, 402);
+            this.lLblTwitter.Name = "lLblTwitter";
+            this.lLblTwitter.Size = new System.Drawing.Size(39, 13);
+            this.lLblTwitter.TabIndex = 154;
+            this.lLblTwitter.TabStop = true;
+            this.lLblTwitter.Text = "Twitter";
+            this.lLblTwitter.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // grpBxCalcTimer
             // 
@@ -105,6 +132,7 @@
             this.btnStop.Text = "Stop";
             this.btnStop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnStop.UseVisualStyleBackColor = false;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // btnStart
             // 
@@ -126,9 +154,9 @@
             this.lblLimitation.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLimitation.Location = new System.Drawing.Point(15, 72);
             this.lblLimitation.Name = "lblLimitation";
-            this.lblLimitation.Size = new System.Drawing.Size(188, 12);
+            this.lblLimitation.Size = new System.Drawing.Size(186, 12);
             this.lblLimitation.TabIndex = 2;
-            this.lblLimitation.Text = "Choose an integer between 5 and 60 minutes";
+            this.lblLimitation.Text = "Choose a number between 5 and 60 minutes";
             // 
             // rTxtBxTimerTime
             // 
@@ -174,28 +202,9 @@
             this.btnImportOldXML.UseVisualStyleBackColor = false;
             this.btnImportOldXML.Click += new System.EventHandler(this.btnImportOldXML_Click);
             // 
-            // lLblTwitter
+            // calcTimer
             // 
-            this.lLblTwitter.ActiveLinkColor = System.Drawing.Color.White;
-            this.lLblTwitter.AutoSize = true;
-            this.lLblTwitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lLblTwitter.LinkColor = System.Drawing.Color.Cyan;
-            this.lLblTwitter.Location = new System.Drawing.Point(184, 402);
-            this.lLblTwitter.Name = "lLblTwitter";
-            this.lLblTwitter.Size = new System.Drawing.Size(39, 13);
-            this.lLblTwitter.TabIndex = 154;
-            this.lLblTwitter.TabStop = true;
-            this.lLblTwitter.Text = "Twitter";
-            this.lLblTwitter.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // lblVersion
-            // 
-            this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(677, 402);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(60, 13);
-            this.lblVersion.TabIndex = 191;
-            this.lblVersion.Text = "Version 1.2";
+            this.calcTimer.Tick += new System.EventHandler(this.calcTimer_Tick);
             // 
             // Form_Options
             // 
@@ -210,6 +219,7 @@
             this.MaximizeBox = false;
             this.Name = "Form_Options";
             this.Text = "CS:GO Case Calculator - Options";
+            this.Load += new System.EventHandler(this.Form_Options_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.grpBxCalcTimer.ResumeLayout(false);
@@ -233,5 +243,6 @@
         private System.Windows.Forms.RichTextBox rTxtBxTimerTime;
         private System.Windows.Forms.LinkLabel lLblTwitter;
         private System.Windows.Forms.Label lblVersion;
+        private System.Windows.Forms.Timer calcTimer;
     }
 }

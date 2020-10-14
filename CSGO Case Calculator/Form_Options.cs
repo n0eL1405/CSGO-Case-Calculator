@@ -1,11 +1,13 @@
 ﻿using System;
+using System.IO;
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace CSGO_Case_Calculator {
+namespace CSGO_Case_Calculator
+{
 
-	public partial class Form_Options : Form {
+    public partial class Form_Options : Form {
 
 		private int TimerTime;
 
@@ -38,9 +40,9 @@ namespace CSGO_Case_Calculator {
 						xmldoc.Load(OLDcasesXML);
 
 						//when new case:
-						//XmlElement NAME_OF_CASE = xmldoc.CreateElement("NAME_LIKE_IN_'FORM_MAIN.CASES'");
-						//NAME_OF_CASE.InnerText = "0";
-						//xmldoc.DocumentElement.AppendChild(NAME_OF_CASE);
+						XmlElement FRACTURE = xmldoc.CreateElement("FRACTURE_AMOUNT");
+						FRACTURE.InnerText = "0";
+						xmldoc.DocumentElement.AppendChild(FRACTURE);
 
 						var settings = new XmlWriterSettings();
 						settings.Indent = true;
@@ -72,7 +74,22 @@ namespace CSGO_Case_Calculator {
 			if (int.TryParse(rTxtBxTimerTime.Text, out TimerTime)) {
 				//check if number is between 5 and 60
 				if (TimerTime >= 5 && TimerTime <= 60) {
-					//code to set the timer
+
+					Form_Main main = new Form_Main();
+
+					//set the textfields of the amounts to read only to block the user from making changes
+					main.rTxtBxChroma.ReadOnly = true;
+
+					calcTimer.Enabled = true;
+
+                    Timer.streamWriterTimer.BaseStream.Seek(0, SeekOrigin.End);
+					Timer.streamWriterTimer.WriteLine("Timer has been started!" +
+					                                  "\nDate: " + DateTime.Now.ToLongDateString() +
+													  "\nTime: " + DateTime.Now.ToLongTimeString() +
+					                                  "\nInterval: " + rTxtBxTimerTime.Text + " minutes");
+					Timer.streamWriterTimer.WriteLine("===================================== \n");
+					Timer.streamWriterTimer.Flush();
+
 				} else {
 					MessageBox.Show("Error: \"" + rTxtBxTimerTime.Text + "\" is not between 5 and 60!", "ERROR",
 						MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -83,10 +100,47 @@ namespace CSGO_Case_Calculator {
 			}
 		}
 
+		public void calcTimer_Tick(object sender, EventArgs e) {
+
+			Form_Main main = new Form_Main();
+
+			Timer.streamWriterTimer.WriteLine("Chroma Case: " +
+			                                  "\n\tAmount: " + main.rTxtBxChromaA.Text +
+			                                  "\n\tPrice: " + main.rTxtBxChroma.Text +
+			                                  "\n\tTotal value: " + main.rTxtBxChromaTV.Text);
+
+			Timer.streamWriterTimer.Flush();
+			calcTimer.Interval = TimerTime * 60000; //calculation for minutes in milliseconds
+		}
+
 		private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
 			Process.Start("https://twitter.com/noel_the_N00B");
 		}
 
-	}
+        private void btnStop_Click(object sender, EventArgs e) {
 
+	        Form_Main main = new Form_Main();
+
+	        main.rTxtBxChroma.ReadOnly = false;
+
+			calcTimer.Enabled = false;
+
+
+	        MessageBox.Show("The timer has been stopped!", "Timer has been stopped!", MessageBoxButtons.OK);
+        }
+
+        private void Form_Options_Exit(object sender, FormClosingEventArgs e) {
+	        if (calcTimer.Enabled) {
+		        //block closing by the user while the timmer is running
+		        e.Cancel = e.CloseReason == CloseReason.UserClosing;
+
+		        MessageBox.Show("ERROR: The timer is still running!\nPlease stop the timer first!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+	        } else {
+		        this.Close();
+			}
+        }
+
+        private void Form_Options_Load(object sender, EventArgs e)
+        { }
+	}
 }
