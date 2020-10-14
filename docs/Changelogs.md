@@ -17,7 +17,8 @@ TBP = To be published
 > \+ Added Fracture Case   
 > \- Removed searching for old XML-files when launching   
 > \* Moved location of XML-file (again) to "\*ROOTFOLDER*\\files"   
-> \* Fixed bug that Breakoutcase gets add doubeld when calculation the full amount
+> \* Fixed bug that Breakoutcase gets add doubeld when calculation the full amount   
+> \* Website where the prices came from changed the structure -> Code fix to get the prices again
 
 
 #### [V 1.1.1](https://github.com/NoelTheN00B/CSGO-Case-Calculator/releases/tag/v1.1.1)
