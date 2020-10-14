@@ -13,7 +13,7 @@ TBP = To be published
 > \+ Added reloade automatically funktion   
 > \+ Added scrollbars when window is getting smaller   
 > \+ Added import function of old XML-files (in new options window)   
-> \+ Letter and empty cases in xml-file will be replaced with "0" when loading cases
+> \+ Letter and empty cases in xml-file will be replaced with "0" when loading cases   
 > \+ Added Fracture Case   
 > \- Removed searching for old XML-files when launching   
 > \* Moved location of XML-file (again) to "\*ROOTFOLDER*\\files"   
