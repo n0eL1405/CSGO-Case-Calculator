@@ -45,6 +45,7 @@ namespace CSGO_Case_Calculator
             this.lblMadeBy = new System.Windows.Forms.Label();
             this.btnImportOldXML = new System.Windows.Forms.Button();
             this.calcTimer = new System.Windows.Forms.Timer(this.components);
+            this.lLblDonate = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.grpBxCalcTimer.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +55,7 @@ namespace CSGO_Case_Calculator
             this.panel1.AutoScroll = true;
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Controls.Add(this.lLblDonate);
             this.panel1.Controls.Add(this.lblVersion);
             this.panel1.Controls.Add(this.lLblTwitter);
             this.panel1.Controls.Add(this.grpBxCalcTimer);
@@ -204,7 +206,21 @@ namespace CSGO_Case_Calculator
             // 
             // calcTimer
             // 
-            this.calcTimer.Tick += new System.EventHandler(this.calcTimer_Tick);
+            this.calcTimer.Tick += new System.EventHandler(this.CalcTimer_Tick);
+            // 
+            // lLblDonate
+            // 
+            this.lLblDonate.ActiveLinkColor = System.Drawing.Color.White;
+            this.lLblDonate.AutoSize = true;
+            this.lLblDonate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lLblDonate.LinkColor = System.Drawing.Color.White;
+            this.lLblDonate.Location = new System.Drawing.Point(229, 402);
+            this.lLblDonate.Name = "lLblDonate";
+            this.lLblDonate.Size = new System.Drawing.Size(42, 13);
+            this.lLblDonate.TabIndex = 192;
+            this.lLblDonate.TabStop = true;
+            this.lLblDonate.Text = "Donate";
+            this.lLblDonate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lLblDonate_LinkClicked);
             // 
             // Form_Options
             // 
@@ -220,6 +236,7 @@ namespace CSGO_Case_Calculator
             this.Name = "Form_Options";
             this.Text = "CS:GO Case Calculator - Options";
             this.Load += new System.EventHandler(this.Form_Options_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Options_Exit);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.grpBxCalcTimer.ResumeLayout(false);
@@ -244,5 +261,6 @@ namespace CSGO_Case_Calculator
         private System.Windows.Forms.LinkLabel lLblTwitter;
         private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.Timer calcTimer;
+        private System.Windows.Forms.LinkLabel lLblDonate;
     }
 }

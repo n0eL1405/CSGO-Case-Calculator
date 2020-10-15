@@ -18,41 +18,41 @@ namespace CSGO_Case_Calculator {
 		private readonly int wait = 3000;
 
 		//strings for the website infos and amount of cases
-		private int aBravo;
-		private int aBreakout;
-		private int aChroma;
-		private int aChroma2;
-		private int aChroma3;
-		private int aClutch;
-		private int aCS20;
-		private int aCSGOWC;
-		private int aCSGOWC2;
-		private int aCSGOWC3;
-		private int aDangerZone;
-		private int aeSports2013;
-		private int aeSports2013Winter;
-		private int aeSports2014Summer;
-		private int aFalchion;
-		private int aGamma;
-		private int aGamma2;
-		private int aGlove;
-		private int aHorizon;
-		private int aHuntsman;
-		private int aHydra;
-		private int aPhoenix;
-		private int aPrisma;
-		private int aPrisma2;
-		private int aRevolver;
-		private int aShadow;
-		private int aShatteredWeb;
-		private int aSpectrum;
-		private int aSpectrum2;
-		private int aVanguard;
-		private int aWildfire;
-		private int aWinterOffensive;
-		private int aFracture;
+		public int aBravo;
+		public int aBreakout;
+		public int aChroma;
+		public int aChroma2;
+		public int aChroma3;
+		public int aClutch;
+		public int aCS20;
+		public int aCSGOWC;
+		public int aCSGOWC2;
+		public int aCSGOWC3;
+		public int aDangerZone;
+		public int aeSports2013;
+		public int aeSports2013Winter;
+		public int aeSports2014Summer;
+		public int aFalchion;
+		public int aGamma;
+		public int aGamma2;
+		public int aGlove;
+		public int aHorizon;
+		public int aHuntsman;
+		public int aHydra;
+		public int aPhoenix;
+		public int aPrisma;
+		public int aPrisma2;
+		public int aRevolver;
+		public int aShadow;
+		public int aShatteredWeb;
+		public int aSpectrum;
+		public int aSpectrum2;
+		public int aVanguard;
+		public int aWildfire;
+		public int aWinterOffensive;
+		public int aFracture;
 
-		public Form_Main() {
+        public Form_Main() {
 			InitializeComponent();
 		}
 
@@ -291,6 +291,27 @@ namespace CSGO_Case_Calculator {
 				catch { }
 			} else {
 				rTxtBxFalchion.Text = "0";
+			}
+
+			if (cBxFracture.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Fracture%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					rTxtBxFracture.Text = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				rTxtBxFracture.Text = "0";
 			}
 
 			if (cBxGamma.Checked) {
@@ -616,27 +637,12 @@ namespace CSGO_Case_Calculator {
 				rTxtBxWinterOffensive.Text = "0";
 			}
 
-			if (cBxFracture.Checked) {
-				await Task.Delay(wait);
-
-				try {
-					var response = await client.GetAsync(urlsteammarkt + "Fracture%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxFracture.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			} else {
-				rTxtBxFracture.Text = "0";
-			}
-
 			//auto calculate
 			if (cBxAC.Checked) {
 				Calculate();
 			}
+
+
 		}
 
 		//Load all Amounts from the XML-File
@@ -1265,7 +1271,8 @@ namespace CSGO_Case_Calculator {
 		}
 
 		//Button to reload all prices
-		private async void btnLoad_Click(object sender, EventArgs e) {
+		public async void btnLoad_Click(object sender, EventArgs e) {
+
 			rTxtBxChroma.Text = "";
 			rTxtBxChroma2.Text = "";
 			rTxtBxChroma3.Text = "";

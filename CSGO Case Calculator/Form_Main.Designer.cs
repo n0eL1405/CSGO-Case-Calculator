@@ -2989,10 +2989,8 @@ namespace CSGO_Case_Calculator
         private System.Windows.Forms.Label lblCases1;
         private System.Windows.Forms.Label lblCases2;
         private System.Windows.Forms.Label lblTotalCase;
-        private System.Windows.Forms.RichTextBox rTxtBxTCV;
         private System.Windows.Forms.Button btnSaveCases;
         private System.Windows.Forms.Button btnLoadSavedCases;
-        private System.Windows.Forms.RichTextBox rTxtBxTCA;
         private System.Windows.Forms.Label lblTCA;
         private System.Windows.Forms.CheckBox cBxChroma;
         private System.Windows.Forms.CheckBox cBxChroma2;
@@ -3131,6 +3129,8 @@ namespace CSGO_Case_Calculator
         public RichTextBox rTxtBxFractureTV;
         public RichTextBox rTxtBxFractureA;
         public RichTextBox rTxtBxFracture;
+        public RichTextBox rTxtBxTCV;
+        public RichTextBox rTxtBxTCA;
     }
 }
 
