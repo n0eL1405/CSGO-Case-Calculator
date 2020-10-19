@@ -83,7 +83,7 @@ namespace CSGO_Case_Calculator
 					calcTimer.Enabled = true;
 
                     Timer.streamWriterTimer.BaseStream.Seek(0, SeekOrigin.End);
-					Timer.streamWriterTimer.WriteLine("========== Timer has been started! ==========" +
+					Timer.streamWriterTimer.WriteLine("=========== Timer has been started! ===========" +
 					                                  "\nStart Date: " + DateTime.Now.ToLongDateString() +
 													  "\nStart Time: " + DateTime.Now.ToLongTimeString() +
 					                                  "\nInterval: " + rTxtBxTimerTime.Text + " minutes");
@@ -111,7 +111,7 @@ namespace CSGO_Case_Calculator
 
 			Form_Main main = new Form_Main();
 
-			await main.Main();
+			main.Main();
 
 			//TODO: Amounts und Prices werdne nicht geladen
 
@@ -121,12 +121,12 @@ namespace CSGO_Case_Calculator
 			                                  "\n\tTotal value: " + main.rTxtBxChromaTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Chroma 2 Case: " +
-											  "\n\tAmount: " + main.rTxtBxChroma2A.Text +
+											  "\n\tAmount: " + main.aChroma2 +
 											  "\n\tPrice: " + main.rTxtBxChroma2.Text +
 											  "\n\tTotal value: " + main.rTxtBxChroma2TV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Chroma 3 Case: " +
-											  "\n\tAmount: " + main.rTxtBxChroma3A.Text +
+											  "\n\tAmount: " + main.aChroma3 +
 											  "\n\tPrice: " + main.rTxtBxChroma3.Text +
 											  "\n\tTotal value: " + main.rTxtBxChroma3TV.Text);
 
