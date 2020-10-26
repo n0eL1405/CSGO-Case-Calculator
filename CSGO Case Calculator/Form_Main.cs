@@ -53,39 +53,39 @@ namespace CSGO_Case_Calculator {
 		public int aFracture;
 
 		//prices
-		public String pBravo;
-		public String pBreakout;
-		public String pChroma;
-		public String pChroma2;
-		public String pChroma3;
-		public String pClutch;
-		public String pCS20;
-		public String pCSGOWC;
-		public String pCSGOWC2;
-		public String pCSGOWC3;
-		public String pDangerZone;
-		public String peSports2013;
-		public String peSports2013Winter;
-		public String peSports2014Summer;
-		public String pFalchion;
-		public String pGamma;
-		public String pGamma2;
-		public String pGlove;
-		public String pHorizon;
-		public String pHuntsman;
-		public String pHydra;
-		public String pPhoenix;
-		public String pPrisma;
-		public String pPrisma2;
-		public String pRevolver;
-		public String pShadow;
-		public String pShatteredWeb;
-		public String pSpectrum;
-		public String pSpectrum2;
-		public String pVanguard;
-		public String pWildfire;
-		public String pWinterOffensive;
-		public String pFracture;
+		public String pBravo = "0";
+		public String pBreakout = "0";
+		public String pChroma = "0";
+		public String pChroma2 = "0";
+		public String pChroma3 = "0";
+		public String pClutch = "0";
+		public String pCS20 = "0";
+		public String pCSGOWC = "0";
+		public String pCSGOWC2 = "0";
+		public String pCSGOWC3 = "0";
+		public String pDangerZone = "0";
+		public String peSports2013 = "0";
+		public String peSports2013Winter = "0";
+		public String peSports2014Summer = "0";
+		public String pFalchion = "0";
+		public String pGamma = "0";
+		public String pGamma2 = "0";
+		public String pGlove = "0";
+		public String pHorizon = "0";
+		public String pHuntsman = "0";
+		public String pHydra = "0";
+		public String pPhoenix = "0";
+		public String pPrisma = "0";
+		public String pPrisma2 = "0";
+		public String pRevolver = "0";
+		public String pShadow = "0";
+		public String pShatteredWeb = "0";
+		public String pSpectrum = "0";
+		public String pSpectrum2 = "0";
+		public String pVanguard = "0";
+		public String pWildfire = "0";
+		public String pWinterOffensive = "0";
+		public String pFracture = "0";
 
 		public Form_Main() {
 			InitializeComponent();
@@ -104,9 +104,749 @@ namespace CSGO_Case_Calculator {
 		}
 
 		//save website in string and extract the price
-		public void Main() {
+		public async void Main() {
 
-			getPrices();
+            await getPricesAsync();
+
+			//auto calculate
+			if (cBxAC.Checked) {
+				Calculate();
+			}
+
+
+		}
+
+		public async Task getPricesAsync() {
+
+			var urlsteammarkt =
+				"https://steamcommunity.com/market/priceoverview/?appid=730&currency=3&market_hash_name=";
+
+			if (cBxChroma.Checked)
+			{
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Chroma%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pChroma = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pChroma = "0";
+			}
+			writePrices();
+
+			if (cBxChroma2.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Chroma%202%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pChroma2 = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pChroma2 = "0";
+			}
+			writePrices();
+
+			if (cBxChroma3.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Chroma%203%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pChroma3 = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pChroma3 = "0";
+			}
+			writePrices();
+
+			if (cBxClutch.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Clutch%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pClutch = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pClutch = "0";
+			}
+			writePrices();
+
+			if (cBxCS20.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "CS20%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pCS20 = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pCS20 = "0";
+			}
+			writePrices();
+
+			if (cBxCSGOWC.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "CS%3AGO%20Weapon%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pCSGOWC = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pCSGOWC2 = "0";
+			}
+			writePrices();
+
+			if (cBxCSGOWC2.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "CS%3AGO%20Weapon%20Case%202");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pCSGOWC2 = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pCSGOWC2 = "0";
+			}
+			writePrices();
+
+			if (cBxCSGOWC3.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "CS%3AGO%20Weapon%20Case%203");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pCSGOWC3 = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pCSGOWC3 = "0";
+			}
+			writePrices();
+
+			if (cBxDangerZone.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Danger%20Zone%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pDangerZone = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pDangerZone = "0";
+			}
+			writePrices();
+
+			if (cBxeSports2013.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "eSports%202013%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					peSports2013 = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				peSports2013 = "0";
+			}
+			writePrices();
+
+			if (cBxeSports2013W.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "eSports%202013%20Winter%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					peSports2013Winter = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				peSports2013Winter = "0";
+			}
+			writePrices();
+
+			if (cBxeSports2014S.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "eSports%202014%20Summer%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					peSports2014Summer = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				peSports2014Summer = "0";
+			}
+			writePrices();
+
+			if (cBxFalchion.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Falchion%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pFalchion = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pFalchion = "0";
+			}
+			writePrices();
+
+			if (cBxFracture.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Fracture%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pFracture = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pFracture = "0";
+			}
+			writePrices();
+
+			if (cBxGamma.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Gamma%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pGamma = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pGamma = "0";
+			}
+			writePrices();
+
+			if (cBxGamma2.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Gamma%202%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pGamma2 = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pGamma2 = "0";
+			}
+			writePrices();
+
+			if (cBxGlove.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Glove%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pGlove = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pGlove = "0";
+			}
+			writePrices();
+
+			if (cBxHorizon.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Horizon%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pHorizon = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pHorizon = "0";
+			}
+			writePrices();
+
+			if (cBxHuntsman.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Huntsman%20Weapon%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pHuntsman = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pHuntsman = "0";
+			}
+			writePrices();
+
+			if (cBxBravo.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Operation%20Bravo%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pBravo = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pBravo = "0";
+			}
+			writePrices();
+
+			if (cBxBreakout.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Operation%20Breakout%20Weapon%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pBreakout = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pBreakout = "0";
+			}
+			writePrices();
+
+			if (cBxHydra.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Operation%20Hydra%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pHydra = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pHydra = "0";
+			}
+			writePrices();
+
+			if (cBxPhoenix.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Operation%20Phoenix%20Weapon%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pPhoenix = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pPhoenix = "0";
+			}
+			writePrices();
+
+			if (cBxVanguard.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Operation%20Vanguard%20Weapon%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pVanguard = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pVanguard = "0";
+			}
+			writePrices();
+
+			if (cBxWildfire.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Operation%20Wildfire%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pWildfire = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pWildfire = "0";
+			}
+			writePrices();
+
+			if (cBxPrisma.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Prisma%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pPrisma = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pPrisma = "0";
+			}
+			writePrices();
+
+			if (cBxPrisma2.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Prisma%202%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pPrisma2 = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pPrisma2 = "0";
+			}
+			writePrices();
+
+			if (cBxRevolver.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Revolver%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pRevolver = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pRevolver = "0";
+			}
+			writePrices();
+
+			if (cBxShadow.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Shadow%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pShadow = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pShadow = "0";
+			}
+			writePrices();
+
+			if (cBxShatteredWeb.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Shattered%20Web%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pShatteredWeb = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pShatteredWeb = "0";
+			}
+			writePrices();
+
+			if (cBxSpectrum.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Spectrum%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pSpectrum = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pSpectrum = "0";
+			}
+			writePrices();
+
+			if (cBxSpectrum2.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Spectrum%202%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pSpectrum2 = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pSpectrum2 = "0";
+			}
+			writePrices();
+
+			if (cBxWinterOffensive.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					var response = await client.GetAsync(urlsteammarkt + "Winter%20Offensive%20Weapon%20Case");
+					response.EnsureSuccessStatusCode();
+					var price = await response.Content.ReadAsStringAsync();
+
+					price = cut(price);
+
+					pWinterOffensive = Convert.ToString(price) + "€";
+				}
+				catch { }
+			}
+			else
+			{
+				pWinterOffensive = "0";
+			}
+			writePrices();
+		}
+
+		public void writePrices() {
 
 			rTxtBxChroma.Text = pChroma;
 			rTxtBxChroma2.Text = pChroma2;
@@ -141,712 +881,6 @@ namespace CSGO_Case_Calculator {
 			rTxtBxSpectrum.Text = pSpectrum;
 			rTxtBxSpectrum2.Text = pSpectrum2;
 			rTxtBxWinterOffensive.Text = pWinterOffensive;
-
-			//auto calculate
-			if (cBxAC.Checked) {
-				Calculate();
-			}
-
-
-		}
-
-		public async void getPrices() {
-
-			var urlsteammarkt =
-				"https://steamcommunity.com/market/priceoverview/?appid=730&currency=3&market_hash_name=";
-
-			if (cBxChroma.Checked)
-			{
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Chroma%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					pChroma = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				pChroma = "0";
-			}
-
-			if (cBxChroma2.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Chroma%202%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					pChroma2 = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				pChroma2 = "0";
-			}
-
-			if (cBxChroma3.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Chroma%203%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					pChroma3 = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				pChroma3 = "0";
-			}
-
-			if (cBxClutch.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Clutch%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					pClutch = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				pClutch = "0";
-			}
-
-			if (cBxCS20.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "CS20%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					pCS20 = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				pCS20 = "0";
-			}
-
-			if (cBxCSGOWC.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "CS%3AGO%20Weapon%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					pCSGOWC = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				pCSGOWC2 = "0";
-			}
-
-			if (cBxCSGOWC2.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "CS%3AGO%20Weapon%20Case%202");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					pCSGOWC2 = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				pCSGOWC2 = "0";
-			}
-
-			if (cBxCSGOWC3.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "CS%3AGO%20Weapon%20Case%203");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					pCSGOWC3 = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				pCSGOWC3 = "0";
-			}
-
-			if (cBxDangerZone.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Danger%20Zone%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					pDangerZone = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				pDangerZone = "0";
-			}
-
-			if (cBxeSports2013.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "eSports%202013%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					peSports2013 = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				peSports2013 = "0";
-			}
-
-			if (cBxeSports2013W.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "eSports%202013%20Winter%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					peSports2013Winter = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				peSports2013Winter = "0";
-			}
-
-			if (cBxeSports2014S.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "eSports%202014%20Summer%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					peSports2014Summer = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				peSports2014Summer = "0";
-			}
-
-			//TODO: Weiter machen
-
-			if (cBxFalchion.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Falchion%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxFalchion.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxFalchion.Text = "0";
-			}
-
-			if (cBxFracture.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Fracture%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxFracture.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxFracture.Text = "0";
-			}
-
-			if (cBxGamma.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Gamma%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxGamma.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxGamma.Text = "0";
-			}
-
-			if (cBxGamma2.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Gamma%202%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxGamma2.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxGamma2.Text = "0";
-			}
-
-			if (cBxGlove.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Glove%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxGlove.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxGlove.Text = "0";
-			}
-
-			if (cBxHorizon.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Horizon%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxHorizon.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxHorizon.Text = "0";
-			}
-
-			if (cBxHuntsman.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Huntsman%20Weapon%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxHuntsman.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxHuntsman.Text = "0";
-			}
-
-			if (cBxBravo.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Operation%20Bravo%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxBravo.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxBravo.Text = "0";
-			}
-
-			if (cBxBreakout.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Operation%20Breakout%20Weapon%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxBreakout.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxBreakout.Text = "0";
-			}
-
-			if (cBxHydra.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Operation%20Hydra%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxHydra.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxHydra.Text = "0";
-			}
-
-			if (cBxPhoenix.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Operation%20Phoenix%20Weapon%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxPhoenix.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxPhoenix.Text = "0";
-			}
-
-			if (cBxVanguard.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Operation%20Vanguard%20Weapon%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxVanguard.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxVanguard.Text = "0";
-			}
-
-			if (cBxWildfire.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Operation%20Wildfire%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxWildfire.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxWildfire.Text = "0";
-			}
-
-			if (cBxPrisma.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Prisma%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxPrisma.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxPrisma.Text = "0";
-			}
-
-			if (cBxPrisma2.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Prisma%202%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxPrisma2.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxPrisma2.Text = "0";
-			}
-
-			if (cBxRevolver.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Revolver%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxRevolver.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxRevolver.Text = "0";
-			}
-
-			if (cBxShadow.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Shadow%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxShadow.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxShadow.Text = "0";
-			}
-
-			if (cBxShatteredWeb.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Shattered%20Web%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxShatteredWeb.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxShatteredWeb.Text = "0";
-			}
-
-			if (cBxSpectrum.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Spectrum%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxSpectrum.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxSpectrum.Text = "0";
-			}
-
-			if (cBxSpectrum2.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Spectrum%202%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxSpectrum2.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxSpectrum2.Text = "0";
-			}
-
-			if (cBxWinterOffensive.Checked)
-			{
-				await Task.Delay(wait);
-
-				try
-				{
-					var response = await client.GetAsync(urlsteammarkt + "Winter%20Offensive%20Weapon%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
-					rTxtBxWinterOffensive.Text = Convert.ToString(price) + "€";
-				}
-				catch { }
-			}
-			else
-			{
-				rTxtBxWinterOffensive.Text = "0";
-			}
 		}
 
 		//Load all Amounts from the XML-File
@@ -1088,7 +1122,7 @@ namespace CSGO_Case_Calculator {
 		public void Calculate() {
 			if (int.TryParse(rTxtBxChromaA.Text, out aChroma)) {
 				rTxtBxChromaTV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxChroma.Text.Replace("€", "")) *
+					Convert.ToString(Convert.ToDecimal(pChroma.Replace("€", "")) *
 					                 Convert.ToDecimal(aChroma)) + "€";
 			} else {
 				MessageBox.Show("Error: \"" + rTxtBxChromaA.Text + "\" is not a number! \nPlease enter a valid number",
@@ -1097,7 +1131,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxChroma2A.Text, out aChroma2)) {
 				rTxtBxChroma2TV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxChroma2.Text.Replace("€", "")) *
+					Convert.ToString(Convert.ToDecimal(pChroma2.Replace("€", "")) *
 					                 Convert.ToDecimal(aChroma2)) + "€";
 			} else {
 				MessageBox.Show("Error: \"" + rTxtBxChroma2A.Text + "\" is not a number! \nPlease enter a valid number",
@@ -1106,7 +1140,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxChroma3A.Text, out aChroma3)) {
 				rTxtBxChroma3TV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxChroma3.Text.Replace("€", "")) *
+					Convert.ToString(Convert.ToDecimal(pChroma3.Replace("€", "")) *
 					                 Convert.ToDecimal(aChroma3)) + "€";
 			} else {
 				MessageBox.Show("Error: \"" + rTxtBxChroma3A.Text + "\" is not a number! \nPlease enter a valid number",
@@ -1115,7 +1149,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxClutchA.Text, out aClutch)) {
 				rTxtBxClutchTV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxClutch.Text.Replace("€", "")) *
+					Convert.ToString(Convert.ToDecimal(pClutch.Replace("€", "")) *
 					                 Convert.ToDecimal(aClutch)) + "€";
 			} else {
 				MessageBox.Show("Error: \"" + rTxtBxClutchA.Text + "\" is not a number! \nPlease enter a valid number",
@@ -1124,7 +1158,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxCS20A.Text, out aCS20)) {
 				rTxtBxCS20TV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxCS20.Text.Replace("€", "")) * Convert.ToDecimal(aCS20)) +
+					Convert.ToString(Convert.ToDecimal(pCS20.Replace("€", "")) * Convert.ToDecimal(aCS20)) +
 					"€";
 			} else {
 				MessageBox.Show("Error: \"" + rTxtBxCS20A.Text + "\" is not a number! \nPlease enter a valid number",
@@ -1133,7 +1167,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxCSGOWCA.Text, out aCSGOWC)) {
 				rTxtBxCSGOWCTV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxCSGOWC.Text.Replace("€", "")) *
+					Convert.ToString(Convert.ToDecimal(pCSGOWC.Replace("€", "")) *
 					                 Convert.ToDecimal(aCSGOWC)) + "€";
 			} else {
 				MessageBox.Show("Error: \"" + rTxtBxCSGOWCA.Text + "\" is not a number! \nPlease enter a valid number",
@@ -1142,7 +1176,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxCSGOWC2A.Text, out aCSGOWC2)) {
 				rTxtBxCSGOWC2TV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxCSGOWC2.Text.Replace("€", "")) *
+					Convert.ToString(Convert.ToDecimal(pCSGOWC2.Replace("€", "")) *
 					                 Convert.ToDecimal(aCSGOWC2)) + "€";
 			} else {
 				MessageBox.Show("Error: \"" + rTxtBxCSGOWC2A.Text + "\" is not a number! \nPlease enter a valid number",
@@ -1151,7 +1185,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxCSGOWC3A.Text, out aCSGOWC3)) {
 				rTxtBxCSGOWC3TV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxCSGOWC3.Text.Replace("€", "")) *
+					Convert.ToString(Convert.ToDecimal(pCSGOWC3.Replace("€", "")) *
 					                 Convert.ToDecimal(aCSGOWC3)) + "€";
 			} else {
 				MessageBox.Show("Error: \"" + rTxtBxCSGOWC3A.Text + "\" is not a number! \nPlease enter a valid number",
@@ -1159,7 +1193,7 @@ namespace CSGO_Case_Calculator {
 			}
 
 			if (int.TryParse(rTxtBxDangerZoneA.Text, out aDangerZone)) {
-				rTxtBxDangerZoneTV.Text = Convert.ToString(Convert.ToDecimal(rTxtBxDangerZone.Text.Replace("€", "")) *
+				rTxtBxDangerZoneTV.Text = Convert.ToString(Convert.ToDecimal(pDangerZone.Replace("€", "")) *
 				                                           Convert.ToDecimal(aDangerZone)) + "€";
 			} else {
 				MessageBox.Show(
@@ -1168,7 +1202,7 @@ namespace CSGO_Case_Calculator {
 			}
 
 			if (int.TryParse(rTxtBxeSports2013A.Text, out aeSports2013)) {
-				rTxtBxeSports2013TV.Text = Convert.ToString(Convert.ToDecimal(rTxtBxeSports2013.Text.Replace("€", "")) *
+				rTxtBxeSports2013TV.Text = Convert.ToString(Convert.ToDecimal(peSports2013.Replace("€", "")) *
 				                                            Convert.ToDecimal(aeSports2013)) + "€";
 			} else {
 				MessageBox.Show(
@@ -1178,7 +1212,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxeSports2013WA.Text, out aeSports2013Winter)) {
 				rTxtBxeSports2013WTV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxeSports2013W.Text.Replace("€", "")) *
+					Convert.ToString(Convert.ToDecimal(peSports2013Winter.Replace("€", "")) *
 					                 Convert.ToDecimal(aeSports2013Winter)) + "€";
 			} else {
 				MessageBox.Show(
@@ -1188,7 +1222,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxeSports2014SA.Text, out aeSports2014Summer)) {
 				rTxtBxeSports2014STV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxeSports2014S.Text.Replace("€", "")) *
+					Convert.ToString(Convert.ToDecimal(peSports2014Summer.Replace("€", "")) *
 					                 Convert.ToDecimal(aeSports2014Summer)) + "€";
 			} else {
 				MessageBox.Show(
@@ -1197,7 +1231,7 @@ namespace CSGO_Case_Calculator {
 			}
 
 			if (int.TryParse(rTxtBxFalchionA.Text, out aFalchion)) {
-				rTxtBxFalchionTV.Text = Convert.ToString(Convert.ToDecimal(rTxtBxFalchion.Text.Replace("€", "")) *
+				rTxtBxFalchionTV.Text = Convert.ToString(Convert.ToDecimal(pFalchion.Replace("€", "")) *
 				                                         Convert.ToDecimal(aFalchion)) + "€";
 			} else {
 				MessageBox.Show(
@@ -1207,7 +1241,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxGammaA.Text, out aGamma)) {
 				rTxtBxGammaTV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxGamma.Text.Replace("€", "")) * Convert.ToDecimal(aGamma)) +
+					Convert.ToString(Convert.ToDecimal(pGamma.Replace("€", "")) * Convert.ToDecimal(aGamma)) +
 					"€";
 			} else {
 				MessageBox.Show("Error: \"" + rTxtBxGammaA.Text + "\" is not a number! \nPlease enter a valid number",
@@ -1216,7 +1250,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxGamma2A.Text, out aGamma2)) {
 				rTxtBxGamma2TV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxGamma2.Text.Replace("€", "")) *
+					Convert.ToString(Convert.ToDecimal(pGamma2.Replace("€", "")) *
 					                 Convert.ToDecimal(aGamma2)) + "€";
 			} else {
 				MessageBox.Show("Error: \"" + rTxtBxGamma2A.Text + "\" is not a number! \nPlease enter a valid number",
@@ -1225,7 +1259,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxGloveA.Text, out aGlove)) {
 				rTxtBxGloveTV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxGlove.Text.Replace("€", "")) * Convert.ToDecimal(aGlove)) +
+					Convert.ToString(Convert.ToDecimal(pGlove.Replace("€", "")) * Convert.ToDecimal(aGlove)) +
 					"€";
 			} else {
 				MessageBox.Show("Error: \"" + rTxtBxGloveA.Text + "\" is not a number! \nPlease enter a valid number",
@@ -1234,7 +1268,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxHorizonA.Text, out aHorizon)) {
 				rTxtBxHorizonTV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxHorizon.Text.Replace("€", "")) *
+					Convert.ToString(Convert.ToDecimal(pHorizon.Replace("€", "")) *
 					                 Convert.ToDecimal(aHorizon)) + "€";
 			} else {
 				MessageBox.Show("Error: \"" + rTxtBxHorizonA.Text + "\" is not a number! \nPlease enter a valid number",
@@ -1242,7 +1276,7 @@ namespace CSGO_Case_Calculator {
 			}
 
 			if (int.TryParse(rTxtBxHuntsmanA.Text, out aHuntsman)) {
-				rTxtBxHuntsmanTV.Text = Convert.ToString(Convert.ToDecimal(rTxtBxHuntsman.Text.Replace("€", "")) *
+				rTxtBxHuntsmanTV.Text = Convert.ToString(Convert.ToDecimal(pHuntsman.Replace("€", "")) *
 				                                         Convert.ToDecimal(aHuntsman)) + "€";
 			} else {
 				MessageBox.Show(
@@ -1252,7 +1286,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxBravoA.Text, out aBravo)) {
 				rTxtBxBravoTV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxBravo.Text.Replace("€", "")) * Convert.ToDecimal(aBravo)) +
+					Convert.ToString(Convert.ToDecimal(pBravo.Replace("€", "")) * Convert.ToDecimal(aBravo)) +
 					"€";
 			} else {
 				MessageBox.Show("Error: \"" + rTxtBxBravoA.Text + "\" is not a number! \nPlease enter a valid number",
@@ -1260,7 +1294,7 @@ namespace CSGO_Case_Calculator {
 			}
 
 			if (int.TryParse(rTxtBxBreakoutA.Text, out aBreakout)) {
-				rTxtBxBreakoutTV.Text = Convert.ToString(Convert.ToDecimal(rTxtBxBreakout.Text.Replace("€", "")) *
+				rTxtBxBreakoutTV.Text = Convert.ToString(Convert.ToDecimal(pBreakout.Replace("€", "")) *
 				                                         Convert.ToDecimal(aBreakout)) + "€";
 			} else {
 				MessageBox.Show(
@@ -1270,7 +1304,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxHydraA.Text, out aHydra)) {
 				rTxtBxHydraTV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxHydra.Text.Replace("€", "")) * Convert.ToDecimal(aHydra)) +
+					Convert.ToString(Convert.ToDecimal(pHydra.Replace("€", "")) * Convert.ToDecimal(aHydra)) +
 					"€";
 			} else {
 				MessageBox.Show("Error: \"" + rTxtBxHydraA.Text + "\" is not a number! \nPlease enter a valid number",
@@ -1279,7 +1313,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxPhoenixA.Text, out aPhoenix)) {
 				rTxtBxPhoenixTV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxPhoenix.Text.Replace("€", "")) *
+					Convert.ToString(Convert.ToDecimal(pPhoenix.Replace("€", "")) *
 					                 Convert.ToDecimal(aPhoenix)) + "€";
 			} else {
 				MessageBox.Show("Error: \"" + rTxtBxPhoenixA.Text + "\" is not a number! \nPlease enter a valid number",
@@ -1287,7 +1321,7 @@ namespace CSGO_Case_Calculator {
 			}
 
 			if (int.TryParse(rTxtBxVanguardA.Text, out aVanguard)) {
-				rTxtBxVanguardTV.Text = Convert.ToString(Convert.ToDecimal(rTxtBxVanguard.Text.Replace("€", "")) *
+				rTxtBxVanguardTV.Text = Convert.ToString(Convert.ToDecimal(pVanguard.Replace("€", "")) *
 				                                         Convert.ToDecimal(aVanguard)) + "€";
 			} else {
 				MessageBox.Show(
@@ -1296,7 +1330,7 @@ namespace CSGO_Case_Calculator {
 			}
 
 			if (int.TryParse(rTxtBxWildfireA.Text, out aWildfire)) {
-				rTxtBxWildfireTV.Text = Convert.ToString(Convert.ToDecimal(rTxtBxWildfire.Text.Replace("€", "")) *
+				rTxtBxWildfireTV.Text = Convert.ToString(Convert.ToDecimal(pWildfire.Replace("€", "")) *
 				                                         Convert.ToDecimal(aWildfire)) + "€";
 			} else {
 				MessageBox.Show(
@@ -1306,7 +1340,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxPrismaA.Text, out aPrisma)) {
 				rTxtBxPrismaTV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxPrisma.Text.Replace("€", "")) *
+					Convert.ToString(Convert.ToDecimal(pPrisma.Replace("€", "")) *
 					                 Convert.ToDecimal(aPrisma)) + "€";
 			} else {
 				MessageBox.Show("Error: \"" + rTxtBxPrismaA.Text + "\" is not a number! \nPlease enter a valid number",
@@ -1315,7 +1349,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxPrisma2A.Text, out aPrisma2)) {
 				rTxtBxPrisma2TV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxPrisma2.Text.Replace("€", "")) *
+					Convert.ToString(Convert.ToDecimal(pPrisma2.Replace("€", "")) *
 					                 Convert.ToDecimal(aPrisma2)) + "€";
 			} else {
 				MessageBox.Show("Error: \"" + rTxtBxPrisma2A.Text + "\" is not a number! \nPlease enter a valid number",
@@ -1323,7 +1357,7 @@ namespace CSGO_Case_Calculator {
 			}
 
 			if (int.TryParse(rTxtBxRevolverA.Text, out aRevolver)) {
-				rTxtBxRevolverTV.Text = Convert.ToString(Convert.ToDecimal(rTxtBxRevolver.Text.Replace("€", "")) *
+				rTxtBxRevolverTV.Text = Convert.ToString(Convert.ToDecimal(pRevolver.Replace("€", "")) *
 				                                         Convert.ToDecimal(aRevolver)) + "€";
 			} else {
 				MessageBox.Show(
@@ -1333,7 +1367,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxShadowA.Text, out aShadow)) {
 				rTxtBxShadowTV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxShadow.Text.Replace("€", "")) *
+					Convert.ToString(Convert.ToDecimal(pShadow.Replace("€", "")) *
 					                 Convert.ToDecimal(aShadow)) + "€";
 			} else {
 				MessageBox.Show("Error: \"" + rTxtBxShadowA.Text + "\" is not a number! \nPlease enter a valid number",
@@ -1342,7 +1376,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxShatteredWebA.Text, out aShatteredWeb)) {
 				rTxtBxShatteredWebTV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxShatteredWeb.Text.Replace("€", "")) *
+					Convert.ToString(Convert.ToDecimal(pShatteredWeb.Replace("€", "")) *
 					                 Convert.ToDecimal(aShatteredWeb)) + "€";
 			} else {
 				MessageBox.Show(
@@ -1351,7 +1385,7 @@ namespace CSGO_Case_Calculator {
 			}
 
 			if (int.TryParse(rTxtBxSpectrumA.Text, out aSpectrum)) {
-				rTxtBxSpectrumTV.Text = Convert.ToString(Convert.ToDecimal(rTxtBxSpectrum.Text.Replace("€", "")) *
+				rTxtBxSpectrumTV.Text = Convert.ToString(Convert.ToDecimal(pSpectrum.Replace("€", "")) *
 				                                         Convert.ToDecimal(aSpectrum)) + "€";
 			} else {
 				MessageBox.Show(
@@ -1360,7 +1394,7 @@ namespace CSGO_Case_Calculator {
 			}
 
 			if (int.TryParse(rTxtBxSpectrum2A.Text, out aSpectrum2)) {
-				rTxtBxSpectrum2TV.Text = Convert.ToString(Convert.ToDecimal(rTxtBxSpectrum2.Text.Replace("€", "")) *
+				rTxtBxSpectrum2TV.Text = Convert.ToString(Convert.ToDecimal(pSpectrum2.Replace("€", "")) *
 				                                          Convert.ToDecimal(aSpectrum2)) + "€";
 			} else {
 				MessageBox.Show(
@@ -1370,7 +1404,7 @@ namespace CSGO_Case_Calculator {
 
 			if (int.TryParse(rTxtBxWinterOffensiveA.Text, out aWinterOffensive)) {
 				rTxtBxWinterOffensiveTV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxWinterOffensive.Text.Replace("€", "")) *
+					Convert.ToString(Convert.ToDecimal(pWinterOffensive.Replace("€", "")) *
 					                 Convert.ToDecimal(aWinterOffensive)) + "€";
 			} else {
 				MessageBox.Show(
@@ -1381,7 +1415,7 @@ namespace CSGO_Case_Calculator {
 			if (int.TryParse(rTxtBxFractureA.Text, out aFracture))
 			{
 				rTxtBxFractureTV.Text =
-					Convert.ToString(Convert.ToDecimal(rTxtBxFracture.Text.Replace("€", "")) *
+					Convert.ToString(Convert.ToDecimal(pFracture.Replace("€", "")) *
 					                 Convert.ToDecimal(aFracture)) + "€";
 			}
 			else
@@ -1475,43 +1509,43 @@ namespace CSGO_Case_Calculator {
 		}
 
 		//Button to reload all prices
-		public async void btnLoad_Click(object sender, EventArgs e) {
+		public void btnLoad_Click(object sender, EventArgs e) {
 
-			rTxtBxChroma.Text = "";
-			rTxtBxChroma2.Text = "";
-			rTxtBxChroma3.Text = "";
-			rTxtBxClutch.Text = "";
-			rTxtBxCS20.Text = "";
-			rTxtBxCSGOWC.Text = "";
-			rTxtBxCSGOWC2.Text = "";
-			rTxtBxCSGOWC3.Text = "";
-			rTxtBxDangerZone.Text = "";
-			rTxtBxeSports2013.Text = "";
-			rTxtBxeSports2013W.Text = "";
-			rTxtBxeSports2014S.Text = "";
-			rTxtBxFalchion.Text = "";
-			rTxtBxGamma.Text = "";
-			rTxtBxGamma2.Text = "";
-			rTxtBxGlove.Text = "";
-			rTxtBxHorizon.Text = "";
-			rTxtBxHuntsman.Text = "";
-			rTxtBxBravo.Text = "";
-			rTxtBxBreakout.Text = "";
-			rTxtBxHydra.Text = "";
-			rTxtBxPhoenix.Text = "";
-			rTxtBxVanguard.Text = "";
-			rTxtBxWildfire.Text = "";
-			rTxtBxPrisma.Text = "";
-			rTxtBxPrisma2.Text = "";
-			rTxtBxRevolver.Text = "";
-			rTxtBxShadow.Text = "";
-			rTxtBxShatteredWeb.Text = "";
-			rTxtBxSpectrum.Text = "";
-			rTxtBxSpectrum2.Text = "";
-			rTxtBxWinterOffensive.Text = "";
-			rTxtBxFracture.Text = "";
+		pBravo = "0";
+		pBreakout = "0";
+		pChroma = "0";
+		pChroma2 = "0";
+		pChroma3 = "0";
+		pClutch = "0";
+		pCS20 = "0";
+		pCSGOWC = "0";
+		pCSGOWC2 = "0";
+		pCSGOWC3 = "0";
+		pDangerZone = "0";
+		peSports2013 = "0";
+		peSports2013Winter = "0";
+		peSports2014Summer = "0";
+		pFalchion = "0";
+		pGamma = "0";
+		pGamma2 = "0";
+		pGlove = "0";
+		pHorizon = "0";
+		pHuntsman = "0";
+		pHydra = "0";
+		pPhoenix = "0";
+		pPrisma = "0";
+		pPrisma2 = "0";
+		pRevolver = "0";
+		pShadow = "0";
+		pShatteredWeb = "0";
+		pSpectrum = "0";
+		pSpectrum2 = "0";
+		pVanguard = "0";
+		pWildfire = "0";
+		pWinterOffensive = "0";
+		pFracture = "0";
 
-			Main();
+		Main();
 		}
 
 		//calculate the values
@@ -1539,7 +1573,7 @@ namespace CSGO_Case_Calculator {
 			new Form_Options().Show();
 		}
 
-		private async void Form_Main_Load(object sender, EventArgs e) {
+		private void Form_Main_Load(object sender, EventArgs e) {
 			var propertyFolder = Application.StartupPath;
 
 			//string propertyFolder = Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents") + "\\CSGOCC";

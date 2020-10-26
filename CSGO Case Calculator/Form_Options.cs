@@ -111,28 +111,28 @@ namespace CSGO_Case_Calculator
 
 			Form_Main main = new Form_Main();
 
-			main.Main();
+            await main.getPricesAsync();
 
-			//TODO: Amounts und Prices werdne nicht geladen
+			//TODO: Price anpassen & Amounts werden nicht geladen
 
 			Timer.streamWriterTimer.WriteLine("Chroma Case: " +
 			                                  "\n\tAmount: " + main.aChroma +
-			                                  "\n\tPrice: " + main.rTxtBxChroma.Text +
+			                                  "\n\tPrice: " + main.pChroma +
 			                                  "\n\tTotal value: " + main.rTxtBxChromaTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Chroma 2 Case: " +
 											  "\n\tAmount: " + main.aChroma2 +
-											  "\n\tPrice: " + main.rTxtBxChroma2.Text +
+											  "\n\tPrice: " + main.pChroma2 +
 											  "\n\tTotal value: " + main.rTxtBxChroma2TV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Chroma 3 Case: " +
 											  "\n\tAmount: " + main.aChroma3 +
-											  "\n\tPrice: " + main.rTxtBxChroma3.Text +
+											  "\n\tPrice: " + main.pChroma3 +
 											  "\n\tTotal value: " + main.rTxtBxChroma3TV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Clutch Case: " +
 											  "\n\tAmount: " + main.rTxtBxClutchA.Text +
-											  "\n\tPrice: " + main.rTxtBxClutch.Text +
+											  "\n\tPrice: " + main.pClutch +
 											  "\n\tTotal value: " + main.rTxtBxClutchTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("CS20 Case: " +
