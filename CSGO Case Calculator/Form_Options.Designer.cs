@@ -33,6 +33,7 @@ namespace CSGO_Case_Calculator
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Options));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lLblDonate = new System.Windows.Forms.LinkLabel();
             this.lblVersion = new System.Windows.Forms.Label();
             this.lLblTwitter = new System.Windows.Forms.LinkLabel();
             this.grpBxCalcTimer = new System.Windows.Forms.GroupBox();
@@ -45,7 +46,6 @@ namespace CSGO_Case_Calculator
             this.lblMadeBy = new System.Windows.Forms.Label();
             this.btnImportOldXML = new System.Windows.Forms.Button();
             this.calcTimer = new System.Windows.Forms.Timer(this.components);
-            this.lLblDonate = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.grpBxCalcTimer.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,20 @@ namespace CSGO_Case_Calculator
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(740, 424);
             this.panel1.TabIndex = 0;
+            // 
+            // lLblDonate
+            // 
+            this.lLblDonate.ActiveLinkColor = System.Drawing.Color.White;
+            this.lLblDonate.AutoSize = true;
+            this.lLblDonate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lLblDonate.LinkColor = System.Drawing.Color.White;
+            this.lLblDonate.Location = new System.Drawing.Point(229, 402);
+            this.lLblDonate.Name = "lLblDonate";
+            this.lLblDonate.Size = new System.Drawing.Size(42, 13);
+            this.lLblDonate.TabIndex = 192;
+            this.lLblDonate.TabStop = true;
+            this.lLblDonate.Text = "Donate";
+            this.lLblDonate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lLblDonate_LinkClicked);
             // 
             // lblVersion
             // 
@@ -199,7 +213,7 @@ namespace CSGO_Case_Calculator
             this.btnImportOldXML.Name = "btnImportOldXML";
             this.btnImportOldXML.Size = new System.Drawing.Size(126, 63);
             this.btnImportOldXML.TabIndex = 151;
-            this.btnImportOldXML.Text = "Import old XML-file";
+            this.btnImportOldXML.Text = "Import old Cases-XML-file";
             this.btnImportOldXML.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnImportOldXML.UseVisualStyleBackColor = false;
             this.btnImportOldXML.Click += new System.EventHandler(this.btnImportOldXML_Click);
@@ -207,20 +221,6 @@ namespace CSGO_Case_Calculator
             // calcTimer
             // 
             this.calcTimer.Tick += new System.EventHandler(this.CalcTimer_Tick);
-            // 
-            // lLblDonate
-            // 
-            this.lLblDonate.ActiveLinkColor = System.Drawing.Color.White;
-            this.lLblDonate.AutoSize = true;
-            this.lLblDonate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lLblDonate.LinkColor = System.Drawing.Color.White;
-            this.lLblDonate.Location = new System.Drawing.Point(229, 402);
-            this.lLblDonate.Name = "lLblDonate";
-            this.lLblDonate.Size = new System.Drawing.Size(42, 13);
-            this.lLblDonate.TabIndex = 192;
-            this.lLblDonate.TabStop = true;
-            this.lLblDonate.Text = "Donate";
-            this.lLblDonate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lLblDonate_LinkClicked);
             // 
             // Form_Options
             // 
@@ -235,8 +235,8 @@ namespace CSGO_Case_Calculator
             this.MaximizeBox = false;
             this.Name = "Form_Options";
             this.Text = "CS:GO Case Calculator - Options";
-            this.Load += new System.EventHandler(this.Form_Options_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Options_Exit);
+            this.Load += new System.EventHandler(this.Form_Options_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.grpBxCalcTimer.ResumeLayout(false);

@@ -799,6 +799,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxChromaA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxChromaA.TabIndex = 41;
             this.rTxtBxChromaA.Text = "0";
+            this.rTxtBxChromaA.TextChanged += new System.EventHandler(this.rTxtBxChromaA_TextChanged);
             // 
             // rTxtBxChromaTV
             // 
@@ -815,7 +816,6 @@ namespace CSGO_Case_Calculator
             this.rTxtBxChromaTV.Size = new System.Drawing.Size(127, 32);
             this.rTxtBxChromaTV.TabIndex = 42;
             this.rTxtBxChromaTV.Text = "";
-            this.rTxtBxChromaTV.TextChanged += new System.EventHandler(this.rTxtBxChromaTV_TextChanged);
             // 
             // rTxtBxChroma2A
             // 
@@ -827,6 +827,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxChroma2A.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxChroma2A.TabIndex = 43;
             this.rTxtBxChroma2A.Text = "0";
+            this.rTxtBxChroma2A.TextChanged += new System.EventHandler(this.rTxtBxChroma2A_TextChanged);
             // 
             // rTxtBxChroma3A
             // 
@@ -838,6 +839,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxChroma3A.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxChroma3A.TabIndex = 44;
             this.rTxtBxChroma3A.Text = "0";
+            this.rTxtBxChroma3A.TextChanged += new System.EventHandler(this.rTxtBxChroma3A_TextChanged);
             // 
             // rTxtBxClutchA
             // 
@@ -2189,10 +2191,9 @@ namespace CSGO_Case_Calculator
             this.lblTotalCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalCase.Location = new System.Drawing.Point(1289, 487);
             this.lblTotalCase.Name = "lblTotalCase";
-            this.lblTotalCase.Size = new System.Drawing.Size(107, 54);
+            this.lblTotalCase.Size = new System.Drawing.Size(129, 54);
             this.lblTotalCase.TabIndex = 143;
             this.lblTotalCase.Text = "Total Case Value:";
-            this.lblTotalCase.Click += new System.EventHandler(this.lblTotalCaseValue_Click);
             // 
             // rTxtBxTCV
             // 
@@ -2209,7 +2210,6 @@ namespace CSGO_Case_Calculator
             this.rTxtBxTCV.Size = new System.Drawing.Size(126, 32);
             this.rTxtBxTCV.TabIndex = 145;
             this.rTxtBxTCV.Text = "";
-            this.rTxtBxTCV.TextChanged += new System.EventHandler(this.rTxtBxTCV_TextChanged);
             // 
             // btnSaveCases
             // 
@@ -2254,14 +2254,13 @@ namespace CSGO_Case_Calculator
             this.rTxtBxTCA.Size = new System.Drawing.Size(126, 32);
             this.rTxtBxTCA.TabIndex = 153;
             this.rTxtBxTCA.Text = "";
-            this.rTxtBxTCA.TextChanged += new System.EventHandler(this.rTxtBxTCA_TextChanged);
             // 
             // lblTCA
             // 
             this.lblTCA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTCA.Location = new System.Drawing.Point(1289, 381);
             this.lblTCA.Name = "lblTCA";
-            this.lblTCA.Size = new System.Drawing.Size(107, 54);
+            this.lblTCA.Size = new System.Drawing.Size(129, 54);
             this.lblTCA.TabIndex = 154;
             this.lblTCA.Text = "Total Case Amount:";
             // 
@@ -2852,7 +2851,6 @@ namespace CSGO_Case_Calculator
             this.pnl1.Name = "pnl1";
             this.pnl1.Size = new System.Drawing.Size(1430, 695);
             this.pnl1.TabIndex = 190;
-            this.pnl1.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl1_Paint);
             // 
             // cBxFracture
             // 
