@@ -213,7 +213,7 @@ namespace CSGO_Case_Calculator
             this.btnImportOldXML.Name = "btnImportOldXML";
             this.btnImportOldXML.Size = new System.Drawing.Size(126, 63);
             this.btnImportOldXML.TabIndex = 151;
-            this.btnImportOldXML.Text = "Import old Cases-XML-file";
+            this.btnImportOldXML.Text = "Import old \"cases.xml\"";
             this.btnImportOldXML.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnImportOldXML.UseVisualStyleBackColor = false;
             this.btnImportOldXML.Click += new System.EventHandler(this.btnImportOldXML_Click);

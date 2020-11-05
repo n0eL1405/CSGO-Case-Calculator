@@ -851,6 +851,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxClutchA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxClutchA.TabIndex = 45;
             this.rTxtBxClutchA.Text = "0";
+            this.rTxtBxClutchA.TextChanged += new System.EventHandler(this.rTxtBxClutchA_TextChanged);
             // 
             // rTxtBxCS20A
             // 
@@ -862,6 +863,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxCS20A.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxCS20A.TabIndex = 46;
             this.rTxtBxCS20A.Text = "0";
+            this.rTxtBxCS20A.TextChanged += new System.EventHandler(this.rTxtBxCS20A_TextChanged);
             // 
             // rTxtBxCSGOWCA
             // 
@@ -873,6 +875,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxCSGOWCA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxCSGOWCA.TabIndex = 47;
             this.rTxtBxCSGOWCA.Text = "0";
+            this.rTxtBxCSGOWCA.TextChanged += new System.EventHandler(this.rTxtBxCSGOWCA_TextChanged);
             // 
             // rTxtBxCSGOWC2A
             // 
@@ -884,6 +887,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxCSGOWC2A.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxCSGOWC2A.TabIndex = 48;
             this.rTxtBxCSGOWC2A.Text = "0";
+            this.rTxtBxCSGOWC2A.TextChanged += new System.EventHandler(this.rTxtBxCSGOWC2A_TextChanged);
             // 
             // rTxtBxCSGOWC3A
             // 
@@ -895,6 +899,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxCSGOWC3A.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxCSGOWC3A.TabIndex = 49;
             this.rTxtBxCSGOWC3A.Text = "0";
+            this.rTxtBxCSGOWC3A.TextChanged += new System.EventHandler(this.rTxtBxCSGOWC3A_TextChanged);
             // 
             // rTxtBxDangerZoneA
             // 
@@ -906,6 +911,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxDangerZoneA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxDangerZoneA.TabIndex = 50;
             this.rTxtBxDangerZoneA.Text = "0";
+            this.rTxtBxDangerZoneA.TextChanged += new System.EventHandler(this.rTxtBxDangerZoneA_TextChanged);
             // 
             // rTxtBxeSports2013A
             // 
@@ -917,6 +923,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxeSports2013A.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxeSports2013A.TabIndex = 51;
             this.rTxtBxeSports2013A.Text = "0";
+            this.rTxtBxeSports2013A.TextChanged += new System.EventHandler(this.rTxtBxeSports2013A_TextChanged);
             // 
             // rTxtBxeSports2013WA
             // 
@@ -928,6 +935,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxeSports2013WA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxeSports2013WA.TabIndex = 52;
             this.rTxtBxeSports2013WA.Text = "0";
+            this.rTxtBxeSports2013WA.TextChanged += new System.EventHandler(this.rTxtBxeSports2013WA_TextChanged);
             // 
             // rTxtBxeSports2014SA
             // 
@@ -939,6 +947,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxeSports2014SA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxeSports2014SA.TabIndex = 53;
             this.rTxtBxeSports2014SA.Text = "0";
+            this.rTxtBxeSports2014SA.TextChanged += new System.EventHandler(this.rTxtBxeSports2014SA_TextChanged);
             // 
             // rTxtBxFalchionA
             // 
@@ -950,6 +959,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxFalchionA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxFalchionA.TabIndex = 54;
             this.rTxtBxFalchionA.Text = "0";
+            this.rTxtBxFalchionA.TextChanged += new System.EventHandler(this.rTxtBxFalchionA_TextChanged);
             // 
             // rTxtBxGammaA
             // 
@@ -961,6 +971,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxGammaA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxGammaA.TabIndex = 55;
             this.rTxtBxGammaA.Text = "0";
+            this.rTxtBxGammaA.TextChanged += new System.EventHandler(this.rTxtBxGammaA_TextChanged);
             // 
             // rTxtBxGamma2A
             // 
@@ -972,6 +983,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxGamma2A.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxGamma2A.TabIndex = 56;
             this.rTxtBxGamma2A.Text = "0";
+            this.rTxtBxGamma2A.TextChanged += new System.EventHandler(this.rTxtBxGamma2A_TextChanged);
             // 
             // rTxtBxGloveA
             // 
@@ -983,6 +995,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxGloveA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxGloveA.TabIndex = 57;
             this.rTxtBxGloveA.Text = "0";
+            this.rTxtBxGloveA.TextChanged += new System.EventHandler(this.rTxtBxGloveA_TextChanged);
             // 
             // rTxtBxChroma2TV
             // 
@@ -1244,6 +1257,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxHorizonA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxHorizonA.TabIndex = 74;
             this.rTxtBxHorizonA.Text = "0";
+            this.rTxtBxHorizonA.TextChanged += new System.EventHandler(this.rTxtBxHorizonA_TextChanged);
             // 
             // rTxtBxHuntsmanA
             // 
@@ -1255,6 +1269,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxHuntsmanA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxHuntsmanA.TabIndex = 75;
             this.rTxtBxHuntsmanA.Text = "0";
+            this.rTxtBxHuntsmanA.TextChanged += new System.EventHandler(this.rTxtBxHuntsmanA_TextChanged);
             // 
             // rTxtBxBravoA
             // 
@@ -1266,6 +1281,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxBravoA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxBravoA.TabIndex = 76;
             this.rTxtBxBravoA.Text = "0";
+            this.rTxtBxBravoA.TextChanged += new System.EventHandler(this.rTxtBxBravoA_TextChanged);
             // 
             // rTxtBxBreakoutA
             // 
@@ -1277,6 +1293,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxBreakoutA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxBreakoutA.TabIndex = 77;
             this.rTxtBxBreakoutA.Text = "0";
+            this.rTxtBxBreakoutA.TextChanged += new System.EventHandler(this.rTxtBxBreakoutA_TextChanged);
             // 
             // rTxtBxHydraA
             // 
@@ -1288,6 +1305,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxHydraA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxHydraA.TabIndex = 78;
             this.rTxtBxHydraA.Text = "0";
+            this.rTxtBxHydraA.TextChanged += new System.EventHandler(this.rTxtBxHydraA_TextChanged);
             // 
             // rTxtBxPhoenixA
             // 
@@ -1299,6 +1317,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxPhoenixA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxPhoenixA.TabIndex = 79;
             this.rTxtBxPhoenixA.Text = "0";
+            this.rTxtBxPhoenixA.TextChanged += new System.EventHandler(this.rTxtBxPhoenixA_TextChanged);
             // 
             // rTxtBxVanguardA
             // 
@@ -1310,6 +1329,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxVanguardA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxVanguardA.TabIndex = 80;
             this.rTxtBxVanguardA.Text = "0";
+            this.rTxtBxVanguardA.TextChanged += new System.EventHandler(this.rTxtBxVanguardA_TextChanged);
             // 
             // rTxtBxWildfireA
             // 
@@ -1321,6 +1341,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxWildfireA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxWildfireA.TabIndex = 81;
             this.rTxtBxWildfireA.Text = "0";
+            this.rTxtBxWildfireA.TextChanged += new System.EventHandler(this.rTxtBxWildfireA_TextChanged);
             // 
             // rTxtBxPrismaA
             // 
@@ -1332,6 +1353,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxPrismaA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxPrismaA.TabIndex = 82;
             this.rTxtBxPrismaA.Text = "0";
+            this.rTxtBxPrismaA.TextChanged += new System.EventHandler(this.rTxtBxPrismaA_TextChanged);
             // 
             // rTxtBxPrisma2A
             // 
@@ -1343,6 +1365,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxPrisma2A.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxPrisma2A.TabIndex = 83;
             this.rTxtBxPrisma2A.Text = "0";
+            this.rTxtBxPrisma2A.TextChanged += new System.EventHandler(this.rTxtBxPrisma2A_TextChanged);
             // 
             // rTxtBxRevolverA
             // 
@@ -1354,6 +1377,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxRevolverA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxRevolverA.TabIndex = 84;
             this.rTxtBxRevolverA.Text = "0";
+            this.rTxtBxRevolverA.TextChanged += new System.EventHandler(this.rTxtBxRevolverA_TextChanged);
             // 
             // rTxtBxShadowA
             // 
@@ -1365,6 +1389,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxShadowA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxShadowA.TabIndex = 85;
             this.rTxtBxShadowA.Text = "0";
+            this.rTxtBxShadowA.TextChanged += new System.EventHandler(this.rTxtBxShadowA_TextChanged);
             // 
             // rTxtBxShatteredWebA
             // 
@@ -1376,6 +1401,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxShatteredWebA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxShatteredWebA.TabIndex = 86;
             this.rTxtBxShatteredWebA.Text = "0";
+            this.rTxtBxShatteredWebA.TextChanged += new System.EventHandler(this.rTxtBxShatteredWebA_TextChanged);
             // 
             // rTxtBxSpectrumA
             // 
@@ -1387,6 +1413,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxSpectrumA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxSpectrumA.TabIndex = 87;
             this.rTxtBxSpectrumA.Text = "0";
+            this.rTxtBxSpectrumA.TextChanged += new System.EventHandler(this.rTxtBxSpectrumA_TextChanged);
             // 
             // rTxtBxSpectrum2A
             // 
@@ -1398,6 +1425,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxSpectrum2A.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxSpectrum2A.TabIndex = 88;
             this.rTxtBxSpectrum2A.Text = "0";
+            this.rTxtBxSpectrum2A.TextChanged += new System.EventHandler(this.rTxtBxSpectrum2A_TextChanged);
             // 
             // rTxtBxWinterOffensiveA
             // 
@@ -1409,6 +1437,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxWinterOffensiveA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxWinterOffensiveA.TabIndex = 89;
             this.rTxtBxWinterOffensiveA.Text = "0";
+            this.rTxtBxWinterOffensiveA.TextChanged += new System.EventHandler(this.rTxtBxWinterOffensiveA_TextChanged);
             // 
             // lblAmount2
             // 
@@ -2904,6 +2933,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxFractureA.Size = new System.Drawing.Size(98, 32);
             this.rTxtBxFractureA.TabIndex = 191;
             this.rTxtBxFractureA.Text = "0";
+            this.rTxtBxFractureA.TextChanged += new System.EventHandler(this.rTxtBxFractureA_TextChanged);
             // 
             // rTxtBxFracture
             // 

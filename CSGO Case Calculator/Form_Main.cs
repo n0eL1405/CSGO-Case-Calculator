@@ -1099,9 +1099,11 @@ namespace CSGO_Case_Calculator {
 
 			tvChroma = Convert.ToString(Convert.ToDecimal(pChroma.Replace("€", "")) * Convert.ToDecimal(aChroma)) + "€";
 
-			tvChroma2 = Convert.ToString(Convert.ToDecimal(pChroma2.Replace("€", "")) * Convert.ToDecimal(aChroma2)) + "€";
+			tvChroma2 = Convert.ToString(Convert.ToDecimal(pChroma2.Replace("€", "")) * Convert.ToDecimal(aChroma2)) +
+			            "€";
 
-			tvChroma3 = Convert.ToString(Convert.ToDecimal(pChroma3.Replace("€", "")) * Convert.ToDecimal(aChroma3)) + "€";
+			tvChroma3 = Convert.ToString(Convert.ToDecimal(pChroma3.Replace("€", "")) * Convert.ToDecimal(aChroma3)) +
+			            "€";
 
 			tvClutch = Convert.ToString(Convert.ToDecimal(pClutch.Replace("€", "")) * Convert.ToDecimal(aClutch)) + "€";
 
@@ -1109,19 +1111,28 @@ namespace CSGO_Case_Calculator {
 
 			tvCSGOWC = Convert.ToString(Convert.ToDecimal(pCSGOWC.Replace("€", "")) * Convert.ToDecimal(aCSGOWC)) + "€";
 
-			tvCSGOWC2 = Convert.ToString(Convert.ToDecimal(pCSGOWC2.Replace("€", "")) * Convert.ToDecimal(aCSGOWC2)) + "€";
+			tvCSGOWC2 = Convert.ToString(Convert.ToDecimal(pCSGOWC2.Replace("€", "")) * Convert.ToDecimal(aCSGOWC2)) +
+			            "€";
 
-			tvCSGOWC3 = Convert.ToString(Convert.ToDecimal(pCSGOWC3.Replace("€", "")) * Convert.ToDecimal(aCSGOWC3)) + "€";
+			tvCSGOWC3 = Convert.ToString(Convert.ToDecimal(pCSGOWC3.Replace("€", "")) * Convert.ToDecimal(aCSGOWC3)) +
+			            "€";
 
-			tvDangerZone = Convert.ToString(Convert.ToDecimal(pDangerZone.Replace("€", "")) * Convert.ToDecimal(aDangerZone)) + "€";
+			tvDangerZone =
+				Convert.ToString(Convert.ToDecimal(pDangerZone.Replace("€", "")) * Convert.ToDecimal(aDangerZone)) +
+				"€";
 
-			tveSports2013 = Convert.ToString(Convert.ToDecimal(peSports2013.Replace("€", "")) * Convert.ToDecimal(aeSports2013)) + "€";
+			tveSports2013 =
+				Convert.ToString(Convert.ToDecimal(peSports2013.Replace("€", "")) * Convert.ToDecimal(aeSports2013)) +
+				"€";
 
-			tveSports2013Winter = Convert.ToString(Convert.ToDecimal(peSports2013Winter.Replace("€", "")) * Convert.ToDecimal(aeSports2013Winter)) + "€";
+			tveSports2013Winter = Convert.ToString(Convert.ToDecimal(peSports2013Winter.Replace("€", "")) *
+			                                       Convert.ToDecimal(aeSports2013Winter)) + "€";
 
-			tveSports2014Summer = Convert.ToString(Convert.ToDecimal(peSports2014Summer.Replace("€", "")) * Convert.ToDecimal(aeSports2014Summer)) + "€";
+			tveSports2014Summer = Convert.ToString(Convert.ToDecimal(peSports2014Summer.Replace("€", "")) *
+			                                       Convert.ToDecimal(aeSports2014Summer)) + "€";
 
-			tvFalchion = Convert.ToString(Convert.ToDecimal(pFalchion.Replace("€", "")) * Convert.ToDecimal(aFalchion)) + "€";
+			tvFalchion =
+				Convert.ToString(Convert.ToDecimal(pFalchion.Replace("€", "")) * Convert.ToDecimal(aFalchion)) + "€";
 
 			tvGamma = Convert.ToString(Convert.ToDecimal(pGamma.Replace("€", "")) * Convert.ToDecimal(aGamma)) + "€";
 
@@ -1129,39 +1140,53 @@ namespace CSGO_Case_Calculator {
 
 			tvGlove = Convert.ToString(Convert.ToDecimal(pGlove.Replace("€", "")) * Convert.ToDecimal(aGlove)) + "€";
 
-			tvHorizon = Convert.ToString(Convert.ToDecimal(pHorizon.Replace("€", "")) * Convert.ToDecimal(aHorizon)) + "€";
+			tvHorizon = Convert.ToString(Convert.ToDecimal(pHorizon.Replace("€", "")) * Convert.ToDecimal(aHorizon)) +
+			            "€";
 
-			tvHuntsman = Convert.ToString(Convert.ToDecimal(pHuntsman.Replace("€", "")) * Convert.ToDecimal(aHuntsman)) + "€";
+			tvHuntsman =
+				Convert.ToString(Convert.ToDecimal(pHuntsman.Replace("€", "")) * Convert.ToDecimal(aHuntsman)) + "€";
 
 			tvBravo = Convert.ToString(Convert.ToDecimal(pBravo.Replace("€", "")) * Convert.ToDecimal(aBravo)) + "€";
 
-			tvBreakout = Convert.ToString(Convert.ToDecimal(pBreakout.Replace("€", "")) * Convert.ToDecimal(aBreakout)) + "€";
+			tvBreakout =
+				Convert.ToString(Convert.ToDecimal(pBreakout.Replace("€", "")) * Convert.ToDecimal(aBreakout)) + "€";
 
 			tvHydra = Convert.ToString(Convert.ToDecimal(pHydra.Replace("€", "")) * Convert.ToDecimal(aHydra)) + "€";
 
-			tvPhoenix = Convert.ToString(Convert.ToDecimal(pPhoenix.Replace("€", "")) * Convert.ToDecimal(aPhoenix)) + "€";
+			tvPhoenix = Convert.ToString(Convert.ToDecimal(pPhoenix.Replace("€", "")) * Convert.ToDecimal(aPhoenix)) +
+			            "€";
 
-			tvVanguard = Convert.ToString(Convert.ToDecimal(pVanguard.Replace("€", "")) * Convert.ToDecimal(aVanguard)) + "€";
+			tvVanguard =
+				Convert.ToString(Convert.ToDecimal(pVanguard.Replace("€", "")) * Convert.ToDecimal(aVanguard)) + "€";
 
-			tvWildfire = Convert.ToString(Convert.ToDecimal(pWildfire.Replace("€", "")) * Convert.ToDecimal(aWildfire)) + "€";
+			tvWildfire =
+				Convert.ToString(Convert.ToDecimal(pWildfire.Replace("€", "")) * Convert.ToDecimal(aWildfire)) + "€";
 
 			tvPrisma = Convert.ToString(Convert.ToDecimal(pPrisma.Replace("€", "")) * Convert.ToDecimal(aPrisma)) + "€";
 
-			tvPrisma2 = Convert.ToString(Convert.ToDecimal(pPrisma2.Replace("€", "")) * Convert.ToDecimal(aPrisma2)) + "€";
+			tvPrisma2 = Convert.ToString(Convert.ToDecimal(pPrisma2.Replace("€", "")) * Convert.ToDecimal(aPrisma2)) +
+			            "€";
 
-			tvRevolver = Convert.ToString(Convert.ToDecimal(pRevolver.Replace("€", "")) * Convert.ToDecimal(aRevolver)) + "€";
+			tvRevolver =
+				Convert.ToString(Convert.ToDecimal(pRevolver.Replace("€", "")) * Convert.ToDecimal(aRevolver)) + "€";
 
 			tvShadow = Convert.ToString(Convert.ToDecimal(pShadow.Replace("€", "")) * Convert.ToDecimal(aShadow)) + "€";
 
-			tvShatteredWeb = Convert.ToString(Convert.ToDecimal(pShatteredWeb.Replace("€", "")) * Convert.ToDecimal(aShatteredWeb)) + "€";
+			tvShatteredWeb =
+				Convert.ToString(Convert.ToDecimal(pShatteredWeb.Replace("€", "")) * Convert.ToDecimal(aShatteredWeb)) +
+				"€";
 
-			tvSpectrum = Convert.ToString(Convert.ToDecimal(pSpectrum.Replace("€", "")) * Convert.ToDecimal(aSpectrum)) + "€";
+			tvSpectrum =
+				Convert.ToString(Convert.ToDecimal(pSpectrum.Replace("€", "")) * Convert.ToDecimal(aSpectrum)) + "€";
 
-			tvSpectrum2 = Convert.ToString(Convert.ToDecimal(pSpectrum2.Replace("€", "")) * Convert.ToDecimal(aSpectrum2)) + "€";
+			tvSpectrum2 =
+				Convert.ToString(Convert.ToDecimal(pSpectrum2.Replace("€", "")) * Convert.ToDecimal(aSpectrum2)) + "€";
 
-			tvWinterOffensive = Convert.ToString(Convert.ToDecimal(pWinterOffensive.Replace("€", "")) * Convert.ToDecimal(aWinterOffensive)) + "€";
+			tvWinterOffensive = Convert.ToString(Convert.ToDecimal(pWinterOffensive.Replace("€", "")) *
+			                                     Convert.ToDecimal(aWinterOffensive)) + "€";
 
-			tvFracture = Convert.ToString(Convert.ToDecimal(pFracture.Replace("€", "")) * Convert.ToDecimal(aFracture)) + "€";
+			tvFracture =
+				Convert.ToString(Convert.ToDecimal(pFracture.Replace("€", "")) * Convert.ToDecimal(aFracture)) + "€";
 
 			writeTotalValues();
 
@@ -1201,7 +1226,7 @@ namespace CSGO_Case_Calculator {
 			                                  Convert.ToDecimal(tvSpectrum2.Replace("€", "")) +
 			                                  Convert.ToDecimal(tvWinterOffensive.Replace("€", "")) +
 			                                  Convert.ToDecimal(tvFracture.Replace("€", ""))
-			                                  ) + "€";
+			) + "€";
 
 			//calculate Total Case Amount
 			rTxtBxTCA.Text = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 +
@@ -1211,7 +1236,7 @@ namespace CSGO_Case_Calculator {
 			                                  aHydra + aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 +
 			                                  aRevolver + aShadow + aShatteredWeb + aSpectrum + aSpectrum2 +
 			                                  aWinterOffensive + aFracture);
-			
+
 		}
 
 		public void writeTotalValues() {
@@ -1368,9 +1393,6 @@ namespace CSGO_Case_Calculator {
 					SaveCases.SaveDaten(casesempty, CaseXML);
 				}
 			} else {
-				var directoryInfo = Directory.CreateDirectory(propertyFolder + "\\files");
-				var di = directoryInfo;
-
 				//on first startup a file will be create where every amount is set to 0 (to avoid bugs when calculating)
 				var casesempty = new Cases {
 					CHROMA_AMOUNT = "0",
@@ -1580,41 +1602,139 @@ namespace CSGO_Case_Calculator {
 		}
 
 		//test if input in amounts text box are only numbers
-		//todo prüfungen
-		private void rTxtBxChromaA_TextChanged(object sender, EventArgs e) {
+		public void amountErrorBox(string msgBxTxt) {
 
-			if (int.TryParse(rTxtBxChromaA.Text, out aChroma)) {
+			MessageBox.Show("Error: \"" + msgBxTxt + "\" is not a number! \nPlease enter a valid number",
+				"ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+		}
 
-				aChroma = int.Parse(rTxtBxChromaA.Text);
+		private int testAmounts(string msgBxTxt, int amountInt) {
+
+			if (int.TryParse(msgBxTxt, out amountInt)) {
+
+				amountInt = int.Parse(msgBxTxt);
 
 			} else {
-				MessageBox.Show("Error: \"" + rTxtBxChromaA.Text + "\" is not a number! \nPlease enter a valid number",
-					"ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+
+				amountErrorBox(msgBxTxt);
 			}
+
+			return amountInt;
+		}
+
+		private void rTxtBxChromaA_TextChanged(object sender, EventArgs e) {
+
+			aChroma = testAmounts(rTxtBxChromaA.Text, aChroma);
 		}
 
 		private void rTxtBxChroma2A_TextChanged(object sender, EventArgs e) {
 
-			if (int.TryParse(rTxtBxChroma2A.Text, out aChroma2)) {
-
-				aChroma2 = int.Parse(rTxtBxChroma2A.Text);
-
-			} else {
-				MessageBox.Show("Error: \"" + rTxtBxChroma2A.Text + "\" is not a number! \nPlease enter a valid number",
-					"ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-			}
+			aChroma2 = testAmounts(rTxtBxChroma2A.Text, aChroma2);
 		}
 
 		private void rTxtBxChroma3A_TextChanged(object sender, EventArgs e) {
-			if (int.TryParse(rTxtBxChroma3A.Text, out aChroma3)) {
 
-				aChroma3 = int.Parse(rTxtBxChroma3A.Text);
-
-			} else {
-				MessageBox.Show("Error: \"" + rTxtBxChroma3A.Text + "\" is not a number! \nPlease enter a valid number",
-					"ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-			}
+			aChroma3 = testAmounts(rTxtBxChroma3A.Text, aChroma3);
 		}
+
+		private void rTxtBxClutchA_TextChanged(object sender, EventArgs e) {
+
+			aClutch = testAmounts(rTxtBxClutchA.Text, aClutch);
+		}
+
+		private void rTxtBxCS20A_TextChanged(object sender, EventArgs e) {
+
+			aCS20 = testAmounts(rTxtBxCS20A.Text, aCS20);
+		}
+
+		private void rTxtBxCSGOWCA_TextChanged(object sender, EventArgs e) {
+
+			aCSGOWC = testAmounts(rTxtBxCSGOWCA.Text, aCSGOWC);
+		}
+
+		private void rTxtBxCSGOWC2A_TextChanged(object sender, EventArgs e) {
+
+			aCSGOWC2 = testAmounts(rTxtBxCSGOWC2A.Text, aCSGOWC2);
+		}
+
+		private void rTxtBxCSGOWC3A_TextChanged(object sender, EventArgs e) {
+
+			aCSGOWC3 = testAmounts(rTxtBxCSGOWC3A.Text, aCSGOWC3);
+		}
+
+		private void rTxtBxDangerZoneA_TextChanged(object sender, EventArgs e) {
+
+			aDangerZone = testAmounts(rTxtBxDangerZoneA.Text, aDangerZone);
+		}
+
+		private void rTxtBxeSports2013A_TextChanged(object sender, EventArgs e) {
+
+			aeSports2013 = testAmounts(rTxtBxeSports2013A.Text, aeSports2013);
+		}
+
+		private void rTxtBxeSports2013WA_TextChanged(object sender, EventArgs e) {
+
+			aeSports2013Winter = testAmounts(rTxtBxeSports2013WA.Text, aeSports2013Winter);
+		}
+
+		private void rTxtBxeSports2014SA_TextChanged(object sender, EventArgs e) {
+
+			aeSports2014Summer = testAmounts(rTxtBxeSports2014SA.Text, aeSports2014Summer);
+		}
+
+		private void rTxtBxFalchionA_TextChanged(object sender, EventArgs e) {
+
+			aFalchion = testAmounts(rTxtBxFalchionA.Text, aFalchion);
+		}
+
+		private void rTxtBxFractureA_TextChanged(object sender, EventArgs e) {
+
+			aFracture = testAmounts(rTxtBxFractureA.Text, aFracture);
+		}
+
+		private void rTxtBxGammaA_TextChanged(object sender, EventArgs e) {
+
+			aGamma = testAmounts(rTxtBxGammaA.Text, aGamma);
+		}
+
+		private void rTxtBxGamma2A_TextChanged(object sender, EventArgs e) {
+
+			aGamma2 = testAmounts(rTxtBxGamma2A.Text, aGamma2);
+		}
+		//todo
+		private void rTxtBxGloveA_TextChanged(object sender, EventArgs e) { }
+
+		private void rTxtBxHorizonA_TextChanged(object sender, EventArgs e) { }
+
+		private void rTxtBxHuntsmanA_TextChanged(object sender, EventArgs e) { }
+
+		private void rTxtBxBravoA_TextChanged(object sender, EventArgs e) { }
+
+		private void rTxtBxBreakoutA_TextChanged(object sender, EventArgs e) { }
+
+		private void rTxtBxHydraA_TextChanged(object sender, EventArgs e) { }
+
+		private void rTxtBxPhoenixA_TextChanged(object sender, EventArgs e) { }
+
+		private void rTxtBxVanguardA_TextChanged(object sender, EventArgs e) { }
+
+		private void rTxtBxWildfireA_TextChanged(object sender, EventArgs e) { }
+
+		private void rTxtBxPrismaA_TextChanged(object sender, EventArgs e) { }
+
+		private void rTxtBxPrisma2A_TextChanged(object sender, EventArgs e) { }
+
+		private void rTxtBxRevolverA_TextChanged(object sender, EventArgs e) { }
+
+		private void rTxtBxShadowA_TextChanged(object sender, EventArgs e) { }
+
+		private void rTxtBxShatteredWebA_TextChanged(object sender, EventArgs e) { }
+
+		private void rTxtBxSpectrumA_TextChanged(object sender, EventArgs e) { }
+
+		private void rTxtBxSpectrum2A_TextChanged(object sender, EventArgs e) { }
+
+		private void rTxtBxWinterOffensiveA_TextChanged(object sender, EventArgs e) { }
 
 		//class to save the amount
 		public class SaveCases {
