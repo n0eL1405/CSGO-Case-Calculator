@@ -1701,40 +1701,91 @@ namespace CSGO_Case_Calculator {
 
 			aGamma2 = testAmounts(rTxtBxGamma2A.Text, aGamma2);
 		}
-		//todo
-		private void rTxtBxGloveA_TextChanged(object sender, EventArgs e) { }
 
-		private void rTxtBxHorizonA_TextChanged(object sender, EventArgs e) { }
+		private void rTxtBxGloveA_TextChanged(object sender, EventArgs e) {
 
-		private void rTxtBxHuntsmanA_TextChanged(object sender, EventArgs e) { }
+			aGlove = testAmounts(rTxtBxGloveA.Text, aGlove);
+		}
 
-		private void rTxtBxBravoA_TextChanged(object sender, EventArgs e) { }
+		private void rTxtBxHorizonA_TextChanged(object sender, EventArgs e) {
 
-		private void rTxtBxBreakoutA_TextChanged(object sender, EventArgs e) { }
+			aHorizon = testAmounts(rTxtBxHorizonA.Text, aHorizon);
+		}
 
-		private void rTxtBxHydraA_TextChanged(object sender, EventArgs e) { }
+		private void rTxtBxHuntsmanA_TextChanged(object sender, EventArgs e) {
 
-		private void rTxtBxPhoenixA_TextChanged(object sender, EventArgs e) { }
+			aHuntsman = testAmounts(rTxtBxHuntsmanA.Text, aHuntsman);
+		}
 
-		private void rTxtBxVanguardA_TextChanged(object sender, EventArgs e) { }
+		private void rTxtBxBravoA_TextChanged(object sender, EventArgs e) {
 
-		private void rTxtBxWildfireA_TextChanged(object sender, EventArgs e) { }
+			aBravo = testAmounts(rTxtBxBravoA.Text, aBravo);
+		}
 
-		private void rTxtBxPrismaA_TextChanged(object sender, EventArgs e) { }
+		private void rTxtBxBreakoutA_TextChanged(object sender, EventArgs e) {
 
-		private void rTxtBxPrisma2A_TextChanged(object sender, EventArgs e) { }
+			aBreakout = testAmounts(rTxtBxBreakoutA.Text, aBreakout);
+		}
 
-		private void rTxtBxRevolverA_TextChanged(object sender, EventArgs e) { }
+		private void rTxtBxHydraA_TextChanged(object sender, EventArgs e) {
 
-		private void rTxtBxShadowA_TextChanged(object sender, EventArgs e) { }
+			aHydra = testAmounts(rTxtBxHydraA.Text, aHydra);
+		}
 
-		private void rTxtBxShatteredWebA_TextChanged(object sender, EventArgs e) { }
+		private void rTxtBxPhoenixA_TextChanged(object sender, EventArgs e) {
 
-		private void rTxtBxSpectrumA_TextChanged(object sender, EventArgs e) { }
+			aPhoenix = testAmounts(rTxtBxPhoenixA.Text, aPhoenix);
+		}
 
-		private void rTxtBxSpectrum2A_TextChanged(object sender, EventArgs e) { }
+		private void rTxtBxVanguardA_TextChanged(object sender, EventArgs e) {
 
-		private void rTxtBxWinterOffensiveA_TextChanged(object sender, EventArgs e) { }
+			aVanguard = testAmounts(rTxtBxVanguardA.Text, aVanguard);
+		}
+
+		private void rTxtBxWildfireA_TextChanged(object sender, EventArgs e) {
+
+			aWildfire = testAmounts(rTxtBxWildfireA.Text, aWildfire);
+		}
+
+		private void rTxtBxPrismaA_TextChanged(object sender, EventArgs e) {
+
+			aPrisma = testAmounts(rTxtBxPrismaA.Text, aPrisma);
+		}
+
+		private void rTxtBxPrisma2A_TextChanged(object sender, EventArgs e) {
+
+			aPrisma2 = testAmounts(rTxtBxPrisma2A.Text, aPrisma2);
+		}
+
+		private void rTxtBxRevolverA_TextChanged(object sender, EventArgs e) {
+
+			aRevolver = testAmounts(rTxtBxRevolverA.Text, aRevolver);
+		}
+
+		private void rTxtBxShadowA_TextChanged(object sender, EventArgs e) {
+
+			aShadow = testAmounts(rTxtBxShadowA.Text, aShadow);
+		}
+
+		private void rTxtBxShatteredWebA_TextChanged(object sender, EventArgs e) {
+
+			aShatteredWeb = testAmounts(rTxtBxShatteredWebA.Text, aShatteredWeb);
+		}
+
+		private void rTxtBxSpectrumA_TextChanged(object sender, EventArgs e) {
+
+			aSpectrum = testAmounts(rTxtBxSpectrumA.Text, aSpectrum);
+		}
+
+		private void rTxtBxSpectrum2A_TextChanged(object sender, EventArgs e) {
+
+			aSpectrum2 = testAmounts(rTxtBxSpectrum2A.Text, aSpectrum2);
+		}
+
+		private void rTxtBxWinterOffensiveA_TextChanged(object sender, EventArgs e) {
+
+			aWinterOffensive = testAmounts(rTxtBxWinterOffensiveA.Text, aWinterOffensive);
+		}
 
 		//class to save the amount
 		public class SaveCases {

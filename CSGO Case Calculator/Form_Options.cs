@@ -76,8 +76,39 @@ namespace CSGO_Case_Calculator {
 
 					var main = new Form_Main();
 
-					//TODO set the textfields of the amounts to read only to block the user from making changes
 					main.rTxtBxChromaA.ReadOnly = true;
+					main.rTxtBxChroma2A.ReadOnly = true;
+					main.rTxtBxChroma3A.ReadOnly = true;
+					main.rTxtBxClutchA.ReadOnly = true;
+					main.rTxtBxCS20A.ReadOnly = true;
+					main.rTxtBxCSGOWCA.ReadOnly = true;
+					main.rTxtBxCSGOWC2A.ReadOnly = true;
+					main.rTxtBxCSGOWC3A.ReadOnly = true;
+					main.rTxtBxDangerZoneA.ReadOnly = true;
+					main.rTxtBxeSports2013A.ReadOnly = true;
+					main.rTxtBxeSports2013WA.ReadOnly = true;
+					main.rTxtBxeSports2014SA.ReadOnly = true;
+					main.rTxtBxFalchionA.ReadOnly = true;
+					main.rTxtBxFractureA.ReadOnly = true;
+					main.rTxtBxGammaA.ReadOnly = true;
+					main.rTxtBxGamma2A.ReadOnly = true;
+					main.rTxtBxGloveA.ReadOnly = true;
+					main.rTxtBxHorizonA.ReadOnly = true;
+					main.rTxtBxHuntsmanA.ReadOnly = true;
+					main.rTxtBxBravoA.ReadOnly = true;
+					main.rTxtBxBreakoutA.ReadOnly = true;
+					main.rTxtBxHydraA.ReadOnly = true;
+					main.rTxtBxPhoenixA.ReadOnly = true;
+					main.rTxtBxVanguardA.ReadOnly = true;
+					main.rTxtBxWildfireA.ReadOnly = true;
+					main.rTxtBxPrismaA.ReadOnly = true;
+					main.rTxtBxPrisma2A.ReadOnly = true;
+					main.rTxtBxRevolverA.ReadOnly = true;
+					main.rTxtBxShadowA.ReadOnly = true;
+					main.rTxtBxShatteredWebA.ReadOnly = true;
+					main.rTxtBxSpectrumA.ReadOnly = true;
+					main.rTxtBxSpectrum2A.ReadOnly = true;
+					main.rTxtBxWinterOffensiveA.ReadOnly = true;
 
 					calcTimer.Enabled = true;
 
@@ -114,11 +145,9 @@ namespace CSGO_Case_Calculator {
 
 			await main.getPricesAsync();
 
-			main.Calculate();
-
 			main.LoadCases();
 
-			//TODO: textboxes mit variablen austauschen
+			main.Calculate();
 
 			Timer.streamWriterTimer.WriteLine("Chroma Case: " +
 			                                  "\n\tAmount: " + main.aChroma +
@@ -136,152 +165,152 @@ namespace CSGO_Case_Calculator {
 			                                  "\n\tTotal value: " + main.tvChroma3);
 
 			Timer.streamWriterTimer.WriteLine("Clutch Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxClutchA.Text +
+			                                  "\n\tAmount: " + main.aClutch +
 			                                  "\n\tPrice: " + main.pClutch +
 			                                  "\n\tTotal value: " + main.rTxtBxClutchTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("CS20 Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxCS20A.Text +
+			                                  "\n\tAmount: " + main.aCS20 +
 			                                  "\n\tPrice: " + main.pCS20 +
 			                                  "\n\tTotal value: " + main.rTxtBxCS20TV.Text);
 
 			Timer.streamWriterTimer.WriteLine("CS:GO Weapon Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxCSGOWCA.Text +
+			                                  "\n\tAmount: " + main.aCSGOWC +
 			                                  "\n\tPrice: " + main.pCSGOWC +
 			                                  "\n\tTotal value: " + main.rTxtBxCSGOWCTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("CS:GO Weapon Case 2: " +
-			                                  "\n\tAmount: " + main.rTxtBxCSGOWC2A.Text +
+			                                  "\n\tAmount: " + main.aCSGOWC2 +
 			                                  "\n\tPrice: " + main.pCSGOWC2 +
 			                                  "\n\tTotal value: " + main.rTxtBxCSGOWC2TV.Text);
 
 			Timer.streamWriterTimer.WriteLine("CS:GO Weapon Case 3: " +
-			                                  "\n\tAmount: " + main.rTxtBxCSGOWC3A.Text +
+			                                  "\n\tAmount: " + main.aCSGOWC3 +
 			                                  "\n\tPrice: " + main.pCSGOWC3 +
 			                                  "\n\tTotal value: " + main.rTxtBxCSGOWC3TV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Danger Zone Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxDangerZoneA.Text +
+			                                  "\n\tAmount: " + main.aDangerZone +
 			                                  "\n\tPrice: " + main.pDangerZone +
 			                                  "\n\tTotal value: " + main.rTxtBxDangerZoneTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("eSports 2013 Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxeSports2013A.Text +
+			                                  "\n\tAmount: " + main.aeSports2013 +
 			                                  "\n\tPrice: " + main.peSports2013 +
 			                                  "\n\tTotal value: " + main.rTxtBxeSports2013TV.Text);
 
 			Timer.streamWriterTimer.WriteLine("eSprts 2013 Winter Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxeSports2013WA.Text +
+			                                  "\n\tAmount: " + main.aeSports2013Winter +
 			                                  "\n\tPrice: " + main.peSports2013Winter +
 			                                  "\n\tTotal value: " + main.rTxtBxeSports2013WTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("eSports 2014 Summer Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxeSports2014SA.Text +
+			                                  "\n\tAmount: " + main.aeSports2014Summer +
 			                                  "\n\tPrice: " + main.peSports2014Summer +
 			                                  "\n\tTotal value: " + main.rTxtBxeSports2014STV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Falchion Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxFalchionA.Text +
+			                                  "\n\tAmount: " + main.aFalchion +
 			                                  "\n\tPrice: " + main.pFalchion +
 			                                  "\n\tTotal value: " + main.rTxtBxFalchionTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Fracture Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxFractureA.Text +
+			                                  "\n\tAmount: " + main.aFracture +
 			                                  "\n\tPrice: " + main.pFracture +
 			                                  "\n\tTotal value: " + main.rTxtBxFractureTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Gamma Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxGammaA.Text +
+			                                  "\n\tAmount: " + main.aGamma +
 			                                  "\n\tPrice: " + main.pGamma +
 			                                  "\n\tTotal value: " + main.rTxtBxGammaTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Gamma 2 Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxGamma2A.Text +
+			                                  "\n\tAmount: " + main.aGamma2 +
 			                                  "\n\tPrice: " + main.pGamma2 +
 			                                  "\n\tTotal value: " + main.rTxtBxGamma2TV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Glove Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxGloveA.Text +
+			                                  "\n\tAmount: " + main.aGlove +
 			                                  "\n\tPrice: " + main.pGlove +
 			                                  "\n\tTotal value: " + main.rTxtBxGloveTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Horizon Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxHorizonA.Text +
+			                                  "\n\tAmount: " + main.aHorizon +
 			                                  "\n\tPrice: " + main.pHorizon +
 			                                  "\n\tTotal value: " + main.rTxtBxHorizonTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Huntsman Weapon Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxHuntsmanA.Text +
+			                                  "\n\tAmount: " + main.aHuntsman +
 			                                  "\n\tPrice: " + main.pHuntsman +
 			                                  "\n\tTotal value: " + main.rTxtBxHuntsmanTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Operation Bravo Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxBravoA.Text +
+			                                  "\n\tAmount: " + main.aBravo +
 			                                  "\n\tPrice: " + main.pBravo +
 			                                  "\n\tTotal value: " + main.rTxtBxBravoTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Operation Breakout Weapon Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxBreakoutA.Text +
+			                                  "\n\tAmount: " + main.aBreakout +
 			                                  "\n\tPrice: " + main.pBreakout +
 			                                  "\n\tTotal value: " + main.rTxtBxBreakoutTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Operation Hydra Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxHydraA.Text +
+			                                  "\n\tAmount: " + main.aHydra +
 			                                  "\n\tPrice: " + main.pHydra +
 			                                  "\n\tTotal value: " + main.rTxtBxHydraTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Operation Phoenix Weapon Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxPhoenixA.Text +
+			                                  "\n\tAmount: " + main.aPhoenix +
 			                                  "\n\tPrice: " + main.pPhoenix +
 			                                  "\n\tTotal value: " + main.rTxtBxPhoenixTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Operation Vanguard Weapon Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxVanguardA.Text +
+			                                  "\n\tAmount: " + main.aVanguard +
 			                                  "\n\tPrice: " + main.pVanguard +
 			                                  "\n\tTotal value: " + main.rTxtBxVanguardTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Operation Wildfire Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxWildfireA.Text +
+			                                  "\n\tAmount: " + main.aWildfire +
 			                                  "\n\tPrice: " + main.pWildfire +
 			                                  "\n\tTotal value: " + main.rTxtBxWildfireTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Prisma Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxPrismaA.Text +
+			                                  "\n\tAmount: " + main.aPrisma +
 			                                  "\n\tPrice: " + main.pPrisma +
 			                                  "\n\tTotal value: " + main.rTxtBxPrismaTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Prisma 2 Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxPrisma2A.Text +
+			                                  "\n\tAmount: " + main.aPrisma2 +
 			                                  "\n\tPrice: " + main.pPrisma2 +
 			                                  "\n\tTotal value: " + main.rTxtBxPrisma2TV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Revolver Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxRevolverA.Text +
+			                                  "\n\tAmount: " + main.aRevolver +
 			                                  "\n\tPrice: " + main.pRevolver +
 			                                  "\n\tTotal value: " + main.rTxtBxRevolverTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Shadow Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxShadowA.Text +
+			                                  "\n\tAmount: " + main.aShadow +
 			                                  "\n\tPrice: " + main.pShadow +
 			                                  "\n\tTotal value: " + main.rTxtBxShadowTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Shattered Web Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxShatteredWebA.Text +
+			                                  "\n\tAmount: " + main.aShatteredWeb +
 			                                  "\n\tPrice: " + main.pShatteredWeb +
 			                                  "\n\tTotal value: " + main.rTxtBxShatteredWebTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Spectrum Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxSpectrumA.Text +
+			                                  "\n\tAmount: " + main.aSpectrum +
 			                                  "\n\tPrice: " + main.pSpectrum +
 			                                  "\n\tTotal value: " + main.rTxtBxSpectrumTV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Spectrum 2 Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxSpectrum2A.Text +
+			                                  "\n\tAmount: " + main.aSpectrum2 +
 			                                  "\n\tPrice: " + main.pSpectrum2 +
 			                                  "\n\tTotal value: " + main.rTxtBxSpectrum2TV.Text);
 
 			Timer.streamWriterTimer.WriteLine("Winter Offensive Weapon Case: " +
-			                                  "\n\tAmount: " + main.rTxtBxWinterOffensiveA.Text +
+			                                  "\n\tAmount: " + main.aWinterOffensive +
 			                                  "\n\tPrice: " + main.pWinterOffensive +
 			                                  "\n\tTotal value: " + main.rTxtBxWinterOffensiveTV.Text);
 
@@ -305,8 +334,39 @@ namespace CSGO_Case_Calculator {
 
 			var main = new Form_Main();
 
-			//TODO
-			main.rTxtBxChroma.ReadOnly = false;
+			main.rTxtBxChromaA.ReadOnly = false;
+			main.rTxtBxChroma2A.ReadOnly = false;
+			main.rTxtBxChroma3A.ReadOnly = false;
+			main.rTxtBxClutchA.ReadOnly = false;
+			main.rTxtBxCS20A.ReadOnly = false;
+			main.rTxtBxCSGOWCA.ReadOnly = false;
+			main.rTxtBxCSGOWC2A.ReadOnly = false;
+			main.rTxtBxCSGOWC3A.ReadOnly = false;
+			main.rTxtBxDangerZoneA.ReadOnly = false;
+			main.rTxtBxeSports2013A.ReadOnly = false;
+			main.rTxtBxeSports2013WA.ReadOnly = false;
+			main.rTxtBxeSports2014SA.ReadOnly = false;
+			main.rTxtBxFalchionA.ReadOnly = false;
+			main.rTxtBxFractureA.ReadOnly = false;
+			main.rTxtBxGammaA.ReadOnly = false;
+			main.rTxtBxGamma2A.ReadOnly = false;
+			main.rTxtBxGloveA.ReadOnly = false;
+			main.rTxtBxHorizonA.ReadOnly = false;
+			main.rTxtBxHuntsmanA.ReadOnly = false;
+			main.rTxtBxBravoA.ReadOnly = false;
+			main.rTxtBxBreakoutA.ReadOnly = false;
+			main.rTxtBxHydraA.ReadOnly = false;
+			main.rTxtBxPhoenixA.ReadOnly = false;
+			main.rTxtBxVanguardA.ReadOnly = false;
+			main.rTxtBxWildfireA.ReadOnly = false;
+			main.rTxtBxPrismaA.ReadOnly = false;
+			main.rTxtBxPrisma2A.ReadOnly = false;
+			main.rTxtBxRevolverA.ReadOnly = false;
+			main.rTxtBxShadowA.ReadOnly = false;
+			main.rTxtBxShatteredWebA.ReadOnly = false;
+			main.rTxtBxSpectrumA.ReadOnly = false;
+			main.rTxtBxSpectrum2A.ReadOnly = false;
+			main.rTxtBxWinterOffensiveA.ReadOnly = false;
 
 			calcTimer.Enabled = false;
 
@@ -329,8 +389,6 @@ namespace CSGO_Case_Calculator {
 					MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
-
-		private void Form_Options_Load(object sender, EventArgs e) { }
 
 	}
 

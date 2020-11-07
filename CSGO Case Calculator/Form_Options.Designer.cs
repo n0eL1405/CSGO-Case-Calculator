@@ -236,7 +236,6 @@ namespace CSGO_Case_Calculator
             this.Name = "Form_Options";
             this.Text = "CS:GO Case Calculator - Options";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Options_Exit);
-            this.Load += new System.EventHandler(this.Form_Options_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.grpBxCalcTimer.ResumeLayout(false);
