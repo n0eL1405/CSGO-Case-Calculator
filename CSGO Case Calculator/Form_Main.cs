@@ -1342,6 +1342,11 @@ namespace CSGO_Case_Calculator {
 		}
 
 		private void Form_Main_Load(object sender, EventArgs e) {
+
+			//check for update
+			var Updater = new Updater();
+			Updater.checkForUpdate();
+
 			var propertyFolder = Application.StartupPath;
 
 			//string propertyFolder = Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents") + "\\CSGOCC";
