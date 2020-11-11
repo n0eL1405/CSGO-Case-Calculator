@@ -23,13 +23,13 @@ TBP = To be published
 > \* Website where the prices came from changed the structure -> Code fix to get the prices again
 
 
-#### ~~V 1.1.1~~   
+#### ~~V 1.1.1~~
 ###### This is broken   
 > \* Moved location of XML-file back to root folder   
 > \* Window is sizeable again   
 
 
-#### ~~V 1.1~~   
+#### ~~V 1.1~~
 ###### This is broken   
 > \+ Added exit button  
 > \+ Added dialog to prevent closing without saving  
@@ -37,6 +37,6 @@ TBP = To be published
 > \* Changed the location for the XML-file where the amounts are saved to "C:\Users\\\*USERNAME*\Documents\CSGOCC"  
 
 
-#### ~~V 1.0~~   
+#### ~~V 1.0~~
 ###### This is broken   
 > Release
