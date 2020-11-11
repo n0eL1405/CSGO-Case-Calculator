@@ -28,9 +28,9 @@ namespace CSGO_Case_Calculator
         /// Erforderliche Methode für die Designerunterstützung.
         /// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Main));
+	        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Main));
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnLoadAll = new System.Windows.Forms.Button();
             this.rTxtBxChroma = new System.Windows.Forms.RichTextBox();

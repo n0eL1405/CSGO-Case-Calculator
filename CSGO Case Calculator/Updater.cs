@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
+﻿using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Octokit;
@@ -17,20 +12,20 @@ namespace CSGO_Case_Calculator
 	    private static string currentVersion = "v1.2";
 	    private static string latestVersion;
 
-        public async void getLatestVersion() {
+        public async Task<string> getLatestVersion() {
 	        var client = new GitHubClient(new ProductHeaderValue(name));
 			var releases = await client.Repository.Release.GetAll(owner, name);
 	        var latest = releases[0];
 
-	        latestVersion = latest.TagName;
+	        return latestVersion = latest.TagName;
         }
 
-        public void checkForUpdate() {
+        public async void checkForUpdate() {
 
-			getLatestVersion();
+			await getLatestVersion();
 
 	        if (latestVersion != currentVersion) {
-				var newVersionMsgBx = MessageBox.Show("New version " + latestVersion + " is available!\nDo you want to open the release page in your browser?",
+				var newVersionMsgBx = MessageBox.Show("New version " + latestVersion + " is available!\nYour current version is " + currentVersion +".\nDo you want to open the release page in your browser?",
 					"There's an update!",
 					MessageBoxButtons.YesNo,
 					MessageBoxIcon.Information,

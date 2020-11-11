@@ -33,6 +33,8 @@ namespace CSGO_Case_Calculator
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Options));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnChangeCurrency = new System.Windows.Forms.Button();
+            this.lblChooseCurrency = new System.Windows.Forms.Label();
             this.lLblDonate = new System.Windows.Forms.LinkLabel();
             this.lblVersion = new System.Windows.Forms.Label();
             this.lLblTwitter = new System.Windows.Forms.LinkLabel();
@@ -46,6 +48,7 @@ namespace CSGO_Case_Calculator
             this.lblMadeBy = new System.Windows.Forms.Label();
             this.btnImportOldXML = new System.Windows.Forms.Button();
             this.calcTimer = new System.Windows.Forms.Timer(this.components);
+            this.cmbBxCurrency = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.grpBxCalcTimer.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +58,9 @@ namespace CSGO_Case_Calculator
             this.panel1.AutoScroll = true;
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Controls.Add(this.cmbBxCurrency);
+            this.panel1.Controls.Add(this.btnChangeCurrency);
+            this.panel1.Controls.Add(this.lblChooseCurrency);
             this.panel1.Controls.Add(this.lLblDonate);
             this.panel1.Controls.Add(this.lblVersion);
             this.panel1.Controls.Add(this.lLblTwitter);
@@ -66,6 +72,28 @@ namespace CSGO_Case_Calculator
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(740, 424);
             this.panel1.TabIndex = 0;
+            // 
+            // btnChangeCurrency
+            // 
+            this.btnChangeCurrency.BackColor = System.Drawing.Color.Gray;
+            this.btnChangeCurrency.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnChangeCurrency.Location = new System.Drawing.Point(331, 32);
+            this.btnChangeCurrency.Name = "btnChangeCurrency";
+            this.btnChangeCurrency.Size = new System.Drawing.Size(58, 21);
+            this.btnChangeCurrency.TabIndex = 195;
+            this.btnChangeCurrency.Text = "Change";
+            this.btnChangeCurrency.UseVisualStyleBackColor = false;
+            this.btnChangeCurrency.Click += new System.EventHandler(this.btnChangeCurrency_Click);
+            // 
+            // lblChooseCurrency
+            // 
+            this.lblChooseCurrency.AutoSize = true;
+            this.lblChooseCurrency.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChooseCurrency.Location = new System.Drawing.Point(270, 12);
+            this.lblChooseCurrency.Name = "lblChooseCurrency";
+            this.lblChooseCurrency.Size = new System.Drawing.Size(119, 17);
+            this.lblChooseCurrency.TabIndex = 194;
+            this.lblChooseCurrency.Text = "Choose currency:";
             // 
             // lLblDonate
             // 
@@ -222,6 +250,20 @@ namespace CSGO_Case_Calculator
             // 
             this.calcTimer.Tick += new System.EventHandler(this.CalcTimer_Tick);
             // 
+            // cmbBxCurrency
+            // 
+            this.cmbBxCurrency.BackColor = System.Drawing.Color.Silver;
+            this.cmbBxCurrency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBxCurrency.FormattingEnabled = true;
+            this.cmbBxCurrency.Items.AddRange(new object[] {
+            "$",
+            "£",
+            "€"});
+            this.cmbBxCurrency.Location = new System.Drawing.Point(273, 32);
+            this.cmbBxCurrency.Name = "cmbBxCurrency";
+            this.cmbBxCurrency.Size = new System.Drawing.Size(52, 21);
+            this.cmbBxCurrency.TabIndex = 196;
+            // 
             // Form_Options
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,5 +303,8 @@ namespace CSGO_Case_Calculator
         private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.Timer calcTimer;
         private System.Windows.Forms.LinkLabel lLblDonate;
+        private System.Windows.Forms.Label lblChooseCurrency;
+        private System.Windows.Forms.Button btnChangeCurrency;
+        internal System.Windows.Forms.ComboBox cmbBxCurrency;
     }
 }

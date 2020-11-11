@@ -7,12 +7,15 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 using CSGO_Case_Calculator.Properties;
 
-namespace CSGO_Case_Calculator {
+namespace CSGO_Case_Calculator
+{
 
-	public partial class Form_Main : Form {
+    public partial class Form_Main : Form {
 
 		//create httpclients
 		private static readonly HttpClient client = new HttpClient();
+
+		public static UserSettings userSettings = new UserSettings();
 
 		private readonly string steammarktcsgo = "https://steamcommunity.com/market/listings/730/";
 
@@ -123,15 +126,22 @@ namespace CSGO_Case_Calculator {
 		public string tvWildfire = "0";
 		public string tvWinterOffensive = "0";
 
+		public string totalCaseAmount;
+		public string totalCaseValue;
+
 		public Form_Main() {
+
 			InitializeComponent();
 		}
 
 		public string cut(string price) {
+			userSettings.loadSettings();
 
 			//cute out the min price
 			price = price.Remove(0, 32);
-			price = price.Remove(price.IndexOf('€'));
+			price = price.Remove(price.IndexOf("\""));
+			price = price.Replace(userSettings.currency, "");
+			price = price.Replace(".", ",");
 
 			//replace -- when it's a round price (e.g. 13€ will be displayed as 13,--)
 			price = price.Replace("--", "00");
@@ -148,14 +158,14 @@ namespace CSGO_Case_Calculator {
 			if (cBxAC.Checked) {
 				Calculate();
 			}
-
-
 		}
 
-		public async Task getPricesAsync() {
+		public async Task getPricesAsync()
+		{
+			userSettings.loadSettings();
 
 			var urlsteammarkt =
-				"https://steamcommunity.com/market/priceoverview/?appid=730&currency=3&market_hash_name=";
+				"https://steamcommunity.com/market/priceoverview/?appid=730&currency=" + userSettings.currencyCode + "&market_hash_name=";
 
 			if (cBxChroma.Checked) {
 				try {
@@ -165,7 +175,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pChroma = Convert.ToString(price) + "€";
+					pChroma = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -184,7 +194,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pChroma2 = Convert.ToString(price) + "€";
+					pChroma2 = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -203,7 +213,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pChroma3 = Convert.ToString(price) + "€";
+					pChroma3 = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -222,7 +232,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pClutch = Convert.ToString(price) + "€";
+					pClutch = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -241,7 +251,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pCS20 = Convert.ToString(price) + "€";
+					pCS20 = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -260,7 +270,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pCSGOWC = Convert.ToString(price) + "€";
+					pCSGOWC = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -279,7 +289,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pCSGOWC2 = Convert.ToString(price) + "€";
+					pCSGOWC2 = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -298,7 +308,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pCSGOWC3 = Convert.ToString(price) + "€";
+					pCSGOWC3 = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -317,7 +327,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pDangerZone = Convert.ToString(price) + "€";
+					pDangerZone = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -336,7 +346,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					peSports2013 = Convert.ToString(price) + "€";
+					peSports2013 = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -355,7 +365,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					peSports2013Winter = Convert.ToString(price) + "€";
+					peSports2013Winter = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -374,7 +384,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					peSports2014Summer = Convert.ToString(price) + "€";
+					peSports2014Summer = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -393,7 +403,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pFalchion = Convert.ToString(price) + "€";
+					pFalchion = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -412,7 +422,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pFracture = Convert.ToString(price) + "€";
+					pFracture = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -431,7 +441,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pGamma = Convert.ToString(price) + "€";
+					pGamma = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -450,7 +460,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pGamma2 = Convert.ToString(price) + "€";
+					pGamma2 = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -469,7 +479,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pGlove = Convert.ToString(price) + "€";
+					pGlove = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -488,7 +498,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pHorizon = Convert.ToString(price) + "€";
+					pHorizon = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -507,7 +517,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pHuntsman = Convert.ToString(price) + "€";
+					pHuntsman = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -526,7 +536,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pBravo = Convert.ToString(price) + "€";
+					pBravo = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -545,7 +555,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pBreakout = Convert.ToString(price) + "€";
+					pBreakout = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -564,7 +574,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pHydra = Convert.ToString(price) + "€";
+					pHydra = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -583,7 +593,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pPhoenix = Convert.ToString(price) + "€";
+					pPhoenix = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -602,7 +612,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pVanguard = Convert.ToString(price) + "€";
+					pVanguard = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -621,7 +631,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pWildfire = Convert.ToString(price) + "€";
+					pWildfire = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -640,7 +650,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pPrisma = Convert.ToString(price) + "€";
+					pPrisma = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -659,7 +669,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pPrisma2 = Convert.ToString(price) + "€";
+					pPrisma2 = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -678,7 +688,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pRevolver = Convert.ToString(price) + "€";
+					pRevolver = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -697,7 +707,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pShadow = Convert.ToString(price) + "€";
+					pShadow = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -716,7 +726,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pShatteredWeb = Convert.ToString(price) + "€";
+					pShatteredWeb = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -735,7 +745,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pSpectrum = Convert.ToString(price) + "€";
+					pSpectrum = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -754,7 +764,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pSpectrum2 = Convert.ToString(price) + "€";
+					pSpectrum2 = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -773,7 +783,7 @@ namespace CSGO_Case_Calculator {
 
 					price = cut(price);
 
-					pWinterOffensive = Convert.ToString(price) + "€";
+					pWinterOffensive = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
 			} else {
@@ -968,7 +978,6 @@ namespace CSGO_Case_Calculator {
 			}
 
 			aChroma = int.Parse(cases.CHROMA_AMOUNT);
-			rTxtBxChromaA.Text = aChroma.ToString();
 			aChroma2 = int.Parse(cases.CHROMA2_AMOUNT);
 			aChroma3 = int.Parse(cases.CHROMA3_AMOUNT);
 			aClutch = int.Parse(cases.CLUTCH_AMOUNT);
@@ -1005,13 +1014,15 @@ namespace CSGO_Case_Calculator {
 			writeAmounts();
 
 			//calculate Total Case Amount
-			rTxtBxTCA.Text = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 +
+			totalCaseAmount = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 +
 			                                  aCSGOWC3 + aDangerZone + aeSports2013 + aeSports2013Winter +
 			                                  aeSports2014Summer + aFalchion + aGamma +
 			                                  aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aHydra +
 			                                  aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 + aRevolver +
 			                                  aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive +
 			                                  aFracture);
+
+			rTxtBxTCA.Text = totalCaseAmount;
 		}
 
 		public void SaveAllCases() {
@@ -1096,146 +1107,151 @@ namespace CSGO_Case_Calculator {
 		}
 
 		public void Calculate() {
+			userSettings.loadSettings();
 
-			tvChroma = Convert.ToString(Convert.ToDecimal(pChroma.Replace("€", "")) * Convert.ToDecimal(aChroma)) + "€";
+			tvChroma = Convert.ToString(Convert.ToDecimal(pChroma.Replace(userSettings.currency, "")) * Convert.ToDecimal(aChroma)) + userSettings.currency;
 
-			tvChroma2 = Convert.ToString(Convert.ToDecimal(pChroma2.Replace("€", "")) * Convert.ToDecimal(aChroma2)) +
-			            "€";
+			tvChroma2 = Convert.ToString(Convert.ToDecimal(pChroma2.Replace(userSettings.currency, "")) * Convert.ToDecimal(aChroma2)) +
+			            userSettings.currency;
 
-			tvChroma3 = Convert.ToString(Convert.ToDecimal(pChroma3.Replace("€", "")) * Convert.ToDecimal(aChroma3)) +
-			            "€";
+			tvChroma3 = Convert.ToString(Convert.ToDecimal(pChroma3.Replace(userSettings.currency, "")) * Convert.ToDecimal(aChroma3)) +
+			            userSettings.currency;
 
-			tvClutch = Convert.ToString(Convert.ToDecimal(pClutch.Replace("€", "")) * Convert.ToDecimal(aClutch)) + "€";
+			tvClutch = Convert.ToString(Convert.ToDecimal(pClutch.Replace(userSettings.currency, "")) * Convert.ToDecimal(aClutch)) + userSettings.currency;
 
-			tvCS20 = Convert.ToString(Convert.ToDecimal(pCS20.Replace("€", "")) * Convert.ToDecimal(aCS20)) + "€";
+			tvCS20 = Convert.ToString(Convert.ToDecimal(pCS20.Replace(userSettings.currency, "")) * Convert.ToDecimal(aCS20)) + userSettings.currency;
 
-			tvCSGOWC = Convert.ToString(Convert.ToDecimal(pCSGOWC.Replace("€", "")) * Convert.ToDecimal(aCSGOWC)) + "€";
+			tvCSGOWC = Convert.ToString(Convert.ToDecimal(pCSGOWC.Replace(userSettings.currency, "")) * Convert.ToDecimal(aCSGOWC)) + userSettings.currency;
 
-			tvCSGOWC2 = Convert.ToString(Convert.ToDecimal(pCSGOWC2.Replace("€", "")) * Convert.ToDecimal(aCSGOWC2)) +
-			            "€";
+			tvCSGOWC2 = Convert.ToString(Convert.ToDecimal(pCSGOWC2.Replace(userSettings.currency, "")) * Convert.ToDecimal(aCSGOWC2)) +
+			            userSettings.currency;
 
-			tvCSGOWC3 = Convert.ToString(Convert.ToDecimal(pCSGOWC3.Replace("€", "")) * Convert.ToDecimal(aCSGOWC3)) +
-			            "€";
+			tvCSGOWC3 = Convert.ToString(Convert.ToDecimal(pCSGOWC3.Replace(userSettings.currency, "")) * Convert.ToDecimal(aCSGOWC3)) +
+			            userSettings.currency;
 
 			tvDangerZone =
-				Convert.ToString(Convert.ToDecimal(pDangerZone.Replace("€", "")) * Convert.ToDecimal(aDangerZone)) +
-				"€";
+				Convert.ToString(Convert.ToDecimal(pDangerZone.Replace(userSettings.currency, "")) * Convert.ToDecimal(aDangerZone)) +
+				userSettings.currency;
 
 			tveSports2013 =
-				Convert.ToString(Convert.ToDecimal(peSports2013.Replace("€", "")) * Convert.ToDecimal(aeSports2013)) +
-				"€";
+				Convert.ToString(Convert.ToDecimal(peSports2013.Replace(userSettings.currency, "")) * Convert.ToDecimal(aeSports2013)) +
+				userSettings.currency;
 
-			tveSports2013Winter = Convert.ToString(Convert.ToDecimal(peSports2013Winter.Replace("€", "")) *
-			                                       Convert.ToDecimal(aeSports2013Winter)) + "€";
+			tveSports2013Winter = Convert.ToString(Convert.ToDecimal(peSports2013Winter.Replace(userSettings.currency, "")) *
+			                                       Convert.ToDecimal(aeSports2013Winter)) + userSettings.currency;
 
-			tveSports2014Summer = Convert.ToString(Convert.ToDecimal(peSports2014Summer.Replace("€", "")) *
-			                                       Convert.ToDecimal(aeSports2014Summer)) + "€";
+			tveSports2014Summer = Convert.ToString(Convert.ToDecimal(peSports2014Summer.Replace(userSettings.currency, "")) *
+			                                       Convert.ToDecimal(aeSports2014Summer)) + userSettings.currency;
 
 			tvFalchion =
-				Convert.ToString(Convert.ToDecimal(pFalchion.Replace("€", "")) * Convert.ToDecimal(aFalchion)) + "€";
+				Convert.ToString(Convert.ToDecimal(pFalchion.Replace(userSettings.currency, "")) * Convert.ToDecimal(aFalchion)) + userSettings.currency;
 
-			tvGamma = Convert.ToString(Convert.ToDecimal(pGamma.Replace("€", "")) * Convert.ToDecimal(aGamma)) + "€";
+			tvGamma = Convert.ToString(Convert.ToDecimal(pGamma.Replace(userSettings.currency, "")) * Convert.ToDecimal(aGamma)) + userSettings.currency;
 
-			tvGamma2 = Convert.ToString(Convert.ToDecimal(pGamma2.Replace("€", "")) * Convert.ToDecimal(aGamma2)) + "€";
+			tvGamma2 = Convert.ToString(Convert.ToDecimal(pGamma2.Replace(userSettings.currency, "")) * Convert.ToDecimal(aGamma2)) + userSettings.currency;
 
-			tvGlove = Convert.ToString(Convert.ToDecimal(pGlove.Replace("€", "")) * Convert.ToDecimal(aGlove)) + "€";
+			tvGlove = Convert.ToString(Convert.ToDecimal(pGlove.Replace(userSettings.currency, "")) * Convert.ToDecimal(aGlove)) + userSettings.currency;
 
-			tvHorizon = Convert.ToString(Convert.ToDecimal(pHorizon.Replace("€", "")) * Convert.ToDecimal(aHorizon)) +
-			            "€";
+			tvHorizon = Convert.ToString(Convert.ToDecimal(pHorizon.Replace(userSettings.currency, "")) * Convert.ToDecimal(aHorizon)) +
+			            userSettings.currency;
 
 			tvHuntsman =
-				Convert.ToString(Convert.ToDecimal(pHuntsman.Replace("€", "")) * Convert.ToDecimal(aHuntsman)) + "€";
+				Convert.ToString(Convert.ToDecimal(pHuntsman.Replace(userSettings.currency, "")) * Convert.ToDecimal(aHuntsman)) + userSettings.currency;
 
-			tvBravo = Convert.ToString(Convert.ToDecimal(pBravo.Replace("€", "")) * Convert.ToDecimal(aBravo)) + "€";
+			tvBravo = Convert.ToString(Convert.ToDecimal(pBravo.Replace(userSettings.currency, "")) * Convert.ToDecimal(aBravo)) + userSettings.currency;
 
 			tvBreakout =
-				Convert.ToString(Convert.ToDecimal(pBreakout.Replace("€", "")) * Convert.ToDecimal(aBreakout)) + "€";
+				Convert.ToString(Convert.ToDecimal(pBreakout.Replace(userSettings.currency, "")) * Convert.ToDecimal(aBreakout)) + userSettings.currency;
 
-			tvHydra = Convert.ToString(Convert.ToDecimal(pHydra.Replace("€", "")) * Convert.ToDecimal(aHydra)) + "€";
+			tvHydra = Convert.ToString(Convert.ToDecimal(pHydra.Replace(userSettings.currency, "")) * Convert.ToDecimal(aHydra)) + userSettings.currency;
 
-			tvPhoenix = Convert.ToString(Convert.ToDecimal(pPhoenix.Replace("€", "")) * Convert.ToDecimal(aPhoenix)) +
-			            "€";
+			tvPhoenix = Convert.ToString(Convert.ToDecimal(pPhoenix.Replace(userSettings.currency, "")) * Convert.ToDecimal(aPhoenix)) +
+			            userSettings.currency;
 
 			tvVanguard =
-				Convert.ToString(Convert.ToDecimal(pVanguard.Replace("€", "")) * Convert.ToDecimal(aVanguard)) + "€";
+				Convert.ToString(Convert.ToDecimal(pVanguard.Replace(userSettings.currency, "")) * Convert.ToDecimal(aVanguard)) + userSettings.currency;
 
 			tvWildfire =
-				Convert.ToString(Convert.ToDecimal(pWildfire.Replace("€", "")) * Convert.ToDecimal(aWildfire)) + "€";
+				Convert.ToString(Convert.ToDecimal(pWildfire.Replace(userSettings.currency, "")) * Convert.ToDecimal(aWildfire)) + userSettings.currency;
 
-			tvPrisma = Convert.ToString(Convert.ToDecimal(pPrisma.Replace("€", "")) * Convert.ToDecimal(aPrisma)) + "€";
+			tvPrisma = Convert.ToString(Convert.ToDecimal(pPrisma.Replace(userSettings.currency, "")) * Convert.ToDecimal(aPrisma)) + userSettings.currency;
 
-			tvPrisma2 = Convert.ToString(Convert.ToDecimal(pPrisma2.Replace("€", "")) * Convert.ToDecimal(aPrisma2)) +
-			            "€";
+			tvPrisma2 = Convert.ToString(Convert.ToDecimal(pPrisma2.Replace(userSettings.currency, "")) * Convert.ToDecimal(aPrisma2)) +
+			            userSettings.currency;
 
 			tvRevolver =
-				Convert.ToString(Convert.ToDecimal(pRevolver.Replace("€", "")) * Convert.ToDecimal(aRevolver)) + "€";
+				Convert.ToString(Convert.ToDecimal(pRevolver.Replace(userSettings.currency, "")) * Convert.ToDecimal(aRevolver)) + userSettings.currency;
 
-			tvShadow = Convert.ToString(Convert.ToDecimal(pShadow.Replace("€", "")) * Convert.ToDecimal(aShadow)) + "€";
+			tvShadow = Convert.ToString(Convert.ToDecimal(pShadow.Replace(userSettings.currency, "")) * Convert.ToDecimal(aShadow)) + userSettings.currency;
 
 			tvShatteredWeb =
-				Convert.ToString(Convert.ToDecimal(pShatteredWeb.Replace("€", "")) * Convert.ToDecimal(aShatteredWeb)) +
-				"€";
+				Convert.ToString(Convert.ToDecimal(pShatteredWeb.Replace(userSettings.currency, "")) * Convert.ToDecimal(aShatteredWeb)) +
+				userSettings.currency;
 
 			tvSpectrum =
-				Convert.ToString(Convert.ToDecimal(pSpectrum.Replace("€", "")) * Convert.ToDecimal(aSpectrum)) + "€";
+				Convert.ToString(Convert.ToDecimal(pSpectrum.Replace(userSettings.currency, "")) * Convert.ToDecimal(aSpectrum)) + userSettings.currency;
 
 			tvSpectrum2 =
-				Convert.ToString(Convert.ToDecimal(pSpectrum2.Replace("€", "")) * Convert.ToDecimal(aSpectrum2)) + "€";
+				Convert.ToString(Convert.ToDecimal(pSpectrum2.Replace(userSettings.currency, "")) * Convert.ToDecimal(aSpectrum2)) + userSettings.currency;
 
-			tvWinterOffensive = Convert.ToString(Convert.ToDecimal(pWinterOffensive.Replace("€", "")) *
-			                                     Convert.ToDecimal(aWinterOffensive)) + "€";
+			tvWinterOffensive = Convert.ToString(Convert.ToDecimal(pWinterOffensive.Replace(userSettings.currency, "")) *
+			                                     Convert.ToDecimal(aWinterOffensive)) + userSettings.currency;
 
 			tvFracture =
-				Convert.ToString(Convert.ToDecimal(pFracture.Replace("€", "")) * Convert.ToDecimal(aFracture)) + "€";
+				Convert.ToString(Convert.ToDecimal(pFracture.Replace(userSettings.currency, "")) * Convert.ToDecimal(aFracture)) + userSettings.currency;
 
 			writeTotalValues();
 
 			//calculate Total Case Value
 			rTxtBxTCV.Text = "";
 
-			rTxtBxTCV.Text = Convert.ToString(Convert.ToDecimal(tvChroma.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvChroma2.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvChroma3.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvClutch.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvCS20.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvCSGOWC.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvCSGOWC2.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvCSGOWC3.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvDangerZone.Replace("€", "")) +
-			                                  Convert.ToDecimal(tveSports2013.Replace("€", "")) +
-			                                  Convert.ToDecimal(tveSports2013Winter.Replace("€", "")) +
-			                                  Convert.ToDecimal(tveSports2014Summer.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvFalchion.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvGamma.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvGamma2.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvGlove.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvHorizon.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvHuntsman.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvBravo.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvBreakout.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvHydra.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvPhoenix.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvVanguard.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvWildfire.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvPrisma.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvPrisma2.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvRevolver.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvShadow.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvShatteredWeb.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvSpectrum.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvSpectrum2.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvWinterOffensive.Replace("€", "")) +
-			                                  Convert.ToDecimal(tvFracture.Replace("€", ""))
-			) + "€";
+			totalCaseValue = Convert.ToString(Convert.ToDecimal(tvChroma.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvChroma2.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvChroma3.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvClutch.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvCS20.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvCSGOWC.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvCSGOWC2.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvCSGOWC3.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvDangerZone.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tveSports2013.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tveSports2013Winter.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tveSports2014Summer.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvFalchion.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvGamma.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvGamma2.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvGlove.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvHorizon.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvHuntsman.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvBravo.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvBreakout.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvHydra.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvPhoenix.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvVanguard.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvWildfire.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvPrisma.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvPrisma2.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvRevolver.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvShadow.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvShatteredWeb.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvSpectrum.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvSpectrum2.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvWinterOffensive.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(tvFracture.Replace(userSettings.currency, ""))
+			) + userSettings.currency;
+
+			rTxtBxTCV.Text = totalCaseValue;
 
 			//calculate Total Case Amount
-			rTxtBxTCA.Text = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 +
-			                                  aCSGOWC3 + aDangerZone + aeSports2013 + aeSports2013Winter +
-			                                  aeSports2014Summer + aFalchion + aGamma +
-			                                  aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout +
-			                                  aHydra + aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 +
-			                                  aRevolver + aShadow + aShatteredWeb + aSpectrum + aSpectrum2 +
-			                                  aWinterOffensive + aFracture);
+			totalCaseAmount = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 +
+			                                   aCSGOWC3 + aDangerZone + aeSports2013 + aeSports2013Winter +
+			                                   aeSports2014Summer + aFalchion + aGamma +
+			                                   aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout +
+			                                   aHydra + aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 +
+			                                   aRevolver + aShadow + aShatteredWeb + aSpectrum + aSpectrum2 +
+			                                   aWinterOffensive + aFracture);
+
+			rTxtBxTCA.Text = totalCaseAmount;
 
 		}
 
@@ -1343,7 +1359,7 @@ namespace CSGO_Case_Calculator {
 
 		private void Form_Main_Load(object sender, EventArgs e) {
 
-			//check for update
+			//check for Updates
 			var Updater = new Updater();
 			Updater.checkForUpdate();
 
@@ -1395,6 +1411,7 @@ namespace CSGO_Case_Calculator {
 					};
 
 					//create file
+					Directory.CreateDirectory(propertyFolder + "\\files");
 					SaveCases.SaveDaten(casesempty, CaseXML);
 				}
 			} else {
@@ -1436,6 +1453,7 @@ namespace CSGO_Case_Calculator {
 				};
 
 				//create file
+				Directory.CreateDirectory(propertyFolder + "\\files");
 				SaveCases.SaveDaten(casesempty, CaseXML);
 			}
 
@@ -1445,28 +1463,61 @@ namespace CSGO_Case_Calculator {
 
 		//Closing the program with asking to save cases ("Closeing" to make it different to the standard Form.Closing() method)
 		private void Closeing() {
-			var ExitMsgBx = MessageBox.Show("Save cases befor closing?", "Save cases?", MessageBoxButtons.YesNoCancel,
-				MessageBoxIcon.Question, MessageBoxDefaultButton.Button3);
 
-			if (ExitMsgBx == DialogResult.Yes) {
-				try {
-					SaveAllCases();
+				var ExitMsgBx = MessageBox.Show("Save cases befor closing?", "Save cases?", MessageBoxButtons.YesNoCancel,
+					MessageBoxIcon.Question, MessageBoxDefaultButton.Button3);
+	
+				if (ExitMsgBx == DialogResult.Yes) {
+					try {
+						SaveAllCases();
+						userSettings.saveSettings();
+					}
+					catch { }
+	
+					Settings.Default.Save();
+					Environment.Exit(0);
+				} else if (ExitMsgBx == DialogResult.No) {
+					Settings.Default.Save();
+					Environment.Exit(0);
+				} else if (ExitMsgBx == DialogResult.Cancel) { }
+			
+		}
+
+		private void Closeing(FormClosingEventArgs e) {
+
+			if (e.CloseReason == CloseReason.UserClosing) {
+
+				var ExitMsgBx = MessageBox.Show("Save cases befor closing?", "Save cases?", MessageBoxButtons.YesNoCancel,
+					MessageBoxIcon.Question, MessageBoxDefaultButton.Button3);
+
+				if (ExitMsgBx == DialogResult.Yes)
+				{
+					try
+					{
+						SaveAllCases();
+						userSettings.saveSettings();
+					}
+					catch { }
+
+					Settings.Default.Save();
+					Environment.Exit(0);
 				}
-				catch { }
-
-				Settings.Default.Save();
-				Environment.Exit(0);
-			} else if (ExitMsgBx == DialogResult.No) {
-				Settings.Default.Save();
-				Environment.Exit(0);
-			} else if (ExitMsgBx == DialogResult.Cancel) { }
+				else if (ExitMsgBx == DialogResult.No)
+				{
+					Settings.Default.Save();
+					Environment.Exit(0);
+				}
+				else if (ExitMsgBx == DialogResult.Cancel) { }
+			} else {
+				e.Cancel = false;
+			}
 		}
 
 		private void Form_Main_Exit(object sender, FormClosingEventArgs e) {
 			//block closing by the user using the "X"
 			e.Cancel = e.CloseReason == CloseReason.UserClosing;
 
-			Closeing();
+			Closeing(e);
 		}
 
 		public void btnExit_Click(object sender, EventArgs e) {

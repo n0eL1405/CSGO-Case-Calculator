@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -167,155 +168,155 @@ namespace CSGO_Case_Calculator {
 			Timer.streamWriterTimer.WriteLine("Clutch Case: " +
 			                                  "\n\tAmount: " + main.aClutch +
 			                                  "\n\tPrice: " + main.pClutch +
-			                                  "\n\tTotal value: " + main.rTxtBxClutchTV.Text);
+			                                  "\n\tTotal value: " + main.tvClutch);
 
 			Timer.streamWriterTimer.WriteLine("CS20 Case: " +
 			                                  "\n\tAmount: " + main.aCS20 +
 			                                  "\n\tPrice: " + main.pCS20 +
-			                                  "\n\tTotal value: " + main.rTxtBxCS20TV.Text);
+			                                  "\n\tTotal value: " + main.tvCS20);
 
 			Timer.streamWriterTimer.WriteLine("CS:GO Weapon Case: " +
 			                                  "\n\tAmount: " + main.aCSGOWC +
 			                                  "\n\tPrice: " + main.pCSGOWC +
-			                                  "\n\tTotal value: " + main.rTxtBxCSGOWCTV.Text);
+			                                  "\n\tTotal value: " + main.tvCSGOWC);
 
 			Timer.streamWriterTimer.WriteLine("CS:GO Weapon Case 2: " +
 			                                  "\n\tAmount: " + main.aCSGOWC2 +
 			                                  "\n\tPrice: " + main.pCSGOWC2 +
-			                                  "\n\tTotal value: " + main.rTxtBxCSGOWC2TV.Text);
+			                                  "\n\tTotal value: " + main.tvCSGOWC2);
 
 			Timer.streamWriterTimer.WriteLine("CS:GO Weapon Case 3: " +
 			                                  "\n\tAmount: " + main.aCSGOWC3 +
 			                                  "\n\tPrice: " + main.pCSGOWC3 +
-			                                  "\n\tTotal value: " + main.rTxtBxCSGOWC3TV.Text);
+			                                  "\n\tTotal value: " + main.tvCSGOWC3);
 
 			Timer.streamWriterTimer.WriteLine("Danger Zone Case: " +
 			                                  "\n\tAmount: " + main.aDangerZone +
 			                                  "\n\tPrice: " + main.pDangerZone +
-			                                  "\n\tTotal value: " + main.rTxtBxDangerZoneTV.Text);
+			                                  "\n\tTotal value: " + main.tvDangerZone);
 
 			Timer.streamWriterTimer.WriteLine("eSports 2013 Case: " +
 			                                  "\n\tAmount: " + main.aeSports2013 +
 			                                  "\n\tPrice: " + main.peSports2013 +
-			                                  "\n\tTotal value: " + main.rTxtBxeSports2013TV.Text);
+			                                  "\n\tTotal value: " + main.tveSports2013);
 
 			Timer.streamWriterTimer.WriteLine("eSprts 2013 Winter Case: " +
 			                                  "\n\tAmount: " + main.aeSports2013Winter +
 			                                  "\n\tPrice: " + main.peSports2013Winter +
-			                                  "\n\tTotal value: " + main.rTxtBxeSports2013WTV.Text);
+			                                  "\n\tTotal value: " + main.tveSports2013Winter);
 
 			Timer.streamWriterTimer.WriteLine("eSports 2014 Summer Case: " +
 			                                  "\n\tAmount: " + main.aeSports2014Summer +
 			                                  "\n\tPrice: " + main.peSports2014Summer +
-			                                  "\n\tTotal value: " + main.rTxtBxeSports2014STV.Text);
+			                                  "\n\tTotal value: " + main.tveSports2014Summer);
 
 			Timer.streamWriterTimer.WriteLine("Falchion Case: " +
 			                                  "\n\tAmount: " + main.aFalchion +
 			                                  "\n\tPrice: " + main.pFalchion +
-			                                  "\n\tTotal value: " + main.rTxtBxFalchionTV.Text);
+			                                  "\n\tTotal value: " + main.tvFalchion);
 
 			Timer.streamWriterTimer.WriteLine("Fracture Case: " +
 			                                  "\n\tAmount: " + main.aFracture +
 			                                  "\n\tPrice: " + main.pFracture +
-			                                  "\n\tTotal value: " + main.rTxtBxFractureTV.Text);
+			                                  "\n\tTotal value: " + main.tvFracture);
 
 			Timer.streamWriterTimer.WriteLine("Gamma Case: " +
 			                                  "\n\tAmount: " + main.aGamma +
 			                                  "\n\tPrice: " + main.pGamma +
-			                                  "\n\tTotal value: " + main.rTxtBxGammaTV.Text);
+			                                  "\n\tTotal value: " + main.tvGamma);
 
 			Timer.streamWriterTimer.WriteLine("Gamma 2 Case: " +
 			                                  "\n\tAmount: " + main.aGamma2 +
 			                                  "\n\tPrice: " + main.pGamma2 +
-			                                  "\n\tTotal value: " + main.rTxtBxGamma2TV.Text);
+			                                  "\n\tTotal value: " + main.tvGamma2);
 
 			Timer.streamWriterTimer.WriteLine("Glove Case: " +
 			                                  "\n\tAmount: " + main.aGlove +
 			                                  "\n\tPrice: " + main.pGlove +
-			                                  "\n\tTotal value: " + main.rTxtBxGloveTV.Text);
+			                                  "\n\tTotal value: " + main.tvGlove);
 
 			Timer.streamWriterTimer.WriteLine("Horizon Case: " +
 			                                  "\n\tAmount: " + main.aHorizon +
 			                                  "\n\tPrice: " + main.pHorizon +
-			                                  "\n\tTotal value: " + main.rTxtBxHorizonTV.Text);
+			                                  "\n\tTotal value: " + main.tvHorizon);
 
 			Timer.streamWriterTimer.WriteLine("Huntsman Weapon Case: " +
 			                                  "\n\tAmount: " + main.aHuntsman +
 			                                  "\n\tPrice: " + main.pHuntsman +
-			                                  "\n\tTotal value: " + main.rTxtBxHuntsmanTV.Text);
+			                                  "\n\tTotal value: " + main.tvHuntsman);
 
 			Timer.streamWriterTimer.WriteLine("Operation Bravo Case: " +
 			                                  "\n\tAmount: " + main.aBravo +
 			                                  "\n\tPrice: " + main.pBravo +
-			                                  "\n\tTotal value: " + main.rTxtBxBravoTV.Text);
+			                                  "\n\tTotal value: " + main.tvBravo);
 
 			Timer.streamWriterTimer.WriteLine("Operation Breakout Weapon Case: " +
 			                                  "\n\tAmount: " + main.aBreakout +
 			                                  "\n\tPrice: " + main.pBreakout +
-			                                  "\n\tTotal value: " + main.rTxtBxBreakoutTV.Text);
+			                                  "\n\tTotal value: " + main.tvBreakout);
 
 			Timer.streamWriterTimer.WriteLine("Operation Hydra Case: " +
 			                                  "\n\tAmount: " + main.aHydra +
 			                                  "\n\tPrice: " + main.pHydra +
-			                                  "\n\tTotal value: " + main.rTxtBxHydraTV.Text);
+			                                  "\n\tTotal value: " + main.tvHydra);
 
 			Timer.streamWriterTimer.WriteLine("Operation Phoenix Weapon Case: " +
 			                                  "\n\tAmount: " + main.aPhoenix +
 			                                  "\n\tPrice: " + main.pPhoenix +
-			                                  "\n\tTotal value: " + main.rTxtBxPhoenixTV.Text);
+			                                  "\n\tTotal value: " + main.tvPhoenix);
 
 			Timer.streamWriterTimer.WriteLine("Operation Vanguard Weapon Case: " +
 			                                  "\n\tAmount: " + main.aVanguard +
 			                                  "\n\tPrice: " + main.pVanguard +
-			                                  "\n\tTotal value: " + main.rTxtBxVanguardTV.Text);
+			                                  "\n\tTotal value: " + main.tvVanguard);
 
 			Timer.streamWriterTimer.WriteLine("Operation Wildfire Case: " +
 			                                  "\n\tAmount: " + main.aWildfire +
 			                                  "\n\tPrice: " + main.pWildfire +
-			                                  "\n\tTotal value: " + main.rTxtBxWildfireTV.Text);
+			                                  "\n\tTotal value: " + main.tvWildfire);
 
 			Timer.streamWriterTimer.WriteLine("Prisma Case: " +
 			                                  "\n\tAmount: " + main.aPrisma +
 			                                  "\n\tPrice: " + main.pPrisma +
-			                                  "\n\tTotal value: " + main.rTxtBxPrismaTV.Text);
+			                                  "\n\tTotal value: " + main.tvPrisma);
 
 			Timer.streamWriterTimer.WriteLine("Prisma 2 Case: " +
 			                                  "\n\tAmount: " + main.aPrisma2 +
 			                                  "\n\tPrice: " + main.pPrisma2 +
-			                                  "\n\tTotal value: " + main.rTxtBxPrisma2TV.Text);
+			                                  "\n\tTotal value: " + main.tvPrisma2);
 
 			Timer.streamWriterTimer.WriteLine("Revolver Case: " +
 			                                  "\n\tAmount: " + main.aRevolver +
 			                                  "\n\tPrice: " + main.pRevolver +
-			                                  "\n\tTotal value: " + main.rTxtBxRevolverTV.Text);
+			                                  "\n\tTotal value: " + main.tvRevolver);
 
 			Timer.streamWriterTimer.WriteLine("Shadow Case: " +
 			                                  "\n\tAmount: " + main.aShadow +
 			                                  "\n\tPrice: " + main.pShadow +
-			                                  "\n\tTotal value: " + main.rTxtBxShadowTV.Text);
+			                                  "\n\tTotal value: " + main.tvShadow);
 
 			Timer.streamWriterTimer.WriteLine("Shattered Web Case: " +
 			                                  "\n\tAmount: " + main.aShatteredWeb +
 			                                  "\n\tPrice: " + main.pShatteredWeb +
-			                                  "\n\tTotal value: " + main.rTxtBxShatteredWebTV.Text);
+			                                  "\n\tTotal value: " + main.tvShatteredWeb);
 
 			Timer.streamWriterTimer.WriteLine("Spectrum Case: " +
 			                                  "\n\tAmount: " + main.aSpectrum +
 			                                  "\n\tPrice: " + main.pSpectrum +
-			                                  "\n\tTotal value: " + main.rTxtBxSpectrumTV.Text);
+			                                  "\n\tTotal value: " + main.tvSpectrum);
 
 			Timer.streamWriterTimer.WriteLine("Spectrum 2 Case: " +
 			                                  "\n\tAmount: " + main.aSpectrum2 +
 			                                  "\n\tPrice: " + main.pSpectrum2 +
-			                                  "\n\tTotal value: " + main.rTxtBxSpectrum2TV.Text);
+			                                  "\n\tTotal value: " + main.tvSpectrum2);
 
 			Timer.streamWriterTimer.WriteLine("Winter Offensive Weapon Case: " +
 			                                  "\n\tAmount: " + main.aWinterOffensive +
 			                                  "\n\tPrice: " + main.pWinterOffensive +
-			                                  "\n\tTotal value: " + main.rTxtBxWinterOffensiveTV.Text);
+			                                  "\n\tTotal value: " + main.tvWinterOffensive);
 
-			Timer.streamWriterTimer.WriteLine("\n\t\tTotal Cases: " + main.rTxtBxTCA.Text +
-			                                  "\n\t\tTotal Case Value: " + main.rTxtBxTCV.Text +
+			Timer.streamWriterTimer.WriteLine("\n\t\tTotal Cases: " + main.totalCaseAmount +
+			                                  "\n\t\tTotal Case Value: " + main.totalCaseValue +
 			                                  "\n\tTime: " + DateTime.Now.ToLongTimeString());
 
 			Timer.streamWriterTimer.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
@@ -390,6 +391,23 @@ namespace CSGO_Case_Calculator {
 			}
 		}
 
-	}
+        private void btnChangeCurrency_Click(object sender, EventArgs e) {
 
+	        var UserSettings = new UserSettings();
+
+			var restartProgrammMsgBx = MessageBox.Show("To apply changes, the program needs to restart.\nBe sure that your cases are saved!",
+				"Restart",
+				MessageBoxButtons.OKCancel,
+				MessageBoxIcon.Information,
+				MessageBoxDefaultButton.Button1);
+
+			if (restartProgrammMsgBx == DialogResult.OK) {
+
+				UserSettings.currency = cmbBxCurrency.GetItemText(cmbBxCurrency.SelectedItem);
+				UserSettings.saveSettings();
+
+				Application.Restart();
+			}
+		}
+    }
 }
