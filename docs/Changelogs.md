@@ -10,10 +10,11 @@ TBP = To be published
 ## Versions
 #### V 1.2 (TBP)
 > \+ Added options window   
-> \+ Added reloade automatically funktion   
+> \+ Added reloade automatically function   
 > \+ Added scrollbars when window is getting smaller   
 > \+ Added import function of old XML-files (in new options window)   
 > \+ Added an update checker when starting the program   
+> \+ Added option to choose between different currencies ($, £, €)
 > \+ Added Fracture Case   
 > \+ Letter and empty cases in xml-file will be replaced with "0" when loading cases   
 > \- Removed searching for old XML-files when launching   
@@ -22,17 +23,20 @@ TBP = To be published
 > \* Website where the prices came from changed the structure -> Code fix to get the prices again
 
 
-#### [V 1.1.1](https://github.com/NoelTheN00B/CSGO-Case-Calculator/releases/tag/v1.1.1)
+#### ~~V 1.1.1~~   
+###### This is broken   
 > \* Moved location of XML-file back to root folder   
 > \* Window is sizeable again   
 
 
-#### [V 1.1](https://github.com/NoelTheN00B/CSGO-Case-Calculator/releases/tag/v1.1)
+#### ~~V 1.1~~   
+###### This is broken   
 > \+ Added exit button  
 > \+ Added dialog to prevent closing without saving  
 > \- Removed ability to maximize the window  
 > \* Changed the location for the XML-file where the amounts are saved to "C:\Users\\\*USERNAME*\Documents\CSGOCC"  
 
 
-#### [V 1.0](https://github.com/NoelTheN00B/CSGO-Case-Calculator/releases/tag/v1.0)
+#### ~~V 1.0~~   
+###### This is broken   
 > Release
