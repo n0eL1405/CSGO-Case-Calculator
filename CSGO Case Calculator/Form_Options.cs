@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace CSGO_Case_Calculator {
+namespace CSGO_Case_Calculator
+{
 
-	public partial class Form_Options : Form {
+    public partial class Form_Options : Form {
 
-		private int TimerTime;
+	    private Form_Main main = new Form_Main();
+
+	    private int TimerTime;
 
 		public Form_Options() {
 			InitializeComponent();
@@ -17,7 +19,6 @@ namespace CSGO_Case_Calculator {
 
 		//button to import old xml-file
 		public void btnImportOldXML_Click(object sender, EventArgs e) {
-			var Form_Main = new Form_Main();
 
 			var openOldXMLfile = new OpenFileDialog();
 
@@ -75,42 +76,6 @@ namespace CSGO_Case_Calculator {
 				//check if number is between 5 and 60
 				if (TimerTime >= 5 && TimerTime <= 60) {
 
-					var main = new Form_Main();
-
-					main.rTxtBxChromaA.ReadOnly = true;
-					main.rTxtBxChroma2A.ReadOnly = true;
-					main.rTxtBxChroma3A.ReadOnly = true;
-					main.rTxtBxClutchA.ReadOnly = true;
-					main.rTxtBxCS20A.ReadOnly = true;
-					main.rTxtBxCSGOWCA.ReadOnly = true;
-					main.rTxtBxCSGOWC2A.ReadOnly = true;
-					main.rTxtBxCSGOWC3A.ReadOnly = true;
-					main.rTxtBxDangerZoneA.ReadOnly = true;
-					main.rTxtBxeSports2013A.ReadOnly = true;
-					main.rTxtBxeSports2013WA.ReadOnly = true;
-					main.rTxtBxeSports2014SA.ReadOnly = true;
-					main.rTxtBxFalchionA.ReadOnly = true;
-					main.rTxtBxFractureA.ReadOnly = true;
-					main.rTxtBxGammaA.ReadOnly = true;
-					main.rTxtBxGamma2A.ReadOnly = true;
-					main.rTxtBxGloveA.ReadOnly = true;
-					main.rTxtBxHorizonA.ReadOnly = true;
-					main.rTxtBxHuntsmanA.ReadOnly = true;
-					main.rTxtBxBravoA.ReadOnly = true;
-					main.rTxtBxBreakoutA.ReadOnly = true;
-					main.rTxtBxHydraA.ReadOnly = true;
-					main.rTxtBxPhoenixA.ReadOnly = true;
-					main.rTxtBxVanguardA.ReadOnly = true;
-					main.rTxtBxWildfireA.ReadOnly = true;
-					main.rTxtBxPrismaA.ReadOnly = true;
-					main.rTxtBxPrisma2A.ReadOnly = true;
-					main.rTxtBxRevolverA.ReadOnly = true;
-					main.rTxtBxShadowA.ReadOnly = true;
-					main.rTxtBxShatteredWebA.ReadOnly = true;
-					main.rTxtBxSpectrumA.ReadOnly = true;
-					main.rTxtBxSpectrum2A.ReadOnly = true;
-					main.rTxtBxWinterOffensiveA.ReadOnly = true;
-
 					calcTimer.Enabled = true;
 
 					Timer.streamWriterTimer.BaseStream.Seek(0, SeekOrigin.End);
@@ -142,9 +107,7 @@ namespace CSGO_Case_Calculator {
 
 		public async void writeFile() {
 
-			var main = new Form_Main();
-
-			await main.getPricesAsync();
+			await main.loadPrices();
 
 			main.LoadCases();
 
@@ -316,8 +279,7 @@ namespace CSGO_Case_Calculator {
 			                                  "\n\tTotal value: " + main.tvWinterOffensive);
 
 			Timer.streamWriterTimer.WriteLine("\n\t\tTotal Cases: " + main.totalCaseAmount +
-			                                  "\n\t\tTotal Case Value: " + main.totalCaseValue +
-			                                  "\n\tTime: " + DateTime.Now.ToLongTimeString());
+			                                  "\n\t\tTotal Case Value: " + main.totalCaseValue);
 
 			Timer.streamWriterTimer.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 			Timer.streamWriterTimer.Flush();
@@ -333,48 +295,12 @@ namespace CSGO_Case_Calculator {
 
 		private void btnStop_Click(object sender, EventArgs e) {
 
-			var main = new Form_Main();
-
-			main.rTxtBxChromaA.ReadOnly = false;
-			main.rTxtBxChroma2A.ReadOnly = false;
-			main.rTxtBxChroma3A.ReadOnly = false;
-			main.rTxtBxClutchA.ReadOnly = false;
-			main.rTxtBxCS20A.ReadOnly = false;
-			main.rTxtBxCSGOWCA.ReadOnly = false;
-			main.rTxtBxCSGOWC2A.ReadOnly = false;
-			main.rTxtBxCSGOWC3A.ReadOnly = false;
-			main.rTxtBxDangerZoneA.ReadOnly = false;
-			main.rTxtBxeSports2013A.ReadOnly = false;
-			main.rTxtBxeSports2013WA.ReadOnly = false;
-			main.rTxtBxeSports2014SA.ReadOnly = false;
-			main.rTxtBxFalchionA.ReadOnly = false;
-			main.rTxtBxFractureA.ReadOnly = false;
-			main.rTxtBxGammaA.ReadOnly = false;
-			main.rTxtBxGamma2A.ReadOnly = false;
-			main.rTxtBxGloveA.ReadOnly = false;
-			main.rTxtBxHorizonA.ReadOnly = false;
-			main.rTxtBxHuntsmanA.ReadOnly = false;
-			main.rTxtBxBravoA.ReadOnly = false;
-			main.rTxtBxBreakoutA.ReadOnly = false;
-			main.rTxtBxHydraA.ReadOnly = false;
-			main.rTxtBxPhoenixA.ReadOnly = false;
-			main.rTxtBxVanguardA.ReadOnly = false;
-			main.rTxtBxWildfireA.ReadOnly = false;
-			main.rTxtBxPrismaA.ReadOnly = false;
-			main.rTxtBxPrisma2A.ReadOnly = false;
-			main.rTxtBxRevolverA.ReadOnly = false;
-			main.rTxtBxShadowA.ReadOnly = false;
-			main.rTxtBxShatteredWebA.ReadOnly = false;
-			main.rTxtBxSpectrumA.ReadOnly = false;
-			main.rTxtBxSpectrum2A.ReadOnly = false;
-			main.rTxtBxWinterOffensiveA.ReadOnly = false;
-
 			calcTimer.Enabled = false;
 
 			Timer.streamWriterTimer.WriteLine("Timer has been stopped!" +
 			                                  "\nEnd Date: " + DateTime.Now.ToLongDateString() +
 			                                  "\nEnd Time: " + DateTime.Now.ToLongTimeString() +
-			                                  "\n==============================================\n");
+			                                  "\n===============================================\n");
 
 			MessageBox.Show("The timer has been stopped!", "Timer has been stopped!", MessageBoxButtons.OK);
 			

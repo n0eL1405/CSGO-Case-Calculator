@@ -2,8 +2,7 @@
 
 namespace CSGO_Case_Calculator
 {
-    partial class Form_Options
-    {
+    partial class Form_Options {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -33,6 +32,7 @@ namespace CSGO_Case_Calculator
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Options));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbBxCurrency = new System.Windows.Forms.ComboBox();
             this.btnChangeCurrency = new System.Windows.Forms.Button();
             this.lblChooseCurrency = new System.Windows.Forms.Label();
             this.lLblDonate = new System.Windows.Forms.LinkLabel();
@@ -48,7 +48,6 @@ namespace CSGO_Case_Calculator
             this.lblMadeBy = new System.Windows.Forms.Label();
             this.btnImportOldXML = new System.Windows.Forms.Button();
             this.calcTimer = new System.Windows.Forms.Timer(this.components);
-            this.cmbBxCurrency = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.grpBxCalcTimer.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +71,20 @@ namespace CSGO_Case_Calculator
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(740, 424);
             this.panel1.TabIndex = 0;
+            // 
+            // cmbBxCurrency
+            // 
+            this.cmbBxCurrency.BackColor = System.Drawing.Color.Silver;
+            this.cmbBxCurrency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBxCurrency.FormattingEnabled = true;
+            this.cmbBxCurrency.Items.AddRange(new object[] {
+            "$",
+            "£",
+            "€"});
+            this.cmbBxCurrency.Location = new System.Drawing.Point(273, 32);
+            this.cmbBxCurrency.Name = "cmbBxCurrency";
+            this.cmbBxCurrency.Size = new System.Drawing.Size(52, 21);
+            this.cmbBxCurrency.TabIndex = 196;
             // 
             // btnChangeCurrency
             // 
@@ -147,7 +160,7 @@ namespace CSGO_Case_Calculator
             this.grpBxCalcTimer.Size = new System.Drawing.Size(235, 149);
             this.grpBxCalcTimer.TabIndex = 153;
             this.grpBxCalcTimer.TabStop = false;
-            this.grpBxCalcTimer.Text = "Calculation Timer";
+            this.grpBxCalcTimer.Text = "AFK Writer";
             // 
             // btnHelpTimer
             // 
@@ -249,20 +262,6 @@ namespace CSGO_Case_Calculator
             // calcTimer
             // 
             this.calcTimer.Tick += new System.EventHandler(this.CalcTimer_Tick);
-            // 
-            // cmbBxCurrency
-            // 
-            this.cmbBxCurrency.BackColor = System.Drawing.Color.Silver;
-            this.cmbBxCurrency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBxCurrency.FormattingEnabled = true;
-            this.cmbBxCurrency.Items.AddRange(new object[] {
-            "$",
-            "£",
-            "€"});
-            this.cmbBxCurrency.Location = new System.Drawing.Point(273, 32);
-            this.cmbBxCurrency.Name = "cmbBxCurrency";
-            this.cmbBxCurrency.Size = new System.Drawing.Size(52, 21);
-            this.cmbBxCurrency.TabIndex = 196;
             // 
             // Form_Options
             // 
