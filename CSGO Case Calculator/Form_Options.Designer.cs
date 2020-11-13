@@ -2,8 +2,7 @@
 
 namespace CSGO_Case_Calculator
 {
-    partial class Form_Options
-    {
+    partial class Form_Options {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -30,7 +29,7 @@ namespace CSGO_Case_Calculator
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+	        this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Options));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnChangeCurrency = new System.Windows.Forms.Button();

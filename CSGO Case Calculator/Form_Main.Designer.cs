@@ -30,7 +30,7 @@ namespace CSGO_Case_Calculator
         /// </summary>
         public void InitializeComponent()
         {
-	        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Main));
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnLoadAll = new System.Windows.Forms.Button();
             this.rTxtBxChroma = new System.Windows.Forms.RichTextBox();
@@ -2884,8 +2884,8 @@ namespace CSGO_Case_Calculator
             // cBxFracture
             // 
             this.cBxFracture.AutoSize = true;
-            this.cBxFracture.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxGamma;
-            this.cBxFracture.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxGamma", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxFracture.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxFracture;
+            this.cBxFracture.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxFracture", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cBxFracture.Location = new System.Drawing.Point(232, 546);
             this.cBxFracture.Name = "cBxFracture";
             this.cBxFracture.Size = new System.Drawing.Size(15, 14);

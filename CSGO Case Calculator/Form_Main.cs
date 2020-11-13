@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Net.Http;
-using System.Net.Http.Headers;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
@@ -637,8 +635,8 @@ namespace CSGO_Case_Calculator {
 			writePrices();
 		}
 
-		//write all prices in text boxes
-		public void writePrices() {
+        //write all prices in text boxes
+        public void writePrices() {
 
 			rTxtBxChroma.Text = pChroma;
 			rTxtBxChroma2.Text = pChroma2;
