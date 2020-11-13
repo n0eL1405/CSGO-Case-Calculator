@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -144,7 +143,7 @@ namespace CSGO_Case_Calculator {
 
 			var main = new Form_Main();
 
-			await main.getPricesAsync();
+			await main.loadPrices();
 
 			main.LoadCases();
 

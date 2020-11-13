@@ -1,20 +1,23 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using CSGO_Case_Calculator.Properties;
 
-namespace CSGO_Case_Calculator
-{
+namespace CSGO_Case_Calculator {
 
-    public partial class Form_Main : Form {
+	public partial class Form_Main : Form {
 
 		//create httpclients
 		private static readonly HttpClient client = new HttpClient();
 
+		//implements UserSettings.cs
 		public static UserSettings userSettings = new UserSettings();
 
 		private readonly string steammarktcsgo = "https://steamcommunity.com/market/listings/730/";
@@ -91,6 +94,9 @@ namespace CSGO_Case_Calculator
 		public string pWildfire = "0";
 		public string pWinterOffensive = "0";
 
+		public string totalCaseAmount;
+		public string totalCaseValue;
+
 		//total values
 		public string tvBravo = "0";
 		public string tvBreakout = "0";
@@ -126,18 +132,31 @@ namespace CSGO_Case_Calculator
 		public string tvWildfire = "0";
 		public string tvWinterOffensive = "0";
 
-		public string totalCaseAmount;
-		public string totalCaseValue;
-
 		public Form_Main() {
 
 			InitializeComponent();
 		}
 
-		public string cut(string price) {
+		//save website in string and extract the price
+		public async void Main() {
+
+			await loadPrices();
+
+			//auto calculate
+			if (cBxAC.Checked) {
+				Calculate();
+			}
+		}
+
+		public async Task<string> getPrice(String url) {
+
 			userSettings.loadSettings();
 
-			//cute out the min price
+			var response = await client.GetAsync(url);
+			response.EnsureSuccessStatusCode();
+			string price = await response.Content.ReadAsStringAsync();
+
+			//cut the price
 			price = price.Remove(0, 32);
 			price = price.Remove(price.IndexOf("\""));
 			price = price.Replace(userSettings.currency, "");
@@ -149,32 +168,17 @@ namespace CSGO_Case_Calculator
 			return price;
 		}
 
-		//save website in string and extract the price
-		public async void Main() {
-
-			await getPricesAsync();
-
-			//auto calculate
-			if (cBxAC.Checked) {
-				Calculate();
-			}
-		}
-
-		public async Task getPricesAsync()
-		{
+		//load all the prices
+		public async Task loadPrices() {
 			userSettings.loadSettings();
 
 			var urlsteammarkt =
-				"https://steamcommunity.com/market/priceoverview/?appid=730&currency=" + userSettings.currencyCode + "&market_hash_name=";
+				"https://steamcommunity.com/market/priceoverview/?appid=730&currency=" + userSettings.currencyCode +
+				"&market_hash_name=";
 
 			if (cBxChroma.Checked) {
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Chroma%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Chroma%20Case");
 					pChroma = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -188,12 +192,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Chroma%202%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Chroma%202%20Case");
 					pChroma2 = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -207,12 +206,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Chroma%203%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Chroma%203%20Case");
 					pChroma3 = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -226,12 +220,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Clutch%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Clutch%20Case");
 					pClutch = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -245,12 +234,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "CS20%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "CS20%20Case");
 					pCS20 = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -264,12 +248,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "CS%3AGO%20Weapon%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "CS%3AGO%20Weapon%20Case");
 					pCSGOWC = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -283,12 +262,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "CS%3AGO%20Weapon%20Case%202");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "CS%3AGO%20Weapon%20Case%202");
 					pCSGOWC2 = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -302,12 +276,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "CS%3AGO%20Weapon%20Case%203");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "CS%3AGO%20Weapon%20Case%203");
 					pCSGOWC3 = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -321,12 +290,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Danger%20Zone%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Danger%20Zone%20Case");
 					pDangerZone = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -340,12 +304,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "eSports%202013%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "eSports%202013%20Case");
 					peSports2013 = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -359,12 +318,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "eSports%202013%20Winter%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "eSports%202013%20Winter%20Case");
 					peSports2013Winter = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -378,12 +332,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "eSports%202014%20Summer%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "eSports%202014%20Summer%20Case");
 					peSports2014Summer = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -397,12 +346,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Falchion%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Falchion%20Case");
 					pFalchion = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -416,12 +360,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Fracture%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Fracture%20Case");
 					pFracture = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -435,12 +374,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Gamma%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Gamma%20Case");
 					pGamma = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -454,12 +388,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Gamma%202%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Gamma%202%20Case");
 					pGamma2 = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -473,12 +402,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Glove%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Glove%20Case");
 					pGlove = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -492,12 +416,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Horizon%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Horizon%20Case");
 					pHorizon = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -511,12 +430,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Huntsman%20Weapon%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Huntsman%20Weapon%20Case");
 					pHuntsman = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -530,12 +444,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Operation%20Bravo%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Operation%20Bravo%20Case");
 					pBravo = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -549,12 +458,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Operation%20Breakout%20Weapon%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Operation%20Breakout%20Weapon%20Case");
 					pBreakout = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -568,12 +472,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Operation%20Hydra%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Operation%20Hydra%20Case");
 					pHydra = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -587,12 +486,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Operation%20Phoenix%20Weapon%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Operation%20Phoenix%20Weapon%20Case");
 					pPhoenix = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -606,12 +500,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Operation%20Vanguard%20Weapon%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Operation%20Vanguard%20Weapon%20Case");
 					pVanguard = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -625,12 +514,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Operation%20Wildfire%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Operation%20Wildfire%20Case");
 					pWildfire = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -644,12 +528,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Prisma%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Prisma%20Case");
 					pPrisma = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -663,12 +542,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Prisma%202%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Prisma%202%20Case");
 					pPrisma2 = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -682,12 +556,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Revolver%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Revolver%20Case");
 					pRevolver = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -701,12 +570,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Shadow%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Shadow%20Case");
 					pShadow = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -720,12 +584,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Shattered%20Web%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Shattered%20Web%20Case");
 					pShatteredWeb = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -739,12 +598,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Spectrum%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Spectrum%20Case");
 					pSpectrum = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -758,12 +612,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Spectrum%202%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Spectrum%202%20Case");
 					pSpectrum2 = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -777,12 +626,7 @@ namespace CSGO_Case_Calculator
 				await Task.Delay(wait);
 
 				try {
-					var response = await client.GetAsync(urlsteammarkt + "Winter%20Offensive%20Weapon%20Case");
-					response.EnsureSuccessStatusCode();
-					var price = await response.Content.ReadAsStringAsync();
-
-					price = cut(price);
-
+					string price = await getPrice(urlsteammarkt + "Winter%20Offensive%20Weapon%20Case");
 					pWinterOffensive = Convert.ToString(price) + userSettings.currency;
 				}
 				catch { }
@@ -793,6 +637,7 @@ namespace CSGO_Case_Calculator
 			writePrices();
 		}
 
+		//write all prices in text boxes
 		public void writePrices() {
 
 			rTxtBxChroma.Text = pChroma;
@@ -830,7 +675,7 @@ namespace CSGO_Case_Calculator
 			rTxtBxWinterOffensive.Text = pWinterOffensive;
 		}
 
-		//Load all Amounts from the XML-File
+		//load all Amounts from the XML-File
 		public void LoadCases() {
 			//amounts a set in the boxes
 			var propertyFolder = Application.StartupPath;
@@ -1015,16 +860,17 @@ namespace CSGO_Case_Calculator
 
 			//calculate Total Case Amount
 			totalCaseAmount = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 +
-			                                  aCSGOWC3 + aDangerZone + aeSports2013 + aeSports2013Winter +
-			                                  aeSports2014Summer + aFalchion + aGamma +
-			                                  aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aHydra +
-			                                  aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 + aRevolver +
-			                                  aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive +
-			                                  aFracture);
+			                                   aCSGOWC3 + aDangerZone + aeSports2013 + aeSports2013Winter +
+			                                   aeSports2014Summer + aFalchion + aGamma +
+			                                   aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aHydra +
+			                                   aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 + aRevolver +
+			                                   aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive +
+			                                   aFracture);
 
 			rTxtBxTCA.Text = totalCaseAmount;
 		}
 
+		//save the amounts from the public variables in the variables of the cases class
 		public void SaveAllCases() {
 			var cases = new Cases {
 				CHROMA_AMOUNT = aChroma.ToString(),
@@ -1070,6 +916,7 @@ namespace CSGO_Case_Calculator
 			SaveCases.SaveDaten(cases, CaseXML);
 		}
 
+		//write all amounts in text boxes
 		public void writeAmounts() {
 			rTxtBxChromaA.Text = aChroma.ToString();
 			rTxtBxChroma2A.Text = aChroma2.ToString();
@@ -1106,99 +953,135 @@ namespace CSGO_Case_Calculator
 			rTxtBxFractureA.Text = aFracture.ToString();
 		}
 
+		//calculates the prices
 		public void Calculate() {
 			userSettings.loadSettings();
 
-			tvChroma = Convert.ToString(Convert.ToDecimal(pChroma.Replace(userSettings.currency, "")) * Convert.ToDecimal(aChroma)) + userSettings.currency;
+			//get the ürices from strings, remove the currency, convert it into a number (decimal), calculate price times amount,
+			//convert the result in a string, add the currency and put it in a variable
+			tvChroma = Convert.ToString(Convert.ToDecimal(pChroma.Replace(userSettings.currency, "")) *
+			                            Convert.ToDecimal(aChroma)) + userSettings.currency;
 
-			tvChroma2 = Convert.ToString(Convert.ToDecimal(pChroma2.Replace(userSettings.currency, "")) * Convert.ToDecimal(aChroma2)) +
+			tvChroma2 = Convert.ToString(Convert.ToDecimal(pChroma2.Replace(userSettings.currency, "")) *
+			                             Convert.ToDecimal(aChroma2)) +
 			            userSettings.currency;
 
-			tvChroma3 = Convert.ToString(Convert.ToDecimal(pChroma3.Replace(userSettings.currency, "")) * Convert.ToDecimal(aChroma3)) +
+			tvChroma3 = Convert.ToString(Convert.ToDecimal(pChroma3.Replace(userSettings.currency, "")) *
+			                             Convert.ToDecimal(aChroma3)) +
 			            userSettings.currency;
 
-			tvClutch = Convert.ToString(Convert.ToDecimal(pClutch.Replace(userSettings.currency, "")) * Convert.ToDecimal(aClutch)) + userSettings.currency;
+			tvClutch = Convert.ToString(Convert.ToDecimal(pClutch.Replace(userSettings.currency, "")) *
+			                            Convert.ToDecimal(aClutch)) + userSettings.currency;
 
-			tvCS20 = Convert.ToString(Convert.ToDecimal(pCS20.Replace(userSettings.currency, "")) * Convert.ToDecimal(aCS20)) + userSettings.currency;
+			tvCS20 = Convert.ToString(Convert.ToDecimal(pCS20.Replace(userSettings.currency, "")) *
+			                          Convert.ToDecimal(aCS20)) + userSettings.currency;
 
-			tvCSGOWC = Convert.ToString(Convert.ToDecimal(pCSGOWC.Replace(userSettings.currency, "")) * Convert.ToDecimal(aCSGOWC)) + userSettings.currency;
+			tvCSGOWC = Convert.ToString(Convert.ToDecimal(pCSGOWC.Replace(userSettings.currency, "")) *
+			                            Convert.ToDecimal(aCSGOWC)) + userSettings.currency;
 
-			tvCSGOWC2 = Convert.ToString(Convert.ToDecimal(pCSGOWC2.Replace(userSettings.currency, "")) * Convert.ToDecimal(aCSGOWC2)) +
+			tvCSGOWC2 = Convert.ToString(Convert.ToDecimal(pCSGOWC2.Replace(userSettings.currency, "")) *
+			                             Convert.ToDecimal(aCSGOWC2)) +
 			            userSettings.currency;
 
-			tvCSGOWC3 = Convert.ToString(Convert.ToDecimal(pCSGOWC3.Replace(userSettings.currency, "")) * Convert.ToDecimal(aCSGOWC3)) +
+			tvCSGOWC3 = Convert.ToString(Convert.ToDecimal(pCSGOWC3.Replace(userSettings.currency, "")) *
+			                             Convert.ToDecimal(aCSGOWC3)) +
 			            userSettings.currency;
 
 			tvDangerZone =
-				Convert.ToString(Convert.ToDecimal(pDangerZone.Replace(userSettings.currency, "")) * Convert.ToDecimal(aDangerZone)) +
+				Convert.ToString(Convert.ToDecimal(pDangerZone.Replace(userSettings.currency, "")) *
+				                 Convert.ToDecimal(aDangerZone)) +
 				userSettings.currency;
 
 			tveSports2013 =
-				Convert.ToString(Convert.ToDecimal(peSports2013.Replace(userSettings.currency, "")) * Convert.ToDecimal(aeSports2013)) +
+				Convert.ToString(Convert.ToDecimal(peSports2013.Replace(userSettings.currency, "")) *
+				                 Convert.ToDecimal(aeSports2013)) +
 				userSettings.currency;
 
-			tveSports2013Winter = Convert.ToString(Convert.ToDecimal(peSports2013Winter.Replace(userSettings.currency, "")) *
-			                                       Convert.ToDecimal(aeSports2013Winter)) + userSettings.currency;
+			tveSports2013Winter = Convert.ToString(
+				Convert.ToDecimal(peSports2013Winter.Replace(userSettings.currency, "")) *
+				Convert.ToDecimal(aeSports2013Winter)) + userSettings.currency;
 
-			tveSports2014Summer = Convert.ToString(Convert.ToDecimal(peSports2014Summer.Replace(userSettings.currency, "")) *
-			                                       Convert.ToDecimal(aeSports2014Summer)) + userSettings.currency;
+			tveSports2014Summer = Convert.ToString(
+				Convert.ToDecimal(peSports2014Summer.Replace(userSettings.currency, "")) *
+				Convert.ToDecimal(aeSports2014Summer)) + userSettings.currency;
 
 			tvFalchion =
-				Convert.ToString(Convert.ToDecimal(pFalchion.Replace(userSettings.currency, "")) * Convert.ToDecimal(aFalchion)) + userSettings.currency;
+				Convert.ToString(Convert.ToDecimal(pFalchion.Replace(userSettings.currency, "")) *
+				                 Convert.ToDecimal(aFalchion)) + userSettings.currency;
 
-			tvGamma = Convert.ToString(Convert.ToDecimal(pGamma.Replace(userSettings.currency, "")) * Convert.ToDecimal(aGamma)) + userSettings.currency;
+			tvGamma = Convert.ToString(Convert.ToDecimal(pGamma.Replace(userSettings.currency, "")) *
+			                           Convert.ToDecimal(aGamma)) + userSettings.currency;
 
-			tvGamma2 = Convert.ToString(Convert.ToDecimal(pGamma2.Replace(userSettings.currency, "")) * Convert.ToDecimal(aGamma2)) + userSettings.currency;
+			tvGamma2 = Convert.ToString(Convert.ToDecimal(pGamma2.Replace(userSettings.currency, "")) *
+			                            Convert.ToDecimal(aGamma2)) + userSettings.currency;
 
-			tvGlove = Convert.ToString(Convert.ToDecimal(pGlove.Replace(userSettings.currency, "")) * Convert.ToDecimal(aGlove)) + userSettings.currency;
+			tvGlove = Convert.ToString(Convert.ToDecimal(pGlove.Replace(userSettings.currency, "")) *
+			                           Convert.ToDecimal(aGlove)) + userSettings.currency;
 
-			tvHorizon = Convert.ToString(Convert.ToDecimal(pHorizon.Replace(userSettings.currency, "")) * Convert.ToDecimal(aHorizon)) +
+			tvHorizon = Convert.ToString(Convert.ToDecimal(pHorizon.Replace(userSettings.currency, "")) *
+			                             Convert.ToDecimal(aHorizon)) +
 			            userSettings.currency;
 
 			tvHuntsman =
-				Convert.ToString(Convert.ToDecimal(pHuntsman.Replace(userSettings.currency, "")) * Convert.ToDecimal(aHuntsman)) + userSettings.currency;
+				Convert.ToString(Convert.ToDecimal(pHuntsman.Replace(userSettings.currency, "")) *
+				                 Convert.ToDecimal(aHuntsman)) + userSettings.currency;
 
-			tvBravo = Convert.ToString(Convert.ToDecimal(pBravo.Replace(userSettings.currency, "")) * Convert.ToDecimal(aBravo)) + userSettings.currency;
+			tvBravo = Convert.ToString(Convert.ToDecimal(pBravo.Replace(userSettings.currency, "")) *
+			                           Convert.ToDecimal(aBravo)) + userSettings.currency;
 
 			tvBreakout =
-				Convert.ToString(Convert.ToDecimal(pBreakout.Replace(userSettings.currency, "")) * Convert.ToDecimal(aBreakout)) + userSettings.currency;
+				Convert.ToString(Convert.ToDecimal(pBreakout.Replace(userSettings.currency, "")) *
+				                 Convert.ToDecimal(aBreakout)) + userSettings.currency;
 
-			tvHydra = Convert.ToString(Convert.ToDecimal(pHydra.Replace(userSettings.currency, "")) * Convert.ToDecimal(aHydra)) + userSettings.currency;
+			tvHydra = Convert.ToString(Convert.ToDecimal(pHydra.Replace(userSettings.currency, "")) *
+			                           Convert.ToDecimal(aHydra)) + userSettings.currency;
 
-			tvPhoenix = Convert.ToString(Convert.ToDecimal(pPhoenix.Replace(userSettings.currency, "")) * Convert.ToDecimal(aPhoenix)) +
+			tvPhoenix = Convert.ToString(Convert.ToDecimal(pPhoenix.Replace(userSettings.currency, "")) *
+			                             Convert.ToDecimal(aPhoenix)) +
 			            userSettings.currency;
 
 			tvVanguard =
-				Convert.ToString(Convert.ToDecimal(pVanguard.Replace(userSettings.currency, "")) * Convert.ToDecimal(aVanguard)) + userSettings.currency;
+				Convert.ToString(Convert.ToDecimal(pVanguard.Replace(userSettings.currency, "")) *
+				                 Convert.ToDecimal(aVanguard)) + userSettings.currency;
 
 			tvWildfire =
-				Convert.ToString(Convert.ToDecimal(pWildfire.Replace(userSettings.currency, "")) * Convert.ToDecimal(aWildfire)) + userSettings.currency;
+				Convert.ToString(Convert.ToDecimal(pWildfire.Replace(userSettings.currency, "")) *
+				                 Convert.ToDecimal(aWildfire)) + userSettings.currency;
 
-			tvPrisma = Convert.ToString(Convert.ToDecimal(pPrisma.Replace(userSettings.currency, "")) * Convert.ToDecimal(aPrisma)) + userSettings.currency;
+			tvPrisma = Convert.ToString(Convert.ToDecimal(pPrisma.Replace(userSettings.currency, "")) *
+			                            Convert.ToDecimal(aPrisma)) + userSettings.currency;
 
-			tvPrisma2 = Convert.ToString(Convert.ToDecimal(pPrisma2.Replace(userSettings.currency, "")) * Convert.ToDecimal(aPrisma2)) +
+			tvPrisma2 = Convert.ToString(Convert.ToDecimal(pPrisma2.Replace(userSettings.currency, "")) *
+			                             Convert.ToDecimal(aPrisma2)) +
 			            userSettings.currency;
 
 			tvRevolver =
-				Convert.ToString(Convert.ToDecimal(pRevolver.Replace(userSettings.currency, "")) * Convert.ToDecimal(aRevolver)) + userSettings.currency;
+				Convert.ToString(Convert.ToDecimal(pRevolver.Replace(userSettings.currency, "")) *
+				                 Convert.ToDecimal(aRevolver)) + userSettings.currency;
 
-			tvShadow = Convert.ToString(Convert.ToDecimal(pShadow.Replace(userSettings.currency, "")) * Convert.ToDecimal(aShadow)) + userSettings.currency;
+			tvShadow = Convert.ToString(Convert.ToDecimal(pShadow.Replace(userSettings.currency, "")) *
+			                            Convert.ToDecimal(aShadow)) + userSettings.currency;
 
 			tvShatteredWeb =
-				Convert.ToString(Convert.ToDecimal(pShatteredWeb.Replace(userSettings.currency, "")) * Convert.ToDecimal(aShatteredWeb)) +
+				Convert.ToString(Convert.ToDecimal(pShatteredWeb.Replace(userSettings.currency, "")) *
+				                 Convert.ToDecimal(aShatteredWeb)) +
 				userSettings.currency;
 
 			tvSpectrum =
-				Convert.ToString(Convert.ToDecimal(pSpectrum.Replace(userSettings.currency, "")) * Convert.ToDecimal(aSpectrum)) + userSettings.currency;
+				Convert.ToString(Convert.ToDecimal(pSpectrum.Replace(userSettings.currency, "")) *
+				                 Convert.ToDecimal(aSpectrum)) + userSettings.currency;
 
 			tvSpectrum2 =
-				Convert.ToString(Convert.ToDecimal(pSpectrum2.Replace(userSettings.currency, "")) * Convert.ToDecimal(aSpectrum2)) + userSettings.currency;
+				Convert.ToString(Convert.ToDecimal(pSpectrum2.Replace(userSettings.currency, "")) *
+				                 Convert.ToDecimal(aSpectrum2)) + userSettings.currency;
 
-			tvWinterOffensive = Convert.ToString(Convert.ToDecimal(pWinterOffensive.Replace(userSettings.currency, "")) *
-			                                     Convert.ToDecimal(aWinterOffensive)) + userSettings.currency;
+			tvWinterOffensive = Convert.ToString(
+				Convert.ToDecimal(pWinterOffensive.Replace(userSettings.currency, "")) *
+				Convert.ToDecimal(aWinterOffensive)) + userSettings.currency;
 
 			tvFracture =
-				Convert.ToString(Convert.ToDecimal(pFracture.Replace(userSettings.currency, "")) * Convert.ToDecimal(aFracture)) + userSettings.currency;
+				Convert.ToString(Convert.ToDecimal(pFracture.Replace(userSettings.currency, "")) *
+				                 Convert.ToDecimal(aFracture)) + userSettings.currency;
 
 			writeTotalValues();
 
@@ -1215,8 +1098,10 @@ namespace CSGO_Case_Calculator
 			                                  Convert.ToDecimal(tvCSGOWC3.Replace(userSettings.currency, "")) +
 			                                  Convert.ToDecimal(tvDangerZone.Replace(userSettings.currency, "")) +
 			                                  Convert.ToDecimal(tveSports2013.Replace(userSettings.currency, "")) +
-			                                  Convert.ToDecimal(tveSports2013Winter.Replace(userSettings.currency, "")) +
-			                                  Convert.ToDecimal(tveSports2014Summer.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(
+				                                  tveSports2013Winter.Replace(userSettings.currency, "")) +
+			                                  Convert.ToDecimal(
+				                                  tveSports2014Summer.Replace(userSettings.currency, "")) +
 			                                  Convert.ToDecimal(tvFalchion.Replace(userSettings.currency, "")) +
 			                                  Convert.ToDecimal(tvGamma.Replace(userSettings.currency, "")) +
 			                                  Convert.ToDecimal(tvGamma2.Replace(userSettings.currency, "")) +
@@ -1255,6 +1140,7 @@ namespace CSGO_Case_Calculator
 
 		}
 
+		//write all the total prices in text boxes
 		public void writeTotalValues() {
 
 			rTxtBxChromaTV.Text = tvChroma;
@@ -1292,7 +1178,7 @@ namespace CSGO_Case_Calculator
 			rTxtBxWinterOffensiveTV.Text = tvWinterOffensive;
 		}
 
-		//Button to reload all prices
+		//button to reload all prices
 		public void btnLoad_Click(object sender, EventArgs e) {
 
 			pBravo = "0";
@@ -1332,7 +1218,7 @@ namespace CSGO_Case_Calculator
 			Main();
 		}
 
-		//calculate the values
+		//button to calculate the values
 		private void btnRefresh_Click(object sender, EventArgs e) {
 			Calculate();
 		}
@@ -1346,7 +1232,7 @@ namespace CSGO_Case_Calculator
 			catch { }
 		}
 
-		//button to load all saved amounts if something went wrong on startup
+		//button to load all saved amounts, if something went wrong on startup
 		public void btnLoadSavedCases_Click(object sender, EventArgs e) {
 			//Load all Amounts
 			LoadCases();
@@ -1357,65 +1243,25 @@ namespace CSGO_Case_Calculator
 			new Form_Options().Show();
 		}
 
+		//when the main window is loading/opening
 		private void Form_Main_Load(object sender, EventArgs e) {
 
 			//check for Updates
 			var Updater = new Updater();
 			Updater.checkForUpdate();
 
+			//get the path where the application is running/the exe is located
 			var propertyFolder = Application.StartupPath;
 
 			//string propertyFolder = Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents") + "\\CSGOCC";
 			var CaseXML = propertyFolder + "\\files\\cases.xml";
 
-			if (Directory.Exists(propertyFolder + "\\files")) {
-				if (File.Exists(CaseXML)) {
-					//Load all Amounts
-					LoadCases();
-				} else {
-					//on first startup a file will be create where every amount is set to 0 (to avoid bugs when calculating)
-					var casesempty = new Cases {
-						CHROMA_AMOUNT = "0",
-						CHROMA2_AMOUNT = "0",
-						CHROMA3_AMOUNT = "0",
-						CLUTCH_AMOUNT = "0",
-						CS20_AMOUNT = "0",
-						CSGOWC_AMOUNT = "0",
-						CSGOWC2_AMOUNT = "0",
-						CSGOWC3_AMOUNT = "0",
-						DANGERZONE_AMOUNT = "0",
-						ESPORTS2013_AMOUNT = "0",
-						ESPORTS2013WINTER_AMOUNT = "0",
-						ESPORTS2014SUMMER_AMOUNT = "0",
-						FALCHION_AMOUNT = "0",
-						GAMMA_AMOUNT = "0",
-						GAMMA2_AMOUNT = "0",
-						GLOVE_AMOUNT = "0",
-						HORIZON_AMOUNT = "0",
-						HUNTSMAN_AMOUNT = "0",
-						BRAVO_AMOUNT = "0",
-						BREAKOUT_AMOUNT = "0",
-						HYDRA_AMOUNT = "0",
-						PHOENIX_AMOUNT = "0",
-						VANGUARD_AMOUNT = "0",
-						WILDFIRE_AMOUNT = "0",
-						PRISMA_AMOUNT = "0",
-						PRISMA2_AMOUNT = "0",
-						REVOLVER_AMOUNT = "0",
-						SHADOW_AMOUNT = "0",
-						SHATTEREDWEB_AMOUNT = "0",
-						SPECTRUM_AMOUNT = "0",
-						SPECTRUM2_AMOUNT = "0",
-						WINTEROFFENSIVE_AMOUNT = "0",
-						FRACTURE_AMOUNT = "0"
-					};
-
-					//create file
-					Directory.CreateDirectory(propertyFolder + "\\files");
-					SaveCases.SaveDaten(casesempty, CaseXML);
-				}
+			//check if there is already a file with saved cases
+			if (File.Exists(CaseXML)) {
+				//if it is so: load the file
+				LoadCases();
 			} else {
-				//on first startup a file will be create where every amount is set to 0 (to avoid bugs when calculating)
+				//if not: create a file with 0 cases (will happen on first startup)
 				var casesempty = new Cases {
 					CHROMA_AMOUNT = "0",
 					CHROMA2_AMOUNT = "0",
@@ -1452,7 +1298,7 @@ namespace CSGO_Case_Calculator
 					FRACTURE_AMOUNT = "0"
 				};
 
-				//create file
+				//create the direction and save the file
 				Directory.CreateDirectory(propertyFolder + "\\files");
 				SaveCases.SaveDaten(casesempty, CaseXML);
 			}
@@ -1461,54 +1307,53 @@ namespace CSGO_Case_Calculator
 			Main();
 		}
 
-		//Closing the program with asking to save cases ("Closeing" to make it different to the standard Form.Closing() method)
+		//closing the program with asking to save cases ("Closeing" to make it different to the standard Form.Closing() method)
+		//close without knowing the clse reason
 		private void Closeing() {
 
-				var ExitMsgBx = MessageBox.Show("Save cases befor closing?", "Save cases?", MessageBoxButtons.YesNoCancel,
+			var ExitMsgBx = MessageBox.Show("Save cases befor closing?", "Save cases?", MessageBoxButtons.YesNoCancel,
+				MessageBoxIcon.Question, MessageBoxDefaultButton.Button3);
+
+			if (ExitMsgBx == DialogResult.Yes) {
+				try {
+					SaveAllCases();
+					userSettings.saveSettings();
+				}
+				catch { }
+
+				Settings.Default.Save();
+				Environment.Exit(0);
+			} else if (ExitMsgBx == DialogResult.No) {
+				Settings.Default.Save();
+				Environment.Exit(0);
+			} else if (ExitMsgBx == DialogResult.Cancel) { }
+
+		}
+
+		//clsoe with knowing the close reason
+		private void Closeing(FormClosingEventArgs e) {
+
+			//if the user closes the programm
+			if (e.CloseReason == CloseReason.UserClosing) {
+
+				var ExitMsgBx = MessageBox.Show("Save cases befor closing?", "Save cases?",
+					MessageBoxButtons.YesNoCancel,
 					MessageBoxIcon.Question, MessageBoxDefaultButton.Button3);
-	
+
 				if (ExitMsgBx == DialogResult.Yes) {
 					try {
 						SaveAllCases();
 						userSettings.saveSettings();
 					}
 					catch { }
-	
+
 					Settings.Default.Save();
 					Environment.Exit(0);
 				} else if (ExitMsgBx == DialogResult.No) {
 					Settings.Default.Save();
 					Environment.Exit(0);
 				} else if (ExitMsgBx == DialogResult.Cancel) { }
-			
-		}
-
-		private void Closeing(FormClosingEventArgs e) {
-
-			if (e.CloseReason == CloseReason.UserClosing) {
-
-				var ExitMsgBx = MessageBox.Show("Save cases befor closing?", "Save cases?", MessageBoxButtons.YesNoCancel,
-					MessageBoxIcon.Question, MessageBoxDefaultButton.Button3);
-
-				if (ExitMsgBx == DialogResult.Yes)
-				{
-					try
-					{
-						SaveAllCases();
-						userSettings.saveSettings();
-					}
-					catch { }
-
-					Settings.Default.Save();
-					Environment.Exit(0);
-				}
-				else if (ExitMsgBx == DialogResult.No)
-				{
-					Settings.Default.Save();
-					Environment.Exit(0);
-				}
-				else if (ExitMsgBx == DialogResult.Cancel) { }
-			} else {
+			} else { //if the programm closes itself (when restarting after changing the currency)
 				e.Cancel = false;
 			}
 		}
@@ -1520,11 +1365,12 @@ namespace CSGO_Case_Calculator
 			Closeing(e);
 		}
 
+		//the exit button
 		public void btnExit_Click(object sender, EventArgs e) {
 			Closeing();
 		}
 
-		//Links for LinkLabels
+		//links for link labels
 		private void lLblChroma_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
 			Process.Start(steammarktcsgo + "Chroma%20Case");
 		}
@@ -1657,22 +1503,31 @@ namespace CSGO_Case_Calculator
 			Process.Start(steammarktcsgo + "Fracture%20Case");
 		}
 
-		//test if input in amounts text box are only numbers
+		//message box when an amount does contain something else then a number
 		public void amountErrorBox(string msgBxTxt) {
 
 			MessageBox.Show("Error: \"" + msgBxTxt + "\" is not a number! \nPlease enter a valid number",
 				"ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
 		}
 
-		private int testAmounts(string msgBxTxt, int amountInt) {
+		//test if input in amounts text box are only numbers
+		private int testAmounts(string txtBxTxt, int amountInt) {
 
-			if (int.TryParse(msgBxTxt, out amountInt)) {
-
-				amountInt = int.Parse(msgBxTxt);
+			if (txtBxTxt.Equals("") || txtBxTxt == null) {
 
 			} else {
 
-				amountErrorBox(msgBxTxt);
+				if (int.TryParse(txtBxTxt, out amountInt))
+				{
+
+					amountInt = int.Parse(txtBxTxt);
+
+				}
+				else
+				{
+
+					amountErrorBox(txtBxTxt);
+				}
 			}
 
 			return amountInt;
