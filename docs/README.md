@@ -2,7 +2,7 @@
 ### Little program to calculate the value off your CS:GO weapon cases you have.
 
 1. Enter the amount of Cases you have
-2. Click on the check boxes of the cases you want to load the prices (the more case prices will be loaded, the longer it takes=
+2. Click on the check boxes of the cases you want to load the prices (the more case prices will be loaded, the longer it takes)
 3. Click on reload prices to get the prices of the cases you have checked
 4. When all prices are loaded click on calculate   
 4.1. You can check the "Calculate automatically" box to calculate your values automatically when all prices are loaded   
