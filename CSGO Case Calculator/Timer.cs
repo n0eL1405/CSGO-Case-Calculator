@@ -6,7 +6,7 @@ namespace CSGO_Case_Calculator {
 	internal class Timer {
 
 		public static readonly string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
-		                                     "\\TimerResults.txt";
+		                                     "\\WriterResults.txt";
 
 		public static readonly FileStream fileStreamTimer =
 			new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write);
