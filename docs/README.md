@@ -8,6 +8,8 @@
 4.1. You can check the "Calculate automatically" box to calculate your values automatically when all prices are loaded   
 5. Before closing the program or when you have entered all amounts click on "Save" to save the amounts
 
+In the options menu, you can change the currency to your preferred one.
+
 Amounts and checked boxes will be load on startup
 
 **If you want to calculate the prices automatically when loading them, check the "Calculate automatically" check box**   
