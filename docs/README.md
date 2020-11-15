@@ -24,7 +24,7 @@ Q: Why is there a pause between when loading the price of every case?
 A: When you request the prices too often Steam thinks you try to DDoS the API (wich I'm using to get the prices) and your pc is banned for about an hour from using the API. Don't panic, the ban would NOT effect your account from using Steam normally.
 (If someone knows a good alternative to reduce/ remove the wait time, please be so kind give me the tip)
 
-Q: What is the AFK Writer?
+Q: What is the AFK Writer?   
 A: This will be your best friend if you want a overview of the case prices and the total worht of your cases without clicking on "Reload Prices" every few minutes.
 
 Q: How to use the AFK Timer?   
