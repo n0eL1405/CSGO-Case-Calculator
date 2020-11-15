@@ -27,7 +27,7 @@ A: When you request the prices too often Steam thinks you try to DDoS the API (w
 Q: What is the AFK Writer?   
 A: This will be your best friend if you want a overview of the case prices and the total worht of your cases without clicking on "Reload Prices" every few minutes.
 
-Q: How to use the AFK Timer?   
+Q: How to use the AFK Writer?   
 A:   
   > 1. Enter a number between 5 and 60, this will be the time in minutes between the calculations.   
   > 2. Click on the "Start"-button   
