@@ -16,6 +16,8 @@ Amounts and checked boxes will be load on startup
 
 ### [Here you can find the changelogs](Changelogs.md)  
 
+### For some status updates and other informations follow me on [Twitter](https://twitter.com/noel_the_N00B) (The most time I post there on germen, but the informations will be on english and marked with "#CSGOCaseCalulator")
+
 ### FAQ
 
 Q: Why is there a pause between when loading the price of every case?  
