@@ -1,5 +1,5 @@
 # CSGO-Case-Calculator
-### Little program to calculate the value off your CS:GO weapon cases you have.
+### Little program to calculate the values of your CS:GO weapon cases.
 
 1. Enter the amount of Cases you have
 2. Click on the check boxes of the cases you want to load the prices (the more case prices will be loaded, the longer it takes)
