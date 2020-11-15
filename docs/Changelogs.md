@@ -10,7 +10,7 @@ TBP = To be published
 ## Versions
 #### [V 1.2](https://github.com/NoelTheN00B/CSGO-Case-Calculator/releases/tag/v1.2)
 > \+ Added options window   
-> \+ Added reloade automatically function   
+> \+ Added AFK Writer   
 > \+ Added scrollbars when window is getting smaller   
 > \+ Added import function of old XML-files (in new options window)   
 > \+ Added an update checker when starting the program   
