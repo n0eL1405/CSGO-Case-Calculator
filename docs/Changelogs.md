@@ -8,6 +8,10 @@ TBP = To be published
   
   
 ## Versions
+#### [V 1.2.1](https://github.com/NoelTheN00B/CSGO-Case-Calculator/releases/tag/v1.2.1)   
+> \+ Added Operation Broken Fang case   
+   
+   
 #### [V 1.2](https://github.com/NoelTheN00B/CSGO-Case-Calculator/releases/tag/v1.2)
 > \+ Added options window   
 > \+ Added AFK Writer   
