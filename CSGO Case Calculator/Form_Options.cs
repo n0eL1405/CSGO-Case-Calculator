@@ -41,12 +41,21 @@ namespace CSGO_Case_Calculator
 						xmldoc.Load(OLDcasesXML);
 
 						//when new case:
-						var FRACTURE = xmldoc.CreateElement("FRACTURE_AMOUNT");
-						FRACTURE.InnerText = "0";
-						xmldoc.DocumentElement.AppendChild(FRACTURE);
+						if (!OLDcasesXML.Contains("FRACTURE_AMOUNT")) {
+							var FRACTURE = xmldoc.CreateElement("FRACTURE_AMOUNT");
+							FRACTURE.InnerText = "0";
+							xmldoc.DocumentElement.AppendChild(FRACTURE);
+						}
+
+						if (!OLDcasesXML.Contains("BROKEN_FANG_AMOUNT")) {
+							var BROKEN_FANG = xmldoc.CreateElement("BROKEN_FANG_AMOUNT");
+							BROKEN_FANG.InnerText = "0";
+							xmldoc.DocumentElement.AppendChild(BROKEN_FANG);
+						}
 
 						var settings = new XmlWriterSettings();
 						settings.Indent = true;
+						File.Delete(NEWcasesXML);
 						var writer = XmlWriter.Create(NEWcasesXML, settings);
 						xmldoc.Save(writer);
 						writer.Close();
@@ -217,6 +226,11 @@ namespace CSGO_Case_Calculator
 			                                  "\n\tAmount: " + main.aBreakout +
 			                                  "\n\tPrice: " + main.pBreakout +
 			                                  "\n\tTotal value: " + main.tvBreakout);
+
+			Timer.streamWriterTimer.WriteLine("Operation Broken Fang Case: " +
+			                                  "\n\tAmount: " + main.aBrokenFang +
+			                                  "\n\tPrice: " + main.pBrokenFang +
+			                                  "\n\tTotal value: " + main.tvBrokenFang);
 
 			Timer.streamWriterTimer.WriteLine("Operation Hydra Case: " +
 			                                  "\n\tAmount: " + main.aHydra +

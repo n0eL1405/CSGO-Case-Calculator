@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.IO;
 using System.Net.Http;
-using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
@@ -25,6 +24,7 @@ namespace CSGO_Case_Calculator {
 		//strings for the website infos and amount of cases
 		public int aBravo;
 		public int aBreakout;
+		public int aBrokenFang;
 		public int aChroma;
 		public int aChroma2;
 		public int aChroma3;
@@ -60,6 +60,7 @@ namespace CSGO_Case_Calculator {
 		//prices
 		public string pBravo = "0";
 		public string pBreakout = "0";
+		public string pBrokenFang = "0";
 		public string pChroma = "0";
 		public string pChroma2 = "0";
 		public string pChroma3 = "0";
@@ -98,6 +99,7 @@ namespace CSGO_Case_Calculator {
 		//total values
 		public string tvBravo = "0";
 		public string tvBreakout = "0";
+		public string tvBrokenFang = "0";
 		public string tvChroma = "0";
 		public string tvChroma2 = "0";
 		public string tvChroma3 = "0";
@@ -466,6 +468,20 @@ namespace CSGO_Case_Calculator {
 
 			writePrices();
 
+			if (cBxBrokenFang.Checked) {
+				await Task.Delay(wait);
+
+				try {
+					string price = await getPrice(urlsteammarkt + "Operation%20Broken%20Fang%20Case");
+					pBrokenFang = Convert.ToString(price) + userSettings.currency;
+				}
+				catch { }
+			} else {
+				pBrokenFang = "0";
+			}
+
+			writePrices();
+
 			if (cBxHydra.Checked) {
 				await Task.Delay(wait);
 
@@ -659,6 +675,7 @@ namespace CSGO_Case_Calculator {
 			rTxtBxHuntsman.Text = pHuntsman;
 			rTxtBxBravo.Text = pBravo;
 			rTxtBxBreakout.Text = pBreakout;
+			rTxtBxBrokenFang.Text = pBrokenFang;
 			rTxtBxHydra.Text = pHydra;
 			rTxtBxPhoenix.Text = pPhoenix;
 			rTxtBxVanguard.Text = pVanguard;
@@ -677,7 +694,7 @@ namespace CSGO_Case_Calculator {
 		public void LoadCases() {
 			//amounts a set in the boxes
 			var propertyFolder = Application.StartupPath;
-			var CaseXML = propertyFolder + "\\files\\cases.xml";
+			var CaseXML = @propertyFolder + "\\files\\cases.xml";
 
 			var xs = new XmlSerializer(typeof(Cases));
 			var read = new FileStream(CaseXML, FileMode.Open, FileAccess.Read, FileShare.Read);
@@ -766,6 +783,11 @@ namespace CSGO_Case_Calculator {
 				cases.BREAKOUT_AMOUNT = "0";
 			}
 
+			if (cases.BROKEN_FANG_AMOUNT == "" || !int.TryParse(cases.BROKEN_FANG_AMOUNT, out aBrokenFang))
+			{
+				cases.BROKEN_FANG_AMOUNT = "0";
+			}
+
 			if (cases.HYDRA_AMOUNT == "" || !int.TryParse(cases.HYDRA_AMOUNT, out aHydra)) {
 				cases.HYDRA_AMOUNT = "0";
 			}
@@ -840,6 +862,7 @@ namespace CSGO_Case_Calculator {
 			aHuntsman = int.Parse(cases.HUNTSMAN_AMOUNT);
 			aBravo = int.Parse(cases.BRAVO_AMOUNT);
 			aBreakout = int.Parse(cases.BREAKOUT_AMOUNT);
+			aBrokenFang = int.Parse(cases.BROKEN_FANG_AMOUNT);
 			aHydra = int.Parse(cases.HYDRA_AMOUNT);
 			aPhoenix = int.Parse(cases.PHOENIX_AMOUNT);
 			aVanguard = int.Parse(cases.VANGUARD_AMOUNT);
@@ -860,7 +883,7 @@ namespace CSGO_Case_Calculator {
 			totalCaseAmount = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 +
 			                                   aCSGOWC3 + aDangerZone + aeSports2013 + aeSports2013Winter +
 			                                   aeSports2014Summer + aFalchion + aGamma +
-			                                   aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aHydra +
+			                                   aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aBrokenFang + aHydra +
 			                                   aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 + aRevolver +
 			                                   aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive +
 			                                   aFracture);
@@ -891,6 +914,7 @@ namespace CSGO_Case_Calculator {
 				HUNTSMAN_AMOUNT = aHuntsman.ToString(),
 				BRAVO_AMOUNT = aBravo.ToString(),
 				BREAKOUT_AMOUNT = aBreakout.ToString(),
+				BROKEN_FANG_AMOUNT = aBrokenFang.ToString(),
 				HYDRA_AMOUNT = aHydra.ToString(),
 				PHOENIX_AMOUNT = aPhoenix.ToString(),
 				VANGUARD_AMOUNT = aVanguard.ToString(),
@@ -936,6 +960,7 @@ namespace CSGO_Case_Calculator {
 			rTxtBxHuntsmanA.Text = aHuntsman.ToString();
 			rTxtBxBravoA.Text = aBravo.ToString();
 			rTxtBxBreakoutA.Text = aBreakout.ToString();
+			rTxtBxBrokenFangA.Text = aBrokenFang.ToString();
 			rTxtBxHydraA.Text = aHydra.ToString();
 			rTxtBxPhoenixA.Text = aPhoenix.ToString();
 			rTxtBxVanguardA.Text = aVanguard.ToString();
@@ -1031,6 +1056,10 @@ namespace CSGO_Case_Calculator {
 				Convert.ToString(Convert.ToDecimal(pBreakout.Replace(userSettings.currency, "")) *
 				                 Convert.ToDecimal(aBreakout)) + userSettings.currency;
 
+			tvBrokenFang =
+				Convert.ToString(Convert.ToDecimal(pBrokenFang.Replace(userSettings.currency, "")) *
+				                 Convert.ToDecimal(aBrokenFang)) + userSettings.currency;
+
 			tvHydra = Convert.ToString(Convert.ToDecimal(pHydra.Replace(userSettings.currency, "")) *
 			                           Convert.ToDecimal(aHydra)) + userSettings.currency;
 
@@ -1108,6 +1137,7 @@ namespace CSGO_Case_Calculator {
 			                                  Convert.ToDecimal(tvHuntsman.Replace(userSettings.currency, "")) +
 			                                  Convert.ToDecimal(tvBravo.Replace(userSettings.currency, "")) +
 			                                  Convert.ToDecimal(tvBreakout.Replace(userSettings.currency, "")) +
+											  Convert.ToDecimal(tvBrokenFang.Replace(userSettings.currency, "")) +
 			                                  Convert.ToDecimal(tvHydra.Replace(userSettings.currency, "")) +
 			                                  Convert.ToDecimal(tvPhoenix.Replace(userSettings.currency, "")) +
 			                                  Convert.ToDecimal(tvVanguard.Replace(userSettings.currency, "")) +
@@ -1129,7 +1159,7 @@ namespace CSGO_Case_Calculator {
 			totalCaseAmount = Convert.ToString(aChroma + aChroma2 + aChroma3 + aClutch + aCS20 + aCSGOWC + aCSGOWC2 +
 			                                   aCSGOWC3 + aDangerZone + aeSports2013 + aeSports2013Winter +
 			                                   aeSports2014Summer + aFalchion + aGamma +
-			                                   aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout +
+			                                   aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aBrokenFang +
 			                                   aHydra + aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 +
 			                                   aRevolver + aShadow + aShatteredWeb + aSpectrum + aSpectrum2 +
 			                                   aWinterOffensive + aFracture);
@@ -1162,6 +1192,7 @@ namespace CSGO_Case_Calculator {
 			rTxtBxHuntsmanTV.Text = tvHuntsman;
 			rTxtBxBravoTV.Text = tvBravo;
 			rTxtBxBreakoutTV.Text = tvBreakout;
+			rTxtBxBrokenFangTV.Text = tvBrokenFang;
 			rTxtBxHydraTV.Text = tvHydra;
 			rTxtBxPhoenixTV.Text = tvPhoenix;
 			rTxtBxVanguardTV.Text = tvVanguard;
@@ -1181,6 +1212,7 @@ namespace CSGO_Case_Calculator {
 
 			pBravo = "0";
 			pBreakout = "0";
+			pBrokenFang = "0";
 			pChroma = "0";
 			pChroma2 = "0";
 			pChroma3 = "0";
@@ -1252,7 +1284,7 @@ namespace CSGO_Case_Calculator {
 			var propertyFolder = Application.StartupPath;
 
 			//string propertyFolder = Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents") + "\\CSGOCC";
-			var CaseXML = propertyFolder + "\\files\\cases.xml";
+			var CaseXML = @propertyFolder + "\\files\\cases.xml";
 
 			//check if there is already a file with saved cases
 			if (File.Exists(CaseXML)) {
@@ -1281,6 +1313,7 @@ namespace CSGO_Case_Calculator {
 					HUNTSMAN_AMOUNT = "0",
 					BRAVO_AMOUNT = "0",
 					BREAKOUT_AMOUNT = "0",
+					BROKEN_FANG_AMOUNT = "0",
 					HYDRA_AMOUNT = "0",
 					PHOENIX_AMOUNT = "0",
 					VANGUARD_AMOUNT = "0",
@@ -1298,7 +1331,19 @@ namespace CSGO_Case_Calculator {
 
 				//create the direction and save the file
 				Directory.CreateDirectory(propertyFolder + "\\files");
-				SaveCases.SaveDaten(casesempty, CaseXML);
+
+				if (!Directory.Exists(propertyFolder + "\\files")) {
+					MessageBox.Show(
+						"ERROR: Can't create directory for settings and cases file!" +
+						"\nPlease restart the programm with admin permisson or install it in a not protected directory.",
+						"ERROR!",
+						MessageBoxButtons.OK,
+						MessageBoxIcon.Error);
+
+				} else {
+
+					SaveCases.SaveDaten(casesempty, CaseXML);
+				}
 			}
 
 			//load all amounts on startup
@@ -1501,6 +1546,10 @@ namespace CSGO_Case_Calculator {
 			Process.Start(steammarktcsgo + "Fracture%20Case");
 		}
 
+		private void lLblBrokenFang_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+			Process.Start(steammarktcsgo + "Operation%20Broken%20Fang%20Case");
+		}
+
 		//message box when an amount does contain something else then a number
 		public void amountErrorBox(string msgBxTxt) {
 
@@ -1634,6 +1683,11 @@ namespace CSGO_Case_Calculator {
 		private void rTxtBxBreakoutA_TextChanged(object sender, EventArgs e) {
 
 			aBreakout = testAmounts(rTxtBxBreakoutA.Text, aBreakout);
+		}
+
+		private void rTxtBxBrokenFangA_TextChanged(object sender, EventArgs e) {
+
+			aBrokenFang = testAmounts(rTxtBxBrokenFangA.Text, aBrokenFang);
 		}
 
 		private void rTxtBxHydraA_TextChanged(object sender, EventArgs e) {
@@ -1777,8 +1831,10 @@ namespace CSGO_Case_Calculator {
 
 			public string FRACTURE_AMOUNT { get; set; }
 
+			public string BROKEN_FANG_AMOUNT { get; set; }
+
 		}
 
-	}
+    }
 
 }

@@ -442,5 +442,17 @@ namespace CSGO_Case_Calculator.Properties {
                 this["cBxFracture"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cbxBrokenFang {
+            get {
+                return ((bool)(this["cbxBrokenFang"]));
+            }
+            set {
+                this["cbxBrokenFang"] = value;
+            }
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace CSGO_Case_Calculator
 
 	    private static string name = "CSGO-Case-Calculator";
 	    private static string owner = "NoelTheN00B";
-	    private static string currentVersion = "v1.2";
+	    private static string currentVersion = "v1.2.1";
 	    private string latestVersion;
 	    private bool versionsFound;
 
