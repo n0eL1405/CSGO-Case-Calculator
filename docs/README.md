@@ -33,5 +33,4 @@ A:
   > 2. Click on the "Start"-button   
   > 3. On your desktop will be the "WriterResults.txt" file created, there will be all informations (each case price, the amounts, the total case prices, your overall amount and your overall case price) of ever AFK Writer run saved.   
   > 3. Wait as long as you want the program to write your prices.   
-  > 4. If you are done click on the "Stop"-button   
-    Be aware that you can change the amounts in the main window, but that won't affect the AFK Writer!
+  > 4. If you are done click on the "Stop"-button
