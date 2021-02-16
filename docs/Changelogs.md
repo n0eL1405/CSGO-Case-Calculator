@@ -18,7 +18,7 @@ TBP = To be published
 > \+ Added scrollbars when window is getting smaller   
 > \+ Added import function of old XML-files (in new options window)   
 > \+ Added an update checker when starting the program   
-> \+ Added option to choose between different currencies ($, £, €)
+> \+ Added option to choose between different currencies ($, £, €)   
 > \+ Added Fracture Case   
 > \+ Letter and empty cases in xml-file will be replaced with "0" when loading cases   
 > \- Removed searching for old XML-files when launching   
