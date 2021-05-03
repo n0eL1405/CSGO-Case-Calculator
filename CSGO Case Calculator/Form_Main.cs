@@ -51,6 +51,7 @@ namespace CSGO_Case_Calculator {
 		public int aRevolver;
 		public int aShadow;
 		public int aShatteredWeb;
+		public int aSnakebite;
 		public int aSpectrum;
 		public int aSpectrum2;
 		public int aVanguard;
@@ -87,6 +88,7 @@ namespace CSGO_Case_Calculator {
 		public string pRevolver = "0";
 		public string pShadow = "0";
 		public string pShatteredWeb = "0";
+		public string pSnakebite = "0";
 		public string pSpectrum = "0";
 		public string pSpectrum2 = "0";
 		public string pVanguard = "0";
@@ -126,6 +128,7 @@ namespace CSGO_Case_Calculator {
 		public string tvRevolver = "0";
 		public string tvShadow = "0";
 		public string tvShatteredWeb = "0";
+		public string tvSnakebite = "0";
 		public string tvSpectrum = "0";
 		public string tvSpectrum2 = "0";
 		public string tvVanguard = "0";
@@ -608,6 +611,24 @@ namespace CSGO_Case_Calculator {
 
 			writePrices();
 
+			if (cBxSnakebite.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					string price = await getPrice(urlsteammarkt + "Snakebite%20Case");
+					pSnakebite = Convert.ToString(price) + userSettings.currency;
+				}
+				catch { }
+			}
+			else
+			{
+				pSnakebite = "0";
+			}
+
+			writePrices();
+
 			if (cBxSpectrum.Checked) {
 				await Task.Delay(wait);
 
@@ -685,6 +706,7 @@ namespace CSGO_Case_Calculator {
 			rTxtBxRevolver.Text = pRevolver;
 			rTxtBxShadow.Text = pShadow;
 			rTxtBxShatteredWeb.Text = pShatteredWeb;
+			rTxtBxSnakebite.Text = pSnakebite;
 			rTxtBxSpectrum.Text = pSpectrum;
 			rTxtBxSpectrum2.Text = pSpectrum2;
 			rTxtBxWinterOffensive.Text = pWinterOffensive;
@@ -699,6 +721,7 @@ namespace CSGO_Case_Calculator {
 			var xs = new XmlSerializer(typeof(Cases));
 			var read = new FileStream(CaseXML, FileMode.Open, FileAccess.Read, FileShare.Read);
 			var cases = (Cases) xs.Deserialize(read);
+			read.Close();
 
 			//if amount is empty or not a number, fill with 0
 			if (cases.CHROMA_AMOUNT == "" || !int.TryParse(cases.CHROMA_AMOUNT, out aChroma)) {
@@ -824,6 +847,11 @@ namespace CSGO_Case_Calculator {
 				cases.SHATTEREDWEB_AMOUNT = "0";
 			}
 
+			if (cases.SNAKEBITE_AMOUNT == "" || !int.TryParse(cases.SNAKEBITE_AMOUNT, out aSnakebite))
+			{
+				cases.SNAKEBITE_AMOUNT = "0";
+			}
+
 			if (cases.SPECTRUM_AMOUNT == "" || !int.TryParse(cases.SPECTRUM_AMOUNT, out aSpectrum)) {
 				cases.SPECTRUM_AMOUNT = "0";
 			}
@@ -876,6 +904,7 @@ namespace CSGO_Case_Calculator {
 			aSpectrum2 = int.Parse(cases.SPECTRUM2_AMOUNT);
 			aWinterOffensive = int.Parse(cases.WINTEROFFENSIVE_AMOUNT);
 			aFracture = int.Parse(cases.FRACTURE_AMOUNT);
+			aSnakebite = int.Parse(cases.SNAKEBITE_AMOUNT);
 
 			writeAmounts();
 
@@ -886,7 +915,7 @@ namespace CSGO_Case_Calculator {
 			                                   aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aBrokenFang + aHydra +
 			                                   aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 + aRevolver +
 			                                   aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive +
-			                                   aFracture);
+			                                   aFracture + aSnakebite);
 
 			rTxtBxTCA.Text = totalCaseAmount;
 		}
@@ -927,7 +956,8 @@ namespace CSGO_Case_Calculator {
 				SPECTRUM_AMOUNT = aSpectrum.ToString(),
 				SPECTRUM2_AMOUNT = aSpectrum2.ToString(),
 				WINTEROFFENSIVE_AMOUNT = aWinterOffensive.ToString(),
-				FRACTURE_AMOUNT = aFracture.ToString()
+				FRACTURE_AMOUNT = aFracture.ToString(),
+				SNAKEBITE_AMOUNT = aSnakebite.ToString()
 			};
 
 			//set path for xml-file
@@ -974,6 +1004,7 @@ namespace CSGO_Case_Calculator {
 			rTxtBxSpectrum2A.Text = aSpectrum2.ToString();
 			rTxtBxWinterOffensiveA.Text = aWinterOffensive.ToString();
 			rTxtBxFractureA.Text = aFracture.ToString();
+			rTxtBxSnakebiteA.Text = aSnakebite.ToString();
 		}
 
 		//calculates the prices
@@ -1110,6 +1141,10 @@ namespace CSGO_Case_Calculator {
 				Convert.ToString(Convert.ToDecimal(pFracture.Replace(userSettings.currency, "")) *
 				                 Convert.ToDecimal(aFracture)) + userSettings.currency;
 
+			tvSnakebite =
+				Convert.ToString(Convert.ToDecimal(pSnakebite.Replace(userSettings.currency, "")) *
+				                 Convert.ToDecimal(aSnakebite)) + userSettings.currency;
+
 			writeTotalValues();
 
 			//calculate Total Case Value
@@ -1150,7 +1185,8 @@ namespace CSGO_Case_Calculator {
 			                                  Convert.ToDecimal(tvSpectrum.Replace(userSettings.currency, "")) +
 			                                  Convert.ToDecimal(tvSpectrum2.Replace(userSettings.currency, "")) +
 			                                  Convert.ToDecimal(tvWinterOffensive.Replace(userSettings.currency, "")) +
-			                                  Convert.ToDecimal(tvFracture.Replace(userSettings.currency, ""))
+			                                  Convert.ToDecimal(tvFracture.Replace(userSettings.currency, "")) +
+											  Convert.ToDecimal(tvSnakebite.Replace(userSettings.currency, ""))
 			) + userSettings.currency;
 
 			rTxtBxTCV.Text = totalCaseValue;
@@ -1162,7 +1198,7 @@ namespace CSGO_Case_Calculator {
 			                                   aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aBrokenFang +
 			                                   aHydra + aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 +
 			                                   aRevolver + aShadow + aShatteredWeb + aSpectrum + aSpectrum2 +
-			                                   aWinterOffensive + aFracture);
+			                                   aWinterOffensive + aFracture + aSnakebite);
 
 			rTxtBxTCA.Text = totalCaseAmount;
 
@@ -1202,6 +1238,7 @@ namespace CSGO_Case_Calculator {
 			rTxtBxRevolverTV.Text = tvRevolver;
 			rTxtBxShadowTV.Text = tvShadow;
 			rTxtBxShatteredWebTV.Text = tvShatteredWeb;
+			rTxtBxSnakebiteTV.Text = tvSnakebite;
 			rTxtBxSpectrumTV.Text = tvSpectrum;
 			rTxtBxSpectrum2TV.Text = tvSpectrum2;
 			rTxtBxWinterOffensiveTV.Text = tvWinterOffensive;
@@ -1244,6 +1281,7 @@ namespace CSGO_Case_Calculator {
 			pWildfire = "0";
 			pWinterOffensive = "0";
 			pFracture = "0";
+			pSnakebite = "0";
 
 			Main();
 		}
@@ -1287,7 +1325,7 @@ namespace CSGO_Case_Calculator {
 			var CaseXML = @propertyFolder + "\\files\\cases.xml";
 
 			//check if there is already a file with saved cases
-			if (File.Exists(CaseXML)) {
+			if (Directory.Exists(@propertyFolder + "\\files") && File.Exists(CaseXML)) {
 				//if it is so: load the file
 				LoadCases();
 			} else {
@@ -1326,13 +1364,14 @@ namespace CSGO_Case_Calculator {
 					SPECTRUM_AMOUNT = "0",
 					SPECTRUM2_AMOUNT = "0",
 					WINTEROFFENSIVE_AMOUNT = "0",
-					FRACTURE_AMOUNT = "0"
+					FRACTURE_AMOUNT = "0",
+					SNAKEBITE_AMOUNT = "0"
 				};
 
 				//create the direction and save the file
-				Directory.CreateDirectory(propertyFolder + "\\files");
+				Directory.CreateDirectory(@propertyFolder + "\\files");
 
-				if (!Directory.Exists(propertyFolder + "\\files")) {
+				if (!Directory.Exists(@propertyFolder + "\\files")) {
 					MessageBox.Show(
 						"ERROR: Can't create directory for settings and cases file!" +
 						"\nPlease restart the programm with admin permisson or install it in a not protected directory.",
@@ -1550,6 +1589,11 @@ namespace CSGO_Case_Calculator {
 			Process.Start(steammarktcsgo + "Operation%20Broken%20Fang%20Case");
 		}
 
+		private void lLblSnakebite_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(steammarktcsgo + "Snakebite%20Case");
+		}
+
 		//message box when an amount does contain something else then a number
 		public void amountErrorBox(string msgBxTxt) {
 
@@ -1735,6 +1779,10 @@ namespace CSGO_Case_Calculator {
 			aShatteredWeb = testAmounts(rTxtBxShatteredWebA.Text, aShatteredWeb);
 		}
 
+		private void rTxtBxSnakebiteA_TextChanged(object sender, EventArgs e) {
+			aSnakebite = testAmounts(rTxtBxSnakebiteA.Text, aSnakebite);
+		}
+
 		private void rTxtBxSpectrumA_TextChanged(object sender, EventArgs e) {
 
 			aSpectrum = testAmounts(rTxtBxSpectrumA.Text, aSpectrum);
@@ -1833,8 +1881,8 @@ namespace CSGO_Case_Calculator {
 
 			public string BROKEN_FANG_AMOUNT { get; set; }
 
+			public string SNAKEBITE_AMOUNT { get; set; }
+
 		}
-
     }
-
 }
