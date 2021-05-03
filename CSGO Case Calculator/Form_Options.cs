@@ -53,6 +53,13 @@ namespace CSGO_Case_Calculator
 							xmldoc.DocumentElement.AppendChild(BROKEN_FANG);
 						}
 
+						if (!OLDcasesXML.Contains("SNAKEBITE_AMOUNT"))
+						{
+							var SNAKEBITE_AMOUNT = xmldoc.CreateElement("SNAKEBITE_AMOUNT");
+							SNAKEBITE_AMOUNT.InnerText = "0";
+							xmldoc.DocumentElement.AppendChild(SNAKEBITE_AMOUNT);
+						}
+
 						var settings = new XmlWriterSettings();
 						settings.Indent = true;
 						File.Delete(NEWcasesXML);
@@ -276,6 +283,11 @@ namespace CSGO_Case_Calculator
 			                                  "\n\tAmount: " + main.aShatteredWeb +
 			                                  "\n\tPrice: " + main.pShatteredWeb +
 			                                  "\n\tTotal value: " + main.tvShatteredWeb);
+
+			Timer.streamWriterTimer.WriteLine("Snakebite Case: " +
+			                                  "\n\tAmount: " + main.aSnakebite +
+			                                  "\n\tPrice: " + main.pSnakebite +
+			                                  "\n\tTotal value: " + main.tvSnakebite);
 
 			Timer.streamWriterTimer.WriteLine("Spectrum Case: " +
 			                                  "\n\tAmount: " + main.aSpectrum +
