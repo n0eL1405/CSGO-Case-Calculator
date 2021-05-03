@@ -211,6 +211,11 @@ namespace CSGO_Case_Calculator
             this.btnExit = new System.Windows.Forms.Button();
             this.btnOptns = new System.Windows.Forms.Button();
             this.pnl1 = new System.Windows.Forms.Panel();
+            this.cBxSnakebite = new System.Windows.Forms.CheckBox();
+            this.lLblSnakebite = new System.Windows.Forms.LinkLabel();
+            this.rTxtBxSnakebiteTV = new System.Windows.Forms.RichTextBox();
+            this.rTxtBxSnakebiteA = new System.Windows.Forms.RichTextBox();
+            this.rTxtBxSnakebite = new System.Windows.Forms.RichTextBox();
             this.cBxBrokenFang = new System.Windows.Forms.CheckBox();
             this.lLblBrokenFang = new System.Windows.Forms.LinkLabel();
             this.rTxtBxBrokenFangTV = new System.Windows.Forms.RichTextBox();
@@ -221,11 +226,6 @@ namespace CSGO_Case_Calculator
             this.rTxtBxFractureTV = new System.Windows.Forms.RichTextBox();
             this.rTxtBxFractureA = new System.Windows.Forms.RichTextBox();
             this.rTxtBxFracture = new System.Windows.Forms.RichTextBox();
-            this.cBxSnakebite = new System.Windows.Forms.CheckBox();
-            this.lLblSnakebite = new System.Windows.Forms.LinkLabel();
-            this.rTxtBxSnakebiteTV = new System.Windows.Forms.RichTextBox();
-            this.rTxtBxSnakebiteA = new System.Windows.Forms.RichTextBox();
-            this.rTxtBxSnakebite = new System.Windows.Forms.RichTextBox();
             this.pnl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -2901,6 +2901,76 @@ namespace CSGO_Case_Calculator
             this.pnl1.Size = new System.Drawing.Size(1430, 730);
             this.pnl1.TabIndex = 190;
             // 
+            // cBxSnakebite
+            // 
+            this.cBxSnakebite.AutoSize = true;
+            this.cBxSnakebite.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxSnakebite;
+            this.cBxSnakebite.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxSnakebite", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxSnakebite.Location = new System.Drawing.Point(861, 546);
+            this.cBxSnakebite.Name = "cBxSnakebite";
+            this.cBxSnakebite.Size = new System.Drawing.Size(15, 14);
+            this.cBxSnakebite.TabIndex = 204;
+            this.cBxSnakebite.UseVisualStyleBackColor = true;
+            // 
+            // lLblSnakebite
+            // 
+            this.lLblSnakebite.ActiveLinkColor = System.Drawing.Color.White;
+            this.lLblSnakebite.AutoSize = true;
+            this.lLblSnakebite.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lLblSnakebite.LinkColor = System.Drawing.Color.White;
+            this.lLblSnakebite.Location = new System.Drawing.Point(641, 542);
+            this.lLblSnakebite.Name = "lLblSnakebite";
+            this.lLblSnakebite.Size = new System.Drawing.Size(106, 25);
+            this.lLblSnakebite.TabIndex = 203;
+            this.lLblSnakebite.TabStop = true;
+            this.lLblSnakebite.Text = "Snakebite:";
+            this.lLblSnakebite.VisitedLinkColor = System.Drawing.Color.White;
+            this.lLblSnakebite.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lLblSnakebite_LinkClicked);
+            // 
+            // rTxtBxSnakebiteTV
+            // 
+            this.rTxtBxSnakebiteTV.BackColor = System.Drawing.Color.Gray;
+            this.rTxtBxSnakebiteTV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rTxtBxSnakebiteTV.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.rTxtBxSnakebiteTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rTxtBxSnakebiteTV.ForeColor = System.Drawing.Color.White;
+            this.rTxtBxSnakebiteTV.Location = new System.Drawing.Point(1122, 537);
+            this.rTxtBxSnakebiteTV.Multiline = false;
+            this.rTxtBxSnakebiteTV.Name = "rTxtBxSnakebiteTV";
+            this.rTxtBxSnakebiteTV.ReadOnly = true;
+            this.rTxtBxSnakebiteTV.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rTxtBxSnakebiteTV.Size = new System.Drawing.Size(127, 32);
+            this.rTxtBxSnakebiteTV.TabIndex = 202;
+            this.rTxtBxSnakebiteTV.Text = "";
+            // 
+            // rTxtBxSnakebiteA
+            // 
+            this.rTxtBxSnakebiteA.BackColor = System.Drawing.Color.Silver;
+            this.rTxtBxSnakebiteA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.rTxtBxSnakebiteA.Location = new System.Drawing.Point(1018, 537);
+            this.rTxtBxSnakebiteA.Name = "rTxtBxSnakebiteA";
+            this.rTxtBxSnakebiteA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rTxtBxSnakebiteA.Size = new System.Drawing.Size(98, 32);
+            this.rTxtBxSnakebiteA.TabIndex = 201;
+            this.rTxtBxSnakebiteA.Text = "0";
+            this.rTxtBxSnakebiteA.TextChanged += new System.EventHandler(this.rTxtBxSnakebiteA_TextChanged);
+            // 
+            // rTxtBxSnakebite
+            // 
+            this.rTxtBxSnakebite.BackColor = System.Drawing.Color.Gray;
+            this.rTxtBxSnakebite.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rTxtBxSnakebite.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.rTxtBxSnakebite.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rTxtBxSnakebite.ForeColor = System.Drawing.Color.White;
+            this.rTxtBxSnakebite.Location = new System.Drawing.Point(882, 537);
+            this.rTxtBxSnakebite.Multiline = false;
+            this.rTxtBxSnakebite.Name = "rTxtBxSnakebite";
+            this.rTxtBxSnakebite.ReadOnly = true;
+            this.rTxtBxSnakebite.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rTxtBxSnakebite.Size = new System.Drawing.Size(130, 32);
+            this.rTxtBxSnakebite.TabIndex = 200;
+            this.rTxtBxSnakebite.Text = "";
+            // 
             // cBxBrokenFang
             // 
             this.cBxBrokenFang.AutoSize = true;
@@ -3040,76 +3110,6 @@ namespace CSGO_Case_Calculator
             this.rTxtBxFracture.Size = new System.Drawing.Size(130, 32);
             this.rTxtBxFracture.TabIndex = 190;
             this.rTxtBxFracture.Text = "";
-            // 
-            // cBxSnakebite
-            // 
-            this.cBxSnakebite.AutoSize = true;
-            this.cBxSnakebite.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxShatteredWeb;
-            this.cBxSnakebite.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxShatteredWeb", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxSnakebite.Location = new System.Drawing.Point(861, 546);
-            this.cBxSnakebite.Name = "cBxSnakebite";
-            this.cBxSnakebite.Size = new System.Drawing.Size(15, 14);
-            this.cBxSnakebite.TabIndex = 204;
-            this.cBxSnakebite.UseVisualStyleBackColor = true;
-            // 
-            // lLblSnakebite
-            // 
-            this.lLblSnakebite.ActiveLinkColor = System.Drawing.Color.White;
-            this.lLblSnakebite.AutoSize = true;
-            this.lLblSnakebite.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lLblSnakebite.LinkColor = System.Drawing.Color.White;
-            this.lLblSnakebite.Location = new System.Drawing.Point(641, 542);
-            this.lLblSnakebite.Name = "lLblSnakebite";
-            this.lLblSnakebite.Size = new System.Drawing.Size(106, 25);
-            this.lLblSnakebite.TabIndex = 203;
-            this.lLblSnakebite.TabStop = true;
-            this.lLblSnakebite.Text = "Snakebite:";
-            this.lLblSnakebite.VisitedLinkColor = System.Drawing.Color.White;
-            this.lLblSnakebite.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lLblSnakebite_LinkClicked);
-            // 
-            // rTxtBxSnakebiteTV
-            // 
-            this.rTxtBxSnakebiteTV.BackColor = System.Drawing.Color.Gray;
-            this.rTxtBxSnakebiteTV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rTxtBxSnakebiteTV.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.rTxtBxSnakebiteTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rTxtBxSnakebiteTV.ForeColor = System.Drawing.Color.White;
-            this.rTxtBxSnakebiteTV.Location = new System.Drawing.Point(1122, 537);
-            this.rTxtBxSnakebiteTV.Multiline = false;
-            this.rTxtBxSnakebiteTV.Name = "rTxtBxSnakebiteTV";
-            this.rTxtBxSnakebiteTV.ReadOnly = true;
-            this.rTxtBxSnakebiteTV.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rTxtBxSnakebiteTV.Size = new System.Drawing.Size(127, 32);
-            this.rTxtBxSnakebiteTV.TabIndex = 202;
-            this.rTxtBxSnakebiteTV.Text = "";
-            // 
-            // rTxtBxSnakebiteA
-            // 
-            this.rTxtBxSnakebiteA.BackColor = System.Drawing.Color.Silver;
-            this.rTxtBxSnakebiteA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.rTxtBxSnakebiteA.Location = new System.Drawing.Point(1018, 537);
-            this.rTxtBxSnakebiteA.Name = "rTxtBxSnakebiteA";
-            this.rTxtBxSnakebiteA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rTxtBxSnakebiteA.Size = new System.Drawing.Size(98, 32);
-            this.rTxtBxSnakebiteA.TabIndex = 201;
-            this.rTxtBxSnakebiteA.Text = "0";
-            this.rTxtBxSnakebiteA.TextChanged += new System.EventHandler(this.rTxtBxSnakebiteA_TextChanged);
-            // 
-            // rTxtBxSnakebite
-            // 
-            this.rTxtBxSnakebite.BackColor = System.Drawing.Color.Gray;
-            this.rTxtBxSnakebite.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rTxtBxSnakebite.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.rTxtBxSnakebite.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rTxtBxSnakebite.ForeColor = System.Drawing.Color.White;
-            this.rTxtBxSnakebite.Location = new System.Drawing.Point(882, 537);
-            this.rTxtBxSnakebite.Multiline = false;
-            this.rTxtBxSnakebite.Name = "rTxtBxSnakebite";
-            this.rTxtBxSnakebite.ReadOnly = true;
-            this.rTxtBxSnakebite.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rTxtBxSnakebite.Size = new System.Drawing.Size(130, 32);
-            this.rTxtBxSnakebite.TabIndex = 200;
-            this.rTxtBxSnakebite.Text = "";
             // 
             // Form_Main
             // 
