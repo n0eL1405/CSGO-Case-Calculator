@@ -179,31 +179,31 @@ namespace CSGO_Case_Calculator
             this.btnOptns = new System.Windows.Forms.Button();
             this.btnUserItems = new System.Windows.Forms.Button();
             this.pnl1 = new System.Windows.Forms.Panel();
-            this.cBxRiptide = new System.Windows.Forms.CheckBox();
             this.lLblRiptide = new System.Windows.Forms.LinkLabel();
             this.rTxtBxRiptideTV = new System.Windows.Forms.RichTextBox();
             this.rTxtBxRiptideA = new System.Windows.Forms.RichTextBox();
             this.rTxtBxRiptide = new System.Windows.Forms.RichTextBox();
-            this.cBxDreamsNightmares = new System.Windows.Forms.CheckBox();
             this.lLblDreamsNightmares = new System.Windows.Forms.LinkLabel();
             this.rTxtBxDreamsNightmaresTV = new System.Windows.Forms.RichTextBox();
             this.rTxtBxDreamsNightmaresA = new System.Windows.Forms.RichTextBox();
             this.rTxtBxDreamsNightmares = new System.Windows.Forms.RichTextBox();
-            this.cBxSnakebite = new System.Windows.Forms.CheckBox();
             this.lLblSnakebite = new System.Windows.Forms.LinkLabel();
             this.rTxtBxSnakebiteTV = new System.Windows.Forms.RichTextBox();
             this.rTxtBxSnakebiteA = new System.Windows.Forms.RichTextBox();
             this.rTxtBxSnakebite = new System.Windows.Forms.RichTextBox();
-            this.cBxBrokenFang = new System.Windows.Forms.CheckBox();
             this.lLblBrokenFang = new System.Windows.Forms.LinkLabel();
             this.rTxtBxBrokenFangTV = new System.Windows.Forms.RichTextBox();
             this.rTxtBxBrokenFangA = new System.Windows.Forms.RichTextBox();
             this.rTxtBxBrokenFang = new System.Windows.Forms.RichTextBox();
-            this.cBxFracture = new System.Windows.Forms.CheckBox();
             this.lLblFracture = new System.Windows.Forms.LinkLabel();
             this.rTxtBxFractureTV = new System.Windows.Forms.RichTextBox();
             this.rTxtBxFractureA = new System.Windows.Forms.RichTextBox();
             this.rTxtBxFracture = new System.Windows.Forms.RichTextBox();
+            this.cBxRiptide = new System.Windows.Forms.CheckBox();
+            this.cBxDreamsNightmares = new System.Windows.Forms.CheckBox();
+            this.cBxSnakebite = new System.Windows.Forms.CheckBox();
+            this.cBxBrokenFang = new System.Windows.Forms.CheckBox();
+            this.cBxFracture = new System.Windows.Forms.CheckBox();
             this.cBxAC = new System.Windows.Forms.CheckBox();
             this.cBxWinterOffensive = new System.Windows.Forms.CheckBox();
             this.cBxSpectrum2 = new System.Windows.Forms.CheckBox();
@@ -237,6 +237,7 @@ namespace CSGO_Case_Calculator
             this.cBxChroma3 = new System.Windows.Forms.CheckBox();
             this.cBxChroma2 = new System.Windows.Forms.CheckBox();
             this.cBxChroma = new System.Windows.Forms.CheckBox();
+            this.cBxIncludeCItems = new System.Windows.Forms.CheckBox();
             this.pnl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -2243,7 +2244,7 @@ namespace CSGO_Case_Calculator
             this.lblTotalCase.Name = "lblTotalCase";
             this.lblTotalCase.Size = new System.Drawing.Size(129, 54);
             this.lblTotalCase.TabIndex = 143;
-            this.lblTotalCase.Text = "Total Case Value:";
+            this.lblTotalCase.Text = "Total Item Value:";
             // 
             // rTxtBxTCV
             // 
@@ -2266,7 +2267,7 @@ namespace CSGO_Case_Calculator
             this.btnSaveCases.BackColor = System.Drawing.Color.Gray;
             this.btnSaveCases.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSaveCases.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.btnSaveCases.Location = new System.Drawing.Point(1293, 142);
+            this.btnSaveCases.Location = new System.Drawing.Point(1293, 167);
             this.btnSaveCases.Name = "btnSaveCases";
             this.btnSaveCases.Size = new System.Drawing.Size(126, 39);
             this.btnSaveCases.TabIndex = 149;
@@ -2280,7 +2281,7 @@ namespace CSGO_Case_Calculator
             this.btnLoadSavedCases.BackColor = System.Drawing.Color.Gray;
             this.btnLoadSavedCases.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLoadSavedCases.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.btnLoadSavedCases.Location = new System.Drawing.Point(1293, 187);
+            this.btnLoadSavedCases.Location = new System.Drawing.Point(1293, 212);
             this.btnLoadSavedCases.Name = "btnLoadSavedCases";
             this.btnLoadSavedCases.Size = new System.Drawing.Size(126, 63);
             this.btnLoadSavedCases.TabIndex = 150;
@@ -2312,7 +2313,7 @@ namespace CSGO_Case_Calculator
             this.lblTCA.Name = "lblTCA";
             this.lblTCA.Size = new System.Drawing.Size(129, 54);
             this.lblTCA.TabIndex = 154;
-            this.lblTCA.Text = "Total Case Amount:";
+            this.lblTCA.Text = "Total Item Amount:";
             // 
             // btnExit
             // 
@@ -2347,7 +2348,7 @@ namespace CSGO_Case_Calculator
             this.btnUserItems.BackColor = System.Drawing.Color.Gray;
             this.btnUserItems.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUserItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.btnUserItems.Location = new System.Drawing.Point(1294, 259);
+            this.btnUserItems.Location = new System.Drawing.Point(1294, 284);
             this.btnUserItems.Name = "btnUserItems";
             this.btnUserItems.Size = new System.Drawing.Size(126, 84);
             this.btnUserItems.TabIndex = 205;
@@ -2361,6 +2362,7 @@ namespace CSGO_Case_Calculator
             this.pnl1.AutoScroll = true;
             this.pnl1.AutoSize = true;
             this.pnl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnl1.Controls.Add(this.cBxIncludeCItems);
             this.pnl1.Controls.Add(this.cBxRiptide);
             this.pnl1.Controls.Add(this.lLblRiptide);
             this.pnl1.Controls.Add(this.rTxtBxRiptideTV);
@@ -2572,17 +2574,6 @@ namespace CSGO_Case_Calculator
             this.pnl1.Size = new System.Drawing.Size(1430, 772);
             this.pnl1.TabIndex = 190;
             // 
-            // cBxRiptide
-            // 
-            this.cBxRiptide.AutoSize = true;
-            this.cBxRiptide.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxRiptide;
-            this.cBxRiptide.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxRiptide", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxRiptide.Location = new System.Drawing.Point(861, 282);
-            this.cBxRiptide.Name = "cBxRiptide";
-            this.cBxRiptide.Size = new System.Drawing.Size(15, 14);
-            this.cBxRiptide.TabIndex = 214;
-            this.cBxRiptide.UseVisualStyleBackColor = true;
-            // 
             // lLblRiptide
             // 
             this.lLblRiptide.ActiveLinkColor = System.Drawing.Color.White;
@@ -2641,17 +2632,6 @@ namespace CSGO_Case_Calculator
             this.rTxtBxRiptide.Size = new System.Drawing.Size(130, 32);
             this.rTxtBxRiptide.TabIndex = 210;
             this.rTxtBxRiptide.Text = "";
-            // 
-            // cBxDreamsNightmares
-            // 
-            this.cBxDreamsNightmares.AutoSize = true;
-            this.cBxDreamsNightmares.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxDreamsNightmares;
-            this.cBxDreamsNightmares.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxDreamsNightmares", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxDreamsNightmares.Location = new System.Drawing.Point(232, 394);
-            this.cBxDreamsNightmares.Name = "cBxDreamsNightmares";
-            this.cBxDreamsNightmares.Size = new System.Drawing.Size(15, 14);
-            this.cBxDreamsNightmares.TabIndex = 209;
-            this.cBxDreamsNightmares.UseVisualStyleBackColor = true;
             // 
             // lLblDreamsNightmares
             // 
@@ -2712,17 +2692,6 @@ namespace CSGO_Case_Calculator
             this.rTxtBxDreamsNightmares.TabIndex = 205;
             this.rTxtBxDreamsNightmares.Text = "";
             // 
-            // cBxSnakebite
-            // 
-            this.cBxSnakebite.AutoSize = true;
-            this.cBxSnakebite.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxSnakebite;
-            this.cBxSnakebite.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxSnakebite", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxSnakebite.Location = new System.Drawing.Point(861, 584);
-            this.cBxSnakebite.Name = "cBxSnakebite";
-            this.cBxSnakebite.Size = new System.Drawing.Size(15, 14);
-            this.cBxSnakebite.TabIndex = 204;
-            this.cBxSnakebite.UseVisualStyleBackColor = true;
-            // 
             // lLblSnakebite
             // 
             this.lLblSnakebite.ActiveLinkColor = System.Drawing.Color.White;
@@ -2781,17 +2750,6 @@ namespace CSGO_Case_Calculator
             this.rTxtBxSnakebite.Size = new System.Drawing.Size(130, 32);
             this.rTxtBxSnakebite.TabIndex = 200;
             this.rTxtBxSnakebite.Text = "";
-            // 
-            // cBxBrokenFang
-            // 
-            this.cBxBrokenFang.AutoSize = true;
-            this.cBxBrokenFang.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cbxBrokenFang;
-            this.cBxBrokenFang.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cbxBrokenFang", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxBrokenFang.Location = new System.Drawing.Point(861, 168);
-            this.cBxBrokenFang.Name = "cBxBrokenFang";
-            this.cBxBrokenFang.Size = new System.Drawing.Size(15, 14);
-            this.cBxBrokenFang.TabIndex = 199;
-            this.cBxBrokenFang.UseVisualStyleBackColor = true;
             // 
             // lLblBrokenFang
             // 
@@ -2852,17 +2810,6 @@ namespace CSGO_Case_Calculator
             this.rTxtBxBrokenFang.TabIndex = 195;
             this.rTxtBxBrokenFang.Text = "";
             // 
-            // cBxFracture
-            // 
-            this.cBxFracture.AutoSize = true;
-            this.cBxFracture.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxFracture;
-            this.cBxFracture.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxFracture", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cBxFracture.Location = new System.Drawing.Point(232, 584);
-            this.cBxFracture.Name = "cBxFracture";
-            this.cBxFracture.Size = new System.Drawing.Size(15, 14);
-            this.cBxFracture.TabIndex = 194;
-            this.cBxFracture.UseVisualStyleBackColor = true;
-            // 
             // lLblFracture
             // 
             this.lLblFracture.ActiveLinkColor = System.Drawing.Color.White;
@@ -2921,6 +2868,61 @@ namespace CSGO_Case_Calculator
             this.rTxtBxFracture.Size = new System.Drawing.Size(130, 32);
             this.rTxtBxFracture.TabIndex = 190;
             this.rTxtBxFracture.Text = "";
+            // 
+            // cBxRiptide
+            // 
+            this.cBxRiptide.AutoSize = true;
+            this.cBxRiptide.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxRiptide;
+            this.cBxRiptide.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxRiptide", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxRiptide.Location = new System.Drawing.Point(861, 282);
+            this.cBxRiptide.Name = "cBxRiptide";
+            this.cBxRiptide.Size = new System.Drawing.Size(15, 14);
+            this.cBxRiptide.TabIndex = 214;
+            this.cBxRiptide.UseVisualStyleBackColor = true;
+            // 
+            // cBxDreamsNightmares
+            // 
+            this.cBxDreamsNightmares.AutoSize = true;
+            this.cBxDreamsNightmares.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxDreamsNightmares;
+            this.cBxDreamsNightmares.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxDreamsNightmares", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxDreamsNightmares.Location = new System.Drawing.Point(232, 394);
+            this.cBxDreamsNightmares.Name = "cBxDreamsNightmares";
+            this.cBxDreamsNightmares.Size = new System.Drawing.Size(15, 14);
+            this.cBxDreamsNightmares.TabIndex = 209;
+            this.cBxDreamsNightmares.UseVisualStyleBackColor = true;
+            // 
+            // cBxSnakebite
+            // 
+            this.cBxSnakebite.AutoSize = true;
+            this.cBxSnakebite.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxSnakebite;
+            this.cBxSnakebite.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxSnakebite", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxSnakebite.Location = new System.Drawing.Point(861, 584);
+            this.cBxSnakebite.Name = "cBxSnakebite";
+            this.cBxSnakebite.Size = new System.Drawing.Size(15, 14);
+            this.cBxSnakebite.TabIndex = 204;
+            this.cBxSnakebite.UseVisualStyleBackColor = true;
+            // 
+            // cBxBrokenFang
+            // 
+            this.cBxBrokenFang.AutoSize = true;
+            this.cBxBrokenFang.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cbxBrokenFang;
+            this.cBxBrokenFang.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cbxBrokenFang", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxBrokenFang.Location = new System.Drawing.Point(861, 168);
+            this.cBxBrokenFang.Name = "cBxBrokenFang";
+            this.cBxBrokenFang.Size = new System.Drawing.Size(15, 14);
+            this.cBxBrokenFang.TabIndex = 199;
+            this.cBxBrokenFang.UseVisualStyleBackColor = true;
+            // 
+            // cBxFracture
+            // 
+            this.cBxFracture.AutoSize = true;
+            this.cBxFracture.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxFracture;
+            this.cBxFracture.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxFracture", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxFracture.Location = new System.Drawing.Point(232, 584);
+            this.cBxFracture.Name = "cBxFracture";
+            this.cBxFracture.Size = new System.Drawing.Size(15, 14);
+            this.cBxFracture.TabIndex = 194;
+            this.cBxFracture.UseVisualStyleBackColor = true;
             // 
             // cBxAC
             // 
@@ -3287,6 +3289,19 @@ namespace CSGO_Case_Calculator
             this.cBxChroma.TabIndex = 155;
             this.cBxChroma.UseVisualStyleBackColor = true;
             // 
+            // cBxIncludeCItems
+            // 
+            this.cBxIncludeCItems.AutoSize = true;
+            this.cBxIncludeCItems.Checked = global::CSGO_Case_Calculator.Properties.Settings.Default.cBxAC;
+            this.cBxIncludeCItems.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cBxIncludeCItems.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::CSGO_Case_Calculator.Properties.Settings.Default, "cBxAC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cBxIncludeCItems.Location = new System.Drawing.Point(1294, 142);
+            this.cBxIncludeCItems.Name = "cBxIncludeCItems";
+            this.cBxIncludeCItems.Size = new System.Drawing.Size(125, 17);
+            this.cBxIncludeCItems.TabIndex = 215;
+            this.cBxIncludeCItems.Text = "Include custom items";
+            this.cBxIncludeCItems.UseVisualStyleBackColor = true;
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3516,6 +3531,7 @@ namespace CSGO_Case_Calculator
         public RichTextBox rTxtBxRiptideA;
         public RichTextBox rTxtBxRiptide;
         private Button btnUserItems;
+        private CheckBox cBxIncludeCItems;
     }
 }
 

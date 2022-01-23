@@ -16,5 +16,10 @@ namespace CSGO_Case_Calculator
         {
             InitializeComponent();
         }
+
+        private void btnSaveCases_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

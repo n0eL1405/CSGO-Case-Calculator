@@ -36,6 +36,7 @@ namespace CSGO_Case_Calculator
             this.lblName = new System.Windows.Forms.Label();
             this.lblAmount = new System.Windows.Forms.Label();
             this.lblLink = new System.Windows.Forms.Label();
+            this.btnAddItem = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // rTxtBxChromaA
@@ -98,12 +99,27 @@ namespace CSGO_Case_Calculator
             this.lblLink.TabIndex = 158;
             this.lblLink.Text = "Steam Community Market Link:";
             // 
+            // btnAddItem
+            // 
+            this.btnAddItem.BackColor = System.Drawing.Color.Gray;
+            this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnAddItem.Location = new System.Drawing.Point(12, 77);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(126, 39);
+            this.btnAddItem.TabIndex = 159;
+            this.btnAddItem.Text = "Add";
+            this.btnAddItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAddItem.UseVisualStyleBackColor = false;
+            this.btnAddItem.Click += new System.EventHandler(this.btnSaveCases_Click);
+            // 
             // Form_UserItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(577, 450);
+            this.Controls.Add(this.btnAddItem);
             this.Controls.Add(this.lblLink);
             this.Controls.Add(this.lblAmount);
             this.Controls.Add(this.lblName);
@@ -126,5 +142,6 @@ namespace CSGO_Case_Calculator
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblAmount;
         private System.Windows.Forms.Label lblLink;
+        private System.Windows.Forms.Button btnAddItem;
     }
 }
