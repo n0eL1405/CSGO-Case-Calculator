@@ -1311,6 +1311,11 @@ namespace CSGO_Case_Calculator {
 			new Form_Options().Show();
 		}
 
+		private void btnUserItems_Click(object sender, EventArgs e)
+		{
+			new Form_UserItems().Show();
+		}
+
 		//when the main window is loading/opening
 		private void Form_Main_Load(object sender, EventArgs e) {
 

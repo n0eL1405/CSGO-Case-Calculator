@@ -226,6 +226,7 @@ namespace CSGO_Case_Calculator
             this.rTxtBxFractureTV = new System.Windows.Forms.RichTextBox();
             this.rTxtBxFractureA = new System.Windows.Forms.RichTextBox();
             this.rTxtBxFracture = new System.Windows.Forms.RichTextBox();
+            this.btnUserItems = new System.Windows.Forms.Button();
             this.pnl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -2701,6 +2702,7 @@ namespace CSGO_Case_Calculator
             this.pnl1.AutoScroll = true;
             this.pnl1.AutoSize = true;
             this.pnl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnl1.Controls.Add(this.btnUserItems);
             this.pnl1.Controls.Add(this.cBxSnakebite);
             this.pnl1.Controls.Add(this.lLblSnakebite);
             this.pnl1.Controls.Add(this.rTxtBxSnakebiteTV);
@@ -3111,6 +3113,20 @@ namespace CSGO_Case_Calculator
             this.rTxtBxFracture.TabIndex = 190;
             this.rTxtBxFracture.Text = "";
             // 
+            // btnUserItems
+            // 
+            this.btnUserItems.BackColor = System.Drawing.Color.Gray;
+            this.btnUserItems.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUserItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnUserItems.Location = new System.Drawing.Point(1294, 259);
+            this.btnUserItems.Name = "btnUserItems";
+            this.btnUserItems.Size = new System.Drawing.Size(126, 84);
+            this.btnUserItems.TabIndex = 205;
+            this.btnUserItems.Text = "Open Custom Items";
+            this.btnUserItems.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnUserItems.UseVisualStyleBackColor = false;
+            this.btnUserItems.Click += new System.EventHandler(this.btnUserItems_Click);
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3329,6 +3345,7 @@ namespace CSGO_Case_Calculator
         public RichTextBox rTxtBxSnakebiteTV;
         public RichTextBox rTxtBxSnakebiteA;
         public RichTextBox rTxtBxSnakebite;
+        private Button btnUserItems;
     }
 }
 
