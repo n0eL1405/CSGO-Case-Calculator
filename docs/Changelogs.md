@@ -9,7 +9,7 @@ TBP = To be published
   
 ## Versions
 #### [V 1.2.3](https://github.com/NoelTheN00B/CSGO-Case-Calculator/releases/tag/v1.2.3)   
-> \+ Added Dreams & Nightmares case
+> \+ Added Dreams & Nightmares case   
 > \+ Added Operation Riptide case
 
 
