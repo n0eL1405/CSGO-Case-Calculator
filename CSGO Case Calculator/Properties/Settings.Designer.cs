@@ -466,5 +466,29 @@ namespace CSGO_Case_Calculator.Properties {
                 this["cBxSnakebite"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxDreamsNightmares {
+            get {
+                return ((bool)(this["cBxDreamsNightmares"]));
+            }
+            set {
+                this["cBxDreamsNightmares"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cBxRiptide {
+            get {
+                return ((bool)(this["cBxRiptide"]));
+            }
+            set {
+                this["cBxRiptide"] = value;
+            }
+        }
     }
 }

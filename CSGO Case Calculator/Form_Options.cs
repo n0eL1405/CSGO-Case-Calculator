@@ -60,6 +60,20 @@ namespace CSGO_Case_Calculator
 							xmldoc.DocumentElement.AppendChild(SNAKEBITE_AMOUNT);
 						}
 
+						if (!OLDcasesXML.Contains("RIPTIDE_AMOUNT"))
+						{
+							var RIPTIDE_AMOUNT = xmldoc.CreateElement("RIPTIDE_AMOUNT");
+							RIPTIDE_AMOUNT.InnerText = "0";
+							xmldoc.DocumentElement.AppendChild(RIPTIDE_AMOUNT);
+						}
+
+						if (!OLDcasesXML.Contains("DREAMS_NIGHTMARES_AMOUNT"))
+						{
+							var DREAMS_NIGHTMARES_AMOUNT = xmldoc.CreateElement("DREAMS_NIGHTMARES_AMOUNT");
+							DREAMS_NIGHTMARES_AMOUNT.InnerText = "0";
+							xmldoc.DocumentElement.AppendChild(DREAMS_NIGHTMARES_AMOUNT);
+						}
+
 						var settings = new XmlWriterSettings();
 						settings.Indent = true;
 						File.Delete(NEWcasesXML);
@@ -174,6 +188,11 @@ namespace CSGO_Case_Calculator
 			                                  "\n\tPrice: " + main.pDangerZone +
 			                                  "\n\tTotal value: " + main.tvDangerZone);
 
+			Timer.streamWriterTimer.WriteLine("Dreams & Nightmares Case: " +
+			                                  "\n\tAmount: " + main.aDreamsNightmares +
+			                                  "\n\tPrice: " + main.pDreamsNightmares +
+			                                  "\n\tTotal value: " + main.tvDreamsNightmares);
+
 			Timer.streamWriterTimer.WriteLine("eSports 2013 Case: " +
 			                                  "\n\tAmount: " + main.aeSports2013 +
 			                                  "\n\tPrice: " + main.peSports2013 +
@@ -248,6 +267,11 @@ namespace CSGO_Case_Calculator
 			                                  "\n\tAmount: " + main.aPhoenix +
 			                                  "\n\tPrice: " + main.pPhoenix +
 			                                  "\n\tTotal value: " + main.tvPhoenix);
+
+			Timer.streamWriterTimer.WriteLine("Operation Riptide Case: " +
+			                                  "\n\tAmount: " + main.aRiptide +
+			                                  "\n\tPrice: " + main.pRiptide +
+			                                  "\n\tTotal value: " + main.tvRiptide);
 
 			Timer.streamWriterTimer.WriteLine("Operation Vanguard Weapon Case: " +
 			                                  "\n\tAmount: " + main.aVanguard +

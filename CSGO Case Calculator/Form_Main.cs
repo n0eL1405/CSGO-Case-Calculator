@@ -34,6 +34,7 @@ namespace CSGO_Case_Calculator {
 		public int aCSGOWC2;
 		public int aCSGOWC3;
 		public int aDangerZone;
+		public int aDreamsNightmares;
 		public int aeSports2013;
 		public int aeSports2013Winter;
 		public int aeSports2014Summer;
@@ -49,6 +50,7 @@ namespace CSGO_Case_Calculator {
 		public int aPrisma;
 		public int aPrisma2;
 		public int aRevolver;
+		public int aRiptide;
 		public int aShadow;
 		public int aShatteredWeb;
 		public int aSnakebite;
@@ -71,6 +73,7 @@ namespace CSGO_Case_Calculator {
 		public string pCSGOWC2 = "0";
 		public string pCSGOWC3 = "0";
 		public string pDangerZone = "0";
+		public string pDreamsNightmares = "0";
 		public string peSports2013 = "0";
 		public string peSports2013Winter = "0";
 		public string peSports2014Summer = "0";
@@ -86,6 +89,7 @@ namespace CSGO_Case_Calculator {
 		public string pPrisma = "0";
 		public string pPrisma2 = "0";
 		public string pRevolver = "0";
+		public string pRiptide = "0";
 		public string pShadow = "0";
 		public string pShatteredWeb = "0";
 		public string pSnakebite = "0";
@@ -111,6 +115,7 @@ namespace CSGO_Case_Calculator {
 		public string tvCSGOWC2 = "0";
 		public string tvCSGOWC3 = "0";
 		public string tvDangerZone = "0";
+		public string tvDreamsNightmares = "0";
 		public string tveSports2013 = "0";
 		public string tveSports2013Winter = "0";
 		public string tveSports2014Summer = "0";
@@ -126,6 +131,7 @@ namespace CSGO_Case_Calculator {
 		public string tvPrisma = "0";
 		public string tvPrisma2 = "0";
 		public string tvRevolver = "0";
+		public string tvRiptide = "0";
 		public string tvShadow = "0";
 		public string tvShatteredWeb = "0";
 		public string tvSnakebite = "0";
@@ -299,6 +305,24 @@ namespace CSGO_Case_Calculator {
 				catch { }
 			} else {
 				pDangerZone = "0";
+			}
+
+			writePrices();
+
+			if (cBxDreamsNightmares.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					string price = await getPrice(urlsteammarkt + "Dreams%20%26%20Nightmares%20Case");
+					pDreamsNightmares = Convert.ToString(price) + userSettings.currency;
+				}
+				catch { }
+			}
+			else
+			{
+				pDreamsNightmares = "0";
 			}
 
 			writePrices();
@@ -513,6 +537,24 @@ namespace CSGO_Case_Calculator {
 
 			writePrices();
 
+			if (cBxRiptide.Checked)
+			{
+				await Task.Delay(wait);
+
+				try
+				{
+					string price = await getPrice(urlsteammarkt + "Operation%20Riptide%20Case");
+					pRiptide = Convert.ToString(price) + userSettings.currency;
+				}
+				catch { }
+			}
+			else
+			{
+				pPhoenix = "0";
+			}
+
+			writePrices();
+
 			if (cBxVanguard.Checked) {
 				await Task.Delay(wait);
 
@@ -684,6 +726,7 @@ namespace CSGO_Case_Calculator {
 			rTxtBxCSGOWC2.Text = pCSGOWC2;
 			rTxtBxCSGOWC3.Text = pCSGOWC3;
 			rTxtBxDangerZone.Text = pDangerZone;
+			rTxtBxDreamsNightmares.Text = pDreamsNightmares;
 			rTxtBxeSports2013.Text = peSports2013;
 			rTxtBxeSports2013W.Text = peSports2013Winter;
 			rTxtBxeSports2014S.Text = peSports2014Summer;
@@ -699,6 +742,7 @@ namespace CSGO_Case_Calculator {
 			rTxtBxBrokenFang.Text = pBrokenFang;
 			rTxtBxHydra.Text = pHydra;
 			rTxtBxPhoenix.Text = pPhoenix;
+			rTxtBxRiptide.Text = pRiptide;
 			rTxtBxVanguard.Text = pVanguard;
 			rTxtBxWildfire.Text = pWildfire;
 			rTxtBxPrisma.Text = pPrisma;
@@ -760,6 +804,10 @@ namespace CSGO_Case_Calculator {
 				cases.DANGERZONE_AMOUNT = "0";
 			}
 
+			if (cases.DREAMS_NIGHTMARES_AMOUNT == "" || !int.TryParse(cases.DREAMS_NIGHTMARES_AMOUNT, out aDreamsNightmares)) {
+				cases.DREAMS_NIGHTMARES_AMOUNT = "0";
+			}
+
 			if (cases.ESPORTS2013_AMOUNT == "" || !int.TryParse(cases.ESPORTS2013_AMOUNT, out aeSports2013)) {
 				cases.ESPORTS2013_AMOUNT = "0";
 			}
@@ -817,6 +865,10 @@ namespace CSGO_Case_Calculator {
 
 			if (cases.PHOENIX_AMOUNT == "" || !int.TryParse(cases.PHOENIX_AMOUNT, out aPhoenix)) {
 				cases.PHOENIX_AMOUNT = "0";
+			}
+
+			if (cases.RIPTIDE_AMOUNT == "" || !int.TryParse(cases.RIPTIDE_AMOUNT, out aRiptide)) {
+				cases.RIPTIDE_AMOUNT = "0";
 			}
 
 			if (cases.VANGUARD_AMOUNT == "" || !int.TryParse(cases.VANGUARD_AMOUNT, out aVanguard)) {
@@ -879,6 +931,7 @@ namespace CSGO_Case_Calculator {
 			aCSGOWC2 = int.Parse(cases.CSGOWC2_AMOUNT);
 			aCSGOWC3 = int.Parse(cases.CSGOWC3_AMOUNT);
 			aDangerZone = int.Parse(cases.DANGERZONE_AMOUNT);
+			aDreamsNightmares = int.Parse(cases.DREAMS_NIGHTMARES_AMOUNT);
 			aeSports2013 = int.Parse(cases.ESPORTS2013_AMOUNT);
 			aeSports2013Winter = int.Parse(cases.ESPORTS2013WINTER_AMOUNT);
 			aeSports2014Summer = int.Parse(cases.ESPORTS2014SUMMER_AMOUNT);
@@ -893,6 +946,7 @@ namespace CSGO_Case_Calculator {
 			aBrokenFang = int.Parse(cases.BROKEN_FANG_AMOUNT);
 			aHydra = int.Parse(cases.HYDRA_AMOUNT);
 			aPhoenix = int.Parse(cases.PHOENIX_AMOUNT);
+			aRiptide = int.Parse(cases.RIPTIDE_AMOUNT);
 			aVanguard = int.Parse(cases.VANGUARD_AMOUNT);
 			aWildfire = int.Parse(cases.WILDFIRE_AMOUNT);
 			aPrisma = int.Parse(cases.PRISMA_AMOUNT);
@@ -915,7 +969,7 @@ namespace CSGO_Case_Calculator {
 			                                   aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aBrokenFang + aHydra +
 			                                   aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 + aRevolver +
 			                                   aShadow + aShatteredWeb + aSpectrum + aSpectrum2 + aWinterOffensive +
-			                                   aFracture + aSnakebite);
+			                                   aFracture + aSnakebite + aDreamsNightmares + aRiptide);
 
 			rTxtBxTCA.Text = totalCaseAmount;
 		}
@@ -932,6 +986,7 @@ namespace CSGO_Case_Calculator {
 				CSGOWC2_AMOUNT = aCSGOWC2.ToString(),
 				CSGOWC3_AMOUNT = aCSGOWC3.ToString(),
 				DANGERZONE_AMOUNT = aDangerZone.ToString(),
+				DREAMS_NIGHTMARES_AMOUNT = aDreamsNightmares.ToString(),
 				ESPORTS2013_AMOUNT = aeSports2013.ToString(),
 				ESPORTS2013WINTER_AMOUNT = aeSports2013Winter.ToString(),
 				ESPORTS2014SUMMER_AMOUNT = aeSports2014Summer.ToString(),
@@ -946,6 +1001,7 @@ namespace CSGO_Case_Calculator {
 				BROKEN_FANG_AMOUNT = aBrokenFang.ToString(),
 				HYDRA_AMOUNT = aHydra.ToString(),
 				PHOENIX_AMOUNT = aPhoenix.ToString(),
+				RIPTIDE_AMOUNT = aRiptide.ToString(),
 				VANGUARD_AMOUNT = aVanguard.ToString(),
 				WILDFIRE_AMOUNT = aWildfire.ToString(),
 				PRISMA_AMOUNT = aPrisma.ToString(),
@@ -979,6 +1035,7 @@ namespace CSGO_Case_Calculator {
 			rTxtBxCSGOWC2A.Text = aCSGOWC2.ToString();
 			rTxtBxCSGOWC3A.Text = aCSGOWC3.ToString();
 			rTxtBxDangerZoneA.Text = aDangerZone.ToString();
+			rTxtBxDreamsNightmaresA.Text = aDreamsNightmares.ToString();
 			rTxtBxeSports2013A.Text = aeSports2013.ToString();
 			rTxtBxeSports2013WA.Text = aeSports2013Winter.ToString();
 			rTxtBxeSports2014SA.Text = aeSports2014Summer.ToString();
@@ -993,6 +1050,7 @@ namespace CSGO_Case_Calculator {
 			rTxtBxBrokenFangA.Text = aBrokenFang.ToString();
 			rTxtBxHydraA.Text = aHydra.ToString();
 			rTxtBxPhoenixA.Text = aPhoenix.ToString();
+			rTxtBxRiptideA.Text = aRiptide.ToString();
 			rTxtBxVanguardA.Text = aVanguard.ToString();
 			rTxtBxWildfireA.Text = aWildfire.ToString();
 			rTxtBxPrismaA.Text = aPrisma.ToString();
@@ -1046,6 +1104,11 @@ namespace CSGO_Case_Calculator {
 				                 Convert.ToDecimal(aDangerZone)) +
 				userSettings.currency;
 
+			tvDreamsNightmares =
+				Convert.ToString(Convert.ToDecimal(pDreamsNightmares.Replace(userSettings.currency, "")) *
+				                 Convert.ToDecimal(aDreamsNightmares)) +
+				userSettings.currency;
+
 			tveSports2013 =
 				Convert.ToString(Convert.ToDecimal(peSports2013.Replace(userSettings.currency, "")) *
 				                 Convert.ToDecimal(aeSports2013)) +
@@ -1096,6 +1159,10 @@ namespace CSGO_Case_Calculator {
 
 			tvPhoenix = Convert.ToString(Convert.ToDecimal(pPhoenix.Replace(userSettings.currency, "")) *
 			                             Convert.ToDecimal(aPhoenix)) +
+			            userSettings.currency;
+
+			tvRiptide = Convert.ToString(Convert.ToDecimal(pRiptide.Replace(userSettings.currency, "")) *
+			                             Convert.ToDecimal(aRiptide)) +
 			            userSettings.currency;
 
 			tvVanguard =
@@ -1186,7 +1253,9 @@ namespace CSGO_Case_Calculator {
 			                                  Convert.ToDecimal(tvSpectrum2.Replace(userSettings.currency, "")) +
 			                                  Convert.ToDecimal(tvWinterOffensive.Replace(userSettings.currency, "")) +
 			                                  Convert.ToDecimal(tvFracture.Replace(userSettings.currency, "")) +
-											  Convert.ToDecimal(tvSnakebite.Replace(userSettings.currency, ""))
+											  Convert.ToDecimal(tvSnakebite.Replace(userSettings.currency, "")) +
+											  Convert.ToDecimal(tvDreamsNightmares.Replace(userSettings.currency, "")) +
+											  Convert.ToDecimal(tvRiptide.Replace(userSettings.currency, ""))
 			) + userSettings.currency;
 
 			rTxtBxTCV.Text = totalCaseValue;
@@ -1198,7 +1267,7 @@ namespace CSGO_Case_Calculator {
 			                                   aGamma2 + aGlove + aHorizon + aHuntsman + aBravo + aBreakout + aBrokenFang +
 			                                   aHydra + aPhoenix + aVanguard + aWildfire + aPrisma + aPrisma2 +
 			                                   aRevolver + aShadow + aShatteredWeb + aSpectrum + aSpectrum2 +
-			                                   aWinterOffensive + aFracture + aSnakebite);
+			                                   aWinterOffensive + aFracture + aSnakebite + aDreamsNightmares + aRiptide);
 
 			rTxtBxTCA.Text = totalCaseAmount;
 
@@ -1216,6 +1285,7 @@ namespace CSGO_Case_Calculator {
 			rTxtBxCSGOWC2TV.Text = tvCSGOWC2;
 			rTxtBxCSGOWC3TV.Text = tvCSGOWC3;
 			rTxtBxDangerZoneTV.Text = tvDangerZone;
+			rTxtBxDreamsNightmaresTV.Text = tvDreamsNightmares;
 			rTxtBxeSports2013TV.Text = tveSports2013;
 			rTxtBxeSports2013WTV.Text = tveSports2013Winter;
 			rTxtBxeSports2014STV.Text = tveSports2014Summer;
@@ -1231,6 +1301,7 @@ namespace CSGO_Case_Calculator {
 			rTxtBxBrokenFangTV.Text = tvBrokenFang;
 			rTxtBxHydraTV.Text = tvHydra;
 			rTxtBxPhoenixTV.Text = tvPhoenix;
+			rTxtBxRiptideTV.Text = tvRiptide;
 			rTxtBxVanguardTV.Text = tvVanguard;
 			rTxtBxWildfireTV.Text = tvWildfire;
 			rTxtBxPrismaTV.Text = tvPrisma;
@@ -1259,6 +1330,7 @@ namespace CSGO_Case_Calculator {
 			pCSGOWC2 = "0";
 			pCSGOWC3 = "0";
 			pDangerZone = "0";
+			pDreamsNightmares = "0";
 			peSports2013 = "0";
 			peSports2013Winter = "0";
 			peSports2014Summer = "0";
@@ -1273,6 +1345,7 @@ namespace CSGO_Case_Calculator {
 			pPrisma = "0";
 			pPrisma2 = "0";
 			pRevolver = "0";
+			pRiptide = "0";
 			pShadow = "0";
 			pShatteredWeb = "0";
 			pSpectrum = "0";
@@ -1340,6 +1413,7 @@ namespace CSGO_Case_Calculator {
 					CSGOWC2_AMOUNT = "0",
 					CSGOWC3_AMOUNT = "0",
 					DANGERZONE_AMOUNT = "0",
+					DREAMS_NIGHTMARES_AMOUNT = "0",
 					ESPORTS2013_AMOUNT = "0",
 					ESPORTS2013WINTER_AMOUNT = "0",
 					ESPORTS2014SUMMER_AMOUNT = "0",
@@ -1359,6 +1433,7 @@ namespace CSGO_Case_Calculator {
 					PRISMA_AMOUNT = "0",
 					PRISMA2_AMOUNT = "0",
 					REVOLVER_AMOUNT = "0",
+					RIPTIDE_AMOUNT = "0",
 					SHADOW_AMOUNT = "0",
 					SHATTEREDWEB_AMOUNT = "0",
 					SPECTRUM_AMOUNT = "0",
@@ -1594,6 +1669,16 @@ namespace CSGO_Case_Calculator {
 			Process.Start(steammarktcsgo + "Snakebite%20Case");
 		}
 
+		private void lLblDreamsNightmares_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(steammarktcsgo + "Dreams%20%26%20Nightmares%20Case");
+		}
+
+		private void lLblRiptide_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(steammarktcsgo + "Operation%20Riptide%20Case");
+		}
+
 		//message box when an amount does contain something else then a number
 		public void amountErrorBox(string msgBxTxt) {
 
@@ -1669,6 +1754,10 @@ namespace CSGO_Case_Calculator {
 			aDangerZone = testAmounts(rTxtBxDangerZoneA.Text, aDangerZone);
 		}
 
+		private void rTxtBxDreamsNightmaresA_TextChanged(object sender, EventArgs e) {
+			aDreamsNightmares = testAmounts(rTxtBxDreamsNightmaresA.Text, aDreamsNightmares);
+		}
+
 		private void rTxtBxeSports2013A_TextChanged(object sender, EventArgs e) {
 
 			aeSports2013 = testAmounts(rTxtBxeSports2013A.Text, aeSports2013);
@@ -1742,6 +1831,10 @@ namespace CSGO_Case_Calculator {
 		private void rTxtBxPhoenixA_TextChanged(object sender, EventArgs e) {
 
 			aPhoenix = testAmounts(rTxtBxPhoenixA.Text, aPhoenix);
+		}
+
+		private void rTxtBxRiptideA_TextChanged(object sender, EventArgs e) {
+			aRiptide = testAmounts(rTxtBxRiptideA.Text, aRiptide);
 		}
 
 		private void rTxtBxVanguardA_TextChanged(object sender, EventArgs e) {
@@ -1882,6 +1975,10 @@ namespace CSGO_Case_Calculator {
 			public string BROKEN_FANG_AMOUNT { get; set; }
 
 			public string SNAKEBITE_AMOUNT { get; set; }
+
+			public string RIPTIDE_AMOUNT { get; set; }
+
+			public string DREAMS_NIGHTMARES_AMOUNT { get; set; }
 
 		}
     }
